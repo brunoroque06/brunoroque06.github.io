@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 600px) {
     div {
         background-color: blue;
     }
