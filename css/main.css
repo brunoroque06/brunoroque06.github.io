@@ -9,6 +9,12 @@
     box-sizing: border-box;
 }
 
+@media only screen and (max-width: 300px) {
+    div {
+        background-color: blue;
+    }
+}
+
 .grid {
     margin: 0 auto;
     max-width: 1200px;
@@ -17,7 +23,7 @@
 
 .row {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
 }
