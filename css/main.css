@@ -1,5 +1,6 @@
 * {
     border: 1px solid grey !important;
+    color: white;
 }
 
 * {
@@ -9,9 +10,8 @@
     box-sizing: border-box;
 }
 
-header {
+header, footer {
     background: -webkit-linear-gradient(top, #373737, #212121);
-    color: white;
 }
 
 body, html {
@@ -26,8 +26,13 @@ img, embed, object, video {
     max-width: 100%;
 }
 
+h1 {
+    color: white;
+    text-transform: uppercase;
+}
+
 .header__logo {
-    height: 72px;
+    height: 48px;
     /* width: 100%; */
     vertical-align: top;
     margin: 0.5%;
@@ -35,10 +40,10 @@ img, embed, object, video {
 
 .nav {
     width: 100%;
+    color: white;
 }
 
 .nav__list {
-    width: 100%;
     padding: 0;
     margin: 0;
 }
@@ -50,13 +55,17 @@ img, embed, object, video {
     text-align: center;
     line-height: 24px;
     padding: 24px;
-    text-transform: uppercase;
 }
 
-nav a, button {
+nav a {
+    background: #36486b;    
     padding: 1.5em;
     /* min-width: 48px;
     min-height: 48px;  */
+}
+
+nav a :hover {
+    background: #4040a1;    
 }
 
 .grid {
@@ -117,6 +126,12 @@ nav a, button {
 
 .col-12 {
     width: 100%;
+}
+
+.footer__logo {
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 0.2em;
 }
 
 @media only screen and (min-width: 600px) {
