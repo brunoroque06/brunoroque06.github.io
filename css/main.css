@@ -1,5 +1,5 @@
 * {
-    border: 1px solid grey !important;
+    /* border: 1px solid grey !important; */
     color: white;
 }
 
@@ -10,16 +10,15 @@
     box-sizing: border-box;
 }
 
-header, footer {
-    background: -webkit-linear-gradient(top, #373737, #212121);
-}
-
-body, html {
-    color: black;
+html, body {
     margin: 0;
-    padding: 0;
     width: 100%;
     height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header, footer {
+    background: -webkit-linear-gradient(top, #373737, #212121);
 }
 
 img, embed, object, video {
@@ -27,20 +26,38 @@ img, embed, object, video {
 }
 
 h1 {
-    color: white;
     text-transform: uppercase;
+}
+
+nav a {
+    background: #36486b;    
+    padding: 1.5em;
+    /* min-width: 48px;
+    min-height: 48px;  */
+}
+
+nav a :hover {
+    background: #4040a1;    
+}
+
+a, a:focus, a:hover {
+	text-decoration: none;
 }
 
 .header__logo {
     height: 48px;
-    /* width: 100%; */
-    vertical-align: top;
-    margin: 0.5%;
+    vertical-align: middle;
+}
+
+.footer__logo {
+    height: 1.5em;
+    width: 1.5em;
+    vertical-align: middle;
+    margin-right: 0.2em;
 }
 
 .nav {
     width: 100%;
-    color: white;
 }
 
 .nav__list {
@@ -57,17 +74,6 @@ h1 {
     padding: 24px;
 }
 
-nav a {
-    background: #36486b;    
-    padding: 1.5em;
-    /* min-width: 48px;
-    min-height: 48px;  */
-}
-
-nav a :hover {
-    background: #4040a1;    
-}
-
 .grid {
     margin: 0 auto;
     width: 100%;
@@ -75,7 +81,7 @@ nav a :hover {
 
 .row {
     width: 100%;
-    margin-bottom: auto;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
 }
@@ -126,12 +132,6 @@ nav a :hover {
 
 .col-12 {
     width: 100%;
-}
-
-.footer__logo {
-    height: 1em;
-    vertical-align: middle;
-    margin-right: 0.2em;
 }
 
 @media only screen and (min-width: 600px) {
