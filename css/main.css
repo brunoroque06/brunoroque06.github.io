@@ -9,7 +9,13 @@
     box-sizing: border-box;
 }
 
+header {
+    background: -webkit-linear-gradient(top, #373737, #212121);
+    color: white;
+}
+
 body, html {
+    color: black;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -114,10 +120,7 @@ nav a, button {
 }
 
 @media only screen and (min-width: 600px) {
-    .col-2 {
-        width: 16.66%;
-    }
-    div {
-        background-color: white;
+    body {
+        
     }
 }
