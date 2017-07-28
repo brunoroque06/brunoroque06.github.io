@@ -5,15 +5,21 @@
     <title>Bruno Roque</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
 <body>
     <header>
         <div class="row">
-            <h1>Bruno Roque</h1>
+            <div class="col-10">
+                <h1>Bruno Roque</h1>
+            </div>
+            <div class="col-2 header__menu">
+                <a id="menu">MENU</a>
+            </div>
         </div>
     </header>
 
-    <nav>
+    <nav class="nav">
         <ul class="nav__list">
             <li class="nav__item"><a href="#">Home</a></li>
             <li class="nav__item"><a href="#">World History</a></li>
@@ -21,19 +27,19 @@
         </ul>
     </nav>
 
-    <div class="row">
-        <h2>About Me</h2>
-    </div>
-    <div class="row">
-        <div class="col-10">
-            My name is Bruno Roque, and I'm a Portuguese Software Engineer. In this website, besides information related with me, as well as small projects in which I work on my free time.
+    <main>
+        <div class="row">
+            <h2>About Me</h2>
         </div>
-        <div class="col-2"
-            <img src="images/" alt="Cat">
+        <div class="row">
+            <div class="col-8">
+                My name is Bruno Roque, and I'm a Portuguese Software Engineer. In this website...
+            </div>
+            <div class="col-4">
+                <img src="images/Globe-Logo2.PNG" alt="Globe">
+            </div>
         </div>
-    </div>
 
-    <div>
         <div class="row">
             <div class="col-2">
                 <p>2014</p>
@@ -41,35 +47,28 @@
             </div>
             <div class="col-10">Mu! Start with small screens! Smartphones first, tablets, and laptops if still needed.</div>
         </div>
-    </div>
-    <div class="grid">
-        <div class="row">
-            <div class="col-2">2 Columns</div>
-            <div class="col-10">10 Columns</div>
-        </div>
-        <div class="row">
-            <div class="col-3">3 Columns</div>
-            <div class="col-9">9 Columns</div>
-        </div>
-        <div class="row">
-            <div class="col-4">4 Columns</div>
-            <div class="col-4">4 Columns</div>
-            <div class="col-4">4 Columns</div>
-        </div>
-        <div class="row">
-            <div class="col-3">3 Columns</div>
-            <div class="col-6">6 Columns</div>
-            <div class="col-3">3 Columns</div>
-        </div>
-    </div>
 
-    <footer>
-        <div class="row">
-            <a href="https://www.linkedin.com/in/BrunoRoque06" target="_blank"><img class="footer__logo" src="images/In-White-128px-TM.png" alt="LinkedIn Logo"> https://www.linkedin.com/in/BrunoRoque06</a>
-        </div>
-        <div class="row">
-            <a href="https://github.com/BrunoRoque06/" target="_blank"><img class="footer__logo" src="images/GitHub-Mark-Light-120px-plus.png" alt="GitHub Logo"> https://github.com/BrunoRoque06/</a>
-        </div>
-    </footer>
+        <footer>
+            <div class="row">
+                <a href="https://www.linkedin.com/in/BrunoRoque06" target="_blank"><img class="footer__logo" src="images/In-White-128px-TM.png" alt="LinkedIn Logo"> https://www.linkedin.com/in/BrunoRoque06</a>
+            </div>
+            <div class="row">
+                <a href="https://github.com/BrunoRoque06/" target="_blank"><img class="footer__logo" src="images/GitHub-Mark-Light-120px-plus.png" alt="GitHub Logo"> https://github.com/BrunoRoque06/</a>
+            </div>
+        </footer>
+    </main>
+    <script>
+        var menu = document.querySelector('#menu');
+        var body = document.querySelector('body');
+        var drawer = document.querySelector('nav');
+
+        menu.addEventListener('click', function(e) {
+            drawer.classList.toggle('open');
+            e.stopPropagation();
+        });
+        body.addEventListener('click', function() {
+            drawer.classList.remove('open');
+        });
+    </script>
 </body>
 </html>
