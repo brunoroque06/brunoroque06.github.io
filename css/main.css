@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     color: black;
     margin: 0;
     width: 100%;
@@ -38,7 +38,7 @@ footer {
 
 .footer__item {
     margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5em; 
 }
 
 img, embed, object, video {
