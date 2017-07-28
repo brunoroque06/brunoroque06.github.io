@@ -26,13 +26,19 @@ main {
     margin-bottom: 2em;
 }
 
+main [class*="col-"] {
+    padding: 1em;
+}
+
 footer {
     background: #2C3D51;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .footer__item {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 img, embed, object, video {
