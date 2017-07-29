@@ -11,7 +11,6 @@ html, body {
     margin: 0;
     width: 100%;
     height: 100%;
-    /* font-family: Georgia, serif;  */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -36,11 +35,6 @@ footer {
     padding-bottom: 0.5em;
 }
 
-.footer__item {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em; 
-}
-
 img, embed, object, video {
     max-width: 100%;
     max-height: 100%;
@@ -51,6 +45,11 @@ href, a {
     color: white;
     font-weight: bold;
     text-decoration: none;
+}
+
+.footer__item {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; 
 }
 
 .header__logo {
