@@ -18,6 +18,8 @@ header {
     color: white;
     text-align: center;
     background: #26251d;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 main {
@@ -26,7 +28,7 @@ main {
 }
 
 main [class*="col-"] {
-    padding: 1em;
+    padding: 0.5em;
 }
 
 footer {
@@ -49,11 +51,12 @@ href, a {
 
 .footer__item {
     margin-top: 0.5em;
-    margin-bottom: 0.5em; 
+    margin-bottom: 0.5em;
 }
 
 .header__logo {
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .logo {
@@ -62,12 +65,12 @@ href, a {
 }
 
 .header__title {
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .header__menu {
-    margin: auto;    
-    visibility: hidden;    
+    margin: auto;
+    visibility: hidden;
 }
 
 #menu {
@@ -98,21 +101,20 @@ nav {
     display: inline-block;
     box-sizing: border-box;
     text-align: center;
-    line-height: 24px;
-    padding: 24px;
+    line-height: 1em;
+    padding: 1.5em;
 }
 
 .footer__logo {
-    vertical-align: -0.5em; 
+    vertical-align: -0.5em;
     height: 2em;
-    width: 2em;
 }
 
 .row {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    border: none;
+    /* border: none; */
 }
 
 .col-1 {
@@ -169,12 +171,11 @@ nav {
     }
 
     .header__title {
-        visibility: hidden;
-        width: 0;
+        display: none;
     }
 
     .header__menu {
-        visibility: visible;
+        visibility: visible; 
         width: 50%;
     }
 
@@ -190,19 +191,19 @@ nav {
 
 @media only screen and (max-width: 700px) {
     main [class*="col-"] {
-        width: 100%;
+         width: 100%;
     }
 }
 
 @media only screen and (min-width: 901px) {
     .row {
-        width: 900px; 
+        width: 900px;
         margin-left: auto;
         margin-right: auto;
     }
 
     .nav__list {
-        width: 900px; 
+        width: 900px;
         margin-left: auto;
         margin-right: auto;
     }
