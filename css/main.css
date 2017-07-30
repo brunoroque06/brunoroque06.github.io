@@ -34,7 +34,7 @@ main [class*="col-"] {
 footer {
     background: #2C3D51;
     padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.5em; 
 }
 
 img, embed, object, video {
