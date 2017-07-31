@@ -166,6 +166,10 @@ nav {
 }
 
 @media only screen and (max-width: 500px) {
+    header {
+        border-bottom: 1em solid #2C3D51;
+    }
+
     .header__logo {
         width: 50%;
     }
