@@ -31,6 +31,10 @@ main [class*="col-"] {
     padding: 0.5em;
 }
 
+p {
+    font-size: 18px;
+}
+
 footer {
     background: #2C3D51;
     padding-top: 0.5em;
