@@ -37,7 +37,8 @@ main [class*="col-"] {
 }
 
 p {
-    font-size: 18px;
+    font-size: 18px; 
+    /* font-size: 3vmin; */
 }
 
 footer {
