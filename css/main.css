@@ -1,3 +1,8 @@
+:root {
+    --header-color: #26251d;
+    --main-footer-color: #2C3D51;
+}
+
 * {
      /* border: 0.1px solid grey !important; */
     -webkit-box-sizing: border-box;
@@ -17,7 +22,7 @@ html, body {
 header {
     color: white;
     text-align: center;
-    background: #26251d;
+    background: var(--header-color);
     padding-top: 2em;
     padding-bottom: 2em;
 }
@@ -36,7 +41,7 @@ p {
 }
 
 footer {
-    background: #2C3D51;
+    background: var(--main-footer-color);
     padding-top: 0.5em;
     padding-bottom: 0.5em; 
 }
@@ -79,11 +84,11 @@ href, a {
 
 #menu {
     font-size: 1.5em;
-    padding: 10%;
+    padding: calc(100% * 0.1);
 }
 
 nav {
-    background: #2C3D51;
+    background: var(--main-footer-color);
     text-transform: none;
     width: 100%;
 }
@@ -171,7 +176,7 @@ nav {
 
 @media only screen and (max-width: 500px) {
     header {
-        border-bottom: 1em solid #2C3D51;
+        border-bottom: 1em solid var(--main-footer-color);
     }
 
     .header__logo {
