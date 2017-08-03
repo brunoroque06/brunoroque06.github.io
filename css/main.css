@@ -75,14 +75,21 @@ href, a {
     font-weight: bold;
     text-decoration: none;
     cursor: default;
+
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 200ms;
+    -webkit-transition-timing-function: ease-in-out;
 }
 
 a:hover {
     color: #c1946a;
+    fill: #c1946a !important;
 }
 
-a svg:hover {
-    fill: blue;
+svg:hover {
+    color: #c1946a;
+    fill: #c1946a !important;
 }
 
 .footer__item {
@@ -97,7 +104,7 @@ a svg:hover {
 
 .logo {
     height: auto;
-    max-height: 64px;
+    max-height: 64px; 
 }
 
 .header__title {
