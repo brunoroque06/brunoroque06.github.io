@@ -98,9 +98,7 @@ nav {
 }
 
 .nav.open {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-    transition: transform 0.3s ease;
+    display: inline;
 }
 
 .nav__list {
@@ -196,8 +194,7 @@ nav {
     }
 
     nav {
-        position: absolute;
-        transform: translate(-100%, 0);
+        display: none;
     }
 
     .nav__item {
