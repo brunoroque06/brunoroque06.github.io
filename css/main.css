@@ -75,7 +75,6 @@ href, a {
     color: white;
     font-weight: bold;
     text-decoration: none;
-    cursor: default;
 
     transition: 100ms;
     transition-timing-function: ease-in-out;
@@ -120,6 +119,7 @@ a:hover {
     color: white;
     font-size: 1.5em;
     padding: calc(100% * 0.1);
+    cursor: default;
 }
 
 nav {
