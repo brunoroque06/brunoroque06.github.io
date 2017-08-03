@@ -1,6 +1,7 @@
 :root {
-    --almost-black: #26251d;
-    --dark-blue: #2C3D51;
+    --header: #26251d;
+    --nav-footer: #2C3D51;
+    --clickable-item: #c1946a;
 }
 
 * {
@@ -31,7 +32,7 @@ html, body {
 header {
     color: white;
     text-align: center;
-    background: var(--almost-black);
+    background: var(--header);
     padding-top: 2em;
     padding-bottom: 2em;
 }
@@ -59,12 +60,12 @@ p {
 }
 
 footer {
-    background: var(--dark-blue);
+    background: var(--nav-footer);
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
 
-img, embed, object, video {
+img, svg, embed, object, video {
     max-width: 100%;
     max-height: 100%;
 }
@@ -76,31 +77,26 @@ href, a {
     text-decoration: none;
     cursor: default;
 
-    transition: 200ms;
+    transition: 100ms;
     transition-timing-function: ease-in-out;
-    -webkit-transition: 200ms;
+    -webkit-transition: 100ms;
     -webkit-transition-timing-function: ease-in-out;
 }
 
 a:hover {
-    color: #c1946a;
-    fill: #c1946a !important;
+    color: var(--clickable-item);
 }
 
-svg:hover {
-    color: #c1946a;
-    fill: #c1946a !important;
+.clickable__item {
+    fill: white;
 }
 
-svg {
-    width: 100%;
+.clickable__item:hover {
+    color: var(--clickable-item);
+    fill: var(--clickable-item);
 }
 
-.icon:hover{
-    fill: #c1946a !important;
-}
-
-.footer__item {
+.footer__row {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
@@ -115,22 +111,19 @@ svg {
     max-height: 64px; 
 }
 
-.header__title {
-    /* white-space: nowrap; */
-}
-
 .header__menu {
     margin: auto;
     visibility: hidden;
 }
 
 #menu {
+    color: white;
     font-size: 1.5em;
     padding: calc(100% * 0.1);
 }
 
 nav {
-    background: var(--dark-blue);
+    background: var(--nav-footer);
     text-transform: none;
     width: 100%;
 }
@@ -216,7 +209,7 @@ nav {
 
 @media only screen and (max-width: 500px) {
     header {
-        border-bottom: 1em solid var(--dark-blue);
+        border-bottom: 1em solid var(--nav-footer);
     }
 
     .header__logo {
