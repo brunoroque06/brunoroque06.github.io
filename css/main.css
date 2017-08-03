@@ -92,6 +92,14 @@ svg:hover {
     fill: #c1946a !important;
 }
 
+svg {
+    width: 100%;
+}
+
+.icon:hover{
+    fill: #c1946a !important;
+}
+
 .footer__item {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
