@@ -19,6 +19,13 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 header {
@@ -33,6 +40,13 @@ main {
     flex: 1;
     margin-top: 2em;
     margin-bottom: 2em;
+
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 main [class*="col-"] {
@@ -40,7 +54,7 @@ main [class*="col-"] {
 }
 
 p {
-    font-size: 18px; 
+    font-size: 18px;
     /* font-size: 3vmin; */
 }
 
@@ -60,6 +74,15 @@ href, a {
     color: white;
     font-weight: bold;
     text-decoration: none;
+    cursor: default;
+}
+
+a:hover {
+    color: #c1946a;
+}
+
+a svg:hover {
+    fill: blue;
 }
 
 .footer__item {
@@ -98,7 +121,8 @@ nav {
 }
 
 .nav.open {
-    display: inline;
+    display: block;
+    /* transition: height 10s; */
 }
 
 .nav__list {
@@ -195,6 +219,7 @@ nav {
 
     nav {
         display: none;
+        position: absolute;
     }
 
     .nav__item {

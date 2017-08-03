@@ -23,12 +23,14 @@
         </div>
     </header> 
 
+    <div class="nav_container">
     <nav class="nav">
         <ul class="nav__list">
             <li class="nav__item"><a href="#">About</a></li>
             <li class="nav__item"><a href="#">Side Projects</a></li>
         </ul>
     </nav>
+    </div>
 
     <main>
         <div class="row">
@@ -65,7 +67,7 @@
             drawer.classList.toggle('open');
             e.stopPropagation();
         });
-        
+
         body.addEventListener('click', function() {
             drawer.classList.remove('open');
         });
