@@ -162,51 +162,51 @@ nav {
 }
 
 .col-1 {
-    width: 8.33%;
+    width: calc(1 * 100% / 12);
 }
 
 .col-2 {
-    width: 16.66%;
+    width: calc(2 * 100% / 12);
 }
 
 .col-3 {
-    width: 25%;
+    width: calc(3 * 100% / 12);
 }
 
 .col-4 {
-    width: 33.33%;
+    width: calc(4 * 100% / 12);
 }
 
 .col-5 {
-    width: 41.66%;
+    width: calc(5 * 100% / 12);
 }
 
 .col-6 {
-    width: 50%;
+    width: calc(6 * 100% / 12);
 }
 
 .col-7 {
-    width: 58.33%;
+    width: calc(7 * 100% / 12);
 }
 
 .col-8 {
-    width: 66.66%;
+    width: calc(8 * 100% / 12);
 }
 
 .col-9 {
-    width: 75%;
+    width: calc(9 * 100% / 12);
 }
 
 .col-10 {
-    width: 83.33%;
+    width: calc(10 * 100% / 12);
 }
 
 .col-11 {
-    width: 91.66%;
+    width: calc(11 * 100% / 12);
 }
 
 .col-12 {
-    width: 100%;
+    width: calc(12 * 100% / 12);
 }
 
 @media only screen and (max-width: 500px) {
