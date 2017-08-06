@@ -125,6 +125,7 @@ a:hover {
 }
 
 nav {
+    font-size: 18px;
     background: var(--nav-footer);
     text-transform: none;
     width: 100%;
