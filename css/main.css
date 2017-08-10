@@ -34,13 +34,12 @@ header {
     color: white;
     text-align: center;
     background: var(--header);
-    padding: 2em 0 2em 0;
+    padding: 1em 0 1em 0;
 }
 
 main {
     flex: 1;
     margin: 2em 0 2em 0;
-
     -webkit-touch-callout: text;
     -webkit-user-select: text;
     -khtml-user-select: text;
@@ -75,7 +74,6 @@ href,
 a {
     margin: auto;
     color: white;
-    font-weight: bold;
     text-decoration: none;
     transition: 100ms;
     transition-timing-function: ease-in-out;
@@ -123,7 +121,6 @@ a:hover {
 }
 
 nav {
-    font-size: 18px;
     background: var(--nav-footer);
     text-transform: none;
     width: 100%;
@@ -141,11 +138,12 @@ nav {
 }
 
 .nav__item {
+    font-size: 18px;
     display: inline-block;
     box-sizing: border-box;
     line-height: 1em;
-    width: 8em;
-    height: 4em;
+    width: 10em;
+    height: 3em;
 }
 
 .nav__item a {
