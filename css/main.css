@@ -55,7 +55,6 @@ main [class*="col-"] {
 
 p {
     font-size: 18px;
-    /* font-size: 3vmin; */
 }
 
 footer {
@@ -78,7 +77,6 @@ a {
     color: white;
     font-weight: bold;
     text-decoration: none;
-
     transition: 100ms;
     transition-timing-function: ease-in-out;
     -webkit-transition: 100ms;
@@ -120,7 +118,7 @@ a:hover {
 #menu {
     color: white;
     font-size: 1.5em;
-    padding: calc(100% * 0.1);
+    padding: 10%;
     cursor: default;
 }
 
@@ -133,7 +131,6 @@ nav {
 
 .nav.open {
     display: block;
-    /* transition: height 10s; */
 }
 
 .nav__list {
@@ -146,9 +143,17 @@ nav {
 .nav__item {
     display: inline-block;
     box-sizing: border-box;
-    text-align: center;
     line-height: 1em;
-    padding: 1.5em;
+    width: 8em;
+    height: 4em;
+}
+
+.nav__item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 .footer__logo {
@@ -235,6 +240,7 @@ nav {
 
     .nav__item {
         display: list-item;
+        width: 100%;
     }
 }
 
