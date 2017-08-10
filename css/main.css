@@ -239,6 +239,7 @@ nav {
     .nav__item {
         display: list-item;
         width: 100%;
+        height: 5em;
     }
 }
 
