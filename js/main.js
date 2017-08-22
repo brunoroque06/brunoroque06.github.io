@@ -1,17 +1,4 @@
 
-var menu = document.querySelector('#menu');
-var body = document.querySelector('body');
-var drawer = document.querySelector('nav');
-
-menu.addEventListener('click', function(e) {
-    drawer.classList.toggle('open');
-    e.stopPropagation();
-});
-
-body.addEventListener('click', function() {
-    drawer.classList.remove('open');
-});
-
 var projects = [
     {
         name: "Block Chain",
