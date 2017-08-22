@@ -42,7 +42,8 @@ body.prepend(htmlHeader);
 body.append(htmlFooter);
 
 var menu = document.querySelector('#menu');
-var drawer = document.querySelector('nav');
+var drawer = document.querySelector('.nav');
+var body = document.querySelector('body');
 
 menu.addEventListener('click', function(e) {
     drawer.classList.toggle('open');

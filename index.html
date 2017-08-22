@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="css/main.css">
     <meta name="theme-color" content="#2c3d51">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function downloadJSAtOnload() {
+            var element = document.createElement("script");
+            element.src = "js/common.js";
+            document.body.appendChild(element);
+        }
+        if (window.addEventListener)
+            window.addEventListener("load", downloadJSAtOnload, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", downloadJSAtOnload);
+        else window.onload = downloadJSAtOnload;
+    </script>
 </head>
 <body>
     
@@ -25,6 +37,5 @@
         </div>
     </main>
 
-    <script src="js/common.js"></script>
 </body>
 </html>
