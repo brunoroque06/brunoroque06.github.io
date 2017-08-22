@@ -12,7 +12,6 @@ body.addEventListener('click', function() {
     drawer.classList.remove('open');
 });
 
-
 var projects = [
     {
         name: "Block Chain",
