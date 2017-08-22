@@ -1,5 +1,5 @@
 
-var projects = [
+var goodPractices = [
     {
         name: "Block Chain",
         description: "",

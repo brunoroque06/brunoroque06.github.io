@@ -17,7 +17,7 @@ var htmlHeader =
 <div class="nav_container">
     <nav class="nav">
         <ul class="nav__list">
-            <li class="nav__item"><a href="">About</a></li>
+            <li class="nav__item"><a href="index.html" rel="noopener">About</a></li>
             <li class="nav__item"><a href="https://github.com/BrunoRoque06/" target="_blank" rel="noopener">Projects</a></li>
         </ul>
     </nav>
