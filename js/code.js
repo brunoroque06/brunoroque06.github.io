@@ -48,9 +48,9 @@ var references = [
 ];
 
 var stringToReplace = "%data%";
-var htmlHeader3 = '<div class="row"><h3>' + stringToReplace + '</h3></div>';
-var htmlHeader4 = '<div class="row"><h4>' + stringToReplace + '</h4></div>';
-var htmlParagraph = '<div class="row"><p>' + stringToReplace + '</p></div>';
+var htmlHeader3 = '<div class="row"><div class="col-12"><h3>' + stringToReplace + '</h3></div></div>';
+var htmlHeader4 = '<div class="row"><div class="col-12"><h4>' + stringToReplace + '</h4></div></div>';
+var htmlParagraph = '<div class="row"><div class="col-12"><p>' + stringToReplace + '</p></div></div>';
 
 intel.display = function() {
     var main = $('main');

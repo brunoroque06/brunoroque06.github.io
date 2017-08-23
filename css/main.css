@@ -52,6 +52,16 @@ main [class*="col-"] {
     padding: 0.5em;
 }
 
+main h2,
+main h3 {
+    color: var(--nav-footer);
+    border-bottom: 0.1em solid var(--nav-footer);
+}
+
+main h4 {
+    color: var(--nav-footer);
+}
+
 p {
     font-size: 18px;
 }
