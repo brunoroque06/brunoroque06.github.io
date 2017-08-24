@@ -21,19 +21,6 @@ var intel = [
             }]
     },
     {
-        title: "Environment",
-        entries: [
-            {
-                subtitle: "Build Requires More Than One Step",
-                description: ["Building a project should be a single trivial operation. One should be able to check out the system with a simple command and then issue another simple command to build it."]
-            },
-            {
-                subtitle: "Tests Require More Than One Step",
-                description: ["One should be able to run all the unit tests with just one command. Being able to run all the tests is so fundamental and so important that it should be quick, easy, and obvious to do."]
-            }
-        ],
-    },
-    {
         title: "Functions",
         entries: [
             {
@@ -58,11 +45,15 @@ var intel = [
         title: "General",
         entries: [
             {
+                subtitle: "Builds Should Be a One Step Process",
+                description: ["Building a project should be a single trivial operation. One should be able to check out the system with a simple command and then issue another simple command to build it."]
+            },
+            {
                 subtitle: "Multiple Languages in One Source File",
                 description: ["Modern programming environments make it possible to put many different languages into a single source file. For example, a Java source file might contain snippets of XML, HTML, YAML, JavaDoc, English, JavaScript, and so on. This is confusing at best and carelessly sloppy at worst.", "The ideal is for a source file to contain one, and only one, language. Realistically, we will probably have to use more than one. But we should take pains to minimize both the number and extent of extra languages in our source files."]
             },
             {
-                subtitle: "Obvious Behavior Is Unimplemented",
+                subtitle: "The Principle of Least Surprise",
                 description: ['Following "The Principle of Least Surprise", any function or class should implement the behaviors that another programmer could reasonably expect.', 'For example, a function that translates the name of a day to an <code>enum</code> that represents the day: <code>Day day = DayDate.StringToDay(String dayName)</code>. It is expected the string "Monday" to be translated to <code>Day.MONDAY</code>. It is also expected the common abbreviations to be translated, and the function to ignore case.', "When an obvious behavior is not implemented, readers and users of the code can no longer depend on their intuition about function names. They lose their trust in the original author and must fall back on reading the details of the code."]
             },
             {
@@ -118,7 +109,7 @@ var intel = [
                 description: ['<code>Math.max(double a, double b)</code> is a good static method. It does not operate on a single instance; indeed, it would make no sense to have to say <code>new Math().max(a,b)</code> or even <code>a.max(b)</code>. All the data that <code>max</code> uses comes from its two arguments, and not from any "owning" object.', "Now take the following method: <code>HourlyPayCalculator.calculatePay(employee, overtimeRate)</code>. This might seem like a reasonable static function, because it does not operate on any particular object and gets all it’s data from it’s arguments. However, there is a reasonable chance that this function should be polymorphic. This method should not be static if more than one implementation is needed for calculating hourly pay: <code>OvertimeHourlyPayCalculator</code>, or <code>StraightTimeHourlyPayCalculator</code>. It should be a nonstatic member function of <code>Employee</code>."]
             },
             {
-                subtitle: "Use Explanatory Variables",
+                subtitle: "Explanatory Variables Should Be Used",
                 description: ["One of the more powerful ways to make a program readable is to break the calculations up into intermediate values that are held in variables with meaningful names. It is remarkable how an opaque module can suddenly become transparent simply by breaking the calculations up into well-named intermediate values."]
             },
             {
@@ -130,15 +121,15 @@ var intel = [
                 description: ["Lots of very funny code is written because people don’t take the time to understand the algorithm. They get something to work by plugging in enough <code>if</code> statements and flags, without really stopping to consider what is really going on. This should not happen.", "Often the best way to gain this knowledge and understanding is to refactor the function into something that is so clean and expressive that it is obvious how it works."]
             },
             {
-                subtitle: "Prefer Polymorphism to If/Else or Switch/Case",
+                subtitle: "Polymorphism Should Be Prefered to If/Else or Switch/Case",
                 description: ["Do not use switch statements because it’s the obvious brute force solution, but because it’s the right solution for the situation. Polymorphism should be considered before using a <code>switch</code>.", 'Robert Martin defines the "One Switch" rule: "There may be no more than one switch statement for a given type of selection. The cases in that switch statement must create polymorphic objects that take the place of other such switch statements in the rest of the system."']
             },
             {
-                subtitle: "Follow Standard Conventions",
+                subtitle: "Standard Conventions Should Be Followed",
                 description: ["Every team should follow a coding standard based on common industry norms. This coding standard should specify things like where to declare instance variables; how to name classes, methods, and variables; where to put braces; and so on. The team should not need a document to describe these conventions because their code provides the examples."]
             },
             {
-                subtitle: "Replace Magic Numbers with Named Constants",
+                subtitle: "Magic Numbers Should Be Replaced with Named Constants",
                 description: ["In general, it is a bad idea to have raw numbers in the code. They should be hidden behind well-named constants: <code>PI</code>, <code>EARTH_RADIUS_IN_METER</code>, etc."]
             },
             {
@@ -146,11 +137,11 @@ var intel = [
                 description: ["Enforce design decisions with structure over convention. Naming conventions are good, but they are inferior to structures that force compliance. For example, <code>switch/cases</code> with nicely named enumerations are inferior to base classes with abstract methods. No one is forced to implement the <code>switch/case</code> statement the same way each time; but the base classes do enforce that concrete classes have all abstract methods implemented."]
             },
             {
-                subtitle: "Encapsulate Conditionals",
+                subtitle: "Conditionals Should Be Encapsulated",
                 description: ["Boolean logic is hard enough to understand without having to see it in the context of an <code>if</code> or <code>while</code> statement. Extract functions that explain the intent of the conditional. For example: <code>if (shouldBeDeleted(timer))</code> is preferable to <code>if (timer.hasExpired() && !timer.isRecurrent())</code>."]
             },
             {
-                subtitle: "Avoid Negative Conditionals",
+                subtitle: "Negative Conditionals Should Be Avoided",
                 description: ["Negatives are just a bit harder to understand than positives. So, when possible, conditionals should be expressed as positives. For example: <code>if (buffer.shouldCompact())</code> is preferable to <code>if (!buffer.shouldNotCompact())</code>"]
             },
             {
@@ -162,7 +153,7 @@ var intel = [
                 description: ["Temporal couplings are often necessary, but the coupling should not be hidden. The arguments of the methods should be structured so that the order in which methods should be called is obvious. The code itself should enforce this temporal coupling, so that methods are not executed in a different order than intended."]
             },
             {
-                subtitle: "Encapsulate Boundary Conditions",
+                subtitle: "Boundary Conditions Should Be Encapsulated",
                 description: ["Boundary conditions are hard to keep track of, so they should not be all over the code. Swarms of <code>+1</code>s and <code>-1</code>s should be avoided by encapsulating these into variables."]
             },
             {
@@ -170,15 +161,15 @@ var intel = [
                 description: ["The statements within a function should all be written at the same level of abstraction, which should be one level below the operation described by the name of the function. This is one of the hardest heuristic to interpret and follow. Separating levels of abstraction is one of the most important functions of refactoring, and it’s one of the hardest to do well."]
             },
             {
-                subtitle: "Keep Configurable Data at High Levels",
+                subtitle: "Configurable Data Should Be at High Levels",
                 description: ["If there is a constant such as a default or configuration value that is known and expected at a high level of abstraction, they should not be hidden in a low-level method. It should be exposed as an argument to that low-level method called from the high-level method."]
             },
             {
-                subtitle: "Avoid Transitive Navigation",
+                subtitle: "Transitive Navigation Should Be Avoided",
                 description: ['In general it is not desirable for a single module to know much about its collaborators. More specifically, if <code>A</code> collaborates with <code>B</code>, and <code>B</code> collaborates with <code>C</code>, modules that use A should not know about C. The following example should be avoided: </code>a.getB().getC().doSomething()</code>. This rule is called "Law of Demeter", or "Writing Shy Code".', "The problem with this is that architectures become rigid, and the copling is high. Too many modules know too much about the architecture."]
             },
             {
-                subtitle: "Don’t Inherit Constants",
+                subtitle: "Inherit Constants Should Not Be Inherited",
                 description: ["Constants should not be inherited, because they will be hidden and hard to find. It is better to use static imports, so that it becomes obvious where they come from."]
             },
             {
@@ -191,8 +182,57 @@ var intel = [
         title: "Names",
         entries: [
             {
-                subtitle: "Choose Descriptive Names",
-                description: [""]
+                subtitle: "Descriptive Names Should Be Used",
+                description: ["Names should be descriptive. Meanings tend to drift as software evolves, so the appropriateness of the names should be frequently reevaluated. Names are too important to treat carelessly.", "The power of carefully chosen names is that they overload the structure of the code with description, thus eliminating the need for commentaries."]
+            },
+            {
+                subtitle: "Names at the Appropriate Level of Abstraction",
+                description: ["Names should not communicate implementation; names should reflect the level of abstraction of the class or function they are in. This is hard to do, as it is very easy to mix levels of abstractions. Making code readable requires a dedication to continuous improvement."]
+            },
+            {
+                subtitle: "Standard Nomenclature Where Possible",
+                description: ["Names are easier to understand if they are based on existing convention or usage. For example, if when using the <code>DECORATOR</code> pattern, the word Decorator should be used in the names of the decorating classes. For example <code>AutoHangupModemDecorator</code> might be the name of a class that decorates a Modem with the ability to automatically hang up at the end of a session.", "Patterns are just one kind of standard. In Java, for example, functions that convert objects to string representations are often named <code>toString</code>. It is better to follow existing conventions like these than to create new ones."]
+            },
+            {
+                subtitle: "Long Names for Long Scopes",
+                description: ["The length of a name should be related to the length of the scope. Short variable names should be used for tiny scopes, but for big scopes longer names should be used.", "Variable names like <code>i</code> and <code>j</code> are just fine if their scope is five lines long, like a <code>for</code> statement. On the other hand, variables and functions with short names lose their meaning over long distances. So the longer the scope, the longer and more precise the name should be."]
+            },
+            {
+                subtitle: "Names Should Describe Side-Effects",
+                description: ["Names should describe everything that a function, variable, or class is or does. Side effects should not be hidden with a name. A simple verb should not be used to describe a function that does more than just that simple action."]
+            }
+        ]
+    },
+    {
+        title: "Tests",
+        entries: [
+            {
+                subtitle: "Insufficient Tests",
+                description: ["How many tests should be in a test suite? A test suite should test everything that could possibly break. The tests are insufficient so long as there are conditions that have not been explored by the tests or calculations that have not been validated."]
+            },
+            {
+                subtitle: "Coverage Tool",
+                description: ["Coverage tools reports gaps in testing strategies. They make it easy to find modules, classes, and functions that are insufficiently tested. Most IDEs gives a visual indication, marking lines that are covered in green and those that are uncovered in red. This makes it quick and easy to find if or catch statements whose bodies haven’t been checked."]
+            },
+            {
+                subtitle: "Trivial Tests Should Not Be Skipped",
+                description: ["They are easy to write and their documentary value is higher than the cost to produce them."]
+            },
+            {
+                subtitle: "Boundary Conditions Should Be Tested",
+                description: ["It is very easy to misjudge test boundary conditions. They should be fully tested."]
+            },
+            {
+                subtitle: "Near Bugs Should Be Exhaustively Tested",
+                description: ["Bugs tend to congregate. When a bug is found in a function, it is wise to do an exhaustive test of that function. Maybe that bug was not alone."]
+            },
+            {
+                subtitle: "Tests Should Be Fast",
+                description: ["A slow test is a test that won’t get run. When things get tight, it’s the slow tests that will be dropped from the suite. Tests should run as fast as possible."]
+            },
+            {
+                subtitle: "Tests Should Require One Step",
+                description: ["One should be able to run all the unit tests with just one command. Being able to run all the tests is so fundamental and so important that it should be quick, easy, and obvious to do."]
             }
         ]
     },
