@@ -12,8 +12,7 @@ var intel = [
             },
             {
                 subtitle: "Redundant Comment",
-                description: ["A comment is redundant if it describes something that adequately describes itself. Comments should say things that the code cannot say for itself."],
-                badExample: "i++; // increment i"
+                description: ["A comment is redundant if it describes something that adequately describes itself. Comments should say things that the code cannot say for itself. The following is a highly redundant comment: <code>i++; // increment i</code>."]
             },
             {
                 subtitle: "Commented-Out Code",
@@ -233,6 +232,13 @@ var intel = [
             {
                 subtitle: "Tests Should Require One Step",
                 description: ["One should be able to run all the unit tests with just one command. Being able to run all the tests is so fundamental and so important that it should be quick, easy, and obvious to do."]
+            },
+            {
+                subtitle: "Test Double",
+                description: ["Every example presented here will be an implementation of the following interface:", "Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists. Example:"],
+                code: `interface Authorizer {
+    public Boolean authorize(String username, String password);
+}`
             }
         ]
     },
@@ -240,36 +246,45 @@ var intel = [
         title: "Unified Modeling Language (UML)",
         entries: [
             {
-                subtitle: "Inappropriate Information",
-                description: "Alguma informação",
-                example: ""
+                subtitle: "Association",
+                description: ["Association is merely invoking a method of another object via a reference to that object (received on a method for instance). Notation is an arrow pointing to the referenced class: <code>[Dog]->[Toy]</code>."]
             },
             {
-                subtitle: "Obsolete Comment",
-                description: "Alguma informação",
-                example: ""
+                subtitle: "Aggregation",
+                description: ["Implies a relationship where the child can exist independently of the parent. Delete the parent and the child still exists. Child can be received in the parent's constructor for example. Notation: <code>[Parent]◇->[Child]</code>."]
             },
             {
-                subtitle: "Redundant Comment",
-                description: "Alguma informação",
-                example: ""
-            }]
+                subtitle: "Composition",
+                description: ["Implies a relationship where the child cannot exist independent of the parent. Child can be instantiated in the parent’s constructor for example. Notation: <code>[House]◆->[Roof]</code>."]
+            },
+            {
+                subtitle: "Inheritance",
+                description: ["Inheritance enables subclasses to take on the properties of existing classes. Notation: [Base]⇽[Derived]."]
+            },
+            {
+                subtitle: "Interface Inheritance",
+                description: ["Interface inheritance enables a class to implement an abstract class, interface. Notation: [Interface]⇠[Implementation]."]
+            }
+        ]
     },
 ];
 
 var references = [
-    "Clean Code, by Robert Martin",
-    "The Pragmatic Programmer, by Andrew Hunt and David Thomas",
-    "Refactor, by Martin Fowler",
-    'The Little Mocker, <a href="https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html" target="_blank" rel="noopener">Article</a>',
-    'Clean Code Javascript, <a href="https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html" target="_blank" rel="noopener">GitHub Page</a>',
-    'Unified Modeling Language (UML), <a href="https://yuml.me/" target="_blank" rel="noopener">yUML</a>'
+    "Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.",
+    "The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.",
+    "Refactoring: Improving the Design of Existing Code, by Martin Fowler, 1999.",
+    'The Little Mocker, by Robert Martin, <a href="https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html" target="_blank" rel="noopener">Blog</a>.',
+    'Clean Code Javascript, by Ryan McDermott, <a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="noopener">GitHub</a>.',
+    'Unified Modeling Language (UML), <a href="https://yuml.me/" target="_blank" rel="noopener">yUML</a>.',
+    'Mocks Are Not Stubs, by Martin Fowler, <a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Article</a>.'
 ];
 
 var stringToReplace = "%data%";
 var htmlHeader3 = '<div class="row"><div class="col-12"><h3>' + stringToReplace + '</h3></div></div>';
 var htmlHeader4 = '<div class="row"><div class="col-12"><h4>' + stringToReplace + '</h4></div></div>';
 var htmlParagraph = '<div class="row"><div class="col-12"><p>' + stringToReplace + '</p></div></div>';
+var htmlCode = '<div class="row"><div class="col-12"><p><code>' + stringToReplace + '</code></p></div></div>';
+
 
 intel.display = function () {
     var main = $('main');
@@ -286,15 +301,15 @@ intel.display = function () {
                 main.append(entryDescription);
             });
 
-            if (isExampleValid(entry.example)) {
-                var entryExample = htmlParagraph.replace(stringToReplace, entry.example);
-                main.append(entryExample);
+            if (isValid(entry.code)) {
+                var entryCode = htmlCode.replace(stringToReplace, entry.code);
+                main.append(entryCode);
             }
         });
     });
 };
 
-function isExampleValid(example) {
+function isValid(example) {
     return typeof example === 'string' && example.length > 0;
 };
 
