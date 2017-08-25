@@ -252,7 +252,7 @@ var intel = [
             },
             {
                 subtitle: "Test Double",
-                description: ["Every example presented here will be an implementation of the following interface:", "Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists. Example:", codeSymbol + `interface Authorizer {
+                description: ["Every example presented here will be an implementation of the following interface:", codeSymbol + `interface Authorizer {
     public Boolean authorize(String username, String password);
 }`, "Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists. Example:", codeSymbol + `public class DummyAuthorizer implements Authorizer {
     public Boolean authorize(String username, String password) {
@@ -293,7 +293,7 @@ var intel = [
         entries: [
             {
                 subtitle: "Association",
-                description: ["Association is merely invoking a method of another object via a reference to that object (received on a method for instance). Notation: <code>[Dog]->[Toy]</code>."]
+                description: ["Association is merely invoking a method of another object via a reference to that object (received on a method for instance). Notation: <code>[Dog]->[Ball]</code>."]
             },
             {
                 subtitle: "Aggregation",
@@ -325,31 +325,34 @@ var references = [
     '<a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Mocks Are Not Stubs</a>, by Martin Fowler.'
 ];
 
-var stringToReplace = "%data%";
-var htmlHeader3 = '<div class="row"><div class="col-12"><h3>' + stringToReplace + '</h3></div></div>';
-var htmlHeader4 = '<h4>' + stringToReplace + '</h4>';
-var htmlParagraph = '<p>' + stringToReplace + '</p>';
-var htmlCode = '<p class="code-example"><code>' + stringToReplace + '</code></p>';
-var htmlToC = '<div class="row"><div class="col-12"><h3>' + stringToReplace + '</h3><ul id="toc"></ul></div></div>';
+var numberOfHeader3 = 1;
+var stringIdToReplace = "%id%";
+var stringTextToReplace = "%text%";
+var htmlHeader3 = '<div class="row"><div class="col-12"><h3 id="' + stringIdToReplace + '">' + stringTextToReplace + '</h3></div></div>';
+var htmlHeader4 = '<h4>' + stringTextToReplace + '</h4>';
+var htmlParagraph = '<p>' + stringTextToReplace + '</p>';
+var htmlCode = '<p class="code-example"><code>' + stringTextToReplace + '</code></p>';
+var htmlToC = '<div class="col-6"><h2>' + stringTextToReplace + '</h2><ol id="toc"></ol></div>';
 
 intel.display = function () {
     var main = $('main');
     this.forEach(function (topic) {
-        var topicTitle = htmlHeader3.replace(stringToReplace, topic.title);
+        var topicTitle = htmlHeader3.replace(stringTextToReplace, topic.title).replace(stringIdToReplace, numberOfHeader3);
+        numberOfHeader3++;
         main.append(topicTitle);
 
         var lastCol = $('main .col-12').last();
 
         topic.entries.forEach(function (entry) {
-            var entryTitle = htmlHeader4.replace(stringToReplace, entry.subtitle);
+            var entryTitle = htmlHeader4.replace(stringTextToReplace, entry.subtitle);
             lastCol.append(entryTitle);
 
             entry.description.forEach(function (paragraph) {
                 var entryParagraph;
                 if (isText(paragraph)) {
-                    entryParagraph = htmlParagraph.replace(stringToReplace, paragraph);
+                    entryParagraph = htmlParagraph.replace(stringTextToReplace, paragraph);
                 } else {
-                    entryParagraph = htmlCode.replace(stringToReplace, paragraph.slice(1));
+                    entryParagraph = htmlCode.replace(stringTextToReplace, paragraph.slice(1));
                 }
                 lastCol.append(entryParagraph);
             });
@@ -367,11 +370,12 @@ function isValid(object) {
 
 references.display = function () {
     var main = $('main');
-    var referencesTitle = htmlHeader3.replace(stringToReplace, "References");
+    var referencesTitle = htmlHeader3.replace(stringTextToReplace, "References").replace(stringIdToReplace, numberOfHeader3);
+    numberOfHeader3++;
     main.append(referencesTitle);
 
     this.forEach(function (referenceString) {
-        var reference = htmlParagraph.replace(stringToReplace, referenceString);
+        var reference = htmlParagraph.replace(stringTextToReplace, referenceString);
         var lastCol = $('main .col-12').last();
         lastCol.append(reference);
     });
@@ -380,12 +384,14 @@ references.display = function () {
 function printToC() {
     var headers = $("main h3");
     
-    var tagToc = htmlToC.replace(stringToReplace, "Table of Content");
-    $("main .row:first-child").after(tagToc);
+    var tagToc = htmlToC.replace(stringTextToReplace, "Table of Content");
+    $("main .row:first-child").append(tagToc);
 
+    var referenceNumber = 1;
     var toc = $('#toc');
     headers.each(function(header) {
-        toc.append('<li>' + $(this).text() + '</li>');
+        toc.append('<a href="#' + referenceNumber + '"><li>' + $(this).text() + '</li></a>');
+        referenceNumber++;
     });
 }
 
