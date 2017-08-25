@@ -208,51 +208,51 @@ footer {
 }
 
 .col-1 {
-    width: calc(1 * 100% / 12);
+    width: 8.33%;
 }
 
 .col-2 {
-    width: calc(2 * 100% / 12);
+    width: 16.66%;
 }
 
 .col-3 {
-    width: calc(3 * 100% / 12);
+    width: 25%;
 }
 
 .col-4 {
-    width: calc(4 * 100% / 12);
+    width: 33.33%;
 }
 
 .col-5 {
-    width: calc(5 * 100% / 12);
+    width: 41.66%;
 }
 
 .col-6 {
-    width: calc(6 * 100% / 12);
+    width: 50%;
 }
 
 .col-7 {
-    width: calc(7 * 100% / 12);
+    width: 58.33%;
 }
 
 .col-8 {
-    width: calc(8 * 100% / 12);
+    width: 66.66%;
 }
 
 .col-9 {
-    width: calc(9 * 100% / 12);
+    width: 75%;
 }
 
 .col-10 {
-    width: calc(10 * 100% / 12);
+    width: 83.33%;
 }
 
 .col-11 {
-    width: calc(11 * 100% / 12);
+    width: 91.66%;
 }
 
 .col-12 {
-    width: calc(12 * 100% / 12);
+    width: 100%;
 }
 
 @media only screen and (max-width: 250px) {
