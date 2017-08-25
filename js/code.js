@@ -1,3 +1,6 @@
+
+var codeSymbol = "⚡";
+
 var intel = [
     {
         title: "Comments",
@@ -12,7 +15,7 @@ var intel = [
             },
             {
                 subtitle: "Redundant Comment",
-                description: ["A comment is redundant if it describes something that adequately describes itself. Comments should say things that the code cannot say for itself. The following is a highly redundant comment: <code>i++; // increment i</code>."]
+                description: ["A comment is redundant if it describes something that adequately describes itself. Comments should say things that the code cannot say for itself. The following is a highly redundant comment.", codeSymbol + "<code>i++; // increment i</code>"]
             },
             {
                 subtitle: "Commented-Out Code",
@@ -53,7 +56,7 @@ var intel = [
             },
             {
                 subtitle: "The Principle of Least Surprise",
-                description: ['Following "The Principle of Least Surprise", any function or class should implement the behaviors that another programmer could reasonably expect.', 'For example, a function that translates the name of a day to an <code>enum</code> that represents the day: <code>Day day = DayDate.StringToDay(String dayName)</code>. It is expected the string "Monday" to be translated to <code>Day.MONDAY</code>. It is also expected the common abbreviations to be translated, and the function to ignore case.', "When an obvious behavior is not implemented, readers and users of the code can no longer depend on their intuition about function names. They lose their trust in the original author and must fall back on reading the details of the code."]
+                description: ['Following "The Principle of Least Surprise", any function or class should implement the behaviors that another programmer could reasonably expect. For example, a function that translates the name of a day to an <code>enum</code> that represents the day.', codeSymbol + "<code>Day day = DayDate.StringToDay(String dayName)</code>;", 'It is expected the string "Monday" to be translated to <code>Day.MONDAY</code>. It is also expected the common abbreviations to be translated, and the function to ignore case.', "When an obvious behavior is not implemented, readers and users of the code can no longer depend on their intuition about function names. They lose their trust in the original author and must fall back on reading the details of the code."]
             },
             {
                 subtitle: "Incorrect Behavior at the Boundaries",
@@ -65,7 +68,7 @@ var intel = [
             },
             {
                 subtitle: "Duplication",
-                description: ["Maybe the most important rule of software development: DRY (Don't repeat yourself. A duplication of code represents a missed opportunity for abstraction. That duplication could probably become a subroutine or perhaps another class outright.", "A subtle is the <code>switch/case</code> or <code>if/else</code> chain that appears again and again in various modules, always testing for the same set of conditions. These should be replaced with polymorphism."]
+                description: ["Maybe the most important rule of software development: DRY (Don't Repeat Yourself). A duplication of code represents a missed opportunity for abstraction. That duplication could probably become a subroutine or perhaps another class outright.", "A subtle is the <code>switch/case</code> or <code>if/else</code> chain that appears again and again in various modules, always testing for the same set of conditions. These should be replaced with polymorphism."]
             },
             {
                 subtitle: "Code at Wrong Level of Abstraction",
@@ -235,10 +238,39 @@ var intel = [
             },
             {
                 subtitle: "Test Double",
-                description: ["Every example presented here will be an implementation of the following interface:", "Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists. Example:"],
-                code: `interface Authorizer {
+                description: ["Every example presented here will be an implementation of the following interface:", "Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists. Example:", codeSymbol + `interface Authorizer {
     public Boolean authorize(String username, String password);
-}`
+}`, "Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists. Example:", codeSymbol + `public class DummyAuthorizer implements Authorizer {
+    public Boolean authorize(String username, String password) {
+        return null
+    }
+}`, 'It can be used when an instantiation of an implementation of the interface "Authorizer" is needed, but never really used. It should return <code>null</code>, as that prevents that implementation from being used (<code>NullPointerException</code>).', "Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test. Example:", codeSymbol + `public class AcceptingAuthorizerStub implements Authorizer {
+	public Boolean authorize(String username, String password) {
+		return true;
+	}
+}`, "Stubs can be used to avoid unnecessary coupling.", "Spies are stubs that also record some information based on how they were called. One form of this might be an email service that records how many messages it was sent. Example:", codeSymbol + `public class AcceptingAuthorizerSpy implements Authorizer {
+	public boolean authorizeWasCalled = false;
+
+	public Boolean authorize(String username, String password) {
+		authorizeWasCalled = true;
+		return true;
+	}
+}`, "It might be used when the test wants to be sure that the authorize method was called by the system (or to count how many times it was called for example). Spies can be used to see inside the workings of the algorithms.", "Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected to receive. Example:", codeSymbol + `public class AcceptingAuthorizerVerificationMock implements Authorizer {
+	public boolean authorizeWasCalled = false;
+
+	public Boolean authorize(String username, String password) {
+		authorizeWasCalled = true;
+		return true;
+	}
+
+	public boolean verify() {
+		return authorizedWasCalled;
+	}
+}`, 'Mocks know what they are testing, thus the "verify" method. A mock spies on the behavior of the module being tested. And the mock knows what behavior to expect. Moving the expectation into the mock is like a coupling, but it makes it easier to write a mocking tool.', "Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an in memory database is a good example).", codeSymbol + `public class AcceptingAuthorizerFake implements Authorizer {
+	public Boolean authorize(String username, String password) {
+		return username.equals("Bob");
+	}
+}`, "A fake has business behavior. Mock is a kind of spy, a spy is a kind of stub, and a stub is a kind of dummy. But a fake is not a kind of any of them. It is a completely different kind of test double. They can get extremely complicated. So complicated they need unit tests of their own. At the extremes the fake becomes the real system."],
             }
         ]
     },
@@ -247,7 +279,7 @@ var intel = [
         entries: [
             {
                 subtitle: "Association",
-                description: ["Association is merely invoking a method of another object via a reference to that object (received on a method for instance). Notation is an arrow pointing to the referenced class: <code>[Dog]->[Toy]</code>."]
+                description: ["Association is merely invoking a method of another object via a reference to that object (received on a method for instance). Notation is an arrow pointing to the referenced class <code>[Dog]->[Toy]</code>."]
             },
             {
                 subtitle: "Aggregation",
@@ -281,9 +313,9 @@ var references = [
 
 var stringToReplace = "%data%";
 var htmlHeader3 = '<div class="row"><div class="col-12"><h3>' + stringToReplace + '</h3></div></div>';
-var htmlHeader4 = '<div class="row"><div class="col-12"><h4>' + stringToReplace + '</h4></div></div>';
-var htmlParagraph = '<div class="row"><div class="col-12"><p>' + stringToReplace + '</p></div></div>';
-var htmlCode = '<div class="row"><div class="col-12"><p><code>' + stringToReplace + '</code></p></div></div>';
+var htmlHeader4 = '<h4>' + stringToReplace + '</h4>';
+var htmlParagraph = '<p>' + stringToReplace + '</p>';
+var htmlCode = '<p class="code-example"><code>' + stringToReplace + '</code></p>';
 
 
 intel.display = function () {
@@ -292,27 +324,32 @@ intel.display = function () {
         var topicTitle = htmlHeader3.replace(stringToReplace, topic.title);
         main.append(topicTitle);
 
+        var lastCol = $('main .col-12').last();
+
         topic.entries.forEach(function (entry) {
             var entryTitle = htmlHeader4.replace(stringToReplace, entry.subtitle);
-            main.append(entryTitle);
+            lastCol.append(entryTitle);
 
             entry.description.forEach(function (paragraph) {
-                var entryDescription = htmlParagraph.replace(stringToReplace, paragraph);
-                main.append(entryDescription);
+                var entryParagraph;
+                if (isText(paragraph)) {
+                    entryParagraph = htmlParagraph.replace(stringToReplace, paragraph);
+                } else {
+                    entryParagraph = htmlCode.replace(stringToReplace, paragraph.slice(1));
+                }
+                lastCol.append(entryParagraph);
             });
-
-            if (isValid(entry.code)) {
-                var entryCode = htmlCode.replace(stringToReplace, entry.code);
-                main.append(entryCode);
-            }
         });
     });
 };
 
-function isValid(example) {
-    return typeof example === 'string' && example.length > 0;
-};
+function isText(string) {
+    return string[0] === codeSymbol ? false : true;
+}
 
+function isValid(object) {
+    return typeof object === 'string' && object.length > 0;
+};
 
 references.display = function () {
     var main = $('main');
@@ -321,7 +358,8 @@ references.display = function () {
 
     this.forEach(function (referenceString) {
         var reference = htmlParagraph.replace(stringToReplace, referenceString);
-        main.append(reference);
+        var lastCol = $('main .col-12').last();
+        lastCol.append(reference);
     });
 };
 

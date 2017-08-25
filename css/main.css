@@ -59,18 +59,28 @@ main h3 {
 }
 
 main h4 {
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    font-size: 18px;
     color: var(--nav-footer);
 }
 
 p {
     font-size: 18px;
     text-align: justify;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
 }
 
 code {
-    /* display: block; */
     white-space: pre-wrap;
     word-break: break-all;
+}
+
+.code-example {
+    background: var(--nav-footer);
+    color: white;
+    padding: 1em;
 }
 
 footer {
