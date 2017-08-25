@@ -65,7 +65,7 @@ main h4 {
     color: var(--nav-footer);
 }
 
-p {
+p, ol {
     font-size: 18px;
     text-align: justify;
     -webkit-margin-before: 1em;

@@ -15,7 +15,7 @@ var intel = [
             },
             {
                 subtitle: "Redundant Comment",
-                description: ["A comment is redundant if it describes something that adequately describes itself. Comments should say things that the code cannot say for itself. The following is a highly redundant comment.", codeSymbol + "<code>i++; // increment i</code>"]
+                description: ["A comment is redundant if it describes something that adequately describes itself. Comments should say things that the code cannot say for itself. The following is a highly redundant comment:", codeSymbol + "i++; // increment i", "Good code mostly documents itself."]
             },
             {
                 subtitle: "Commented-Out Code",
@@ -47,6 +47,10 @@ var intel = [
         title: "General",
         entries: [
             {
+                subtitle: "S.O.L.I.D.",
+                description: ["<ol><li>Single responsibility principle (SRP), a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class);</li><li>Open/closed principle (OCP), software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification;</li><li>Liskov substitution principle (LSP), objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program;</li><li>Interface segregation principle (ISP), many client-specific interfaces are better than one general-purpose interface;</li><li>Dependency inversion principle (DIP), one should depend upon abstractions, [not] concretions.</li>"]
+            },
+            {
                 subtitle: "Builds Should Be a One Step Process",
                 description: ["Building a project should be a single trivial operation. One should be able to check out the system with a simple command and then issue another simple command to build it."]
             },
@@ -56,7 +60,7 @@ var intel = [
             },
             {
                 subtitle: "The Principle of Least Surprise",
-                description: ['Following "The Principle of Least Surprise", any function or class should implement the behaviors that another programmer could reasonably expect. For example, a function that translates the name of a day to an <code>enum</code> that represents the day.', codeSymbol + "<code>Day day = DayDate.StringToDay(String dayName)</code>;", 'It is expected the string "Monday" to be translated to <code>Day.MONDAY</code>. It is also expected the common abbreviations to be translated, and the function to ignore case.', "When an obvious behavior is not implemented, readers and users of the code can no longer depend on their intuition about function names. They lose their trust in the original author and must fall back on reading the details of the code."]
+                description: ['Following "The Principle of Least Surprise", any function or class should implement the behaviors that another programmer could reasonably expect. For example, a function that translates the name of a day to an <code>enum</code> that represents the day:', codeSymbol + "Day day = DayDate.StringToDay(String dayName);", 'It is expected the string "Monday" to be translated to <code>Day.MONDAY</code>. It is also expected the common abbreviations to be translated, and the function to ignore case.', "When an obvious behavior is not implemented, readers and users of the code can no longer depend on their intuition about function names. They lose their trust in the original author and must fall back on reading the details of the code."]
             },
             {
                 subtitle: "Incorrect Behavior at the Boundaries",
@@ -72,7 +76,13 @@ var intel = [
             },
             {
                 subtitle: "Code at Wrong Level of Abstraction",
-                description: ["It is important to create abstractions that separate higher level general concepts from lower level detailed concepts. Sometimes this is done by creating abstract (base) classes to hold the higher level concepts and derivatives to hold the lower level concepts.", "For example, constants, variables, or utility functions that pertain only to the detailed implementation should not be present in the base class. The base class should know nothing about them."]
+                description: ["It is important to create abstractions that separate higher level general concepts from lower level detailed concepts. Sometimes this is done by creating abstract (base) classes to hold the higher level concepts and derivatives to hold the lower level concepts.", "For example, constants, variables, or utility functions that pertain only to the detailed implementation should not be present in the base class. The base class should know nothing about them. Consider the following code:", codeSymbol + `public interface Stack {
+    Object pop() throws EmptyException;
+    void push(Object o) throws FullException;
+    double percentFull();
+    class EmptyException extends Exception {}
+    class FullException extends Exception {}
+}`, "The <code>percentFull</code> function is at the wrong level of abstraction. Although there are many implementations of <code>Stack</code> where the concept of fullness is reasonable, there are other implementations that simply could not know how full they are. So the function would be better placed in a derivative interface such as <code>BoundedStack</code>."]
             },
             {
                 subtitle: "Base Classes Depending on Their Derivatives",
@@ -108,7 +118,7 @@ var intel = [
             },
             {
                 subtitle: "Inappropriate Static",
-                description: ['<code>Math.max(double a, double b)</code> is a good static method. It does not operate on a single instance; indeed, it would make no sense to have to say <code>new Math().max(a,b)</code> or even <code>a.max(b)</code>. All the data that <code>max</code> uses comes from its two arguments, and not from any "owning" object.', "Now take the following method: <code>HourlyPayCalculator.calculatePay(employee, overtimeRate)</code>. This might seem like a reasonable static function, because it does not operate on any particular object and gets all it’s data from it’s arguments. However, there is a reasonable chance that this function should be polymorphic. This method should not be static if more than one implementation is needed for calculating hourly pay: <code>OvertimeHourlyPayCalculator</code>, or <code>StraightTimeHourlyPayCalculator</code>. It should be a nonstatic member function of <code>Employee</code>."]
+                description: ['<code>Math.max(double a, double b)</code> is a good static method. It does not operate on a single instance; indeed, it would make no sense to have to say <code>new Math().max(a,b)</code> or even <code>a.max(b)</code>. All the data that <code>max</code> uses comes from its two arguments, and not from any "owning" object. Now take the following method.', codeSymbol + "<code>HourlyPayCalculator.calculatePay(employee, overtimeRate)</code>", "This might seem like a reasonable static function, because it does not operate on any particular object and gets all it’s data from it’s arguments. However, there is a reasonable chance that this function should be polymorphic. This method should not be static if more than one implementation is needed for calculating hourly pay: <code>OvertimeHourlyPayCalculator</code>, or <code>StraightTimeHourlyPayCalculator</code>. It should be a nonstatic member function of <code>Employee</code>."]
             },
             {
                 subtitle: "Explanatory Variables Should Be Used",
@@ -116,7 +126,7 @@ var intel = [
             },
             {
                 subtitle: "Function Names Should Say What They Do",
-                description: ["Consider the following method: <code>Date newDate = date.add(5)</code>. Should this method be expected to add five days to the date? Or is it weeks, or hours? Is the <code>date</code> instance changed or does the function just return a new <code>Date</code> without changing the old one? It is not obvious what this function does.", "If the function adds five days to the date and changes the date, then it should be called <code>addDaysTo</code> or <code>increaseByDays</code>. If, on the other hand, the function returns a new date that is five days later but does not change the date instance, it should be called <code>daysLater</code> or <code>daysSince</code>.", "If one has to look at the implementation (or documentation) of the function to know what it does, then a better name should be found, or the functionality rearranged so that it can be placed in functions with better names."]
+                description: ["Consider the following method:", codeSymbol + "Date newDate = date.add(5)", "Should this method be expected to add five days to the date? Or is it weeks, or hours? Is the <code>date</code> instance changed or does the function just return a new <code>Date</code> without changing the old one? It is not obvious what this function does.", "If the function adds five days to the date and changes the date, then it should be called <code>addDaysTo</code> or <code>increaseByDays</code>. If, on the other hand, the function returns a new date that is five days later but does not change the date instance, it should be called <code>daysLater</code> or <code>daysSince</code>.", "If one has to look at the implementation (or documentation) of the function to know what it does, then a better name should be found, or the functionality rearranged so that it can be placed in functions with better names."]
             },
             {
                 subtitle: "Understand the Algorithm",
@@ -140,11 +150,11 @@ var intel = [
             },
             {
                 subtitle: "Conditionals Should Be Encapsulated",
-                description: ["Boolean logic is hard enough to understand without having to see it in the context of an <code>if</code> or <code>while</code> statement. Extract functions that explain the intent of the conditional. For example: <code>if (shouldBeDeleted(timer))</code> is preferable to <code>if (timer.hasExpired() && !timer.isRecurrent())</code>."]
+                description: ["Boolean logic is hard enough to understand without having to see it in the context of an <code>if</code> or <code>while</code> statement. Extract functions that explain the intent of the conditional. For example:", codeSymbol + "if (shouldBeDeleted(timer))", "is preferable to", codeSymbol + "if (timer.hasExpired() && !timer.isRecurrent())"]
             },
             {
                 subtitle: "Negative Conditionals Should Be Avoided",
-                description: ["Negatives are just a bit harder to understand than positives. So, when possible, conditionals should be expressed as positives. For example: <code>if (buffer.shouldCompact())</code> is preferable to <code>if (!buffer.shouldNotCompact())</code>"]
+                description: ["Negatives are just a bit harder to understand than positives. So, when possible, conditionals should be expressed as positives. For example:", codeSymbol + "if (buffer.shouldCompact())", "is preferable to", codeSymbol + "if (!buffer.shouldNotCompact())"]
             },
             {
                 subtitle: "Functions Should Do One Thing",
@@ -200,6 +210,10 @@ var intel = [
                 description: ["The length of a name should be related to the length of the scope. Short variable names should be used for tiny scopes, but for big scopes longer names should be used.", "Variable names like <code>i</code> and <code>j</code> are just fine if their scope is five lines long, like a <code>for</code> statement. On the other hand, variables and functions with short names lose their meaning over long distances. So the longer the scope, the longer and more precise the name should be."]
             },
             {
+                subtitle: "Encoding Should Be Avoided",
+                description: ["Names should not be encoded with type or scope information. Also project and/or subsystem encodings such as <code>vis_</code> (for visual imaging system) are distracting and redundant. Hungarian Notation should not be used."]
+            },
+            {
                 subtitle: "Names Should Describe Side-Effects",
                 description: ["Names should describe everything that a function, variable, or class is or does. Side effects should not be hidden with a name. A simple verb should not be used to describe a function that does more than just that simple action."]
             }
@@ -208,6 +222,10 @@ var intel = [
     {
         title: "Tests",
         entries: [
+            {
+                subtitle: "Test Driven Development (TDD)",
+                description: ["There are only 3 laws for Test Driven Development (TDD): <ol><li>You may not write production code until you have first written a failing unit test;</li><li>You may not write more of a unit test than is sufficient to fail, and not compiling is failing;</li><li>You may not write more production code than is sufficient to pass the currently failing unit test.</li><ol>", "These three laws the software developer into a cycle that is perhaps 30 seconds long. The tests and the production code are written together, with the tests just a few seconds ahead of the production code."]
+            },
             {
                 subtitle: "Insufficient Tests",
                 description: ["How many tests should be in a test suite? A test suite should test everything that could possibly break. The tests are insufficient so long as there are conditions that have not been explored by the tests or calculations that have not been validated."]
