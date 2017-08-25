@@ -31,7 +31,7 @@ var intel = [
             },
             {
                 subtitle: "Output Arguments",
-                description: ["Output arguments are counterintuitive. Readers expect arguments to be inputs, not outputs. If a function must change the state of something, it should change the state of the object it is called on."]
+                description: ["Output arguments are counter intuitive. Readers expect arguments to be inputs, not outputs. If a function must change the state of something, it should change the state of the object it is called on."]
             },
             {
                 subtitle: "Flag Arguments",
@@ -133,7 +133,7 @@ var intel = [
                 description: ["Lots of very funny code is written because people don’t take the time to understand the algorithm. They get something to work by plugging in enough <code>if</code> statements and flags, without really stopping to consider what is really going on. This should not happen.", "Often the best way to gain this knowledge and understanding is to refactor the function into something that is so clean and expressive that it is obvious how it works."]
             },
             {
-                subtitle: "Polymorphism Should Be Prefered to If/Else or Switch/Case",
+                subtitle: "Polymorphism Should Be Preferred to If/Else or Switch/Case",
                 description: ["Do not use switch statements because it’s the obvious brute force solution, but because it’s the right solution for the situation. Polymorphism should be considered before using a <code>switch</code>.", 'Robert Martin defines the "One Switch" rule: "There may be no more than one switch statement for a given type of selection. The cases in that switch statement must create polymorphic objects that take the place of other such switch statements in the rest of the system."']
             },
             {
@@ -178,7 +178,7 @@ var intel = [
             },
             {
                 subtitle: "Transitive Navigation Should Be Avoided",
-                description: ['In general it is not desirable for a single module to know much about its collaborators. More specifically, if <code>A</code> collaborates with <code>B</code>, and <code>B</code> collaborates with <code>C</code>, modules that use A should not know about C. The following example should be avoided: </code>a.getB().getC().doSomething()</code>. This rule is called "Law of Demeter", or "Writing Shy Code".', "The problem with this is that architectures become rigid, and the copling is high. Too many modules know too much about the architecture."]
+                description: ['In general it is not desirable for a single module to know much about its collaborators. More specifically, if <code>A</code> collaborates with <code>B</code>, and <code>B</code> collaborates with <code>C</code>, modules that use A should not know about C. The following example should be avoided: </code>a.getB().getC().doSomething()</code>. This rule is called "Law of Demeter", or "Writing Shy Code".', "The problem with this is that architectures become rigid, and the coupling is high. Too many modules know too much about the architecture."]
             },
             {
                 subtitle: "Inherit Constants Should Not Be Inherited",
