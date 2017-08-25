@@ -320,7 +320,7 @@ var references = [
     "The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.",
     "Refactoring: Improving the Design of Existing Code, by Martin Fowler, 1999.",
     '<a href="https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html" target="_blank" rel="noopener">The Little Mocker</a>, by Robert Martin.',
-    '<a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="noopener">Clean Code Javascript</a>, by Ryan McDermott et al..',
+    '<a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="noopener">Clean Code Javascript</a>, by Ryan McDermott et al.',
     '<a href="https://yuml.me/" target="_blank" rel="noopener">yUML</a>, Unified Modeling Language (UML).',
     '<a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Mocks Are Not Stubs</a>, by Martin Fowler.'
 ];
