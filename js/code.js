@@ -22,16 +22,16 @@ var intel = [
         title: "Functions",
         entries: [
             {
+                subtitle: "Flag Arguments",
+                description: ["Boolean arguments loudly declare that the function does more than one thing. They are confusing and should be eliminated."]
+            },
+            {
                 subtitle: "Too Many Arguments",
                 description: ["Functions should have a small number of arguments. No argument is best, followed by one, two, and three. More than three is very questionable and should be avoided."]
             },
             {
                 subtitle: "Output Arguments",
                 description: ["Output arguments are counter intuitive. Readers expect arguments to be inputs, not outputs. If a function must change the state of something, it should change the state of the object it is called on."]
-            },
-            {
-                subtitle: "Flag Arguments",
-                description: ["Boolean arguments loudly declare that the function does more than one thing. They are confusing and should be eliminated."]
             },
             {
                 subtitle: "Dead Function",
@@ -43,7 +43,7 @@ var intel = [
         title: "General",
         entries: [
             {
-                subtitle: "S.O.L.I.D.",
+                subtitle: "S.O.L.I.D. Principles",
                 description: ["These are the five principles:<ol><li>Single responsibility principle (SRP), a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class);</li><li>Open/closed principle (OCP), software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification;</li><li>Liskov substitution principle (LSP), objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program;</li><li>Interface segregation principle (ISP), many client-specific interfaces are better than one general-purpose interface;</li><li>Dependency inversion principle (DIP), one should depend upon abstractions, [not] concretions.</li>"]
             },
             {
@@ -85,7 +85,7 @@ var intel = [
                 description: ["The most common reason for partitioning concepts into base and derivative classes is so that the higher level base class concepts can be independent of the lower level derivative class concepts. Therefore, base classes should not mention the names of their derivatives. In general, base classes should know nothing about their derivatives.", "Deploying derivatives and bases in different jar files and making sure the base jar files know nothing about the contents of the derivative jar files allow us to deploy our systems in discrete and independent components. When such components are modified, they can be redeployed without having to redeploy the base components. This means that the impact of a change is greatly lessened, and maintaining systems in the field is made much simpler."]
             },
             {
-                subtitle: "Too Much Information",
+                subtitle: "Keeping Coupling Low",
                 description: ["Well-defined modules have very small interfaces that allow developers to do a lot with a little. Poorly defined modules have wide and deep interfaces that force developers to use many different gestures to get simple things done. A well-defined interface does not offer very many functions to depend upon, so coupling is low. A poorly defined interface provides lots of functions that must be called, so coupling is high.", "Good software developers learn to limit what they expose at the interfaces of their classes and modules. The fewer methods a class has, the better. The fewer variables a function knows about, the better. The fewer instance variables a class has, the better."]
             },
             {
@@ -93,7 +93,7 @@ var intel = [
                 description: ["Variables and function should be defined close to where they are used. Local variables should be declared just above their first usage and should have a small vertical scope.", "Private functions should be defined just below their first usage, limiting the vertical distance between the invocations and definitions."]
             },
             {
-                subtitle: "Inconsistency",
+                subtitle: "Consistency",
                 description: ["If a software developer does something in a certain way, he/she should do all similar things in the same way. This goes back to the principle of least surprise. Once a conventions is chosen, it must be followed."]
             },
             {
@@ -319,10 +319,10 @@ var references = [
     "Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.",
     "The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.",
     "Refactoring: Improving the Design of Existing Code, by Martin Fowler, 1999.",
-    'The Little Mocker, by Robert Martin, <a href="https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html" target="_blank" rel="noopener">Blog</a>.',
-    'Clean Code Javascript, by Ryan McDermott, <a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="noopener">GitHub</a>.',
-    'Unified Modeling Language (UML), <a href="https://yuml.me/" target="_blank" rel="noopener">yUML</a>.',
-    'Mocks Are Not Stubs, by Martin Fowler, <a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Article</a>.'
+    '<a href="https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html" target="_blank" rel="noopener">The Little Mocker</a>, by Robert Martin.',
+    '<a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="noopener">Clean Code Javascript</a>, by Ryan McDermott et al..',
+    '<a href="https://yuml.me/" target="_blank" rel="noopener">yUML</a>, Unified Modeling Language (UML).',
+    '<a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Mocks Are Not Stubs</a>, by Martin Fowler.'
 ];
 
 var stringToReplace = "%data%";
@@ -330,7 +330,7 @@ var htmlHeader3 = '<div class="row"><div class="col-12"><h3>' + stringToReplace 
 var htmlHeader4 = '<h4>' + stringToReplace + '</h4>';
 var htmlParagraph = '<p>' + stringToReplace + '</p>';
 var htmlCode = '<p class="code-example"><code>' + stringToReplace + '</code></p>';
-
+var htmlToC = '<div class="row"><div class="col-12"><h3>' + stringToReplace + '</h3><ul id="toc"></ul></div></div>';
 
 intel.display = function () {
     var main = $('main');
@@ -377,5 +377,18 @@ references.display = function () {
     });
 };
 
+function printToC() {
+    var headers = $("main h3");
+    
+    var tagToc = htmlToC.replace(stringToReplace, "Table of Content");
+    $("main .row:first-child").after(tagToc);
+
+    var toc = $('#toc');
+    headers.each(function(header) {
+        toc.append('<li>' + $(this).text() + '</li>');
+    });
+}
+
 intel.display();
 references.display();
+printToC();

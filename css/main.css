@@ -1,7 +1,7 @@
 :root {
-    --header: #26251d;
-    --nav-footer: #2c3d51;
-    --clickable-item: #8d9db6;
+    --dark-grey: #26251d;
+    --dark-blue: #2c3d51;
+    --light-blue: #8d9db6;
 }
 
 * {
@@ -34,7 +34,7 @@ body {
 header {
     color: white;
     text-align: center;
-    background: var(--header);
+    background: var(--dark-grey);
     padding: 0.6em 0 0.6em 0;
 }
 
@@ -55,12 +55,12 @@ main [class*="col-"] {
 
 main h2,
 main h3 {
-    color: var(--nav-footer);
-    border-bottom: 0.1rem solid var(--nav-footer);
+    color: var(--dark-blue);
+    border-bottom: 0.1rem solid var(--dark-blue);
 }
 
 main h4 {
-    color: var(--nav-footer);
+    color: var(--dark-blue);
     -webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
 }
@@ -81,12 +81,12 @@ code {
     color: white;
     padding: 1em;
     margin: 0 2em 0 2em;
-    background: var(--nav-footer);
+    background: var(--dark-blue);
 }
 
 footer {
     padding: 0.3em 0 0.3em 0;
-    background: var(--nav-footer);    
+    background: var(--dark-blue);    
 }
 
 img,
@@ -110,11 +110,12 @@ a {
 }
 
 main a {
-    color: black;
+    color: var(--dark-blue);
+    font-weight: bold;
 }
 
 a:hover {
-    color: var(--clickable-item);
+    color: var(--light-blue);
 }
 
 .clickable__item {
@@ -122,8 +123,8 @@ a:hover {
 }
 
 .clickable__item:hover {
-    color: var(--clickable-item);
-    fill: var(--clickable-item);
+    color: var(--light-blue);
+    fill: var(--light-blue);
 }
 
 .footer__row {
@@ -153,7 +154,7 @@ a:hover {
 }
 
 nav {
-    background: var(--nav-footer);
+    background: var(--dark-blue);
     text-transform: none;
     width: 100%;
 }
@@ -253,7 +254,7 @@ nav {
 
 @media only screen and (max-width: 600px) {
     header {
-        border-bottom: 0.6em solid var(--nav-footer);
+        border-bottom: 0.6em solid var(--dark-blue);
         padding: 0.8em 0 0.8em 0;
     }
 
