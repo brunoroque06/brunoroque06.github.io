@@ -40,7 +40,7 @@ header {
 
 main {
     flex: 1;
-    margin: 2em 0 2em 0;
+    margin: 1em 0 1em 0;    
     -webkit-touch-callout: text;
     -webkit-user-select: text;
     -khtml-user-select: text;
@@ -242,14 +242,15 @@ nav {
     width: calc(12 * 100% / 12);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     html,
     body {
         word-break: break-all;
     }
 
     header {
-        border-bottom: 1em solid var(--nav-footer);
+        border-bottom: 0.6em solid var(--nav-footer);
+        padding: 0.8em 0 0.8em 0;
     }
 
     .header__logo {
