@@ -6,7 +6,7 @@ var htmlHeader =
         </div>
         <div class="col-8 header__title">
             <h1>Bruno Roque</h1>
-            <h2>Software Engineer</h2>
+            <h3>Software Engineer</h3>
         </div>
         <div class="col-2 header__menu">
             <a id="menu">&#9776;</a>
