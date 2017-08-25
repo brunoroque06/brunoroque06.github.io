@@ -77,14 +77,16 @@ code {
 }
 
 .code-example {
-    background: var(--nav-footer);
+    font-size: 0.9em;
     color: white;
     padding: 1em;
+    margin: 0 2em 0 2em;
+    background: var(--nav-footer);
 }
 
 footer {
-    background: var(--nav-footer);
     padding: 0.3em 0 0.3em 0;
+    background: var(--nav-footer);    
 }
 
 img,
@@ -242,12 +244,14 @@ nav {
     width: calc(12 * 100% / 12);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 250px) {
     html,
     body {
         word-break: break-all;
     }
+}
 
+@media only screen and (max-width: 600px) {
     header {
         border-bottom: 0.6em solid var(--nav-footer);
         padding: 0.8em 0 0.8em 0;

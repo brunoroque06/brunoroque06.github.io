@@ -6,16 +6,12 @@ var intel = [
         title: "Comments",
         entries: [
             {
-                subtitle: "Inappropriate Information",
-                description: ["It is inappropriate for a comment to hold information better held in a different kind of system such as source code control systems. Comments should be reserved for technical notes about the code and design"]
+                subtitle: "Redundant Comment",
+                description: ["A comment is redundant if it describes something that adequately describes itself. Comments should say things that the code cannot say for itself. The following is a highly redundant comment:", codeSymbol + "i++; // increment i", "Also, it is inappropriate for a comment to hold information better held in a different kind of system such as source code control systems. Comments should be reserved for technical notes about the code and design.",  "Comments are an apology, not a requirement. Good code mostly documents itself."]
             },
             {
                 subtitle: "Obsolete Comment",
                 description: ["A comment that has gotten old, irrelevant, and incorrect is obsolete. Comments get old quickly. It is best not to write a comment that will become obsolete. If an obsolete comment is found, it is best to update it or get rid of it as quickly as possible. Obsolete comments tend to migrate away from the code they once described."]
-            },
-            {
-                subtitle: "Redundant Comment",
-                description: ["A comment is redundant if it describes something that adequately describes itself. Comments should say things that the code cannot say for itself. The following is a highly redundant comment:", codeSymbol + "i++; // increment i", "Good code mostly documents itself."]
             },
             {
                 subtitle: "Commented-Out Code",
@@ -129,8 +125,8 @@ var intel = [
                 description: ["Consider the following method:", codeSymbol + "Date newDate = date.add(5)", "Should this method be expected to add five days to the date? Or is it weeks, or hours? Is the <code>date</code> instance changed or does the function just return a new <code>Date</code> without changing the old one? It is not obvious what this function does.", "If the function adds five days to the date and changes the date, then it should be called <code>addDaysTo</code> or <code>increaseByDays</code>. If, on the other hand, the function returns a new date that is five days later but does not change the date instance, it should be called <code>daysLater</code> or <code>daysSince</code>.", "If one has to look at the implementation (or documentation) of the function to know what it does, then a better name should be found, or the functionality rearranged so that it can be placed in functions with better names."]
             },
             {
-                subtitle: "Understand the Algorithm",
-                description: ["Lots of very funny code is written because people don’t take the time to understand the algorithm. They get something to work by plugging in enough <code>if</code> statements and flags, without really stopping to consider what is really going on. This should not happen.", "Often the best way to gain this knowledge and understanding is to refactor the function into something that is so clean and expressive that it is obvious how it works."]
+                subtitle: "Understanding the Algorithm",
+                description: ['Algorithms that are not well understood are hard to work with, to change, and to adapt. Even if they are "working", this should not happen. Often the best way to gain knowledge and understanding of an algorithm is to refactor it into something that is so clean and expressive that it is obvious how it works.']
             },
             {
                 subtitle: "Polymorphism Should Be Preferred to If/Else or Switch/Case",
@@ -141,7 +137,7 @@ var intel = [
                 description: ["Every team should follow a coding standard based on common industry norms. This coding standard should specify things like where to declare instance variables; how to name classes, methods, and variables; where to put braces; and so on. The team should not need a document to describe these conventions because their code provides the examples."]
             },
             {
-                subtitle: "Magic Numbers Should Be Replaced with Named Constants",
+                subtitle: "Known Numbers Should Be Replaced with Named Constants",
                 description: ["In general, it is a bad idea to have raw numbers in the code. They should be hidden behind well-named constants: <code>PI</code>, <code>EARTH_RADIUS_IN_METER</code>, etc."]
             },
             {
@@ -178,7 +174,7 @@ var intel = [
             },
             {
                 subtitle: "Transitive Navigation Should Be Avoided",
-                description: ['In general it is not desirable for a single module to know much about its collaborators. More specifically, if <code>A</code> collaborates with <code>B</code>, and <code>B</code> collaborates with <code>C</code>, modules that use A should not know about C. The following example should be avoided: </code>a.getB().getC().doSomething()</code>. This rule is called "Law of Demeter", or "Writing Shy Code".', "The problem with this is that architectures become rigid, and the coupling is high. Too many modules know too much about the architecture."]
+                description: ['In general it is not desirable for a single module to know much about its collaborators. More specifically, if <code>A</code> collaborates with <code>B</code>, and <code>B</code> collaborates with <code>C</code>, modules that use A should not know about C. The following example should be avoided: <code>a.getB().getC().doSomething()</code>. This rule is called "Law of Demeter", or "Writing Shy Code".', "The problem with this is that architectures become rigid, and the coupling is high. Too many modules know too much about the architecture."]
             },
             {
                 subtitle: "Inherit Constants Should Not Be Inherited",
@@ -297,7 +293,7 @@ var intel = [
         entries: [
             {
                 subtitle: "Association",
-                description: ["Association is merely invoking a method of another object via a reference to that object (received on a method for instance). Notation is an arrow pointing to the referenced class <code>[Dog]->[Toy]</code>."]
+                description: ["Association is merely invoking a method of another object via a reference to that object (received on a method for instance). Notation: <code>[Dog]->[Toy]</code>."]
             },
             {
                 subtitle: "Aggregation",
@@ -309,11 +305,11 @@ var intel = [
             },
             {
                 subtitle: "Inheritance",
-                description: ["Inheritance enables subclasses to take on the properties of existing classes. Notation: [Base]⇽[Derived]."]
+                description: ["Inheritance enables subclasses to take on the properties of existing classes. Notation: <code>[Base]⇽[Derived]</code>."]
             },
             {
                 subtitle: "Interface Inheritance",
-                description: ["Interface inheritance enables a class to implement an abstract class, interface. Notation: [Interface]⇠[Implementation]."]
+                description: ["Interface inheritance enables a class to implement an abstract class, interface. Notation: <code>[Interface]⇠[Implementation]</code>."]
             }
         ]
     },
