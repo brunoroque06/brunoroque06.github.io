@@ -390,7 +390,7 @@ function printToC() {
     var referenceNumber = 1;
     var toc = $('#toc');
     headers.each(function(header) {
-        toc.append('<a href="#' + referenceNumber + '"><li>' + $(this).text() + '</li></a>');
+        toc.append('<li class="toc"><a href="#' + referenceNumber + '">' + $(this).text() + '</a></li>');
         referenceNumber++;
     });
 }

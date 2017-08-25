@@ -149,6 +149,15 @@ main a {
     font-weight: bold;
 }
 
+.toc {
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+.toc a {
+    display: block;
+}
+
 p, ol {
     text-align: justify;
     -webkit-margin-before: 1em;
