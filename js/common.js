@@ -2,7 +2,7 @@ var htmlHeader =
 `<header>
     <div class="row">
         <div class="col-2 header__logo">
-            <img class="logo" src="img/Chess.svg" alt="Chess">
+            <img class="logo" src="img/chess.svg" alt="Chess">
         </div>
         <div class="col-8 header__title">
             <h2>Bruno Roque</h2>
