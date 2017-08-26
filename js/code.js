@@ -83,7 +83,7 @@ var intel = [
         entries: [
             {
                 subtitle: "Flag Arguments Should be Avoided",
-                description: ["Boolean arguments loudly declare that a function does more than one thing, thus breaking the single responsibility principle. That function should be divided into more than one functions."]
+                description: ["Boolean arguments loudly declare that a function does more than one thing, thus breaking the single responsibility principle. That function should probably be divided."]
             },
             {
                 subtitle: "Too Many Arguments",
