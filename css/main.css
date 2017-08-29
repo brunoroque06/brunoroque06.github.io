@@ -82,6 +82,7 @@ header {
     font-size: 1.5em;
     padding: 10%;
     cursor: default;
+    font-weight: bold;
 }
 
 nav {
