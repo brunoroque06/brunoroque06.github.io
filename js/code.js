@@ -1,5 +1,7 @@
 
 const codeSymbol = "⚡";
+const lessThan = "&lt;";
+const greaterThan = "&gt;";
 
 const intel = [
     {
@@ -300,6 +302,15 @@ const intel = [
         ]
     },
     {
+        title: "Version Control System (Git)",
+        entries: [
+            {
+                subtitle: "Commands",
+                description: [`Create a repository, in the working directory:`, `${codeSymbol}> git init`, "Clone an existing repository:", `${codeSymbol}> git clone ${lessThan}project-url${greaterThan}`, "Information on the HEAD branch and Staging Area of the repository:", `${codeSymbol}> git status`, "Commit information of the HEAD branch (1 commit per line with the flag), including SHA hash:", `${codeSymbol}> git log --oneline`, "Commit information of only one commit (if no SHA is provided, last commit is shown):", `${codeSymbol}> git show ${lessThan}SHA${greaterThan}`, "Move files from the Working Directory to the Staging Area (adds every file with the flag):", `${codeSymbol}> git add --a`, "Commit every change in the Staging Area to the repository:", `${codeSymbol}> git commit -am ${lessThan}message${greaterThan}`, "Check changes that have been made but have not been committed, yet:", `${codeSymbol}> git diff`, 'Create new branch (flag <code>-d</code> deletes instead):', `${codeSymbol}> git branch ${lessThan}new-branch${greaterThan}`, "Switch active branch (flag <code>-b</code> creates branch):", `${codeSymbol}> git checkout ${lessThan}branch${greaterThan}`, "Merge specified branch into the active branch: ", `${codeSymbol}> git merge ${lessThan}name-of-branch-to-merge${greaterThan}`, "Revert a commit by creating another commit with the exact opposite changes:", `${codeSymbol}> git revert ${lessThan}SHA-to-revert${greaterThan}`, "Reset (erase) commits:", `${codeSymbol}> git reset ${lessThan}SHA${greaterThan}`]
+            }
+        ]
+    },
+    {
         title: "Unified Modeling Language (UML)",
         entries: [
             {
@@ -333,7 +344,8 @@ const references = [
     '<a href="https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html" target="_blank" rel="noopener">The Little Mocker</a>, by Robert Martin.',
     '<a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="noopener">Clean Code Javascript</a>, by Ryan McDermott et al.',
     '<a href="https://yuml.me/" target="_blank" rel="noopener">yUML</a>, Unified Modeling Language (UML).',
-    '<a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Mocks Are Not Stubs</a>, by Martin Fowler.'
+    '<a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Mocks Are Not Stubs</a>, by Martin Fowler.',
+    '<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>, Version Control System Git.'
 ];
 
 let numberOfHeader3 = 1;
