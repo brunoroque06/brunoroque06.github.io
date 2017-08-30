@@ -171,6 +171,10 @@ const intel = [
             {
                 subtitle: "Structure over Convention",
                 description: ["Enforce design decisions with structure over convention. Naming conventions are good, but they are inferior to structures that force compliance. For example, <code>switch/cases</code> with nicely named enumerations are inferior to base classes with abstract methods. No one is forced to implement the <code>switch/case</code> statement the same way each time; but the base classes do enforce that concrete classes have all abstract methods implemented."]
+            },
+            {
+                subtitle: "Broken Window Theory",
+                description: ["This theory states that maintaining and monitoring urban environments to prevent small crimes such as vandalism, public drinking, and toll-jumping helps to create an atmosphere of order and lawfulness, thereby preventing more serious crimes from happening.", "One broken window, left unrepaired for any substantial length of time, instills in the inhabitants of the building a sense of abandonment. So another window gets broken. People start littering. Serious structural damage begins. In a relatively short space of time, the building becomes damaged beyond the owner's desire to fix it, and the sense of abandonment becomes reality.", 'There should be no "broken windows" (bad designs, wrong decisions, poor code) unrepaired. Each one should be fixed as soon as it is discovered.']
             }
         ]
     },
