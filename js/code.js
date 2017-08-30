@@ -1,7 +1,7 @@
 
-var codeSymbol = "⚡";
+const codeSymbol = "⚡";
 
-var intel = [
+const intel = [
     {
         title: "Boundaries & Conditionals",
         entries: [
@@ -326,7 +326,7 @@ var intel = [
     },
 ];
 
-var references = [
+const references = [
     "Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.",
     "The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.",
     "Refactoring: Improving the Design of Existing Code, by Martin Fowler et al, 1999.",
@@ -336,30 +336,30 @@ var references = [
     '<a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Mocks Are Not Stubs</a>, by Martin Fowler.'
 ];
 
-var numberOfHeader3 = 1;
-var stringIdToReplace = "%id%";
-var stringTextToReplace = "%text%";
-var htmlHeader3 = '<div class="row"><div class="col-12"><h3 id="' + stringIdToReplace + '">' + stringTextToReplace + '</h3></div></div>';
-var htmlHeader4 = '<h4>' + stringTextToReplace + '</h4>';
-var htmlParagraph = '<p>' + stringTextToReplace + '</p>';
-var htmlCode = '<p class="code-example"><code>' + stringTextToReplace + '</code></p>';
-var htmlToC = '<div class="col-6"><h2>' + stringTextToReplace + '</h2><ol id="toc"></ol></div>';
+let numberOfHeader3 = 1;
+const stringIdToReplace = "%id%";
+const stringTextToReplace = "%text%";
+const htmlHeader3 = '<div class="row"><div class="col-12"><h3 id="' + stringIdToReplace + '">' + stringTextToReplace + '</h3></div></div>';
+const htmlHeader4 = '<h4>' + stringTextToReplace + '</h4>';
+const htmlParagraph = '<p>' + stringTextToReplace + '</p>';
+const htmlCode = '<p class="code-example"><code>' + stringTextToReplace + '</code></p>';
+const htmlToC = '<div class="col-6"><h2>' + stringTextToReplace + '</h2><ol id="toc"></ol></div>';
 
 intel.display = function () {
-    var main = $('main');
+    let main = $('main');
     this.forEach(function (topic) {
-        var topicTitle = htmlHeader3.replace(stringTextToReplace, topic.title).replace(stringIdToReplace, numberOfHeader3);
+        let topicTitle = htmlHeader3.replace(stringTextToReplace, topic.title).replace(stringIdToReplace, numberOfHeader3);
         numberOfHeader3++;
         main.append(topicTitle);
 
-        var lastCol = $('main .col-12').last();
+        let lastCol = $('main .col-12').last();
 
         topic.entries.forEach(function (entry) {
-            var entryTitle = htmlHeader4.replace(stringTextToReplace, entry.subtitle);
+            let entryTitle = htmlHeader4.replace(stringTextToReplace, entry.subtitle);
             lastCol.append(entryTitle);
 
             entry.description.forEach(function (paragraph) {
-                var entryParagraph;
+                let entryParagraph;
                 if (isText(paragraph)) {
                     entryParagraph = htmlParagraph.replace(stringTextToReplace, paragraph);
                 } else {
@@ -380,26 +380,26 @@ function isValid(object) {
 };
 
 references.display = function () {
-    var main = $('main');
-    var referencesTitle = htmlHeader3.replace(stringTextToReplace, "References").replace(stringIdToReplace, numberOfHeader3);
+    let main = $('main');
+    let referencesTitle = htmlHeader3.replace(stringTextToReplace, "References").replace(stringIdToReplace, numberOfHeader3);
     numberOfHeader3++;
     main.append(referencesTitle);
 
     this.forEach(function (referenceString) {
-        var reference = htmlParagraph.replace(stringTextToReplace, referenceString);
-        var lastCol = $('main .col-12').last();
+        let reference = htmlParagraph.replace(stringTextToReplace, referenceString);
+        let lastCol = $('main .col-12').last();
         lastCol.append(reference);
     });
 };
 
 function printToC() {
-    var headers = $("main h3");
+    let headers = $("main h3");
     
-    var tagToc = htmlToC.replace(stringTextToReplace, "Table of Content");
+    let tagToc = htmlToC.replace(stringTextToReplace, "Table of Content");
     $("main .row:first-child").append(tagToc);
 
-    var referenceNumber = 1;
-    var toc = $('#toc');
+    let referenceNumber = 1;
+    let toc = $('#toc');
     headers.each(function(header) {
         toc.append('<li class="toc"><a href="#' + referenceNumber + '">' + $(this).text() + '</a></li>');
         referenceNumber++;

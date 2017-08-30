@@ -1,4 +1,4 @@
-var htmlHeader = 
+const htmlHeader = 
 `<header>
     <div class="row">
         <div class="col-2 header__logo">
@@ -24,7 +24,7 @@ var htmlHeader =
     </nav>
 </div>`;
 
-var htmlFooter = 
+const htmlFooter = 
 `<footer>
     <div class="row footer__row">
         <a class="clickable__item" href="docs/BrunoRoqueCV.pdf" target="_blank" rel="noopener"><svg class="footer__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.162 240.162"><path d="M39.818 72.494h97.652c3.866 0 7-3.134 7-7s-3.134-7-7-7H39.818c-3.866 0-7 3.134-7 7s3.134 7 7 7zM39.818 96.543h97.652c3.866 0 7-3.134 7-7s-3.134-7-7-7H39.818c-3.866 0-7 3.134-7 7s3.134 7 7 7zM91.477 178.738h-51.66c-3.865 0-7 3.134-7 7s3.135 7 7 7h51.66c3.865 0 7-3.134 7-7s-3.134-7-7-7z"/><path d="M236.763 20.91l-20.58-12.347c-1.592-.955-3.498-1.24-5.3-.79-1.8.45-3.35 1.6-4.304 3.19l-35.83 59.714v-42.32c0-3.866-3.134-7-7-7H7c-3.866 0-7 3.134-7 7v197.24c0 3.866 3.134 7 7 7h156.75c3.866 0 7-3.134 7-7v-81.062l68.414-114.02c1.99-3.315.914-7.614-2.4-9.604zM146.36 157.973l-11.616 9.643 3.042-14.788L204.938 40.91l8.575 5.145-67.152 111.917zM220.717 34.05l-8.575-5.145 2.843-4.736 8.575 5.144-2.842 4.736zM14 218.597V35.357h142.75V94.01l-12.363 20.604c.05-.335.083-.674.083-1.022 0-3.866-3.134-7-7-7H39.818c-3.866 0-7 3.134-7 7s3.134 7 7 7h97.652c1.56 0 2.993-.516 4.156-1.377l-6.856 11.426H39.818c-3.866 0-7 3.135-7 7s3.134 7 7 7h86.552l-1.204 2.007c-.406.677-.695 1.418-.854 2.19l-1.203 5.852H39.817c-3.866 0-7 3.133-7 7s3.134 7 7 7h80.41l-3.216 15.638c-.6 2.91.706 5.883 3.255 7.413 1.114.67 2.36 1 3.6 1 1.598 0 3.186-.546 4.473-1.615l27.88-23.142c.19-.16.357-.344.53-.52v51.134H14z"/></svg> Resume</a>
@@ -37,14 +37,14 @@ var htmlFooter =
     </div>
 </footer>`;
 
-var body = $('body');
+let body = $('body');
 
 body.prepend(htmlHeader);
 body.append(htmlFooter);
 
-var menu = document.querySelector('#menu');
-var drawer = document.querySelector('.nav');
-var body = document.querySelector('body');
+let menu = document.querySelector('#menu');
+let drawer = document.querySelector('.nav');
+body = document.querySelector('body');
 
 menu.addEventListener('click', function(e) {
     drawer.classList.toggle('open');
