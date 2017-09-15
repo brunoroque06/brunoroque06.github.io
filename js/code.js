@@ -62,6 +62,10 @@ const intel = [
     class FullException extends Exception {}
 }`, "The <code>percentFull</code> function is at the wrong level of abstraction. Although there are many implementations of <code>Stack</code> where the concept of fullness is reasonable, there are other implementations that simply could not know how full they are. So the function would be better placed in a derivative interface such as <code>BoundedStack</code>."]
             },
+            {
+                subtitle: "Interface vs Abstract Class",
+                description: ["An Abstract Class defines the characteristics of an object; specifying what an object is. They can be used to reduce the amount of code that has to be rewritten in its subclasses: Template Pattern.", "An Interface defines a contract about what the object can (should) do."]
+            }
         ]
     },
     {
@@ -410,7 +414,7 @@ references.display = function () {
 
 function printToC() {
     let headers = $("main h3");
-    
+
     let tagToc = htmlToC.replace(stringTextToReplace, "Table of Content");
     $("main .row:first-child").append(tagToc);
 
