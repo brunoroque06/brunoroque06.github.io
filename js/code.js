@@ -1,16 +1,16 @@
-
-const codeS = "⚡";
-const lt = "&lt;";
-const gt = "&gt;";
-
+(()=>{
 const model = {
+    codeS: "⚡",
+    lt: "&lt;",
+    gt: "&gt;",
+
     intel: [
         {
             title: "Boundaries & Conditionals",
             entries: [
                 {
                     subtitle: "Boundaries & Conditionals Should Be Encapsulated",
-                    description: ["Boolean logic is hard enough to understand without having to see it in the context of an <code>if</code> or <code>while</code> statement. Extract functions that explain the intent of the conditional. For example:", codeS + "if (shouldBeDeleted(timer))", "is preferable to", codeS + "if (timer.hasExpired() && !timer.isRecurrent())", "Also boundary conditions should be encapsulated, as they are hard to keep track of. Swarms of <code>+1</code>s and <code>-1</code>s should be avoided by encapsulating these into variables."]
+                    description: ["Boolean logic is hard enough to understand without having to see it in the context of an <code>if</code> or <code>while</code> statement. Extract functions that explain the intent of the conditional. For example:", this.codeS + "if (shouldBeDeleted(timer))", "is preferable to", this.codeS + "if (timer.hasExpired() && !timer.isRecurrent())", "Also boundary conditions should be encapsulated, as they are hard to keep track of. Swarms of <code>+1</code>s and <code>-1</code>s should be avoided by encapsulating these into variables."]
                 },
                 {
                     subtitle: "Incorrect Behavior at the Boundaries",
@@ -18,7 +18,7 @@ const model = {
                 },
                 {
                     subtitle: "Negative Conditionals Should Be Avoided",
-                    description: ["Negatives are just a bit harder to understand than positives. So, when possible, conditionals should be expressed as positives. For example:", codeS + "if (buffer.shouldCompact())", "is preferable to", codeS + "if (!buffer.shouldNotCompact())"]
+                    description: ["Negatives are just a bit harder to understand than positives. So, when possible, conditionals should be expressed as positives. For example:", this.codeS + "if (buffer.shouldCompact())", "is preferable to", this.codeS + "if (!buffer.shouldNotCompact())"]
                 }
             ]
         },
@@ -51,11 +51,11 @@ const model = {
                 },
                 {
                     subtitle: "Inappropriate Static",
-                    description: ['<code>Math.max(double a, double b)</code> is a good static method. It does not operate on a single instance; indeed, it would make no sense to have to say <code>new Math().max(a,b)</code> or even <code>a.max(b)</code>. All the data that <code>max</code> uses comes from its two arguments, and not from any "owning" object. Now take the following method.', codeS + "<code>HourlyPayCalculator.calculatePay(employee, overtimeRate)</code>", "This might seem like a reasonable static function, because it does not operate on any particular object and gets all it’s data from it’s arguments. However, there is a reasonable chance that this function should be polymorphic. This method should not be static if more than one implementation is needed for calculating hourly pay: <code>OvertimeHourlyPayCalculator</code>, or <code>StraightTimeHourlyPayCalculator</code>. It should be a nonstatic member function of <code>Employee</code>."]
+                    description: ['<code>Math.max(double a, double b)</code> is a good static method. It does not operate on a single instance; indeed, it would make no sense to have to say <code>new Math().max(a,b)</code> or even <code>a.max(b)</code>. All the data that <code>max</code> uses comes from its two arguments, and not from any "owning" object. Now take the following method.', this.codeS + "<code>HourlyPayCalculator.calculatePay(employee, overtimeRate)</code>", "This might seem like a reasonable static function, because it does not operate on any particular object and gets all it’s data from it’s arguments. However, there is a reasonable chance that this function should be polymorphic. This method should not be static if more than one implementation is needed for calculating hourly pay: <code>OvertimeHourlyPayCalculator</code>, or <code>StraightTimeHourlyPayCalculator</code>. It should be a nonstatic member function of <code>Employee</code>."]
                 },
                 {
                     subtitle: "Code at Wrong Level of Abstraction",
-                    description: ["It is important to create abstractions that separate higher level general concepts from lower level detailed concepts. Sometimes this is done by creating abstract (base) classes to hold the higher level concepts and derivatives to hold the lower level concepts.", "For example, constants, variables, or utility functions that pertain only to the detailed implementation should not be present in the base class. The base class should know nothing about them. Consider the following code:", codeS + `public interface Stack {
+                    description: ["It is important to create abstractions that separate higher level general concepts from lower level detailed concepts. Sometimes this is done by creating abstract (base) classes to hold the higher level concepts and derivatives to hold the lower level concepts.", "For example, constants, variables, or utility functions that pertain only to the detailed implementation should not be present in the base class. The base class should know nothing about them. Consider the following code:", this.codeS + `public interface Stack {
         Object pop() throws EmptyException;
         void push(Object o) throws FullException;
         double percentFull();
@@ -74,7 +74,7 @@ const model = {
             entries: [
                 {
                     subtitle: "Redundant Comment",
-                    description: ["A comment is redundant if it describes something that adequately describes itself. Comments should say things that the code cannot say for itself. The following is a highly redundant comment:", codeS + "i++; // increment i", "Also, it is inappropriate for a comment to hold information better held in a different kind of system such as source code control systems. Comments should be reserved for technical notes about the code and design.",  "Comments are an apology, not a requirement. Good code mostly documents itself."]
+                    description: ["A comment is redundant if it describes something that adequately describes itself. Comments should say things that the code cannot say for itself. The following is a highly redundant comment:", this.codeS + "i++; // increment i", "Also, it is inappropriate for a comment to hold information better held in a different kind of system such as source code control systems. Comments should be reserved for technical notes about the code and design.",  "Comments are an apology, not a requirement. Good code mostly documents itself."]
                 },
                 {
                     subtitle: "Obsolete Comment",
@@ -110,7 +110,7 @@ const model = {
                 },
                 {
                     subtitle: "Function Names Should Say What They Do",
-                    description: ["Consider the following method:", codeS + "Date newDate = date.add(5)", "Should this method be expected to add five days to the date? Or is it weeks, or hours? Is the <code>date</code> instance changed or does the function just return a new <code>Date</code> without changing the old one? It is not obvious what this function does.", "If the function adds five days to the date and changes the date, then it should be called <code>addDaysTo</code> or <code>increaseByDays</code>. If, on the other hand, the function returns a new date that is five days later but does not change the date instance, it should be called <code>daysLater</code> or <code>daysSince</code>.", "If one has to look at the implementation (or documentation) of the function to know what it does, then a better name should be found, or the functionality rearranged so that it can be placed in functions with better names."]
+                    description: ["Consider the following method:", this.codeS + "Date newDate = date.add(5)", "Should this method be expected to add five days to the date? Or is it weeks, or hours? Is the <code>date</code> instance changed or does the function just return a new <code>Date</code> without changing the old one? It is not obvious what this function does.", "If the function adds five days to the date and changes the date, then it should be called <code>addDaysTo</code> or <code>increaseByDays</code>. If, on the other hand, the function returns a new date that is five days later but does not change the date instance, it should be called <code>daysLater</code> or <code>daysSince</code>.", "If one has to look at the implementation (or documentation) of the function to know what it does, then a better name should be found, or the functionality rearranged so that it can be placed in functions with better names."]
                 },
                 {
                     subtitle: "Functions Should Descend Only One Level of Abstraction",
@@ -139,7 +139,7 @@ const model = {
                 },
                 {
                     subtitle: "The Principle of Least Surprise",
-                    description: ['Following "The Principle of Least Surprise", any function or class should implement the behaviors that another programmer could reasonably expect. For example, a function that translates the name of a day to an <code>enum</code> that represents the day:', codeS + "Day day = DayDate.StringToDay(String dayName);", 'It is expected the string "Monday" to be translated to <code>Day.MONDAY</code>. It is also expected the common abbreviations to be translated, and the function to ignore case.', "When an obvious behavior is not implemented, readers and users of the code can no longer depend on their intuition about function names. They lose their trust in the original author and must fall back on reading the details of the code."]
+                    description: ['Following "The Principle of Least Surprise", any function or class should implement the behaviors that another programmer could reasonably expect. For example, a function that translates the name of a day to an <code>enum</code> that represents the day:', this.codeS + "Day day = DayDate.StringToDay(String dayName);", 'It is expected the string "Monday" to be translated to <code>Day.MONDAY</code>. It is also expected the common abbreviations to be translated, and the function to ignore case.', "When an obvious behavior is not implemented, readers and users of the code can no longer depend on their intuition about function names. They lose their trust in the original author and must fall back on reading the details of the code."]
                 },
                 {
                     subtitle: "Overridden Safeties",
@@ -249,24 +249,24 @@ const model = {
                 },
                 {
                     subtitle: "Test Double",
-                    description: ["Every example presented here will be an implementation of the following interface:", codeS + `interface Authorizer {
+                    description: ["Every example presented here will be an implementation of the following interface:", this.codeS + `interface Authorizer {
         public Boolean authorize(String username, String password);
-    }`, "Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists. Example:", codeS + `public class DummyAuthorizer implements Authorizer {
+    }`, "Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists. Example:", this.codeS + `public class DummyAuthorizer implements Authorizer {
         public Boolean authorize(String username, String password) {
             return null
         }
-    }`, 'It can be used when an instantiation of an implementation of the interface "Authorizer" is needed, but never really used. It should return <code>null</code>, as that prevents that implementation from being used (<code>NullPointerException</code>).', "Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test. Example:", codeS + `public class AcceptingAuthorizerStub implements Authorizer {
+    }`, 'It can be used when an instantiation of an implementation of the interface "Authorizer" is needed, but never really used. It should return <code>null</code>, as that prevents that implementation from being used (<code>NullPointerException</code>).', "Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test. Example:", this.codeS + `public class AcceptingAuthorizerStub implements Authorizer {
         public Boolean authorize(String username, String password) {
             return true;
         }
-    }`, "Stubs can be used to avoid unnecessary coupling.", "Spies are stubs that also record some information based on how they were called. One form of this might be an email service that records how many messages it was sent. Example:", codeS + `public class AcceptingAuthorizerSpy implements Authorizer {
+    }`, "Stubs can be used to avoid unnecessary coupling.", "Spies are stubs that also record some information based on how they were called. One form of this might be an email service that records how many messages it was sent. Example:", this.codeS + `public class AcceptingAuthorizerSpy implements Authorizer {
         public boolean authorizeWasCalled = false;
 
         public Boolean authorize(String username, String password) {
             authorizeWasCalled = true;
             return true;
         }
-    }`, "It might be used when the test wants to be sure that the authorize method was called by the system (or to count how many times it was called for example). Spies can be used to see inside the workings of the algorithms.", "Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected to receive. Example:", codeS + `public class AcceptingAuthorizerVerificationMock implements Authorizer {
+    }`, "It might be used when the test wants to be sure that the authorize method was called by the system (or to count how many times it was called for example). Spies can be used to see inside the workings of the algorithms.", "Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected to receive. Example:", this.codeS + `public class AcceptingAuthorizerVerificationMock implements Authorizer {
         public boolean authorizeWasCalled = false;
 
         public Boolean authorize(String username, String password) {
@@ -277,7 +277,7 @@ const model = {
         public boolean verify() {
             return authorizedWasCalled;
         }
-    }`, 'Mocks know what they are testing, thus the "verify" method. A mock spies on the behavior of the module being tested. And the mock knows what behavior to expect. Moving the expectation into the mock is like a coupling, but it makes it easier to write a mocking tool.', "Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an in memory database is a good example).", codeS + `public class AcceptingAuthorizerFake implements Authorizer {
+    }`, 'Mocks know what they are testing, thus the "verify" method. A mock spies on the behavior of the module being tested. And the mock knows what behavior to expect. Moving the expectation into the mock is like a coupling, but it makes it easier to write a mocking tool.', "Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an in memory database is a good example).", this.codeS + `public class AcceptingAuthorizerFake implements Authorizer {
         public Boolean authorize(String username, String password) {
             return username.equals("Bob");
         }
@@ -315,7 +315,7 @@ const model = {
             entries: [
                 {
                     subtitle: "Command List",
-                    description: [`Create a repository, in the working directory:`, `${codeS}> git init`, "Clone an existing repository:", `${codeS}> git clone ${lt}project-url${gt}`, "Information on the HEAD branch and Staging Area of the repository:", `${codeS}> git status`, "Commit information of the HEAD branch (1 commit per line with the flag), including SHA hash:", `${codeS}> git log --oneline`, "Commit information of only one commit (if no SHA is provided, last commit is shown):", `${codeS}> git show ${lt}SHA${gt}`, "Move files from the Working Directory to the Staging Area (adds every file with the flag):", `${codeS}> git add --a`, "Commit every change in the Staging Area to the repository:", `${codeS}> git commit -am ${lt}message${gt}`, "Check changes that have been made but have not been committed, yet:", `${codeS}> git diff`, 'Create new branch (flag <code>-d</code> deletes instead):', `${codeS}> git branch ${lt}new-branch${gt}`, "Switch active branch (flag <code>-b</code> creates branch):", `${codeS}> git checkout ${lt}branch${gt}`, "Merge specified branch into the active branch: ", `${codeS}> git merge ${lt}name-of-branch-to-merge${gt}`, "Revert a commit by creating another commit with the exact opposite changes:", `${codeS}> git revert ${lt}SHA-to-revert${gt}`, "Reset (erase) commits:", `${codeS}> git reset ${lt}SHA${gt}`, "Manage set of tracked repositories:", `${codeS}> git remote -v`, "Send local commits to a remote repository:", `${codeS}> git push ${lt}remote-shortname${gt} ${lt}branch${gt}`, "Pull changes from the remote repository to the local one, merging them into a local branch (<code>fetch</code> does not merge):", `${codeS}> git pull ${lt}remote-shortname${gt} ${lt}branch${gt}`]
+                    description: [`Create a repository, in the working directory:`, `${this.codeS}> git init`, "Clone an existing repository:", `${this.codeS}> git clone ${this.lt}project-url${this.gt}`, "Information on the HEAD branch and Staging Area of the repository:", `${this.codeS}> git status`, "Commit information of the HEAD branch (1 commit per line with the flag), including SHA hash:", `${this.codeS}> git log --oneline`, "Commit information of only one commit (if no SHA is provided, last commit is shown):", `${this.codeS}> git show ${this.lt}SHA${this.gt}`, "Move files from the Working Directory to the Staging Area (adds every file with the flag):", `${this.codeS}> git add --a`, "Commit every change in the Staging Area to the repository:", `${this.codeS}> git commit -am ${this.lt}message${this.gt}`, "Check changes that have been made but have not been committed, yet:", `${this.codeS}> git diff`, 'Create new branch (flag <code>-d</code> deletes instead):', `${this.codeS}> git branch ${this.lt}new-branch${this.gt}`, "Switch active branch (flag <code>-b</code> creates branch):", `${this.codeS}> git checkout ${this.lt}branch${this.gt}`, "Merge specified branch into the active branch: ", `${this.codeS}> git merge ${this.lt}name-of-branch-to-merge${this.gt}`, "Revert a commit by creating another commit with the exact opposite changes:", `${this.codeS}> git revert ${this.lt}SHA-to-revert${this.gt}`, "Reset (erase) commits:", `${this.codeS}> git reset ${this.lt}SHA${this.gt}`, "Manage set of tracked repositories:", `${this.codeS}> git remote -v`, "Send local commits to a remote repository:", `${this.codeS}> git push ${this.lt}remote-shortname${this.gt} ${this.lt}branch${this.gt}`, "Pull changes from the remote repository to the local one, merging them into a local branch (<code>fetch</code> does not merge):", `${this.codeS}> git pull ${this.lt}remote-shortname${this.gt} ${this.lt}branch${this.gt}`]
                 }
             ]
         },
@@ -358,7 +358,7 @@ const model = {
     ]
 }
 
-class Octupus {
+class Controller {
     getHeaders() {
         return $("main h3");
     }
@@ -373,7 +373,7 @@ class Octupus {
 }
 
 class View {
-    constructor() {
+    constructor(controller) {
         this.numberOfHeader3 = 1;
         this.stringIdToReplace = "%id%";
         this.stringTextToReplace = "%text%";
@@ -382,6 +382,7 @@ class View {
         this.htmlParagraph = '<p>' + this.stringTextToReplace + '</p>';
         this.htmlCode = '<p class="code-example"><code>' + this.stringTextToReplace + '</code></p>';
         this.htmlToC = '<div class="col-6"><h2>' + this.stringTextToReplace + '</h2><ol id="toc"></ol></div>';
+        this.controller = controller;
     }
 
     printTableOfContent() {
@@ -390,7 +391,7 @@ class View {
 
         let referenceNumber = 1;
         let toc = $('#toc');
-        octupus.getHeaders().each(function(header) {
+        this.controller.getHeaders().each(function(header) {
             toc.append('<li class="toc"><a href="#' + referenceNumber + '">' + $(this).text() + '</a></li>');
             referenceNumber++;
         });
@@ -400,7 +401,7 @@ class View {
         let main = $('main');
         let _this = this;
 
-        octupus.getIntel().forEach(function (topic) {
+        this.controller.getIntel().forEach(function (topic) {
             let topicTitle = _this.htmlHeader3.replace(_this.stringTextToReplace, topic.title).replace(_this.stringIdToReplace, _this.numberOfHeader3);
 
             _this.numberOfHeader3++;
@@ -427,7 +428,7 @@ class View {
     };
 
     isText(string) {
-        return string[0] === codeS ? false : true;
+        return string[0] === model.codeS ? false : true;
     }
 
     printReferences() {
@@ -437,7 +438,7 @@ class View {
         main.append(referencesTitle);
 
         let _this = this;
-        octupus.getReferences().forEach(function (referenceString) {
+        this.controller.getReferences().forEach(function (referenceString) {
             let reference = _this.htmlParagraph.replace(_this.stringTextToReplace, referenceString);
             let lastCol = $('main .col-12').last();
             lastCol.append(reference);
@@ -445,9 +446,10 @@ class View {
     }
 }
 
-let octupus = new Octupus();
-let view = new View();
+let controller = new Controller();
+let view = new View(controller);
 
 view.printIntel();
 view.printReferences();
 view.printTableOfContent();
+})()
