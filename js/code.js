@@ -21,6 +21,5 @@
     }
 
     const view = new View();
-
     view.printTableOfContent();
 })()
