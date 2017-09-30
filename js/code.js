@@ -1,10 +1,13 @@
 (()=>{
-const model = {
-    codeS: "⚡",
-    lt: "&lt;",
-    gt: "&gt;",
+class Model {
+    constructor() {
+        this.codeS = "⚡";
+        this.lt = "&lt;";
+        this.gt = "&gt;";
+    }
 
-    intel: [
+    getIntel() {
+        return [
         {
             title: "Boundaries & Conditionals",
             entries: [
@@ -343,37 +346,45 @@ const model = {
                     description: ["Interface inheritance enables a class to implement an abstract class, interface. Notation: <code>[Interface]⇠[Implementation]</code>."]
                 }
             ]
-        },
-    ],
+        }];
+    }
 
-    references: [
-        "Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.",
-        "The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.",
-        "Refactoring: Improving the Design of Existing Code, by Martin Fowler et al, 1999.",
-        '<a href="https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html" target="_blank" rel="noopener">The Little Mocker</a>, by Robert Martin.',
-        '<a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="noopener">Clean Code Javascript</a>, by Ryan McDermott et al.',
-        '<a href="https://yuml.me/" target="_blank" rel="noopener">yUML</a>, Unified Modeling Language (UML).',
-        '<a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Mocks Are Not Stubs</a>, by Martin Fowler.',
-        '<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>, Version Control System Git.'
-    ]
+    getReferences() {
+        return [
+            "Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.",
+            "The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.",
+            "Refactoring: Improving the Design of Existing Code, by Martin Fowler et al, 1999.",
+            '<a href="https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html" target="_blank" rel="noopener">The Little Mocker</a>, by Robert Martin.',
+            '<a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="noopener">Clean Code Javascript</a>, by Ryan McDermott et al.',
+            '<a href="https://yuml.me/" target="_blank" rel="noopener">yUML</a>, Unified Modeling Language (UML).',
+            '<a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Mocks Are Not Stubs</a>, by Martin Fowler.',
+            '<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>, Version Control System Git.'
+        ];
+    }
 }
 
 class Controller {
+    getMain() {
+        return $('main');
+    }
+
+    getMainFirstRow() {
+        return $("main .row:first-child");
+    }
+
     getHeaders() {
         return $("main h3");
     }
 
-    getIntel() {
-        return model.intel;
-    }
-
-    getReferences() {
-        return model.references;
+    getToc() {
+        return $('#toc');
     }
 }
 
 class View {
-    constructor(controller) {
+    constructor(model, controller) {
+        this.model = model;
+        this.controller = controller;
         this.numberOfHeader3 = 1;
         this.stringIdToReplace = "%id%";
         this.stringTextToReplace = "%text%";
@@ -382,15 +393,14 @@ class View {
         this.htmlParagraph = '<p>' + this.stringTextToReplace + '</p>';
         this.htmlCode = '<p class="code-example"><code>' + this.stringTextToReplace + '</code></p>';
         this.htmlToC = '<div class="col-6"><h2>' + this.stringTextToReplace + '</h2><ol id="toc"></ol></div>';
-        this.controller = controller;
     }
 
     printTableOfContent() {
-        let tagToc = this.htmlToC.replace(this.stringTextToReplace, "Table of Content");
-        $("main .row:first-child").append(tagToc);
+        const tagToc = this.htmlToC.replace(this.stringTextToReplace, "Table of Content");
+        this.controller.getMainFirstRow().append(tagToc);
 
         let referenceNumber = 1;
-        let toc = $('#toc');
+        const toc = this.controller.getToc();
         this.controller.getHeaders().each(function(header) {
             toc.append('<li class="toc"><a href="#' + referenceNumber + '">' + $(this).text() + '</a></li>');
             referenceNumber++;
@@ -398,10 +408,10 @@ class View {
     }
 
     printIntel() {
-        let main = $('main');
+        let main = this.controller.getMain();
         let _this = this;
 
-        this.controller.getIntel().forEach(function (topic) {
+        this.model.getIntel().forEach(function (topic) {
             let topicTitle = _this.htmlHeader3.replace(_this.stringTextToReplace, topic.title).replace(_this.stringIdToReplace, _this.numberOfHeader3);
 
             _this.numberOfHeader3++;
@@ -428,7 +438,7 @@ class View {
     };
 
     isText(string) {
-        return string[0] === model.codeS ? false : true;
+        return string[0] === this.model.codeS ? false : true;
     }
 
     printReferences() {
@@ -438,7 +448,7 @@ class View {
         main.append(referencesTitle);
 
         let _this = this;
-        this.controller.getReferences().forEach(function (referenceString) {
+        this.model.getReferences().forEach(function (referenceString) {
             let reference = _this.htmlParagraph.replace(_this.stringTextToReplace, referenceString);
             let lastCol = $('main .col-12').last();
             lastCol.append(reference);
@@ -446,8 +456,9 @@ class View {
     }
 }
 
+const model = new Model();
 let controller = new Controller();
-let view = new View(controller);
+let view = new View(model, controller);
 
 view.printIntel();
 view.printReferences();
