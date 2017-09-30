@@ -31,9 +31,9 @@
                 <h4>Boundaries &amp; Conditionals Should Be Encapsulated</h4>
                 <p>Boolean logic is hard enough to understand without having to see it in the context of an <code>if</code>                    or <code>while</code> statement. Extract functions that explain the intent of the conditional. For example:
                 </p>
-                <p class="code-example"><code>if (shouldBeDeleted(timer))</code></p>
+                <p class="code__example"><code>if (shouldBeDeleted(timer))</code></p>
                 <p>is preferable to</p>
-                <p class="code-example"><code>if (timer.hasExpired() &amp;&amp; !timer.isRecurrent())</code>
+                <p class="code__example"><code>if (timer.hasExpired() &amp;&amp; !timer.isRecurrent())</code>
                 </p>
                 <p>Also boundary conditions should be encapsulated, as they are hard to keep track of. Swarms of <code>+1</code>s
                     and <code>-1</code>s should be avoided by encapsulating these into variables.</p>
@@ -46,9 +46,9 @@
                 <h4>Negative Conditionals Should Be Avoided</h4>
                 <p>Negatives are just a bit harder to understand than positives. So, when possible, conditionals should be expressed
                     as positives. For example:</p>
-                <p class="code-example"><code>if (buffer.shouldCompact())</code></p>
+                <p class="code__example"><code>if (buffer.shouldCompact())</code></p>
                 <p>is preferable to</p>
-                <p class="code-example"><code>if (!buffer.shouldNotCompact())</code></p>
+                <p class="code__example"><code>if (!buffer.shouldNotCompact())</code></p>
             </div>
         </div>
         <div class="row">
@@ -103,7 +103,7 @@
                     indeed, it would make no sense to have to say <code>new Math().max(a,b)</code> or even <code>a.max(b)</code>.
                     All the data that <code>max</code> uses comes from its two arguments, and not from any "owning" object.
                     Now take the following method.</p>
-                <p class="code-example"><code>HourlyPayCalculator.calculatePay(employee, overtimeRate);</code>
+                <p class="code__example"><code>HourlyPayCalculator.calculatePay(employee, overtimeRate);</code>
                 </p>
                 <p>This might seem like a reasonable static function, because it does not operate on any particular object and
                     gets all it’s data from it’s arguments. However, there is a reasonable chance that this function should
@@ -117,7 +117,7 @@
                 <p>For example, constants, variables, or utility functions that pertain only to the detailed implementation
                     should not be present in the base class. The base class should know nothing about them. Consider the
                     following code:</p>
-                <p class="code-example"><code>public interface Stack {<br>&nbsp;&nbsp;&nbsp;&nbsp;Object pop() throws EmptyException;<br>&nbsp;&nbsp;&nbsp;&nbsp;void push(Object o) throws FullException;<br>&nbsp;&nbsp;&nbsp;&nbsp;double percentFull();<br>&nbsp;&nbsp;&nbsp;&nbsp;class EmptyException extends Exception {}<br>&nbsp;&nbsp;&nbsp;&nbsp;class FullException extends Exception {}<br>}</code></p>
+                <p class="code__example"><code>public interface Stack {<br>&nbsp;&nbsp;&nbsp;&nbsp;Object pop() throws EmptyException;<br>&nbsp;&nbsp;&nbsp;&nbsp;void push(Object o) throws FullException;<br>&nbsp;&nbsp;&nbsp;&nbsp;double percentFull();<br>&nbsp;&nbsp;&nbsp;&nbsp;class EmptyException extends Exception {}<br>&nbsp;&nbsp;&nbsp;&nbsp;class FullException extends Exception {}<br>}</code></p>
                 <p>The <code>percentFull</code> function is at the wrong level of abstraction. Although there are many implementations
                     of <code>Stack</code> where the concept of fullness is reasonable, there are other implementations that
                     simply could not know how full they are. So the function would be better placed in a derivative interface
@@ -134,7 +134,7 @@
                 <h4>Redundant Comment</h4>
                 <p>A comment is redundant if it describes something that adequately describes itself. Comments should say things
                     that the code cannot say for itself. The following is a highly redundant comment:</p>
-                <p class="code-example"><code>i++; // increment i</code></p>
+                <p class="code__example"><code>i++; // increment i</code></p>
                 <p>Also, it is inappropriate for a comment to hold information better held in a different kind of system such
                     as source code control systems. Comments should be reserved for technical notes about the code and design.</p>
                 <p>Comments are an apology, not a requirement. Good code mostly documents itself.</p>
@@ -173,7 +173,7 @@
                     of which does one thing.</p>
                 <h4>Function Names Should Say What They Do</h4>
                 <p>Consider the following method:</p>
-                <p class="code-example"><code>Date newDate = date.add(5);</code></p>
+                <p class="code__example"><code>Date newDate = date.add(5);</code></p>
                 <p>Should this method be expected to add five days to the date? Or is it weeks, or hours? Is the <code>date</code>                    instance changed or does the function just return a new <code>Date</code> without changing the old one?
                     It is not obvious what this function does.</p>
                 <p>If the function adds five days to the date and changes the date, then it should be called <code>addDaysTo</code>                    or <code>increaseByDays</code>. If, on the other hand, the function returns a new date that is five days
@@ -225,7 +225,7 @@
                 <h4>The Principle of Least Surprise</h4>
                 <p>Following "The Principle of Least Surprise", any function or class should implement the behaviors that another
                     programmer could reasonably expect. For example, a function that translates the name of a day to an <code>enum</code>                    that represents the day:</p>
-                <p class="code-example"><code>Day day = DayDate.StringToDay(String dayName);</code></p>
+                <p class="code__example"><code>Day day = DayDate.StringToDay(String dayName);</code></p>
                 <p>It is expected the string "Monday" to be translated to <code>Day.MONDAY</code>. It is also expected the common
                     abbreviations to be translated, and the function to ignore case.</p>
                 <p>When an obvious behavior is not implemented, readers and users of the code can no longer depend on their
@@ -361,35 +361,35 @@
                     fundamental and so important that it should be quick, easy, and obvious to do.</p>
                 <h4>Test Double</h4>
                 <p>Every example presented here will be an implementation of the following interface:</p>
-                <p class="code-example"><code>interface Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password);<br>}</code></p>
+                <p class="code__example"><code>interface Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password);<br>}</code></p>
                 <p>Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists.
                     Example:
                 </p>
-                <p class="code-example"><code>public class DummyAuthorizer implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return null;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code></p>
+                <p class="code__example"><code>public class DummyAuthorizer implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return null;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code></p>
                 <p>It can be used when an instantiation of an implementation of the interface "Authorizer" is needed, but never
                     really used. It should return <code>null</code>, as that prevents that implementation from being used
                     (
                     <code>NullPointerException</code>).</p>
                 <p>Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside
                     what's programmed in for the test. Example:</p>
-                <p class="code-example"><code>public class AcceptingAuthorizerStub implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code></p>
+                <p class="code__example"><code>public class AcceptingAuthorizerStub implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code></p>
                 <p>Stubs can be used to avoid unnecessary coupling.</p>
                 <p>Spies are stubs that also record some information based on how they were called. One form of this might be
                     an email service that records how many messages it was sent. Example:</p>
-                <p class="code-example"><code>public class AcceptingAuthorizerSpy implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public boolean authorizeWasCalled = false;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authorizeWasCalled = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code></p>
+                <p class="code__example"><code>public class AcceptingAuthorizerSpy implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public boolean authorizeWasCalled = false;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authorizeWasCalled = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code></p>
                 <p>It might be used when the test wants to be sure that the authorize method was called by the system (or to
                     count how many times it was called for example). Spies can be used to see inside the workings of the
                     algorithms.
                 </p>
                 <p>Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected
                     to receive. Example:</p>
-                <p class="code-example"><code>public class AcceptingAuthorizerVerificationMock implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public boolean authorizeWasCalled = false;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authorizeWasCalled = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public boolean verify() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return authorizedWasCalled;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code></p>
+                <p class="code__example"><code>public class AcceptingAuthorizerVerificationMock implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public boolean authorizeWasCalled = false;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authorizeWasCalled = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public boolean verify() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return authorizedWasCalled;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code></p>
                 <p>Mocks know what they are testing, thus the "verify" method. A mock spies on the behavior of the module being
                     tested. And the mock knows what behavior to expect. Moving the expectation into the mock is like a coupling,
                     but it makes it easier to write a mocking tool.</p>
                 <p>Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable
                     for production (an in memory database is a good example).</p>
-                <p class="code-example"><code>public class AcceptingAuthorizerFake implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return username.equals("Bob");<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code></p>
+                <p class="code__example"><code>public class AcceptingAuthorizerFake implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return username.equals("Bob");<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code></p>
                 <p>A fake has business behavior. Mock is a kind of spy, a spy is a kind of stub, and a stub is a kind of dummy.
                     But a fake is not a kind of any of them. It is a completely different kind of test double. They can get
                     extremely complicated. So complicated they need unit tests of their own. At the extremes the fake becomes
@@ -424,37 +424,37 @@
                 <h3>Version Control System (Git)</h3>
                 <h4>Command List</h4>
                 <p>Create a repository, in the working directory:</p>
-                <p class="code-example"><code>&gt; git init</code></p>
+                <p class="code__example"><code>&gt; git init</code></p>
                 <p>Clone an existing repository:</p>
-                <p class="code-example"><code>&gt; git clone &lt;project-url&gt;</code></p>
+                <p class="code__example"><code>&gt; git clone &lt;project-url&gt;</code></p>
                 <p>Information on the HEAD branch and Staging Area of the repository:</p>
-                <p class="code-example"><code>&gt; git status</code></p>
+                <p class="code__example"><code>&gt; git status</code></p>
                 <p>Commit information of the HEAD branch (1 commit per line with the flag), including SHA hash:</p>
-                <p class="code-example"><code>&gt; git log --oneline</code></p>
+                <p class="code__example"><code>&gt; git log --oneline</code></p>
                 <p>Commit information of only one commit (if no SHA is provided, last commit is shown):</p>
-                <p class="code-example"><code>&gt; git show &lt;SHA&gt;</code></p>
+                <p class="code__example"><code>&gt; git show &lt;SHA&gt;</code></p>
                 <p>Move files from the Working Directory to the Staging Area (adds every file with the flag):</p>
-                <p class="code-example"><code>&gt; git add --a</code></p>
+                <p class="code__example"><code>&gt; git add --a</code></p>
                 <p>Commit every change in the Staging Area to the repository:</p>
-                <p class="code-example"><code>&gt; git commit -am &lt;message&gt;</code></p>
+                <p class="code__example"><code>&gt; git commit -am &lt;message&gt;</code></p>
                 <p>Check changes that have been made but have not been committed, yet:</p>
-                <p class="code-example"><code>&gt; git diff</code></p>
+                <p class="code__example"><code>&gt; git diff</code></p>
                 <p>Create new branch (flag <code>-d</code> deletes instead):</p>
-                <p class="code-example"><code>&gt; git branch &lt;new-branch&gt;</code></p>
+                <p class="code__example"><code>&gt; git branch &lt;new-branch&gt;</code></p>
                 <p>Switch active branch (flag <code>-b</code> creates branch):</p>
-                <p class="code-example"><code>&gt; git checkout &lt;branch&gt;</code></p>
+                <p class="code__example"><code>&gt; git checkout &lt;branch&gt;</code></p>
                 <p>Merge specified branch into the active branch: </p>
-                <p class="code-example"><code>&gt; git merge &lt;name-of-branch-to-merge&gt;</code></p>
+                <p class="code__example"><code>&gt; git merge &lt;name-of-branch-to-merge&gt;</code></p>
                 <p>Revert a commit by creating another commit with the exact opposite changes:</p>
-                <p class="code-example"><code>&gt; git revert &lt;SHA-to-revert&gt;</code></p>
+                <p class="code__example"><code>&gt; git revert &lt;SHA-to-revert&gt;</code></p>
                 <p>Reset (erase) commits:</p>
-                <p class="code-example"><code>&gt; git reset &lt;SHA&gt;</code></p>
+                <p class="code__example"><code>&gt; git reset &lt;SHA&gt;</code></p>
                 <p>Manage set of tracked repositories:</p>
-                <p class="code-example"><code>&gt; git remote -v</code></p>
+                <p class="code__example"><code>&gt; git remote -v</code></p>
                 <p>Send local commits to a remote repository:</p>
-                <p class="code-example"><code>&gt; git push &lt;remote-shortname&gt; &lt;branch&gt;</code></p>
+                <p class="code__example"><code>&gt; git push &lt;remote-shortname&gt; &lt;branch&gt;</code></p>
                 <p>Pull changes from the remote repository to the local one, merging them into a local branch (<code>fetch</code>                    does not merge):</p>
-                <p class="code-example"><code>&gt; git pull &lt;remote-shortname&gt; &lt;branch&gt;</code></p>
+                <p class="code__example"><code>&gt; git pull &lt;remote-shortname&gt; &lt;branch&gt;</code></p>
             </div>
         </div>
         <div class="row">

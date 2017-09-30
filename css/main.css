@@ -5,7 +5,6 @@
 }
 
 * {
-     /* border: 0.1px solid grey !important; */
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -42,7 +41,6 @@ video {
 
 href,
 a {
-    margin: auto;
     color: white;
     text-decoration: none;
     transition: 100ms;
@@ -53,23 +51,23 @@ a {
 
 a:hover {
     color: var(--light-blue);
+    fill: var(--light-blue);
 }
 
 header {
     color: white;
     text-align: center;
     background: var(--dark-grey);
-    padding: 0;
+}
+
+header img {
+    height: auto;
+    max-height: 3.5em;
 }
 
 .header__logo {
     margin-top: auto;
     margin-bottom: auto;
-}
-
-.logo {
-    height: auto;
-    max-height: 3.5em;
 }
 
 .header__menu {
@@ -159,7 +157,8 @@ main a {
     display: block;
 }
 
-p, ol {
+p,
+ol {
     text-align: justify;
     -webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
@@ -170,7 +169,7 @@ code {
     word-break: break-all;
 }
 
-.code-example {
+.code__example {
     font-size: 0.9em;
     color: white;
     padding: 1em;
@@ -179,26 +178,24 @@ code {
 }
 
 footer {
+    color: white;
     font-size: 0.9em;
-    padding: 0.3em 0 0.3em 0;
+    padding: 0.4em 0 0.4em 0;
     background: var(--dark-blue);
 }
 
-.clickable__item {
+footer a {
+    margin: 0 0.5em 0 0.5em;
     fill: white;
 }
 
-.clickable__item:hover {
-    color: var(--light-blue);
-    fill: var(--light-blue);
-}
-
-.footer__row {
-    margin: 0.3em 0 0.3em 0;
+footer .row {
+    padding: 0.3em;
+    text-align: center;
+    display: block;
 }
 
 .footer__logo {
-    vertical-align: -0.5em;
     height: 2em;
 }
 
