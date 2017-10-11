@@ -23,4 +23,5 @@ Both strategies reduce to the same final value, as long as:
 - both evaluations terminate.
 
 Tail Recursion: if a function calls itself as its last action, the function's stack frame can be reused. Tail recursive functions are iterative processes, and no memory problems.
-
+<p class="code__example"><code>def factorial(num: Int): Int = {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (num == 1) num<br>&nbsp;&nbsp;&nbsp;&nbsp;else num * factorial(num - 1)<br>}</code></p>
+<p class="code__example"><code>def greatestCommonDivisor(x: Int, y: Int): Int = {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (y == 0) x<br>&nbsp;&nbsp;&nbsp;&nbsp;else greatestCommonDivisor(y, x % y)<br>}</code></p>

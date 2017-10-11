@@ -1,7 +1,7 @@
 :root {
-    --dark-grey: #26251d;
-    --dark-blue: #2c3d51;
-    --light-blue: #8d9db6;
+    --color-head: #26251d;
+    --color-main: #2c3d51;
+    --color-hover: #8d9db6;
 }
 
 * {
@@ -50,14 +50,14 @@ a {
 }
 
 a:hover {
-    color: var(--light-blue);
-    fill: var(--light-blue);
+    color: var(--color-hover);
+    fill: var(--color-hover);
 }
 
 header {
     color: white;
     text-align: center;
-    background: var(--dark-grey);
+    background: var(--color-head);
 }
 
 header img {
@@ -84,7 +84,7 @@ header img {
 }
 
 nav {
-    background: var(--dark-blue);
+    background: var(--color-main);
     text-transform: none;
     width: 100%;
 }
@@ -133,23 +133,23 @@ main [class*="col-"] {
 
 main h2,
 main h3 {
-    color: var(--dark-blue);
-    border-bottom: 0.1rem solid var(--dark-blue);
+    color: var(--color-main);
+    border-bottom: 0.1rem solid var(--color-main);
 }
 
 main h4 {
-    color: var(--dark-blue);
+    color: var(--color-main);
     -webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
 }
 
 main a {
-    color: var(--dark-blue);
+    color: var(--color-main);
     font-weight: bold;
 }
 
 .toc {
-    color: var(--dark-blue);
+    color: var(--color-main);
     font-weight: bold;
 }
 
@@ -174,14 +174,15 @@ code {
     color: white;
     padding: 1em;
     margin: 0 2em 0 2em;
-    background: var(--dark-blue);
+    background: var(--color-main);
+    border-left: 0.4em solid var(--color-hover);
 }
 
 footer {
     color: white;
     font-size: 0.9em;
     padding: 0.4em 0 0.4em 0;
-    background: var(--dark-blue);
+    background: var(--color-main);
 }
 
 footer a {
@@ -262,7 +263,7 @@ footer .row {
 
 @media only screen and (max-width: 600px) {
     header {
-        border-bottom: 0.6em solid var(--dark-blue);
+        border-bottom: 0.6em solid var(--color-main);
         padding: 0.8em 0 0.8em 0;
     }
 
