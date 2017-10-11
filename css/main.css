@@ -132,13 +132,17 @@ main [class*="col-"] {
 }
 
 main h2,
-main h3 {
+main h3,
+main h4 {
     color: var(--color-main);
+}
+
+main h2,
+main h3 {
     border-bottom: 0.1rem solid var(--color-main);
 }
 
 main h4 {
-    color: var(--color-main);
     -webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
 }
