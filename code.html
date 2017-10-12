@@ -191,9 +191,8 @@
                 <p>Pure imperative programming is limited by the Von Neumann bottleneck: "One tends to conceptualize data structures word-by-word".</p>
                 <p>Functional programming, on the other hand, focus on functions. There are no mutable variables, assignments, or control sequences. It is stateless. One of its main advantages is the easy exploitation of parallelism.</p>
                 <h4>Substitution Model</h4>
-                <p>Substitution model reduces expressions to a value, as long as these expressions have no side effects. It is formalized in the &#955;-calculus, which gives the foundation for functional programming. An example of a side effect is the following expression: <code>number++</code>, which can not be expressed by the substitution model.</p>
-                <h4>Evaluation Strategies</h4>
-                <p>Regarding substition model, there are 2 evaluation strategies:</p>
+                <p>Substitution model reduces expressions to a value, as long as these expressions have no side effects. It is formalized in the &#955;-calculus, which is the foundation for functional programming. An example of a side effect is the following expression: <code>number++</code>, which can not be expressed by the substitution model.</p>
+                <p>There are 2 evaluation strategies:</p>
                 <ul>
                     <li>Call-by-value: evaluate operations, and then functions. It has the advantage that it evaluates every function argument only once;</li>
                     <li>Call-by-name: evaluate functions, and then operations. It has the advantage that a function argument is not evaluated if the corresponding parameter is unused in the evaluation of the function body.</li>
