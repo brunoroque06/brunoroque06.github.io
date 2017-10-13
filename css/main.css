@@ -258,6 +258,16 @@ footer .row {
     width: 100%;
 }
 
+::selection {
+    color: white;
+    background: var(--color-main);
+}
+
+::-moz-selection {
+    color: white;
+    background: var(--color-main);
+}
+
 @media only screen and (max-width: 250px) {
     html,
     body {
