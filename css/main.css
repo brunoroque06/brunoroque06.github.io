@@ -1,7 +1,7 @@
 :root {
-    --color-head: #26251d;
-    --color-main: #2c3d51;
-    --color-hover: #8d9db6;
+    --primary-color: #2c3d51;
+    --secondary-color: #26251d;
+    --accent-color: #8d9db6;
 }
 
 * {
@@ -50,14 +50,14 @@ a {
 }
 
 a:hover {
-    color: var(--color-hover);
-    fill: var(--color-hover);
+    color: var(--accent-color);
+    fill: var(--accent-color);
 }
 
 header {
     color: white;
     text-align: center;
-    background: var(--color-head);
+    background: var(--secondary-color);
 }
 
 header img {
@@ -84,7 +84,7 @@ header img {
 }
 
 nav {
-    background: var(--color-main);
+    background: var(--primary-color);
     text-transform: none;
     width: 100%;
 }
@@ -134,12 +134,12 @@ main [class*="col-"] {
 main h2,
 main h3,
 main h4 {
-    color: var(--color-main);
+    color: var(--primary-color);
 }
 
 main h2,
 main h3 {
-    border-bottom: 0.1rem solid var(--color-main);
+    border-bottom: 0.1rem solid var(--primary-color);
 }
 
 main h4 {
@@ -148,12 +148,12 @@ main h4 {
 }
 
 main a {
-    color: var(--color-main);
+    color: var(--primary-color);
     font-weight: bold;
 }
 
 .toc {
-    color: var(--color-main);
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -178,15 +178,15 @@ code {
     color: white;
     padding: 1em;
     margin: 0 2em 0 2em;
-    background: var(--color-main);
-    border-left: 0.4em solid var(--color-hover);
+    background: var(--primary-color);
+    border-left: 0.4em solid var(--accent-color);
 }
 
 footer {
     color: white;
     font-size: 0.9em;
     padding: 0.4em 0 0.4em 0;
-    background: var(--color-main);
+    background: var(--primary-color);
 }
 
 footer a {
@@ -260,12 +260,12 @@ footer .row {
 
 ::selection {
     color: white;
-    background: var(--color-main);
+    background: var(--primary-color);
 }
 
 ::-moz-selection {
     color: white;
-    background: var(--color-main);
+    background: var(--primary-color);
 }
 
 @media only screen and (max-width: 250px) {
@@ -277,7 +277,7 @@ footer .row {
 
 @media only screen and (max-width: 600px) {
     header {
-        border-bottom: 0.6em solid var(--color-main);
+        border-bottom: 0.6em solid var(--primary-color);
         padding: 0.8em 0 0.8em 0;
     }
 
