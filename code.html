@@ -182,14 +182,13 @@
         <div class="row">
             <div class="col-12">
                 <h3>Functional Programming</h3>
-                <p>Contrary to functional programming, imperative programming is characterized by the following:</p>
+                <p>Contrary to imperative programming, functional programming is characterized by the following:</p>
                 <ul>
-                    <li>use of mutable variables;</li>
-                    <li>use of assignments;</li>
-                    <li>use of control sequences (if, else, for, break, continue, return).</li>
+                    <li>immutability, no mutable variables are used;</li>
+                    <li>higher order functions, functions that can receive functions as inputs and/or return functions as outputs;</li>
+                    <li>use of recursion instead of imperative loops (for, while).</li>
                 </ul>
-                <p>Pure imperative programming is limited by the Von Neumann bottleneck: "One tends to conceptualize data structures word-by-word".</p>
-                <p>Functional programming, on the other hand, focus on functions. There are no mutable variables, assignments, or control sequences. It is stateless. One of its main advantages is the easy exploitation of parallelism.</p>
+                <p>Pure imperative programming is limited by the Von Neumann bottleneck: "One tends to conceptualize data structures word-by-word". Functional programming, on the other hand, focus on functions. There are no mutable variables, assignments, or control sequences. It is stateless. One of its main advantages is the easy exploitation of parallelism.</p>
                 <h4>Substitution Model</h4>
                 <p>Substitution model reduces expressions to a value, as long as these expressions have no side effects. It is formalized in the &#955;-calculus, which is the foundation for functional programming. An example of a side effect is the following expression: <code>number++</code>, which can not be expressed by the substitution model.</p>
                 <p>There are 2 evaluation strategies:</p>
