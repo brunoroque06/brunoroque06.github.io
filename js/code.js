@@ -9,13 +9,13 @@
             const tagToc = this.htmlToC.replace(this.stringTextToReplace, "Table of Content");
             $("main .row:first-child").append(tagToc);
 
-            let referenceNumber = 1;
             const toc = $('#toc');
             $("main h3").each(function () {
                 const header = $(this);
-                header.attr('id', referenceNumber);
-                toc.append(`<li class="toc"><a href="#${referenceNumber}">${header.text()}</a></li>`);
-                referenceNumber++;
+                const text = header.text().replace(/\s+/g, '');
+
+                header.attr('id', text);
+                toc.append(`<li class="toc"><a href="#${text}">${header.text()}</a></li>`);
             });
         }
     }
