@@ -7,15 +7,13 @@
 
         printTableOfContent() {
             const tagToc = this.htmlToC.replace(this.stringTextToReplace, "Table of Content");
-            $("main .row:first-child").append(tagToc);
+            document.querySelector("main .row:first-child").innerHTML += tagToc;
 
-            const toc = $('#toc');
-            $("main h3").each(function () {
-                const header = $(this);
-                const text = header.text().replace(/\s+/g, '');
-
-                header.attr('id', text);
-                toc.append(`<li class="toc"><a href="#${text}">${header.text()}</a></li>`);
+            const toc = document.getElementById('toc');
+            document.querySelectorAll("main h3").forEach(function(header) {
+                const text = header.innerHTML.replace(/\s+/g, '');
+                header.id = text;
+                toc.innerHTML += `<li class="toc"><a href="#${text}">${header.innerHTML}</a></li>`;
             });
         }
     }
