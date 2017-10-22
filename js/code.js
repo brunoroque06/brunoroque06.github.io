@@ -2,7 +2,7 @@
     class View {
         constructor() {
             this.stringTextToReplace = "%text%";
-            this.htmlToC = `<div class="col-6"><h2>${this.stringTextToReplace}</h2><ol id="toc"></ol></div>`;
+            this.htmlToC = `<div class="col-6"><h2>${this.stringTextToReplace}</h2><ul id="toc"></ul></div>`;
         }
 
         printTableOfContent() {
