@@ -50,14 +50,14 @@ a {
 }
 
 a:hover {
-    color: var(--accent-color);
-    fill: var(--accent-color);
+    color: #8d9db6;
+    fill: #8d9db6;
 }
 
 header {
     color: white;
     text-align: center;
-    background: var(--secondary-color);
+    background: #26251d;
 }
 
 header img {
@@ -84,7 +84,7 @@ header img {
 }
 
 nav {
-    background: var(--primary-color);
+    background: #2c3d51;
     text-transform: none;
     width: 100%;
 }
@@ -134,12 +134,12 @@ main [class*="col-"] {
 main h2,
 main h3,
 main h4 {
-    color: var(--primary-color);
+    color: #2c3d51;
 }
 
 main h2,
 main h3 {
-    border-bottom: 0.1rem solid var(--primary-color);
+    border-bottom: 0.1rem solid #2c3d51;
 }
 
 main h4 {
@@ -148,12 +148,12 @@ main h4 {
 }
 
 main a {
-    color: var(--primary-color);
+    color: #2c3d51;
     font-weight: bold;
 }
 
 .toc {
-    color: var(--primary-color);
+    color: #2c3d51;
     font-weight: bold;
 }
 
@@ -178,15 +178,15 @@ code {
     color: white;
     padding: 1em;
     margin: 0 2em 0 2em;
-    background: var(--primary-color);
-    border-left: 0.4em solid var(--accent-color);
+    background: #2c3d51;
+    border-left: 0.4em solid #8d9db6;
 }
 
 footer {
     color: white;
     font-size: 0.9em;
     padding: 0.4em 0 0.4em 0;
-    background: var(--primary-color);
+    background: #2c3d51;
 }
 
 footer a {
@@ -260,12 +260,12 @@ footer .row {
 
 ::selection {
     color: white;
-    background: var(--primary-color);
+    background: #2c3d51;
 }
 
 ::-moz-selection {
     color: white;
-    background: var(--primary-color);
+    background: #2c3d51;
 }
 
 @media only screen and (max-width: 250px) {
@@ -277,7 +277,7 @@ footer .row {
 
 @media only screen and (max-width: 600px) {
     header {
-        border-bottom: 0.6em solid var(--primary-color);
+        border-bottom: 0.6em solid #2c3d51;
         padding: 0.8em 0 0.8em 0;
     }
 
