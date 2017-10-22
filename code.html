@@ -8,6 +8,9 @@
     <link rel="icon" href="img/chess.png" sizes="any">
     <link rel="stylesheet" href="css/main.css">
     <meta name="theme-color" content="#2c3d51">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="js/common.js"></script>
+    <script defer src="js/code.js"></script>
 </head>
 
 <body>
@@ -188,25 +191,43 @@
                     <li>higher order functions, functions that can receive functions as inputs and/or return functions as outputs;</li>
                     <li>use of recursion instead of imperative loops (for, while).</li>
                 </ul>
-                <p>Pure imperative programming is limited by the Von Neumann bottleneck: "One tends to conceptualize data structures word-by-word". Functional programming, on the other hand, focus on functions. There are no mutable variables, assignments, or control sequences. It is stateless. One of its main advantages is the easy exploitation of parallelism.</p>
+                <p>Pure imperative programming is limited by the Von Neumann bottleneck: "One tends to conceptualize data structures
+                    word-by-word". Functional programming, on the other hand, focus on functions. There are no mutable variables,
+                    assignments, or control sequences. It is stateless. One of its main advantages is the easy exploitation
+                    of parallelism.</p>
                 <h4>Substitution Model</h4>
-                <p>Substitution model reduces expressions to a value, as long as these expressions have no side effects. It is formalized in the &#955;-calculus, which is the foundation for functional programming. An example of a side effect is the following expression: <code>number++</code>, which can not be expressed by the substitution model.</p>
+                <p>Substitution model reduces expressions to a value, as long as these expressions have no side effects. It
+                    is formalized in the &#955;-calculus, which is the foundation for functional programming. An example
+                    of a side effect is the following expression:
+                    <code>number++</code>, which can not be expressed by the substitution model.</p>
                 <p>There are 2 evaluation strategies:</p>
                 <ul>
-                    <li>Call-by-value: evaluate operations, and then functions. It has the advantage that it evaluates every function argument only once;</li>
-                    <li>Call-by-name: evaluate functions, and then operations. It has the advantage that a function argument is not evaluated if the corresponding parameter is unused in the evaluation of the function body.</li>
+                    <li>Call-by-value: evaluate operations, and then functions. It has the advantage that it evaluates every
+                        function argument only once;</li>
+                    <li>Call-by-name: evaluate functions, and then operations. It has the advantage that a function argument
+                        is not evaluated if the corresponding parameter is unused in the evaluation of the function body.</li>
                 </ul>
-                <p>Both strategies reduce an expression <code>e</code> to the same final value, as long as:</p>
+                <p>Both strategies reduce an expression
+                    <code>e</code> to the same final value, as long as:</p>
                 <ul>
                     <li>the reduced expressions consists of pure functions;</li>
                     <li>both evaluations terminate.</li>
                 </ul>
-                <p>If call-by-value evaluation of an expression <code>e</code> terminates, then call-by-name evaluation of <code>e</code> also terminates. But the other direction is not true. Scala uses call-by-value by default, but it is also possible to use call-by-name.</p>
+                <p>If call-by-value evaluation of an expression
+                    <code>e</code> terminates, then call-by-name evaluation of
+                    <code>e</code> also terminates. But the other direction is not true. Scala uses call-by-value by default, but it is
+                    also possible to use call-by-name.</p>
                 <h4>Tail Recursion</h4>
-                <p>A function uses tail recursion if it calls itself as its last action, allowing the function's stack frame to be reused. These functions are iterative processes, and pose no memory problems. An example of a tail recursive function:</p>
-                <p class="code__example"><code>def greatestCommonDivisor(x: Int, y: Int): Int = {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (y == 0) x<br>&nbsp;&nbsp;&nbsp;&nbsp;else greatestCommonDivisor(y, x % y)<br>}</code></p>
+                <p>A function uses tail recursion if it calls itself as its last action, allowing the function's stack frame
+                    to be reused. These functions are iterative processes, and pose no memory problems. An example of a tail
+                    recursive function:</p>
+                <p class="code__example">
+                    <code>def greatestCommonDivisor(x: Int, y: Int): Int = {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (y == 0) x<br>&nbsp;&nbsp;&nbsp;&nbsp;else greatestCommonDivisor(y, x % y)<br>}</code>
+                </p>
                 <p>On the other hand, the following example uses recursion, but not tail recursion:</p>
-                <p class="code__example"><code>def factorial(num: Int): Int = {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (num == 1) num<br>&nbsp;&nbsp;&nbsp;&nbsp;else num * factorial(num - 1)<br>}</code></p>
+                <p class="code__example">
+                    <code>def factorial(num: Int): Int = {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (num == 1) num<br>&nbsp;&nbsp;&nbsp;&nbsp;else num * factorial(num - 1)<br>}</code>
+                </p>
             </div>
         </div>
         <div class="row">
@@ -413,7 +434,8 @@
                 </ul>
                 <p>These 3 laws lock the software developer into a cycle that is perhaps 30 seconds long. The tests and the
                     production code are written together, with the tests being just a few seconds ahead of the production
-                    code.</p>
+                    code.
+                </p>
                 <h4>Insufficient Tests</h4>
                 <p>How many tests should be in a test suite? A test suite should test everything that could possibly break.
                     The tests are insufficient so long as there are conditions that have not been explored by the tests or
@@ -515,7 +537,8 @@
             <div class="col-12">
                 <h3>Version Control System</h3>
                 <p>This sections contains a compilation of the most important commands required to use the Version Control System
-                    Git.</p>
+                    Git.
+                </p>
                 <p>Create a repository, in the working directory:</p>
                 <p class="code__example">
                     <code>&gt; git init</code>
@@ -588,7 +611,10 @@
         <div class="row">
             <div class="col-12">
                 <h3>Unified Modeling Language</h3>
-                <p>Unified Modeling language (UML) is a standardized modeling language enabling developers to specify, visualize, construct and document artifacts of a software system. The most basic relations are presented in this section.</p>
+                <p>Unified Modeling language (UML) is a standardized modeling language enabling developers to specify, visualize,
+                    construct and document artifacts of a software system. The most basic relations are presented in this
+                    section.
+                </p>
                 <h4>Association</h4>
                 <p>Association is merely invoking a method of another object via a reference to that object (received on a method
                     for instance). Notation:
@@ -629,9 +655,5 @@
         </div>
     </main>
 </body>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/common.js" defer></script>
-<script src="js/code.js" defer></script>
 
 </html>
