@@ -1,18 +1,17 @@
+---
+# Jekyll needs this
+---
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    {% include head.html %}
     <title>Bruno Roque - About</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/chess.png" sizes="any">
-    <link rel="stylesheet" href="css/main.css">
-    <meta name="theme-color" content="#2c3d51">
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script defer src="js/common.js"></script>
 </head>
 
 <body>
+    {% include header.html %}
     <main>
         <div class="row">
             <div class="col-6">
@@ -31,6 +30,7 @@
             </div>
         </div>
     </main>
+    {% include footer.html %}
 </body>
 
 </html>
