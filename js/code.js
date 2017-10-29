@@ -11,9 +11,9 @@
 
             const toc = document.getElementById('toc');
             document.querySelectorAll("main h3").forEach(function(header) {
-                const text = header.innerHTML.replace(/\s+/g, '');
-                header.id = text;
-                toc.innerHTML += `<li class="toc"><a href="#${text}">${header.innerHTML}</a></li>`;
+                const id = header.innerHTML.toLowerCase().replace(/\s+/g, '-');
+                header.id = id;
+                toc.innerHTML += `<li class="toc"><a href="#${id}">${header.innerHTML}</a></li>`;
             });
         }
     }
