@@ -5,653 +5,637 @@
 <html lang="en">
 
 <head>
-    {% include head.html %}
-    <title>Bruno Roque - Code Mastery</title>
-    <script defer src="js/code.js"></script>
+  {% include head.html %}
+  <title>Bruno Roque - Code Mastery</title>
+  <script defer src="js/code.js"></script>
 </head>
 
 <body>
-    {% include header.html %}
-    <main>
-        <div class="row">
-            <div class="col-6">
-                <h2>Code Mastery</h2>
-                <p>
-                    This page contains a compilation of good practices on software development, gathered through different sources. Some concepts
-                    are only valid for object oriented programming, but most are language agnostic.
-                </p>
-                <p>
-                    I find this a good way for me to check something pretty quickly. Feel free to do the same! Please let me know if you find
-                    any mistake, or inaccuracy, or simply something that you disagree.
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h3>Boundaries and Conditionals</h3>
-                <h4>Boundaries and Conditionals Should Be Encapsulated</h4>
-                <p>Boolean logic is hard enough to understand without having to see it in the context of an
-                    <code>if</code> or
-                    <code>while</code> statement. Extract functions that explain the intent of the conditional. For example:
-                </p>
-                <p class="code__example">
-                    <code>if (shouldBeDeleted(timer))</code>
-                </p>
-                <p>is preferable to</p>
-                <p class="code__example">
-                    <code>if (timer.hasExpired() &amp;&amp; !timer.isRecurrent())</code>
-                </p>
-                <p>Also boundary conditions should be encapsulated, as they are hard to keep track of. Swarms of
-                    <code>+1</code>s and
-                    <code>-1</code>s should be avoided by encapsulating these into variables.</p>
-                <h4>Incorrect Behavior at the Boundaries</h4>
-                <p>Developers often write functions that they think will work, and then trust their intuition rather than going
-                    to the effort to prove that their code works in all the corner and boundary cases.</p>
-                <p>There is no replacement for due diligence. Every boundary condition, every corner case, every quirk and exception
-                    represents something that can confound an elegant and intuitive algorithm. Programmers should not rely
-                    on their intuition, they should look for every boundary condition and write a test for it.</p>
-                <h4>Negative Conditionals Should Be Avoided</h4>
-                <p>Negatives are just a bit harder to understand than positives. So, when possible, conditionals should be expressed
-                    as positives. For example:</p>
-                <p class="code__example">
-                    <code>if (buffer.shouldCompact())</code>
-                </p>
-                <p>is preferable to</p>
-                <p class="code__example">
-                    <code>if (!buffer.shouldNotCompact())</code>
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h3>Classes</h3>
-                <h4>Polymorphism Should Be Preferred to If/Else or Switch/Case</h4>
-                <p>
-                    <code>Switch</code> statements should not be used because it’s the obvious brute force solution, but because it’s the right
-                    solution for the situation. Polymorphism should be considered before using a
-                    <code>switch</code>.</p>
-                <p>Robert Martin defines the "One Switch" rule: "There may be no more than one switch statement for a given
-                    type of selection. The cases in that switch statement must create polymorphic objects that take the place
-                    of other such switch statements in the rest of the system.".</p>
-                <h4>Keeping Coupling Low</h4>
-                <p>Well-defined modules have very small interfaces that allow developers to do a lot with a little. Poorly defined
-                    modules have wide and deep interfaces that force developers to use many different gestures to get simple
-                    things done. A well-defined interface does not offer very many functions to depend upon, so coupling
-                    is low. A poorly defined interface provides lots of functions that must be called, so coupling is high.</p>
-                <p>Good software developers learn to limit what they expose at the interfaces of their classes and modules.
-                    The fewer methods a class has, the better. The fewer variables a function knows about, the better. The
-                    fewer instance variables a class has, the better.</p>
-                <h4>Transitive Navigation Should Be Avoided</h4>
-                <p>In general it is not desirable for a single module to know much about its collaborators. More specifically,
-                    if
-                    <code>A</code> collaborates with
-                    <code>B</code>, and
-                    <code>B</code> collaborates with
-                    <code>C</code>, modules that use A should not know about C. The following example should be avoided:
-                    <code>a.getB().getC().doSomething()</code>. This rule is called "Law of Demeter", or "Writing Shy Code".</p>
-                <p>The problem with this is that architectures become rigid, and the coupling is high. Too many modules know
-                    too much about the architecture.</p>
-                <h4>Feature Envy</h4>
-                <p>The methods of a class should be interested in the variables and functions of the class they belong to, and
-                    not the variables and functions of other classes. When a method uses accessors and mutators of some other
-                    object to manipulate the data within that object, then it envies the scope of the class of that other
-                    object. It wishes that it were inside that other class so that it could have direct access to the variables
-                    it is manipulating.</p>
-                <p> Sometimes, however, Feature Envy is a necessary evil in order to avoid unnecessary coupling.</p>
-                <h4>Base Classes Depending on Their Derivatives</h4>
-                <p>The most common reason for partitioning concepts into base and derivative classes is so that the higher level
-                    base class concepts can be independent of the lower level derivative class concepts. Therefore, base
-                    classes should not mention the names of their derivatives. In general, base classes should know nothing
-                    about their derivatives.</p>
-                <p>As for Java, deploying derivatives and bases in different "jar" files and making sure the base "jar" files
-                    know nothing about the contents of the derivative "jar" files allow the deployment of systems in discrete
-                    and independent components. When such components are modified, they can be redeployed without having
-                    to redeploy the base components. This means that the impact of a change is greatly lessened, and maintaining
-                    systems in the field is made much simpler.</p>
-                <h4>Artificial Coupling</h4>
-                <p>In general an artificial coupling is a coupling between two modules that serves no direct purpose. For example,
-                    general
-                    <code>enums</code> should not be contained within more specific classes because this forces the whole application to know
-                    about these more specific classes.</p>
-                <p>It is a result of putting a variable, constant, or function in a temporarily convenient, though inappropriate,
-                    location. This should be avoided.</p>
-                <h4>Inappropriate Static</h4>
-                <p>
-                    <code>Math.max(double a, double b)</code> is a good static method. It does not operate on a single instance; indeed, it would make no sense to
-                    have to say
-                    <code>new Math().max(a,b)</code> or even
-                    <code>a.max(b)</code>. All the data that
-                    <code>max</code> uses comes from its two arguments, and not from any "owning" object. Now take the following method.</p>
-                <p class="code__example">
-                    <code>HourlyPayCalculator.calculatePay(employee, overtimeRate);</code>
-                </p>
-                <p>This might seem like a reasonable static function, because it does not operate on any particular object and
-                    gets all it’s data from it’s arguments. However, there is a reasonable chance that this function should
-                    be polymorphic. This method should not be static if more than one implementation is needed for calculating
-                    hourly pay:
-                    <code>OvertimeHourlyPayCalculator</code>, or
-                    <code>StraightTimeHourlyPayCalculator</code>. It should be a nonstatic member function of
-                    <code>Employee</code>.</p>
-                <h4>Code at Wrong Level of Abstraction</h4>
-                <p>It is important to create abstractions that separate higher level general concepts from lower level detailed
-                    concepts. Sometimes this is done by creating abstract (base) classes to hold the higher level concepts
-                    and derivatives to hold the lower level concepts.</p>
-                <p>For example, constants, variables, or utility functions that pertain only to the detailed implementation
-                    should not be present in the base class. The base class should know nothing about them. Consider the
-                    following code:</p>
-                <p class="code__example">
-                    <code>public interface Stack {<br>&nbsp;&nbsp;&nbsp;&nbsp;Object pop() throws EmptyException;<br>&nbsp;&nbsp;&nbsp;&nbsp;void push(Object o) throws FullException;<br>&nbsp;&nbsp;&nbsp;&nbsp;double percentFull();<br>&nbsp;&nbsp;&nbsp;&nbsp;class EmptyException extends Exception {}<br>&nbsp;&nbsp;&nbsp;&nbsp;class FullException extends Exception {}<br>}</code>
-                </p>
-                <p>The
-                    <code>percentFull</code> function is at the wrong level of abstraction. Although there are many implementations of
-                    <code>Stack</code> where the concept of fullness is reasonable, there are other implementations that simply could not know
-                    how full they are. So the function would be better placed in a derivative interface such as
-                    <code>BoundedStack</code>.</p>
-                <h4>Interface vs Abstract Class</h4>
-                <p>An Abstract Class defines the characteristics of an object; specifying what an object is. They can be used
-                    to reduce the amount of code that has to be rewritten in its subclasses: Template Pattern.</p>
-                <p>An Interface defines a contract about what the object can (should) do.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h3>Comments</h3>
-                <h4>Redundant Comment</h4>
-                <p>A comment is redundant if it describes something that adequately describes itself. Comments should say things
-                    that the code cannot say for itself. The following is a highly redundant comment:</p>
-                <p class="code__example">
-                    <code>i++; // increment i</code>
-                </p>
-                <p>Also, it is inappropriate for a comment to hold information better held in a different kind of system such
-                    as source code control systems. Comments should be reserved for technical notes about the code and design.</p>
-                <p>Comments are an apology, not a requirement. Good code mostly documents itself.</p>
-                <h4>Obsolete Comment</h4>
-                <p>A comment that has gotten old, irrelevant, and incorrect is obsolete. Comments get old quickly. It is best
-                    not to write a comment that will become obsolete. If an obsolete comment is found, it is best to update
-                    it or get rid of it as quickly as possible. Obsolete comments tend to migrate away from the code they
-                    once described.</p>
-                <h4>Commented-Out Code</h4>
-                <p>Code that is commented ask at least two questions: how old is it, and is it meaningful? No one will delete
-                    it because everyone assumes someone else needs it or has plans for it. That code sits there and rots,
-                    getting less and less relevant with every passing day. It calls functions that no longer exist. It uses
-                    variables whose names have changed. It follows conventions that are long obsolete. It pollutes the modules
-                    that contain it and distracts the people who try to read it.</p>
-                <p>Commented-out code should be deleted. Source code control systems will remember it, in case someone really
-                    needs it.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h3>Functional Programming</h3>
-                <p>Contrary to imperative programming, functional programming is characterized by the following:</p>
-                <ul>
-                    <li>immutability, no mutable variables are used;</li>
-                    <li>higher order functions, functions that can receive functions as inputs and/or return functions as outputs;</li>
-                    <li>use of recursion instead of imperative loops (for, while).</li>
-                </ul>
-                <p>Pure imperative programming is limited by the Von Neumann bottleneck: "One tends to conceptualize data structures
-                    word-by-word". Functional programming, on the other hand, focus on functions. There are no mutable variables,
-                    assignments, or control sequences. It is stateless. One of its main advantages is the easy exploitation
-                    of parallelism.</p>
-                <h4>Substitution Model</h4>
-                <p>Substitution model reduces expressions to a value, as long as these expressions have no side effects. It
-                    is formalized in the &#955;-calculus, which is the foundation for functional programming. An example
-                    of a side effect is the following expression:
-                    <code>number++</code>, which can not be expressed by the substitution model.</p>
-                <p>There are 2 evaluation strategies:</p>
-                <ul>
-                    <li>Call-by-value: evaluate operations, and then functions. It has the advantage that it evaluates every
-                        function argument only once;</li>
-                    <li>Call-by-name: evaluate functions, and then operations. It has the advantage that a function argument
-                        is not evaluated if the corresponding parameter is unused in the evaluation of the function body.</li>
-                </ul>
-                <p>Both strategies reduce an expression
-                    <code>e</code> to the same final value, as long as:</p>
-                <ul>
-                    <li>the reduced expressions consists of pure functions;</li>
-                    <li>both evaluations terminate.</li>
-                </ul>
-                <p>If call-by-value evaluation of an expression
-                    <code>e</code> terminates, then call-by-name evaluation of
-                    <code>e</code> also terminates. But the other direction is not true. Scala uses call-by-value by default, but it is
-                    also possible to use call-by-name.</p>
-                <h4>Tail Recursion</h4>
-                <p>A function uses tail recursion if it calls itself as its last action, allowing the function's stack frame
-                    to be reused. These functions are iterative processes, and pose no memory problems. An example of a tail
-                    recursive function:</p>
-                <p class="code__example">
-                    <code>def greatestCommonDivisor(x: Int, y: Int): Int = {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (y == 0) x<br>&nbsp;&nbsp;&nbsp;&nbsp;else greatestCommonDivisor(y, x % y)<br>}</code>
-                </p>
-                <p>On the other hand, the following example uses recursion, but not tail recursion:</p>
-                <p class="code__example">
-                    <code>def factorial(num: Int): Int = {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (num == 1) num<br>&nbsp;&nbsp;&nbsp;&nbsp;else num * factorial(num - 1)<br>}</code>
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h3>Functions</h3>
-                <h4>Flag Arguments Should be Avoided</h4>
-                <p>Boolean arguments loudly declare that a function does more than one thing, thus breaking the single responsibility
-                    principle. That function should probably be divided.</p>
-                <h4>Too Many Arguments</h4>
-                <p>Functions should have a small number of arguments. No argument is best, followed by one, two, and three.
-                    More than three is very questionable and should be avoided.</p>
-                <h4>Output Arguments</h4>
-                <p>Output arguments are counter intuitive. Readers expect arguments to be inputs, not outputs. If a function
-                    must change the state of something, it should change the state of the object it is called on.</p>
-                <h4>Dead Function</h4>
-                <p>Methods that are never called should be discarded. Source code control systems still remember it.</p>
-                <h4>Functions Should Do One Thing</h4>
-                <p>It is often tempting to create functions that have multiple sections that perform a series of operations.
-                    Functions of this kind do more than one thing, and should be converted into many smaller functions, each
-                    of which does one thing.</p>
-                <h4>Function Names Should Say What They Do</h4>
-                <p>Consider the following method:</p>
-                <p class="code__example">
-                    <code>Date newDate = date.add(5);</code>
-                </p>
-                <p>Should this method be expected to add five days to the date? Or is it weeks, or hours? Is the
-                    <code>date</code> instance changed or does the function just return a new
-                    <code>Date</code> without changing the old one? It is not obvious what this function does.</p>
-                <p>If the function adds five days to the date and changes the date, then it should be called
-                    <code>addDaysTo</code> or
-                    <code>increaseByDays</code>. If, on the other hand, the function returns a new date that is five days later but does not change
-                    the date instance, it should be called
-                    <code>daysLater</code> or
-                    <code>daysSince</code>.</p>
-                <p>If one has to look at the implementation (or documentation) of the function to know what it does, then a
-                    better name should be found, or the functionality rearranged so that it can be placed in functions with
-                    better names.</p>
-                <h4>Functions Should Descend Only One Level of Abstraction</h4>
-                <p>The statements within a function should all be written at the same level of abstraction, which should be
-                    one level below the operation described by the name of the function. This is one of the hardest heuristic
-                    to interpret and follow. Separating levels of abstraction is one of the most important functions of refactoring,
-                    and it’s one of the hardest to do well.</p>
-                <h4>Hidden Temporal Couplings</h4>
-                <p>Temporal couplings are often necessary, but the coupling should not be hidden. The arguments of the methods
-                    should be structured so that the order in which methods should be called is obvious. The code itself
-                    should enforce this temporal coupling, so that methods are not executed in a different order than intended.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h3>General Principles</h3>
-                <h4>S.O.L.I.D.</h4>
-                <p>These are the five S.O.L.I.D. principles:</p>
-                <ul>
-                    <li>Single responsibility principle (SRP), a class should have only a single responsibility (i.e. only one
-                        potential change in the software's specification should be able to affect the specification of the
-                        class);
-                    </li>
-                    <li>Open/closed principle (OCP), software entities (classes, modules, functions, etc.) should be open for
-                        extension, but closed for modification;</li>
-                    <li>Liskov substitution principle (LSP), objects in a program should be replaceable with instances of their
-                        subtypes without altering the correctness of that program;</li>
-                    <li>Interface segregation principle (ISP), many client-specific interfaces are better than one general-purpose
-                        interface;
-                    </li>
-                    <li>Dependency inversion principle (DIP), one should depend on abstractions, not on concretions.</li>
-                </ul>
-                <h4>Builds Should Be a One Step Process</h4>
-                <p>Building a project should be a single trivial operation. One should be able to check out the system with
-                    a simple command and then issue another simple command to build it.</p>
-                <h4>Multiple Languages in One Source File</h4>
-                <p>Modern programming environments make it possible to put many different languages into a single source file.
-                    For example, a Java source file might contain snippets of XML, HTML, YAML, JavaDoc, English, JavaScript,
-                    and so on. This is confusing at best and carelessly sloppy at worst.</p>
-                <p>The ideal is for a source file to contain one, and only one, language. Realistically, we will probably have
-                    to use more than one. But we should take pains to minimize both the number and extent of extra languages
-                    in our source files.</p>
-                <h4>The Principle of Least Surprise</h4>
-                <p>Following "The Principle of Least Surprise", any function or class should implement the behaviors that another
-                    programmer could reasonably expect. For example, a function that translates the name of a day to an
-                    <code>enum</code> that represents the day:</p>
-                <p class="code__example">
-                    <code>Day day = DayDate.StringToDay(String dayName);</code>
-                </p>
-                <p>It is expected the string "Monday" to be translated to
-                    <code>Day.MONDAY</code>. It is also expected the common abbreviations to be translated, and the function to ignore case.</p>
-                <p>When an obvious behavior is not implemented, readers and users of the code can no longer depend on their
-                    intuition about function names. They lose their trust in the original author and must fall back on reading
-                    the details of the code.</p>
-                <h4>Overridden Safeties</h4>
-                <p>It is risky to override safeties. Turning off certain compiler warnings, and/or ignoring failing tests, may
-                    help get the build to succeed, but at the risk of endless debugging sessions.</p>
-                <h4>Duplication</h4>
-                <p>Maybe the most important rule of software development: Don't Repeat Yourself (DRY). A duplication of code
-                    represents a missed opportunity for abstraction. That duplication could probably become a subroutine
-                    or perhaps another class outright.</p>
-                <p>A subtle is the
-                    <code>switch/case</code> or
-                    <code>if/else</code> chain that appears again and again in various modules, always testing for the same set of conditions.
-                    These should be replaced with polymorphism.</p>
-                <h4>Vertical Separation</h4>
-                <p>Variables and function should be defined close to where they are used. Local variables should be declared
-                    just above their first usage and should have a small vertical scope.</p>
-                <p>Private functions should be defined just below their first usage, limiting the vertical distance between
-                    the invocations and definitions.</p>
-                <h4>Consistency</h4>
-                <p>If a software developer does something in a certain way, he/she should do all similar things in the same
-                    way. This goes back to the principle of least surprise. Once a conventions is chosen, it must be followed.</p>
-                <h4>Clutter</h4>
-                <p>Of what use is a default constructor with no implementation? All it serves to do is clutter up the code with
-                    meaningless artifacts. Variables that aren’t used, functions that are never called, comments that add
-                    no information, and so forth. All these things are clutter and should be removed. Source files should
-                    be clean, well organized, and free of clutter.</p>
-                <h4>Misplaced Responsibility</h4>
-                <p>One of the most important decisions a software developer can make is where to put code. For example, where
-                    should the
-                    <code>PI</code> constant go? Should it be in the
-                    <code>Math</code> class? Perhaps it belongs in the
-                    <code>Trigonometry</code> class? Or maybe in the
-                    <code>Circle</code> class?</p>
-                <p>The principle of least surprise comes into play here. Code should be placed where a reader would naturally
-                    expect it to be. The
-                    <code>PI</code> constant should go where the
-                    <code>Trigonometry</code> functions are declared. One way to make this decision is to look at the names of the functions.</p>
-                <h4>Understanding the Algorithm</h4>
-                <p>Algorithms that are not well understood are hard to work with, to change, and to adapt. Even if they are
-                    "working", this should not happen. Often the best way to gain knowledge and understanding of an algorithm
-                    is to refactor it into something that is so clean and expressive that it is obvious how it works.</p>
-                <h4>Standard Conventions Should Be Followed</h4>
-                <p>Every team should follow a coding standard based on common industry norms. This coding standard should specify
-                    things like where to declare instance variables; how to name classes, methods, and variables; where to
-                    put braces; and so on. The team should not need a document to describe these conventions because their
-                    code provides the examples.</p>
-                <h4>Structure over Convention</h4>
-                <p>Enforce design decisions with structure over convention. Naming conventions are good, but they are inferior
-                    to structures that force compliance. For example,
-                    <code>switch/cases</code> with nicely named enumerations are inferior to base classes with abstract methods. No one is forced
-                    to implement the
-                    <code>switch/case</code> statement the same way each time; but the base classes do enforce that concrete classes have all abstract
-                    methods implemented.</p>
-                <h4>Broken Window Theory</h4>
-                <p>This theory states that maintaining and monitoring urban environments to prevent small crimes such as vandalism,
-                    public drinking, and toll-jumping helps to create an atmosphere of order and lawfulness, thereby preventing
-                    more serious crimes from happening.</p>
-                <p>One broken window, left unrepaired for any substantial length of time, instills in the inhabitants of the
-                    building a sense of abandonment. So another window gets broken. People start littering. Serious structural
-                    damage begins. In a relatively short space of time, the building becomes damaged beyond the owner's desire
-                    to fix it, and the sense of abandonment becomes reality.</p>
-                <p>There should be no "broken windows" (bad designs, wrong decisions, poor code) unrepaired. Each one should
-                    be fixed as soon as it is discovered.</p>
-                <h4>Optimization</h4>
-                <p>Optimization should only be performed after the code is working as intended: "Premature optimization is the
-                    root of all evil (or at least most of it) in programming." - Donald Knuth.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h3>Names</h3>
-                <h4>Descriptive Names Should Be Used</h4>
-                <p>Names should be descriptive. Meanings tend to drift as software evolves, so the appropriateness of the names
-                    should be frequently reevaluated. Names are too important to treat carelessly.</p>
-                <p>The power of carefully chosen names is that they overload the structure of the code with description, thus
-                    eliminating the need for commentaries.</p>
-                <h4>Names at the Appropriate Level of Abstraction</h4>
-                <p>Names should not communicate implementation; names should reflect the level of abstraction of the class or
-                    function they are in. This is hard to do, as it is very easy to mix levels of abstractions. Making code
-                    readable requires a dedication to continuous improvement.</p>
-                <h4>Standard Nomenclature Where Possible</h4>
-                <p>Names are easier to understand if they are based on existing convention or usage. For example, if when using
-                    the
-                    <code>DECORATOR</code> pattern, the word Decorator should be used in the names of the decorating classes. For example
-                    <code>AutoHangupModemDecorator</code> might be the name of a class that decorates a Modem with the ability to automatically hang up at the
-                    end of a session.</p>
-                <p>Patterns are just one kind of standard. In Java, for example, functions that convert objects to string representations
-                    are often named
-                    <code>toString</code>. It is better to follow existing conventions like these than to create new ones.</p>
-                <h4>Long Names for Long Scopes</h4>
-                <p>The length of a name should be related to the length of the scope. Short variable names should be used for
-                    tiny scopes, but for big scopes longer names should be used.</p>
-                <p>Variable names like
-                    <code>i</code> and
-                    <code>j</code> are just fine if their scope is five lines long, like a
-                    <code>for</code> statement. On the other hand, variables and functions with short names lose their meaning over long
-                    distances. So the longer the scope, the longer and more precise the name should be.</p>
-                <h4>Encoding Should Be Avoided</h4>
-                <p>Names should not be encoded with type or scope information. Also project and/or subsystem encodings such
-                    as
-                    <code>vis_</code> (for visual imaging system) are distracting and redundant. Hungarian Notation should not be used.</p>
-                <h4>Names Should Describe Side-Effects</h4>
-                <p>Names should describe everything that a function, variable, or class is or does. Side effects should not
-                    be hidden with a name. A simple verb should not be used to describe a function that does more than just
-                    that simple action.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h3>Test Driven Development</h3>
-                <p>There are 3 laws for Test Driven Development (TDD):</p>
-                <ul>
-                    <li>One must write a failing unit test before writing any production code.</li>
-                    <li>One may not write more of a unit test than is sufficient to fail, and not compiling is failing;</li>
-                    <li>One may not write more production code than is sufficient to pass the currently failing unit test.</li>
-                </ul>
-                <p>These 3 laws lock the software developer into a cycle that is perhaps 30 seconds long. The tests and the
-                    production code are written together, with the tests being just a few seconds ahead of the production
-                    code.
-                </p>
-                <h4>Insufficient Tests</h4>
-                <p>How many tests should be in a test suite? A test suite should test everything that could possibly break.
-                    The tests are insufficient so long as there are conditions that have not been explored by the tests or
-                    calculations that have not been validated.</p>
-                <h4>Coverage Tool</h4>
-                <p>Coverage tools reports gaps in testing strategies. They make it easy to find modules, classes, and functions
-                    that are insufficiently tested. Most IDEs gives a visual indication, marking lines that are covered in
-                    green and those that are uncovered in red. This makes it quick and easy to find if or catch statements
-                    whose bodies haven’t been checked.</p>
-                <h4>Trivial Tests Should Not Be Skipped</h4>
-                <p>They are easy to write and their documentary value is higher than the cost to produce them.</p>
-                <h4>Boundary Conditions Should Be Tested</h4>
-                <p>It is very easy to misjudge test boundary conditions. They should be fully tested.</p>
-                <h4>Near Bugs Should Be Exhaustively Tested</h4>
-                <p>Bugs tend to congregate. When a bug is found in a function, it is wise to do an exhaustive test of that function.
-                    Maybe that bug was not alone.</p>
-                <h4>Tests Should Be Fast</h4>
-                <p>A slow test is a test that won’t get run. When things get tight, it’s the slow tests that will be dropped
-                    from the suite. Tests should run as fast as possible.</p>
-                <h4>Tests Should Require One Step</h4>
-                <p>One should be able to run all the unit tests with just one command. Being able to run all the tests is so
-                    fundamental and so important that it should be quick, easy, and obvious to do.</p>
-                <h4>Test Double</h4>
-                <p>Every example presented here will be an implementation of the following interface:</p>
-                <p class="code__example">
-                    <code>interface Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password);<br>}</code>
-                </p>
-                <p>Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists.
-                    Example:
-                </p>
-                <p class="code__example">
-                    <code>public class DummyAuthorizer implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return null;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code>
-                </p>
-                <p>It can be used when an instantiation of an implementation of the interface "Authorizer" is needed, but never
-                    really used. It should return
-                    <code>null</code>, as that prevents that implementation from being used (
-                    <code>NullPointerException</code>).</p>
-                <p>Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside
-                    what's programmed in for the test. Example:</p>
-                <p class="code__example">
-                    <code>public class AcceptingAuthorizerStub implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code>
-                </p>
-                <p>Stubs can be used to avoid unnecessary coupling.</p>
-                <p>Spies are stubs that also record some information based on how they were called. One form of this might be
-                    an email service that records how many messages it was sent. Example:</p>
-                <p class="code__example">
-                    <code>public class AcceptingAuthorizerSpy implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public boolean authorizeWasCalled = false;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authorizeWasCalled = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code>
-                </p>
-                <p>It might be used when the test wants to be sure that the authorize method was called by the system (or to
-                    count how many times it was called for example). Spies can be used to see inside the workings of the
-                    algorithms.
-                </p>
-                <p>Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected
-                    to receive. Example:</p>
-                <p class="code__example">
-                    <code>public class AcceptingAuthorizerVerificationMock implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public boolean authorizeWasCalled = false;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authorizeWasCalled = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public boolean verify() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return authorizedWasCalled;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code>
-                </p>
-                <p>Mocks know what they are testing, thus the "verify" method. A mock spies on the behavior of the module being
-                    tested. And the mock knows what behavior to expect. Moving the expectation into the mock is like a coupling,
-                    but it makes it easier to write a mocking tool.</p>
-                <p>Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable
-                    for production (an in memory database is a good example).</p>
-                <p class="code__example">
-                    <code>public class AcceptingAuthorizerFake implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return username.equals("Bob");<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code>
-                </p>
-                <p>A fake has business behavior. Mock is a kind of spy, a spy is a kind of stub, and a stub is a kind of dummy.
-                    But a fake is not a kind of any of them. It is a completely different kind of test double. They can get
-                    extremely complicated. So complicated they need unit tests of their own. At the extremes the fake becomes
-                    the real system.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h3>Variables and Constants</h3>
-                <h4>Explanatory Variables Should Be Used</h4>
-                <p>One of the more powerful ways to make a program readable is to break the calculations up into intermediate
-                    values that are held in variables with meaningful names. It is remarkable how an opaque module can suddenly
-                    become transparent simply by breaking the calculations up into well-named intermediate values.</p>
-                <h4>Known Numbers Should Be Replaced with Named Constants</h4>
-                <p>In general, it is a bad idea to have raw numbers in the code. They should be hidden behind well-named constants:
-                    <code>PI</code>,
-                    <code>EARTH_RADIUS_IN_METER</code>, etc.</p>
-                <h4>Configurable Data Should Be at High Levels</h4>
-                <p>If there is a constant such as a default or configuration value that is known and expected at a high level
-                    of abstraction, they should not be hidden in a low-level method. It should be exposed as an argument
-                    to that low-level method called from the high-level method.</p>
-                <h4>Constants Should Not Be Inherited</h4>
-                <p>Constants should not be inherited, because they will be hidden and hard to find. It is better to use static
-                    imports, so that it becomes obvious where they come from.</p>
-                <h4>Constants versus Enums</h4>
-                <p>The meaning of
-                    <code>int</code>s can get lost, but the meaning of
-                    <code>enum</code>s cannot, because they belong to an enumeration that is named. Besides they can have methods and fields.
-                    This makes them very powerful tools that allow much more expression and flexibility than
-                    <code>int</code>s. </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h3>Version Control System</h3>
-                <p>This sections contains a compilation of the most important commands required to use the Version Control System
-                    Git.
-                </p>
-                <p>Create a repository, in the working directory:</p>
-                <p class="code__example">
-                    <code>&gt; git init</code>
-                </p>
-                <p>Clone an existing repository:</p>
-                <p class="code__example">
-                    <code>&gt; git clone &lt;project-url&gt;</code>
-                </p>
-                <p>Information on the HEAD branch and Staging Area of the repository:</p>
-                <p class="code__example">
-                    <code>&gt; git status</code>
-                </p>
-                <p>Commit information of the HEAD branch (1 commit per line with the flag), including SHA hash:</p>
-                <p class="code__example">
-                    <code>&gt; git log --oneline</code>
-                </p>
-                <p>Commit information of only one commit (if no SHA is provided, last commit is shown):</p>
-                <p class="code__example">
-                    <code>&gt; git show &lt;SHA&gt;</code>
-                </p>
-                <p>Move files from the Working Directory to the Staging Area (adds every file with the flag):</p>
-                <p class="code__example">
-                    <code>&gt; git add --a</code>
-                </p>
-                <p>Commit every change in the Staging Area to the repository:</p>
-                <p class="code__example">
-                    <code>&gt; git commit -am &lt;message&gt;</code>
-                </p>
-                <p>Check changes that have been made but have not been committed, yet:</p>
-                <p class="code__example">
-                    <code>&gt; git diff</code>
-                </p>
-                <p>Create new branch (flag
-                    <code>-d</code> deletes instead):</p>
-                <p class="code__example">
-                    <code>&gt; git branch &lt;new-branch&gt;</code>
-                </p>
-                <p>Switch active branch (flag
-                    <code>-b</code> creates branch):</p>
-                <p class="code__example">
-                    <code>&gt; git checkout &lt;branch&gt;</code>
-                </p>
-                <p>Merge specified branch into the active branch: </p>
-                <p class="code__example">
-                    <code>&gt; git merge &lt;name-of-branch-to-merge&gt;</code>
-                </p>
-                <p>Revert a commit by creating another commit with the exact opposite changes:</p>
-                <p class="code__example">
-                    <code>&gt; git revert &lt;SHA-to-revert&gt;</code>
-                </p>
-                <p>Reset (erase) commits:</p>
-                <p class="code__example">
-                    <code>&gt; git reset &lt;SHA&gt;</code>
-                </p>
-                <p>Manage set of tracked repositories:</p>
-                <p class="code__example">
-                    <code>&gt; git remote -v</code>
-                </p>
-                <p>Send local commits to a remote repository:</p>
-                <p class="code__example">
-                    <code>&gt; git push &lt;remote-shortname&gt; &lt;branch&gt;</code>
-                </p>
-                <p>Pull changes from the remote repository to the local one, merging them into a local branch (
-                    <code>fetch</code> does not merge):</p>
-                <p class="code__example">
-                    <code>&gt; git pull &lt;remote-shortname&gt; &lt;branch&gt;</code>
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h3>Unified Modeling Language</h3>
-                <p>Unified Modeling language (UML) is a standardized modeling language enabling developers to specify, visualize,
-                    construct and document artifacts of a software system. The most basic relations are presented in this
-                    section.
-                </p>
-                <h4>Association</h4>
-                <p>Association is merely invoking a method of another object via a reference to that object (received on a method
-                    for instance). Notation:
-                    <code>[Dog]-&gt;[Ball]</code>.</p>
-                <h4>Aggregation</h4>
-                <p>Implies a relationship where the child can exist independently of the parent. Delete the parent and the child
-                    still exists. Child can be received in the parent's constructor for example. Notation:
-                    <code>[Parent]◇-&gt;[Child]</code>.</p>
-                <h4>Composition</h4>
-                <p>Implies a relationship where the child cannot exist independent of the parent. Child can be instantiated
-                    in the parent’s constructor for example. Notation:
-                    <code>[House]◆-&gt;[Roof]</code>.</p>
-                <h4>Inheritance</h4>
-                <p>Inheritance enables subclasses to take on the properties of existing classes. Notation:
-                    <code>[Base]⇽[Derived]</code>.</p>
-                <h4>Interface Inheritance</h4>
-                <p>Interface inheritance enables a class to implement an abstract class, interface. Notation:
-                    <code>[Interface]⇠[Implementation]</code>.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h3>References</h3>
-                <p>Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.</p>
-                <p>The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.</p>
-                <p>Refactoring: Improving the Design of Existing Code, by Martin Fowler et al, 1999.</p>
-                <p>
-                    <a href="https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html" target="_blank" rel="noopener">The Little Mocker</a>, by Robert Martin.</p>
-                <p>
-                    <a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="noopener">Clean Code Javascript</a>, by Ryan McDermott et al.</p>
-                <p>
-                    <a href="https://yuml.me/" target="_blank" rel="noopener">yUML</a>, Unified Modeling Language (UML).</p>
-                <p>
-                    <a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Mocks Are Not Stubs</a>, by Martin Fowler.</p>
-                <p>
-                    <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>, Version Control System Git.</p>
-            </div>
-        </div>
-    </main>
-    {% include footer.html %}
+  {% include header.html %}
+  <main>
+    <div class="row">
+      <div class="col-6">
+        <h2>Code Mastery</h2>
+        <p>
+          This page contains a compilation of good practices on software development, gathered through different sources. Some concepts
+          are only valid for object oriented programming, but most are language agnostic.
+        </p>
+        <p>
+          I find this a good way for me to check something pretty quickly. Feel free to do the same! Please let me know if you find
+          any mistake, or inaccuracy, or simply something that you disagree.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Boundaries and Conditionals</h3>
+        <h4>Boundaries and Conditionals Should Be Encapsulated</h4>
+        <p>Boolean logic is hard enough to understand without having to see it in the context of an
+          <code>if</code> or
+          <code>while</code> statement. Extract functions that explain the intent of the conditional. For example:
+        </p>
+        <p class="code__example">
+          <code>if (shouldBeDeleted(timer))</code>
+        </p>
+        <p>is preferable to</p>
+        <p class="code__example">
+          <code>if (timer.hasExpired() &amp;&amp; !timer.isRecurrent())</code>
+        </p>
+        <p>Also boundary conditions should be encapsulated, as they are hard to keep track of. Swarms of
+          <code>+1</code>s and
+          <code>-1</code>s should be avoided by encapsulating these into variables.</p>
+        <h4>Incorrect Behavior at the Boundaries</h4>
+        <p>Developers often write functions that they think will work, and then trust their intuition rather than going to the
+          effort to prove that their code works in all the corner and boundary cases.</p>
+        <p>There is no replacement for due diligence. Every boundary condition, every corner case, every quirk and exception
+          represents something that can confound an elegant and intuitive algorithm. Programmers should not rely on their
+          intuition, they should look for every boundary condition and write a test for it.</p>
+        <h4>Negative Conditionals Should Be Avoided</h4>
+        <p>Negatives are just a bit harder to understand than positives. So, when possible, conditionals should be expressed
+          as positives. For example:</p>
+        <p class="code__example">
+          <code>if (buffer.shouldCompact())</code>
+        </p>
+        <p>is preferable to</p>
+        <p class="code__example">
+          <code>if (!buffer.shouldNotCompact())</code>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Classes</h3>
+        <h4>Polymorphism Should Be Preferred to If/Else or Switch/Case</h4>
+        <p>
+          <code>Switch</code> statements should not be used because it’s the obvious brute force solution, but because it’s the right solution
+          for the situation. Polymorphism should be considered before using a
+          <code>switch</code>.</p>
+        <p>Robert Martin defines the "One Switch" rule: "There may be no more than one switch statement for a given type of
+          selection. The cases in that switch statement must create polymorphic objects that take the place of other such
+          switch statements in the rest of the system.".</p>
+        <h4>Keeping Coupling Low</h4>
+        <p>Well-defined modules have very small interfaces that allow developers to do a lot with a little. Poorly defined modules
+          have wide and deep interfaces that force developers to use many different gestures to get simple things done. A
+          well-defined interface does not offer very many functions to depend upon, so coupling is low. A poorly defined
+          interface provides lots of functions that must be called, so coupling is high.</p>
+        <p>Good software developers learn to limit what they expose at the interfaces of their classes and modules. The fewer
+          methods a class has, the better. The fewer variables a function knows about, the better. The fewer instance variables
+          a class has, the better.</p>
+        <h4>Transitive Navigation Should Be Avoided</h4>
+        <p>In general it is not desirable for a single module to know much about its collaborators. More specifically, if
+          <code>A</code> collaborates with
+          <code>B</code>, and
+          <code>B</code> collaborates with
+          <code>C</code>, modules that use A should not know about C. The following example should be avoided:
+          <code>a.getB().getC().doSomething()</code>. This rule is called "Law of Demeter", or "Writing Shy Code".</p>
+        <p>The problem with this is that architectures become rigid, and the coupling is high. Too many modules know too much
+          about the architecture.</p>
+        <h4>Feature Envy</h4>
+        <p>The methods of a class should be interested in the variables and functions of the class they belong to, and not the
+          variables and functions of other classes. When a method uses accessors and mutators of some other object to manipulate
+          the data within that object, then it envies the scope of the class of that other object. It wishes that it were
+          inside that other class so that it could have direct access to the variables it is manipulating.</p>
+        <p> Sometimes, however, Feature Envy is a necessary evil in order to avoid unnecessary coupling.</p>
+        <h4>Base Classes Depending on Their Derivatives</h4>
+        <p>The most common reason for partitioning concepts into base and derivative classes is so that the higher level base
+          class concepts can be independent of the lower level derivative class concepts. Therefore, base classes should
+          not mention the names of their derivatives. In general, base classes should know nothing about their derivatives.</p>
+        <p>As for Java, deploying derivatives and bases in different "jar" files and making sure the base "jar" files know nothing
+          about the contents of the derivative "jar" files allow the deployment of systems in discrete and independent components.
+          When such components are modified, they can be redeployed without having to redeploy the base components. This
+          means that the impact of a change is greatly lessened, and maintaining systems in the field is made much simpler.</p>
+        <h4>Artificial Coupling</h4>
+        <p>In general an artificial coupling is a coupling between two modules that serves no direct purpose. For example, general
+          <code>enums</code> should not be contained within more specific classes because this forces the whole application to know about these
+          more specific classes.</p>
+        <p>It is a result of putting a variable, constant, or function in a temporarily convenient, though inappropriate, location.
+          This should be avoided.</p>
+        <h4>Inappropriate Static</h4>
+        <p>
+          <code>Math.max(double a, double b)</code> is a good static method. It does not operate on a single instance; indeed, it would make no sense to have to say
+          <code>new Math().max(a,b)</code> or even
+          <code>a.max(b)</code>. All the data that
+          <code>max</code> uses comes from its two arguments, and not from any "owning" object. Now take the following method.</p>
+        <p class="code__example">
+          <code>HourlyPayCalculator.calculatePay(employee, overtimeRate);</code>
+        </p>
+        <p>This might seem like a reasonable static function, because it does not operate on any particular object and gets
+          all it’s data from it’s arguments. However, there is a reasonable chance that this function should be polymorphic.
+          This method should not be static if more than one implementation is needed for calculating hourly pay:
+          <code>OvertimeHourlyPayCalculator</code>, or
+          <code>StraightTimeHourlyPayCalculator</code>. It should be a nonstatic member function of
+          <code>Employee</code>.</p>
+        <h4>Code at Wrong Level of Abstraction</h4>
+        <p>It is important to create abstractions that separate higher level general concepts from lower level detailed concepts.
+          Sometimes this is done by creating abstract (base) classes to hold the higher level concepts and derivatives to
+          hold the lower level concepts.</p>
+        <p>For example, constants, variables, or utility functions that pertain only to the detailed implementation should not
+          be present in the base class. The base class should know nothing about them. Consider the following code:</p>
+        <p class="code__example">
+          <code>public interface Stack {<br>&nbsp;&nbsp;&nbsp;&nbsp;Object pop() throws EmptyException;<br>&nbsp;&nbsp;&nbsp;&nbsp;void push(Object o) throws FullException;<br>&nbsp;&nbsp;&nbsp;&nbsp;double percentFull();<br>&nbsp;&nbsp;&nbsp;&nbsp;class EmptyException extends Exception {}<br>&nbsp;&nbsp;&nbsp;&nbsp;class FullException extends Exception {}<br>}</code>
+        </p>
+        <p>The
+          <code>percentFull</code> function is at the wrong level of abstraction. Although there are many implementations of
+          <code>Stack</code> where the concept of fullness is reasonable, there are other implementations that simply could not know how full
+          they are. So the function would be better placed in a derivative interface such as
+          <code>BoundedStack</code>.</p>
+        <h4>Interface vs Abstract Class</h4>
+        <p>An Abstract Class defines the characteristics of an object; specifying what an object is. They can be used to reduce
+          the amount of code that has to be rewritten in its subclasses: Template Pattern.</p>
+        <p>An Interface defines a contract about what the object can (should) do.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Comments</h3>
+        <h4>Redundant Comment</h4>
+        <p>A comment is redundant if it describes something that adequately describes itself. Comments should say things that
+          the code cannot say for itself. The following is a highly redundant comment:</p>
+        <p class="code__example">
+          <code>i++; // increment i</code>
+        </p>
+        <p>Also, it is inappropriate for a comment to hold information better held in a different kind of system such as source
+          code control systems. Comments should be reserved for technical notes about the code and design.</p>
+        <p>Comments are an apology, not a requirement. Good code mostly documents itself.</p>
+        <h4>Obsolete Comment</h4>
+        <p>A comment that has gotten old, irrelevant, and incorrect is obsolete. Comments get old quickly. It is best not to
+          write a comment that will become obsolete. If an obsolete comment is found, it is best to update it or get rid
+          of it as quickly as possible. Obsolete comments tend to migrate away from the code they once described.</p>
+        <h4>Commented-Out Code</h4>
+        <p>Code that is commented ask at least two questions: how old is it, and is it meaningful? No one will delete it because
+          everyone assumes someone else needs it or has plans for it. That code sits there and rots, getting less and less
+          relevant with every passing day. It calls functions that no longer exist. It uses variables whose names have changed.
+          It follows conventions that are long obsolete. It pollutes the modules that contain it and distracts the people
+          who try to read it.</p>
+        <p>Commented-out code should be deleted. Source code control systems will remember it, in case someone really needs
+          it.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Functional Programming</h3>
+        <p>Contrary to imperative programming, functional programming is characterized by the following:</p>
+        <ul>
+          <li>immutability, no mutable variables are used;</li>
+          <li>higher order functions, functions that can receive functions as inputs and/or return functions as outputs;</li>
+          <li>use of recursion instead of imperative loops (for, while).</li>
+        </ul>
+        <p>Pure imperative programming is limited by the Von Neumann bottleneck: "One tends to conceptualize data structures
+          word-by-word". Functional programming, on the other hand, focus on functions. There are no mutable variables, assignments,
+          or control sequences. It is stateless. One of its main advantages is the easy exploitation of parallelism.</p>
+        <h4>Substitution Model</h4>
+        <p>Substitution model reduces expressions to a value, as long as these expressions have no side effects. It is formalized
+          in the &#955;-calculus, which is the foundation for functional programming. An example of a side effect is the
+          following expression:
+          <code>number++</code>, which can not be expressed by the substitution model.</p>
+        <p>There are 2 evaluation strategies:</p>
+        <ul>
+          <li>Call-by-value: evaluate operations, and then functions. It has the advantage that it evaluates every function argument
+            only once;</li>
+          <li>Call-by-name: evaluate functions, and then operations. It has the advantage that a function argument is not evaluated
+            if the corresponding parameter is unused in the evaluation of the function body.</li>
+        </ul>
+        <p>Both strategies reduce an expression
+          <code>e</code> to the same final value, as long as:</p>
+        <ul>
+          <li>the reduced expressions consists of pure functions;</li>
+          <li>both evaluations terminate.</li>
+        </ul>
+        <p>If call-by-value evaluation of an expression
+          <code>e</code> terminates, then call-by-name evaluation of
+          <code>e</code> also terminates. But the other direction is not true. Scala uses call-by-value by default, but it is also possible
+          to use call-by-name.</p>
+        <h4>Tail Recursion</h4>
+        <p>A function uses tail recursion if it calls itself as its last action, allowing the function's stack frame to be reused.
+          These functions are iterative processes, and pose no memory problems. An example of a tail recursive function:</p>
+        <p class="code__example">
+          <code>def greatestCommonDivisor(x: Int, y: Int): Int = {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (y == 0) x<br>&nbsp;&nbsp;&nbsp;&nbsp;else greatestCommonDivisor(y, x % y)<br>}</code>
+        </p>
+        <p>On the other hand, the following example uses recursion, but not tail recursion:</p>
+        <p class="code__example">
+          <code>def factorial(num: Int): Int = {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (num == 1) num<br>&nbsp;&nbsp;&nbsp;&nbsp;else num * factorial(num - 1)<br>}</code>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Functions</h3>
+        <h4>Flag Arguments Should be Avoided</h4>
+        <p>Boolean arguments loudly declare that a function does more than one thing, thus breaking the single responsibility
+          principle. That function should probably be divided.</p>
+        <h4>Too Many Arguments</h4>
+        <p>Functions should have a small number of arguments. No argument is best, followed by one, two, and three. More than
+          three is very questionable and should be avoided.</p>
+        <h4>Output Arguments</h4>
+        <p>Output arguments are counter intuitive. Readers expect arguments to be inputs, not outputs. If a function must change
+          the state of something, it should change the state of the object it is called on.</p>
+        <h4>Dead Function</h4>
+        <p>Methods that are never called should be discarded. Source code control systems still remember it.</p>
+        <h4>Functions Should Do One Thing</h4>
+        <p>It is often tempting to create functions that have multiple sections that perform a series of operations. Functions
+          of this kind do more than one thing, and should be converted into many smaller functions, each of which does one
+          thing.
+        </p>
+        <h4>Function Names Should Say What They Do</h4>
+        <p>Consider the following method:</p>
+        <p class="code__example">
+          <code>Date newDate = date.add(5);</code>
+        </p>
+        <p>Should this method be expected to add five days to the date? Or is it weeks, or hours? Is the
+          <code>date</code> instance changed or does the function just return a new
+          <code>Date</code> without changing the old one? It is not obvious what this function does.</p>
+        <p>If the function adds five days to the date and changes the date, then it should be called
+          <code>addDaysTo</code> or
+          <code>increaseByDays</code>. If, on the other hand, the function returns a new date that is five days later but does not change the date instance,
+          it should be called
+          <code>daysLater</code> or
+          <code>daysSince</code>.</p>
+        <p>If one has to look at the implementation (or documentation) of the function to know what it does, then a better name
+          should be found, or the functionality rearranged so that it can be placed in functions with better names.</p>
+        <h4>Functions Should Descend Only One Level of Abstraction</h4>
+        <p>The statements within a function should all be written at the same level of abstraction, which should be one level
+          below the operation described by the name of the function. This is one of the hardest heuristic to interpret and
+          follow. Separating levels of abstraction is one of the most important functions of refactoring, and it’s one of
+          the hardest to do well.</p>
+        <h4>Hidden Temporal Couplings</h4>
+        <p>Temporal couplings are often necessary, but the coupling should not be hidden. The arguments of the methods should
+          be structured so that the order in which methods should be called is obvious. The code itself should enforce this
+          temporal coupling, so that methods are not executed in a different order than intended.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>General Principles</h3>
+        <h4>S.O.L.I.D.</h4>
+        <p>These are the five S.O.L.I.D. principles:</p>
+        <ul>
+          <li>Single responsibility principle (SRP), a class should have only a single responsibility (i.e. only one potential
+            change in the software's specification should be able to affect the specification of the class);
+          </li>
+          <li>Open/closed principle (OCP), software entities (classes, modules, functions, etc.) should be open for extension,
+            but closed for modification;</li>
+          <li>Liskov substitution principle (LSP), objects in a program should be replaceable with instances of their subtypes
+            without altering the correctness of that program;</li>
+          <li>Interface segregation principle (ISP), many client-specific interfaces are better than one general-purpose interface;
+          </li>
+          <li>Dependency inversion principle (DIP), one should depend on abstractions, not on concretions.</li>
+        </ul>
+        <h4>Builds Should Be a One Step Process</h4>
+        <p>Building a project should be a single trivial operation. One should be able to check out the system with a simple
+          command and then issue another simple command to build it.</p>
+        <h4>Multiple Languages in One Source File</h4>
+        <p>Modern programming environments make it possible to put many different languages into a single source file. For example,
+          a Java source file might contain snippets of XML, HTML, YAML, JavaDoc, English, JavaScript, and so on. This is
+          confusing at best and carelessly sloppy at worst.</p>
+        <p>The ideal is for a source file to contain one, and only one, language. Realistically, we will probably have to use
+          more than one. But we should take pains to minimize both the number and extent of extra languages in our source
+          files.
+        </p>
+        <h4>The Principle of Least Surprise</h4>
+        <p>Following "The Principle of Least Surprise", any function or class should implement the behaviors that another programmer
+          could reasonably expect. For example, a function that translates the name of a day to an
+          <code>enum</code> that represents the day:</p>
+        <p class="code__example">
+          <code>Day day = DayDate.StringToDay(String dayName);</code>
+        </p>
+        <p>It is expected the string "Monday" to be translated to
+          <code>Day.MONDAY</code>. It is also expected the common abbreviations to be translated, and the function to ignore case.</p>
+        <p>When an obvious behavior is not implemented, readers and users of the code can no longer depend on their intuition
+          about function names. They lose their trust in the original author and must fall back on reading the details of
+          the code.</p>
+        <h4>Overridden Safeties</h4>
+        <p>It is risky to override safeties. Turning off certain compiler warnings, and/or ignoring failing tests, may help
+          get the build to succeed, but at the risk of endless debugging sessions.</p>
+        <h4>Duplication</h4>
+        <p>Maybe the most important rule of software development: Don't Repeat Yourself (DRY). A duplication of code represents
+          a missed opportunity for abstraction. That duplication could probably become a subroutine or perhaps another class
+          outright.
+        </p>
+        <p>A subtle is the
+          <code>switch/case</code> or
+          <code>if/else</code> chain that appears again and again in various modules, always testing for the same set of conditions. These should
+          be replaced with polymorphism.</p>
+        <h4>Vertical Separation</h4>
+        <p>Variables and function should be defined close to where they are used. Local variables should be declared just above
+          their first usage and should have a small vertical scope.</p>
+        <p>Private functions should be defined just below their first usage, limiting the vertical distance between the invocations
+          and definitions.</p>
+        <h4>Consistency</h4>
+        <p>If a software developer does something in a certain way, he/she should do all similar things in the same way. This
+          goes back to the principle of least surprise. Once a conventions is chosen, it must be followed.</p>
+        <h4>Clutter</h4>
+        <p>Of what use is a default constructor with no implementation? All it serves to do is clutter up the code with meaningless
+          artifacts. Variables that aren’t used, functions that are never called, comments that add no information, and so
+          forth. All these things are clutter and should be removed. Source files should be clean, well organized, and free
+          of clutter.</p>
+        <h4>Misplaced Responsibility</h4>
+        <p>One of the most important decisions a software developer can make is where to put code. For example, where should
+          the
+          <code>PI</code> constant go? Should it be in the
+          <code>Math</code> class? Perhaps it belongs in the
+          <code>Trigonometry</code> class? Or maybe in the
+          <code>Circle</code> class?</p>
+        <p>The principle of least surprise comes into play here. Code should be placed where a reader would naturally expect
+          it to be. The
+          <code>PI</code> constant should go where the
+          <code>Trigonometry</code> functions are declared. One way to make this decision is to look at the names of the functions.</p>
+        <h4>Understanding the Algorithm</h4>
+        <p>Algorithms that are not well understood are hard to work with, to change, and to adapt. Even if they are "working",
+          this should not happen. Often the best way to gain knowledge and understanding of an algorithm is to refactor it
+          into something that is so clean and expressive that it is obvious how it works.</p>
+        <h4>Standard Conventions Should Be Followed</h4>
+        <p>Every team should follow a coding standard based on common industry norms. This coding standard should specify things
+          like where to declare instance variables; how to name classes, methods, and variables; where to put braces; and
+          so on. The team should not need a document to describe these conventions because their code provides the examples.</p>
+        <h4>Structure over Convention</h4>
+        <p>Enforce design decisions with structure over convention. Naming conventions are good, but they are inferior to structures
+          that force compliance. For example,
+          <code>switch/cases</code> with nicely named enumerations are inferior to base classes with abstract methods. No one is forced to implement
+          the
+          <code>switch/case</code> statement the same way each time; but the base classes do enforce that concrete classes have all abstract methods
+          implemented.
+        </p>
+        <h4>Broken Window Theory</h4>
+        <p>This theory states that maintaining and monitoring urban environments to prevent small crimes such as vandalism,
+          public drinking, and toll-jumping helps to create an atmosphere of order and lawfulness, thereby preventing more
+          serious crimes from happening.</p>
+        <p>One broken window, left unrepaired for any substantial length of time, instills in the inhabitants of the building
+          a sense of abandonment. So another window gets broken. People start littering. Serious structural damage begins.
+          In a relatively short space of time, the building becomes damaged beyond the owner's desire to fix it, and the
+          sense of abandonment becomes reality.</p>
+        <p>There should be no "broken windows" (bad designs, wrong decisions, poor code) unrepaired. Each one should be fixed
+          as soon as it is discovered.</p>
+        <h4>Optimization</h4>
+        <p>Optimization should only be performed after the code is working as intended: "Premature optimization is the root
+          of all evil (or at least most of it) in programming." - Donald Knuth.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Names</h3>
+        <h4>Descriptive Names Should Be Used</h4>
+        <p>Names should be descriptive. Meanings tend to drift as software evolves, so the appropriateness of the names should
+          be frequently reevaluated. Names are too important to treat carelessly.</p>
+        <p>The power of carefully chosen names is that they overload the structure of the code with description, thus eliminating
+          the need for commentaries.</p>
+        <h4>Names at the Appropriate Level of Abstraction</h4>
+        <p>Names should not communicate implementation; names should reflect the level of abstraction of the class or function
+          they are in. This is hard to do, as it is very easy to mix levels of abstractions. Making code readable requires
+          a dedication to continuous improvement.</p>
+        <h4>Standard Nomenclature Where Possible</h4>
+        <p>Names are easier to understand if they are based on existing convention or usage. For example, if when using the
+          <code>DECORATOR</code> pattern, the word Decorator should be used in the names of the decorating classes. For example
+          <code>AutoHangupModemDecorator</code> might be the name of a class that decorates a Modem with the ability to automatically hang up at the end of a
+          session.
+        </p>
+        <p>Patterns are just one kind of standard. In Java, for example, functions that convert objects to string representations
+          are often named
+          <code>toString</code>. It is better to follow existing conventions like these than to create new ones.</p>
+        <h4>Long Names for Long Scopes</h4>
+        <p>The length of a name should be related to the length of the scope. Short variable names should be used for tiny scopes,
+          but for big scopes longer names should be used.</p>
+        <p>Variable names like
+          <code>i</code> and
+          <code>j</code> are just fine if their scope is five lines long, like a
+          <code>for</code> statement. On the other hand, variables and functions with short names lose their meaning over long distances.
+          So the longer the scope, the longer and more precise the name should be.</p>
+        <h4>Encoding Should Be Avoided</h4>
+        <p>Names should not be encoded with type or scope information. Also project and/or subsystem encodings such as
+          <code>vis_</code> (for visual imaging system) are distracting and redundant. Hungarian Notation should not be used.</p>
+        <h4>Names Should Describe Side-Effects</h4>
+        <p>Names should describe everything that a function, variable, or class is or does. Side effects should not be hidden
+          with a name. A simple verb should not be used to describe a function that does more than just that simple action.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Test Driven Development</h3>
+        <p>There are 3 laws for Test Driven Development (TDD):</p>
+        <ul>
+          <li>One must write a failing unit test before writing any production code.</li>
+          <li>One may not write more of a unit test than is sufficient to fail, and not compiling is failing;</li>
+          <li>One may not write more production code than is sufficient to pass the currently failing unit test.</li>
+        </ul>
+        <p>These 3 laws lock the software developer into a cycle that is perhaps 30 seconds long. The tests and the production
+          code are written together, with the tests being just a few seconds ahead of the production code.
+        </p>
+        <h4>Insufficient Tests</h4>
+        <p>How many tests should be in a test suite? A test suite should test everything that could possibly break. The tests
+          are insufficient so long as there are conditions that have not been explored by the tests or calculations that
+          have not been validated.</p>
+        <h4>Coverage Tool</h4>
+        <p>Coverage tools reports gaps in testing strategies. They make it easy to find modules, classes, and functions that
+          are insufficiently tested. Most IDEs gives a visual indication, marking lines that are covered in green and those
+          that are uncovered in red. This makes it quick and easy to find if or catch statements whose bodies haven’t been
+          checked.
+        </p>
+        <h4>Trivial Tests Should Not Be Skipped</h4>
+        <p>They are easy to write and their documentary value is higher than the cost to produce them.</p>
+        <h4>Boundary Conditions Should Be Tested</h4>
+        <p>It is very easy to misjudge test boundary conditions. They should be fully tested.</p>
+        <h4>Near Bugs Should Be Exhaustively Tested</h4>
+        <p>Bugs tend to congregate. When a bug is found in a function, it is wise to do an exhaustive test of that function.
+          Maybe that bug was not alone.</p>
+        <h4>Tests Should Be Fast</h4>
+        <p>A slow test is a test that won’t get run. When things get tight, it’s the slow tests that will be dropped from the
+          suite. Tests should run as fast as possible.</p>
+        <h4>Tests Should Require One Step</h4>
+        <p>One should be able to run all the unit tests with just one command. Being able to run all the tests is so fundamental
+          and so important that it should be quick, easy, and obvious to do.</p>
+        <h4>Test Double</h4>
+        <p>Every example presented here will be an implementation of the following interface:</p>
+        <p class="code__example">
+          <code>interface Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password);<br>}</code>
+        </p>
+        <p>Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists. Example:
+        </p>
+        <p class="code__example">
+          <code>public class DummyAuthorizer implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return null;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code>
+        </p>
+        <p>It can be used when an instantiation of an implementation of the interface "Authorizer" is needed, but never really
+          used. It should return
+          <code>null</code>, as that prevents that implementation from being used (
+          <code>NullPointerException</code>).</p>
+        <p>Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what's
+          programmed in for the test. Example:</p>
+        <p class="code__example">
+          <code>public class AcceptingAuthorizerStub implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code>
+        </p>
+        <p>Stubs can be used to avoid unnecessary coupling.</p>
+        <p>Spies are stubs that also record some information based on how they were called. One form of this might be an email
+          service that records how many messages it was sent. Example:</p>
+        <p class="code__example">
+          <code>public class AcceptingAuthorizerSpy implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public boolean authorizeWasCalled = false;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authorizeWasCalled = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code>
+        </p>
+        <p>It might be used when the test wants to be sure that the authorize method was called by the system (or to count how
+          many times it was called for example). Spies can be used to see inside the workings of the algorithms.
+        </p>
+        <p>Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected to receive.
+          Example:
+        </p>
+        <p class="code__example">
+          <code>public class AcceptingAuthorizerVerificationMock implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public boolean authorizeWasCalled = false;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authorizeWasCalled = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public boolean verify() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return authorizedWasCalled;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code>
+        </p>
+        <p>Mocks know what they are testing, thus the "verify" method. A mock spies on the behavior of the module being tested.
+          And the mock knows what behavior to expect. Moving the expectation into the mock is like a coupling, but it makes
+          it easier to write a mocking tool.</p>
+        <p>Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable
+          for production (an in memory database is a good example).</p>
+        <p class="code__example">
+          <code>public class AcceptingAuthorizerFake implements Authorizer {<br>&nbsp;&nbsp;&nbsp;&nbsp;public Boolean authorize(String username, String password) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return username.equals("Bob");<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code>
+        </p>
+        <p>A fake has business behavior. Mock is a kind of spy, a spy is a kind of stub, and a stub is a kind of dummy. But
+          a fake is not a kind of any of them. It is a completely different kind of test double. They can get extremely complicated.
+          So complicated they need unit tests of their own. At the extremes the fake becomes the real system.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Variables and Constants</h3>
+        <h4>Explanatory Variables Should Be Used</h4>
+        <p>One of the more powerful ways to make a program readable is to break the calculations up into intermediate values
+          that are held in variables with meaningful names. It is remarkable how an opaque module can suddenly become transparent
+          simply by breaking the calculations up into well-named intermediate values.</p>
+        <h4>Known Numbers Should Be Replaced with Named Constants</h4>
+        <p>In general, it is a bad idea to have raw numbers in the code. They should be hidden behind well-named constants:
+          <code>PI</code>,
+          <code>EARTH_RADIUS_IN_METER</code>, etc.</p>
+        <h4>Configurable Data Should Be at High Levels</h4>
+        <p>If there is a constant such as a default or configuration value that is known and expected at a high level of abstraction,
+          they should not be hidden in a low-level method. It should be exposed as an argument to that low-level method called
+          from the high-level method.</p>
+        <h4>Constants Should Not Be Inherited</h4>
+        <p>Constants should not be inherited, because they will be hidden and hard to find. It is better to use static imports,
+          so that it becomes obvious where they come from.</p>
+        <h4>Constants versus Enums</h4>
+        <p>The meaning of
+          <code>int</code>s can get lost, but the meaning of
+          <code>enum</code>s cannot, because they belong to an enumeration that is named. Besides they can have methods and fields. This makes
+          them very powerful tools that allow much more expression and flexibility than
+          <code>int</code>s. </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Version Control System</h3>
+        <p>This sections contains a compilation of the most important commands required to use the Version Control System Git.
+        </p>
+        <p>Create a repository, in the working directory:</p>
+        <p class="code__example">
+          <code>&gt; git init</code>
+        </p>
+        <p>Clone an existing repository:</p>
+        <p class="code__example">
+          <code>&gt; git clone &lt;project-url&gt;</code>
+        </p>
+        <p>Information on the HEAD branch and Staging Area of the repository:</p>
+        <p class="code__example">
+          <code>&gt; git status</code>
+        </p>
+        <p>Commit information of the HEAD branch (1 commit per line with the flag), including SHA hash:</p>
+        <p class="code__example">
+          <code>&gt; git log --oneline</code>
+        </p>
+        <p>Commit information of only one commit (if no SHA is provided, last commit is shown):</p>
+        <p class="code__example">
+          <code>&gt; git show &lt;SHA&gt;</code>
+        </p>
+        <p>Move files from the Working Directory to the Staging Area (adds every file with the flag):</p>
+        <p class="code__example">
+          <code>&gt; git add --a</code>
+        </p>
+        <p>Commit every change in the Staging Area to the repository:</p>
+        <p class="code__example">
+          <code>&gt; git commit -am &lt;message&gt;</code>
+        </p>
+        <p>Check changes that have been made but have not been committed, yet:</p>
+        <p class="code__example">
+          <code>&gt; git diff</code>
+        </p>
+        <p>Create new branch (flag
+          <code>-d</code> deletes instead):</p>
+        <p class="code__example">
+          <code>&gt; git branch &lt;new-branch&gt;</code>
+        </p>
+        <p>Switch active branch (flag
+          <code>-b</code> creates branch):</p>
+        <p class="code__example">
+          <code>&gt; git checkout &lt;branch&gt;</code>
+        </p>
+        <p>Merge specified branch into the active branch: </p>
+        <p class="code__example">
+          <code>&gt; git merge &lt;name-of-branch-to-merge&gt;</code>
+        </p>
+        <p>Revert a commit by creating another commit with the exact opposite changes:</p>
+        <p class="code__example">
+          <code>&gt; git revert &lt;SHA-to-revert&gt;</code>
+        </p>
+        <p>Reset (erase) commits:</p>
+        <p class="code__example">
+          <code>&gt; git reset &lt;SHA&gt;</code>
+        </p>
+        <p>Manage set of tracked repositories:</p>
+        <p class="code__example">
+          <code>&gt; git remote -v</code>
+        </p>
+        <p>Send local commits to a remote repository:</p>
+        <p class="code__example">
+          <code>&gt; git push &lt;remote-shortname&gt; &lt;branch&gt;</code>
+        </p>
+        <p>Pull changes from the remote repository to the local one, merging them into a local branch (
+          <code>fetch</code> does not merge):</p>
+        <p class="code__example">
+          <code>&gt; git pull &lt;remote-shortname&gt; &lt;branch&gt;</code>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Unified Modeling Language</h3>
+        <p>Unified Modeling language (UML) is a standardized modeling language enabling developers to specify, visualize, construct
+          and document artifacts of a software system. The most basic relations are presented in this section.
+        </p>
+        <h4>Association</h4>
+        <p>Association is merely invoking a method of another object via a reference to that object (received on a method for
+          instance). Notation:
+          <code>[Dog]-&gt;[Ball]</code>.</p>
+        <h4>Aggregation</h4>
+        <p>Implies a relationship where the child can exist independently of the parent. Delete the parent and the child still
+          exists. Child can be received in the parent's constructor for example. Notation:
+          <code>[Parent]◇-&gt;[Child]</code>.</p>
+        <h4>Composition</h4>
+        <p>Implies a relationship where the child cannot exist independent of the parent. Child can be instantiated in the parent’s
+          constructor for example. Notation:
+          <code>[House]◆-&gt;[Roof]</code>.</p>
+        <h4>Inheritance</h4>
+        <p>Inheritance enables subclasses to take on the properties of existing classes. Notation:
+          <code>[Base]⇽[Derived]</code>.</p>
+        <h4>Interface Inheritance</h4>
+        <p>Interface inheritance enables a class to implement an abstract class, interface. Notation:
+          <code>[Interface]⇠[Implementation]</code>.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>References</h3>
+        <p>Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.</p>
+        <p>The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.</p>
+        <p>Refactoring: Improving the Design of Existing Code, by Martin Fowler et al, 1999.</p>
+        <p>
+          <a href="https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html" target="_blank" rel="noopener">The Little Mocker</a>, by Robert Martin.</p>
+        <p>
+          <a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="noopener">Clean Code Javascript</a>, by Ryan McDermott et al.</p>
+        <p>
+          <a href="https://yuml.me/" target="_blank" rel="noopener">yUML</a>, Unified Modeling Language (UML).</p>
+        <p>
+          <a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Mocks Are Not Stubs</a>, by Martin Fowler.</p>
+        <p>
+          <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>, Version Control System Git.</p>
+      </div>
+    </div>
+  </main>
+  {% include footer.html %}
 </body>
 
 </html>
