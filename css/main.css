@@ -104,7 +104,9 @@ nav {
     display: inline-block;
     box-sizing: border-box;
     line-height: 1em;
-    width: 10em;
+    padding-left: 1em;
+    padding-right: 1em;
+    /* width: 8em; */
     height: 3em;
 }
 

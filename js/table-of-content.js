@@ -10,7 +10,7 @@
             document.querySelector("main .row:first-child").innerHTML += tagToc;
 
             const toc = document.getElementById('toc');
-            document.querySelectorAll("main h3").forEach(function(header) {
+            document.querySelectorAll("main h3").forEach(function (header) {
                 const id = header.innerHTML.toLowerCase().replace(/\s+/g, '-');
                 header.id = id;
                 toc.innerHTML += `<li class="toc"><a href="#${id}">${header.innerHTML}</a></li>`;
