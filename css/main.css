@@ -210,6 +210,8 @@ footer .row {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .col-1 {
@@ -277,7 +279,13 @@ footer .row {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
+    main [class*="col-"] {
+         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
     header {
         border-bottom: 0.6em solid #2c3d51;
         padding: 0.8em 0 0.8em 0;
@@ -309,16 +317,10 @@ footer .row {
     }
 }
 
-@media only screen and (max-width: 700px) {
-    main [class*="col-"] {
-         width: 100%;
-    }
-}
-
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 1001px) {
     .row,
     .nav__list {
-        width: 900px;
+        width: 1000px;
         margin-left: auto;
         margin-right: auto;
     }
