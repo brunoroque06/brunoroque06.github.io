@@ -4,9 +4,9 @@ Personal website that contains information about myself, and some projects. The 
 
 ## Development
 
-The website requires Jekyll to run:
+Serve website:
 
 ```bash
-gem install jekyll bundler
-jekyll serve
+$ gem install jekyll bundler
+$ jekyll serve
 ```
