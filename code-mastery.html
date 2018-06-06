@@ -1,4 +1,4 @@
---- 
+---
 # Jekyll needs this
 ---
 <!DOCTYPE html>
@@ -35,309 +35,311 @@
           <li>Positive conditionals should be preferred over negative ones.</li>
         </ul>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <h3>Classes</h3>
-          <ul>
-            <li>
-              Five S.O.L.I.D. principles:
-              <ol>
-                <li>Single responsibility principle (SRP), a class should have only a single responsibility (i.e. only one potential
-                  change in the software's specification should be able to affect the specification of the class);
-                </li>
-                <li>Open/closed principle (OCP), software entities (classes, modules, functions, etc.) should be open for extension,
-                  but closed for modification;</li>
-                <li>Liskov substitution principle (LSP), objects in a program should be replaceable with instances of their subtypes
-                  without altering the correctness of that program;</li>
-                <li>Interface segregation principle (ISP), many client-specific interfaces are better than one general-purpose
-                  interface;
-                </li>
-                <li>Dependency inversion principle (DIP), one should depend on abstractions, not on concretions.</li>
-              </ol>
-            </li>
-            <li>Polymorphism should be preferred to
-              <code>if/else</code> or
-              <code>switch/case</code>.</li>
-            <li>Coupling should be kept low by having small interfaces with few methods and responsibilities. The fewer (variables,
-              methods, etc) the better.</li>
-            <li>"Law of Demeter"/"Shy Code" should be respected, by avoiding
-              <code>a.getB().getC().doSomething()</code>.</li>
-            <li>Base classes should not depend on their derivatives.</li>
-            <li>
-              <code>Static</code> methods should be used when they does not operate in a single instance and all the data that they use comes
-              from their arguments. For different implementations polymorphism should be used instead.</li>
-            <li>Abstract classes should be used to get rid of duplicated code, while Interfaces should define contracts.</li>
-          </ul>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <h3>Comments</h3>
-            <ul>
-              <li>Are redundant if they describe something that adequately describes itself.</li>
-              <li>Get old quickly, and tend to migrate away from the code they once described.</li>
-              <li>Should be used to explain business logic, or eventually explain decisions.</li>
-              <li>Commented-out code should be deleted (Version Control Systems will still remember).</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <h3>Functional Programming</h3>
-            <ul>
-              <li>Contrary to imperative programming, functional programming is characterized by variable immutability, higher
-                order functions (functions that can receive functions as inputs and/or return functions as outputs), and
-                recursion instead of imperative loops (for, while).
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Classes</h3>
+        <ul>
+          <li>
+            Five S.O.L.I.D. principles:
+            <ol>
+              <li>Single responsibility principle (SRP), a class should have only a single responsibility (i.e. only one potential
+                change in the software's specification should be able to affect the specification of the class);
               </li>
-              <li>It is stateless, which makes easy the exploitation of parallelism.</li>
-              <li>Substitution model reduces expressions to a value, as long as these expressions have no side effects. It is
-                formalized in the &#955;-calculus, which is the foundation for functional programming. An example of a side
-                effect is the following expression:
-                <code>number++</code>, which can not be expressed by the substitution model. There are 2 evaluation strategies:
-                <ol>
-                  <li>
-                    Call-by-value: evaluate operations, and then functions. It has the advantage that it evaluates every function argument only
-                    once;
-                  </li>
-                  <li>
-                    Call-by-name: evaluate functions, and then operations. It has the advantage that a function argument is not evaluated if
-                    the corresponding parameter is unused in the evaluation of the function body.
-                  </li>
-                </ol>
+              <li>Open/closed principle (OCP), software entities (classes, modules, functions, etc.) should be open for extension,
+                but closed for modification;</li>
+              <li>Liskov substitution principle (LSP), objects in a program should be replaceable with instances of their subtypes
+                without altering the correctness of that program;</li>
+              <li>Interface segregation principle (ISP), many client-specific interfaces are better than one general-purpose
+                interface;
               </li>
-              <li>A function uses tail recursion if it calls itself as its last action, allowing the function's stack frame to
-                be reused.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <h3>Functions</h3>
-            <ul>
-              <li>Flag arguments should be avoided.</li>
-              <li>Functions with more than 3 arguments are very questionable.</li>
-              <li>Output arguments should be avoided: if a function must change the state of something, it should change the
-                state of the object it is called on.</li>
-              <li>Names should be self explanatory.</li>
-              <li>Temporal coupling should be enforced, so that methods are not executed in a different order than intended.</li>
-              <li>Algorithms that are not well understood are hard to work with, or to change. Even if they are "working", this
-                should be avoided.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <h3>General Principles</h3>
-            <ul>
-              <li>Don't Repeat Yourself (DRY): a duplication of code, or any other task, represents a missed opportunity for
-                automation/abstraction.
+              <li>Dependency inversion principle (DIP), one should depend on abstractions, not on concretions.</li>
+            </ol>
+          </li>
+          <li>Polymorphism should be preferred to
+            <code>if/else</code> or
+            <code>switch/case</code>.</li>
+          <li>Coupling should be kept low by having small interfaces with few methods and responsibilities. The fewer (variables,
+            methods, etc) the better.</li>
+          <li>"Law of Demeter"/"Shy Code" should be respected, by avoiding
+            <code>a.getB().getC().doSomething()</code>.</li>
+          <li>Base classes should not depend on their derivatives.</li>
+          <li>
+            <code>Static</code> methods should be used when they does not operate in a single instance and all the data that they use comes
+            from their arguments. For different implementations polymorphism should be used instead.</li>
+          <li>Abstract classes should be used to get rid of duplicated code, while Interfaces should define contracts.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Comments</h3>
+        <ul>
+          <li>Are redundant if they describe something that adequately describes itself.</li>
+          <li>Get old quickly, and tend to migrate away from the code they once described.</li>
+          <li>Should be used to explain business logic, or eventually explain decisions.</li>
+          <li>Commented-out code should be deleted (Version Control Systems will still remember).</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Functional Programming</h3>
+        <ul>
+          <li>Contrary to imperative programming, functional programming is characterized by variable immutability, higher order
+            functions (functions that can receive functions as inputs and/or return functions as outputs), and recursion
+            instead of imperative loops (for, while).
+          </li>
+          <li>It is stateless, which makes easy the exploitation of parallelism.</li>
+          <li>Substitution model reduces expressions to a value, as long as these expressions have no side effects. It is formalized
+            in the &#955;-calculus, which is the foundation for functional programming. An example of a side effect is the
+            following expression:
+            <code>number++</code>, which can not be expressed by the substitution model. There are 2 evaluation strategies:
+            <ol>
+              <li>
+                Call-by-value: evaluate operations, and then functions. It has the advantage that it evaluates every function argument only
+                once;
               </li>
-              <li>Builds should be a one step process.</li>
-              <li>Safeties should not be overridden, like turning off certain compiler warnings, ignoring failing tests, etc.
+              <li>
+                Call-by-name: evaluate functions, and then operations. It has the advantage that a function argument is not evaluated if
+                the corresponding parameter is unused in the evaluation of the function body.
               </li>
-              <li>A developer should be consistent: if something is done in a certain way, all similar things should be done
-                in the same way. Conventions should be followed, and every team should have one.</li>
-              <li>Design decisions should be enforced with structure over convention.</li>
-              <li>Broken Window Theory: one broken window, left unrepaired for any substantial length of time, instills in the
-                inhabitants of the building a sense of abandonment. So another window gets broken. Serious structural damage
-                begins. In a relatively short space of time, the building becomes damaged beyond the owner's desire to fix
-                it, and the sense of abandonment becomes reality. Each broken window should be fixed as soon as it is discovered.</li>
-              <li>Optimization should only be performed after the code is working as intended: "Premature optimization is the
-                root of all evil (or at least most of it) in programming." - Donald Knuth.</li>
-              <li>Instead of excuses, options should be provided. Don’t say it can’t be done; explain what can be done.</li>
-              <li>Abstractions outlive implementations, and are more worthy of time investment.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <h3>Names</h3>
-            <ul>
-              <li>The "Principle of Least Surprise" should be followed: any function or class should implement the behaviors
-                that another programmer could reasonably expect just by reading its name.</li>
-              <li>Standard nomenclature should be used where possible, like when using patterns, or native language methods like
-                <code>toString</code>.</li>
-              <li>The length of a name should be related to the length of the scope. Short variable names should be used for
-                tiny scopes, but for big scopes longer names should be used (variable
-                <code>i</code> for a
-                <code>for</code> cycle is fine for example).</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <h3>Test Driven Development</h3>
-            <ul>
-              <li>There are 3 laws for Test Driven Development (TDD):
-                <ol>
-                  <li>One must write a failing unit test before writing any production code.</li>
-                  <li>One may not write more of a unit test than is sufficient to fail, and not compiling is failing;</li>
-                  <li>One may not write more production code than is sufficient to pass the currently failing unit test.</li>
-                </ol>
+            </ol>
+          </li>
+          <li>A function uses tail recursion if it calls itself as its last action, allowing the function's stack frame to be
+            reused.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Functions</h3>
+        <ul>
+          <li>Flag arguments should be avoided.</li>
+          <li>Functions with more than 3 arguments are very questionable.</li>
+          <li>Output arguments should be avoided: if a function must change the state of something, it should change the state
+            of the object it is called on.</li>
+          <li>Names should be self explanatory.</li>
+          <li>Temporal coupling should be enforced, so that methods are not executed in a different order than intended.</li>
+          <li>Algorithms that are not well understood are hard to work with, or to change. Even if they are "working", this should
+            be avoided.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>General Principles</h3>
+        <ul>
+          <li>Don't Repeat Yourself (DRY): a duplication of code, or any other task, represents a missed opportunity for automation/abstraction.
+          </li>
+          <li>Builds should be a one step process.</li>
+          <li>Safeties should not be overridden, like turning off certain compiler warnings, ignoring failing tests, etc.
+          </li>
+          <li>A developer should be consistent: if something is done in a certain way, all similar things should be done in the
+            same way. Conventions should be followed, and every team should have one.</li>
+          <li>Design decisions should be enforced with structure over convention.</li>
+          <li>Broken Window Theory: one broken window, left unrepaired for any substantial length of time, instills in the inhabitants
+            of the building a sense of abandonment. So another window gets broken. Serious structural damage begins. In a
+            relatively short space of time, the building becomes damaged beyond the owner's desire to fix it, and the sense
+            of abandonment becomes reality. Each broken window should be fixed as soon as it is discovered.</li>
+          <li>Optimization should only be performed after the code is working as intended: "Premature optimization is the root
+            of all evil (or at least most of it) in programming." - Donald Knuth.</li>
+          <li>Instead of excuses, options should be provided. Don’t say it can’t be done; explain what can be done.</li>
+          <li>Abstractions outlive implementations, and are more worthy of time investment.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Names</h3>
+        <ul>
+          <li>The "Principle of Least Surprise" should be followed: any function or class should implement the behaviors that
+            another programmer could reasonably expect just by reading its name.</li>
+          <li>Standard nomenclature should be used where possible, like when using patterns, or native language methods like
+            <code>toString</code>.</li>
+          <li>The length of a name should be related to the length of the scope. Short variable names should be used for tiny
+            scopes, but for big scopes longer names should be used (variable
+            <code>i</code> for a
+            <code>for</code> cycle is fine for example).</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Test Driven Development</h3>
+        <ul>
+          <li>There are 3 laws for Test Driven Development (TDD):
+            <ol>
+              <li>One must write a failing unit test before writing any production code.</li>
+              <li>One may not write more of a unit test than is sufficient to fail, and not compiling is failing;</li>
+              <li>One may not write more production code than is sufficient to pass the currently failing unit test.</li>
+            </ol>
+          </li>
+          <li>Tests are insufficient as long as there are conditions that have not been covered by the tests or calculations
+            that have not been validated. Test suite should not be bigger than the required to test every piece of code.</li>
+          <li>Should require 1 step to run, and should run fast.</li>
+          <li>Test Doubles:
+            <ol>
+              <li>
+                Dummy objects are passed around but never actually used. It should return
+                <code>null</code>, as that prevents that implementation from being used (
+                <code>NullPointerException</code>);
               </li>
-              <li>Tests are insufficient as long as there are conditions that have not been covered by the tests or calculations
-                that have not been validated. Test suite should not be bigger than the required to test every piece of code.</li>
-              <li>Should require 1 step to run, and should run fast.</li>
-              <li>Test Doubles:
-                <ol>
-                  <li>
-                    Dummy objects are passed around but never actually used. It should return
-                    <code>null</code>, as that prevents that implementation from being used (
-                    <code>NullPointerException</code>);
-                  </li>
-                  <li>Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside
-                    what's programmed in for the test;</li>
-                  <li>Spies are stubs that also record some information based on how they were called. It might be used when
-                    the test wants to be sure that the authorize method was called by the system (or to count how many times
-                    it was called for example);</li>
-                  <li>Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected
-                    to receive. A mock spies on the behavior of the module being tested. And the mock knows what behavior
-                    to expect;</li>
-                  <li>Fake objects actually have working implementations, but usually take some shortcut which makes them not
-                    suitable for production (an in memory database is a good example).</li>
-                </ol>
+              <li>Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside
+                what's programmed in for the test;</li>
+              <li>Spies are stubs that also record some information based on how they were called. It might be used when the
+                test wants to be sure that the authorize method was called by the system (or to count how many times it was
+                called for example);</li>
+              <li>Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected
+                to receive. A mock spies on the behavior of the module being tested. And the mock knows what behavior to
+                expect;
               </li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <h3>Variables and Constants</h3>
-            <ul>
-              <li>Explanatory variables should be used by breaking up calculations into intermediate values that are held in
-                variables with meaningful names.</li>
-              <li>Known numbers should be replaced with named constants (
-                <code>PI</code>,
-                <code>EARTH_RADIUS_IN_METER</code>, etc).</li>
-              <li>Configurable data should be at high levels.</li>
-              <li>Constants should not be inherited, because they will be hidden and hard to find. It is better to use static
-                imports, so that it becomes obvious where they come from.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <h3>Version Control System</h3>
-            <p>This sections contains a compilation of the most important commands required to use the Version Control System
-              Git.
-            </p>
-            <p>Create a repository, in the working directory:</p>
-            <p class="code__example">
-              <code>&gt; git init</code>
-            </p>
-            <p>Clone an existing repository:</p>
-            <p class="code__example">
-              <code>&gt; git clone &lt;project-url&gt;</code>
-            </p>
-            <p>Information on the HEAD branch and Staging Area of the repository:</p>
-            <p class="code__example">
-              <code>&gt; git status</code>
-            </p>
-            <p>Commit information of the HEAD branch (1 commit per line with the flag), including SHA hash:</p>
-            <p class="code__example">
-              <code>&gt; git log --oneline</code>
-            </p>
-            <p>Commit information of only one commit (if no SHA is provided, last commit is shown):</p>
-            <p class="code__example">
-              <code>&gt; git show &lt;SHA&gt;</code>
-            </p>
-            <p>Move files from the Working Directory to the Staging Area (adds every file with the flag):</p>
-            <p class="code__example">
-              <code>&gt; git add --a</code>
-            </p>
-            <p>Commit every change in the Staging Area to the repository:</p>
-            <p class="code__example">
-              <code>&gt; git commit -am &lt;message&gt;</code>
-            </p>
-            <p>Check changes that have been made but have not been committed, yet:</p>
-            <p class="code__example">
-              <code>&gt; git diff</code>
-            </p>
-            <p>Create new branch (flag
-              <code>-d</code> deletes instead):</p>
-            <p class="code__example">
-              <code>&gt; git branch &lt;new-branch&gt;</code>
-            </p>
-            <p>Switch active branch (flag
-              <code>-b</code> creates branch):</p>
-            <p class="code__example">
-              <code>&gt; git checkout &lt;branch&gt;</code>
-            </p>
-            <p>Merge specified branch into the active branch: </p>
-            <p class="code__example">
-              <code>&gt; git merge &lt;name-of-branch-to-merge&gt;</code>
-            </p>
-            <p>Revert a commit by creating another commit with the exact opposite changes:</p>
-            <p class="code__example">
-              <code>&gt; git revert &lt;SHA-to-revert&gt;</code>
-            </p>
-            <p>Reset (erase) commits:</p>
-            <p class="code__example">
-              <code>&gt; git reset &lt;SHA&gt;</code>
-            </p>
-            <p>Manage set of tracked repositories:</p>
-            <p class="code__example">
-              <code>&gt; git remote -v</code>
-            </p>
-            <p>Send local commits to a remote repository:</p>
-            <p class="code__example">
-              <code>&gt; git push &lt;remote-shortname&gt; &lt;branch&gt;</code>
-            </p>
-            <p>Pull changes from the remote repository to the local one, merging them into a local branch (
-              <code>fetch</code> does not merge):</p>
-            <p class="code__example">
-              <code>&gt; git pull &lt;remote-shortname&gt; &lt;branch&gt;</code>
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <h3>Unified Modeling Language</h3>
-            <p>Unified Modeling language (UML) is a standardized modeling language enabling developers to specify, visualize,
-              construct and document artifacts of a software system. The most basic relations are presented in this section.
-            </p>
-            <p>Association is merely the invocation of a method of another object via a reference to that object (received on a method
-              for instance).</p>
-            <p class="code__example">
-              <code>[Dog]-&gt;[Ball]</code>
-            </p>
-            <p>Aggregation implies a relationship where the child can exist independently of the parent. Delete the parent and the child
-              still exists. Child can be received in the parent's constructor for example.</p>
-            <p class="code__example">
-              <code>[Parent]◇-&gt;[Child]</code>
-            </p>
-            <p>Composition implies a relationship where the child cannot exist independent of the parent. Child can be instantiated in the
-              parent’s constructor for example.</p>
-            <p class="code__example">
-              <code>[House]◆-&gt;[Roof]</code>
-            </p>
-            <p>Inheritance enables subclasses to take on the properties of existing classes.</p>
-            <p class="code__example">
-              <code>[Base]⇽[Derived]</code>
-            </p>
-            <p>Interface inheritance enables a class to implement an abstract class, interface.</p>
-            <p class="code__example">
-              <code>[Interface]⇠[Implementation]</code>
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <h3>References</h3>
-            <p>Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.</p>
-            <p>The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.</p>
-            <p>Refactoring: Improving the Design of Existing Code, by Martin Fowler et al, 1999.</p>
-            <p>
-              <a href="https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html" target="_blank" rel="noopener">The Little Mocker</a>, by Robert Martin.</p>
-            <p>
-              <a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="noopener">Clean Code Javascript</a>, by Ryan McDermott et al.</p>
-            <p>
-              <a href="https://yuml.me/" target="_blank" rel="noopener">yUML</a>, Unified Modeling Language (UML).</p>
-            <p>
-              <a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Mocks Are Not Stubs</a>, by Martin Fowler.</p>
-            <p>
-              <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>, Version Control System Git.</p>
-          </div>
-        </div>
+              <li>Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable
+                for production (an in memory database is a good example).</li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Variables and Constants</h3>
+        <ul>
+          <li>Explanatory variables should be used by breaking up calculations into intermediate values that are held in variables
+            with meaningful names.</li>
+          <li>Known numbers should be replaced with named constants (
+            <code>PI</code>,
+            <code>EARTH_RADIUS_IN_METER</code>, etc).</li>
+          <li>Configurable data should be at high levels.</li>
+          <li>Constants should not be inherited, because they will be hidden and hard to find. It is better to use static imports,
+            so that it becomes obvious where they come from.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Version Control System</h3>
+        <p>This sections contains a compilation of the most important commands required to use the Version Control System Git.
+        </p>
+        <p>Create a repository, in the working directory:</p>
+        <p class="code__example">
+          <code>&gt; git init</code>
+        </p>
+        <p>Clone an existing repository:</p>
+        <p class="code__example">
+          <code>&gt; git clone &lt;project-url&gt;</code>
+        </p>
+        <p>Information on the HEAD branch and Staging Area of the repository:</p>
+        <p class="code__example">
+          <code>&gt; git status</code>
+        </p>
+        <p>Commit information of the HEAD branch (1 commit per line with the flag), including SHA hash:</p>
+        <p class="code__example">
+          <code>&gt; git log --oneline</code>
+        </p>
+        <p>Commit information of only one commit (if no SHA is provided, last commit is shown):</p>
+        <p class="code__example">
+          <code>&gt; git show &lt;SHA&gt;</code>
+        </p>
+        <p>Move files from the Working Directory to the Staging Area (adds every file with the flag):</p>
+        <p class="code__example">
+          <code>&gt; git add --a</code>
+        </p>
+        <p>Commit every change in the Staging Area to the repository:</p>
+        <p class="code__example">
+          <code>&gt; git commit -am &lt;message&gt;</code>
+        </p>
+        <p>Check changes that have been made but have not been committed, yet:</p>
+        <p class="code__example">
+          <code>&gt; git diff</code>
+        </p>
+        <p>Create new branch (flag
+          <code>-d</code> deletes instead):</p>
+        <p class="code__example">
+          <code>&gt; git branch &lt;new-branch&gt;</code>
+        </p>
+        <p>Switch active branch (flag
+          <code>-b</code> creates branch):</p>
+        <p class="code__example">
+          <code>&gt; git checkout &lt;branch&gt;</code>
+        </p>
+        <p>Merge specified branch into the active branch: </p>
+        <p class="code__example">
+          <code>&gt; git merge &lt;name-of-branch-to-merge&gt;</code>
+        </p>
+        <p>Revert a commit by creating another commit with the exact opposite changes:</p>
+        <p class="code__example">
+          <code>&gt; git revert &lt;SHA-to-revert&gt;</code>
+        </p>
+        <p>Reset (erase) commits:</p>
+        <p class="code__example">
+          <code>&gt; git reset &lt;SHA&gt;</code>
+        </p>
+        <p>Manage set of tracked repositories:</p>
+        <p class="code__example">
+          <code>&gt; git remote -v</code>
+        </p>
+        <p>Send local commits to a remote repository:</p>
+        <p class="code__example">
+          <code>&gt; git push &lt;remote-shortname&gt; &lt;branch&gt;</code>
+        </p>
+        <p>Pull changes from the remote repository to the local one, merging them into a local branch (
+          <code>fetch</code> does not merge):</p>
+        <p class="code__example">
+          <code>&gt; git pull &lt;remote-shortname&gt; &lt;branch&gt;</code>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Unified Modeling Language</h3>
+        <p>Unified Modeling language (UML) is a standardized modeling language enabling developers to specify, visualize, construct
+          and document artifacts of a software system. The most basic relations are presented in this section.
+        </p>
+        <p>Association is merely the invocation of a method of another object via a reference to that object (received on a
+          method for instance).</p>
+        <p class="code__example">
+          <code>[Dog]-&gt;[Ball]</code>
+        </p>
+        <p>Aggregation implies a relationship where the child can exist independently of the parent. Delete the parent and the
+          child still exists. Child can be received in the parent's constructor for example.</p>
+        <p class="code__example">
+          <code>[Parent]◇-&gt;[Child]</code>
+        </p>
+        <p>Composition implies a relationship where the child cannot exist independent of the parent. Child can be instantiated
+          in the parent’s constructor for example.</p>
+        <p class="code__example">
+          <code>[House]◆-&gt;[Roof]</code>
+        </p>
+        <p>Inheritance enables subclasses to take on the properties of existing classes.</p>
+        <p class="code__example">
+          <code>[Base]⇽[Derived]</code>
+        </p>
+        <p>Interface inheritance enables a class to implement an abstract class, interface.</p>
+        <p class="code__example">
+          <code>[Interface]⇠[Implementation]</code>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>References</h3>
+        <p>Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.</p>
+        <p>The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.</p>
+        <p>Refactoring: Improving the Design of Existing Code, by Martin Fowler et al, 1999.</p>
+        <p>
+          <a href="https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html" target="_blank" rel="noopener">The Little Mocker</a>, by Robert Martin.</p>
+        <p>
+          <a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="noopener">Clean Code Javascript</a>, by Ryan McDermott et al.</p>
+        <p>
+          <a href="https://yuml.me/" target="_blank" rel="noopener">yUML</a>, Unified Modeling Language (UML).</p>
+        <p>
+          <a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Mocks Are Not Stubs</a>, by Martin Fowler.</p>
+        <p>
+          <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>, Version Control System Git.</p>
+      </div>
+    </div>
   </main>
   {% include footer.html %}
 </body>
