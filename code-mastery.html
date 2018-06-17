@@ -220,80 +220,6 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <h3>Version Control System</h3>
-        <p>This sections contains a compilation of the most important commands required to use the Version Control System Git.
-        </p>
-        <p>Create a repository, in the working directory:</p>
-        <p class="code__example">
-          <code>&gt; git init</code>
-        </p>
-        <p>Clone an existing repository:</p>
-        <p class="code__example">
-          <code>&gt; git clone &lt;project-url&gt;</code>
-        </p>
-        <p>Information on the HEAD branch and Staging Area of the repository:</p>
-        <p class="code__example">
-          <code>&gt; git status</code>
-        </p>
-        <p>Commit information of the HEAD branch (1 commit per line with the flag), including SHA hash:</p>
-        <p class="code__example">
-          <code>&gt; git log --oneline</code>
-        </p>
-        <p>Commit information of only one commit (if no SHA is provided, last commit is shown):</p>
-        <p class="code__example">
-          <code>&gt; git show &lt;SHA&gt;</code>
-        </p>
-        <p>Move files from the Working Directory to the Staging Area (adds every file with the flag):</p>
-        <p class="code__example">
-          <code>&gt; git add --a</code>
-        </p>
-        <p>Commit every change in the Staging Area to the repository:</p>
-        <p class="code__example">
-          <code>&gt; git commit -am &lt;message&gt;</code>
-        </p>
-        <p>Check changes that have been made but have not been committed, yet:</p>
-        <p class="code__example">
-          <code>&gt; git diff</code>
-        </p>
-        <p>Create new branch (flag
-          <code>-d</code> deletes instead):</p>
-        <p class="code__example">
-          <code>&gt; git branch &lt;new-branch&gt;</code>
-        </p>
-        <p>Switch active branch (flag
-          <code>-b</code> creates branch):</p>
-        <p class="code__example">
-          <code>&gt; git checkout &lt;branch&gt;</code>
-        </p>
-        <p>Merge specified branch into the active branch: </p>
-        <p class="code__example">
-          <code>&gt; git merge &lt;name-of-branch-to-merge&gt;</code>
-        </p>
-        <p>Revert a commit by creating another commit with the exact opposite changes:</p>
-        <p class="code__example">
-          <code>&gt; git revert &lt;SHA-to-revert&gt;</code>
-        </p>
-        <p>Reset (erase) commits:</p>
-        <p class="code__example">
-          <code>&gt; git reset &lt;SHA&gt;</code>
-        </p>
-        <p>Manage set of tracked repositories:</p>
-        <p class="code__example">
-          <code>&gt; git remote -v</code>
-        </p>
-        <p>Send local commits to a remote repository:</p>
-        <p class="code__example">
-          <code>&gt; git push &lt;remote-shortname&gt; &lt;branch&gt;</code>
-        </p>
-        <p>Pull changes from the remote repository to the local one, merging them into a local branch (
-          <code>fetch</code> does not merge):</p>
-        <p class="code__example">
-          <code>&gt; git pull &lt;remote-shortname&gt; &lt;branch&gt;</code>
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12">
         <h3>Unified Modeling Language</h3>
         <p>Unified Modeling language (UML) is a standardized modeling language enabling developers to specify, visualize, construct
           and document artifacts of a software system. The most basic relations are presented in this section.
@@ -301,25 +227,25 @@
         <p>Association is merely the invocation of a method of another object via a reference to that object (received on a
           method for instance).</p>
         <p class="code__example">
-          <code>[Dog]-&gt;[Ball]</code>
+          <code>[Dog]&#8594;[Ball]</code>
         </p>
         <p>Aggregation implies a relationship where the child can exist independently of the parent. Delete the parent and the
           child still exists. Child can be received in the parent's constructor for example.</p>
         <p class="code__example">
-          <code>[Parent]◇-&gt;[Child]</code>
+          <code>[Parent]◇&#8594;[Child]</code>
         </p>
         <p>Composition implies a relationship where the child cannot exist independent of the parent. Child can be instantiated
           in the parent’s constructor for example.</p>
         <p class="code__example">
-          <code>[House]◆-&gt;[Roof]</code>
+          <code>[House]◆&#8594;[Roof]</code>
         </p>
         <p>Inheritance enables subclasses to take on the properties of existing classes.</p>
         <p class="code__example">
-          <code>[Base]⇽[Derived]</code>
+          <code>[Base]&#8592;[Derived]</code>
         </p>
         <p>Interface inheritance enables a class to implement an abstract class, interface.</p>
         <p class="code__example">
-          <code>[Interface]⇠[Implementation]</code>
+          <code>[Interface]&#8672;[Implementation]</code>
         </p>
       </div>
     </div>
@@ -337,8 +263,6 @@
           <a href="https://yuml.me/" target="_blank" rel="noopener">yUML</a>, Unified Modeling Language (UML).</p>
         <p>
           <a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Mocks Are Not Stubs</a>, by Martin Fowler.</p>
-        <p>
-          <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>, Version Control System Git.</p>
       </div>
     </div>
   </main>
