@@ -113,7 +113,7 @@ Inheritance enables subclasses to take on the properties of existing classes.
 ```
 [Base]←[Derived]
 ```
-Interface inheritance enables a class to implement an abstract class, interface.<
+Interface inheritance enables a class to implement an abstract class, interface.
 ```
 [Interface]⇠[Implementation]
 ```

@@ -1,0 +1,16 @@
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
