@@ -4,14 +4,8 @@ Personal website that contains information about myself, and some projects: [Bru
 
 ## Development
 
-Install Jekyll:
+Run the following:
 
 ```bash
-gem install jekyll bundler
-```
-
-Serve website:
-
-```bash
-jekyll serve
+npm run start
 ```

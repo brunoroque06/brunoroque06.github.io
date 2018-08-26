@@ -1,16 +1,9 @@
-
-.row {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 1em;
-  padding-right: 1em;
+body {
+  margin: 0;
+  background: #2C3D51;
+  color: white;
 }
 
-.col-2 {
-  width: 16.66%;
-}
-
-.col-10 {
-  width: 83.33%;
+#root {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif;
 }

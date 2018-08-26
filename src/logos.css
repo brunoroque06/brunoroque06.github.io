@@ -1,0 +1,20 @@
+.center {
+  text-align: center;
+}
+
+a {
+  fill: white;
+  transition: 100ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 100ms;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+a:hover {
+  fill: #8d9db6;
+}
+
+.logo {
+  height: 1.75em;
+  margin: 0.5em;
+}
