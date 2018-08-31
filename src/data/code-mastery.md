@@ -85,6 +85,7 @@ I find this a good way for me to check something pretty quickly. Feel free to do
   3. Spies are stubs that also record some information based on how they were called. It might be used when the test wants to be sure that the authorize method was called by the system (or to count how many times it was called for example);
   4. Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected to receive. A mock spies on the behavior of the module being tested. And the mock knows what behavior to expect;
   5. Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an in memory database is a good example).
+- Functions should do or delegate, never both.
 
 ## Variables and Constants
 
