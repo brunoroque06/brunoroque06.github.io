@@ -13,6 +13,7 @@ I find this a good way for me to check something pretty quickly. Feel free to do
 ## Classes
 
 - Five S.O.L.I.D. principles:
+
   1. Single responsibility principle (SRP), a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class);
   2. Open/closed principle (OCP), software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification;
   3. Liskov substitution principle (LSP), objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program;
@@ -42,7 +43,7 @@ I find this a good way for me to check something pretty quickly. Feel free to do
   1. Call-by-value: evaluate operations, and then functions. It has the advantage that it evaluates every function argument only once;
   2. Call-by-name: evaluate functions, and then operations. It has the advantage that a function argument is not evaluated if the corresponding parameter is unused in the evaluation of the function body.
 - A function uses tail recursion if it calls itself as its last action, allowing the function's stack frame to be reused.
-          
+
 ## Functions
 
 - Flag arguments should be avoided.
@@ -76,7 +77,6 @@ I find this a good way for me to check something pretty quickly. Feel free to do
   1. One must write a failing unit test before writing any production code.
   2. One may not write more of a unit test than is sufficient to fail, and not compiling is failing;
   3. One may not write more production code than is sufficient to pass the currently failing unit test.
-          
 - Tests are insufficient as long as there are conditions that have not been covered by the tests or calculations that have not been validated. Test suite should not be bigger than the required to test every piece of code.
 - Should require 1 step to run, and should run fast.
 - Test Doubles:
@@ -85,7 +85,7 @@ I find this a good way for me to check something pretty quickly. Feel free to do
   3. Spies are stubs that also record some information based on how they were called. It might be used when the test wants to be sure that the authorize method was called by the system (or to count how many times it was called for example);
   4. Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected to receive. A mock spies on the behavior of the module being tested. And the mock knows what behavior to expect;
   5. Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an in memory database is a good example).
-         
+
 ## Variables and Constants
 
 - Explanatory variables should be used by breaking up calculations into intermediate values that are held in variables with meaningful names.
@@ -96,24 +96,33 @@ I find this a good way for me to check something pretty quickly. Feel free to do
 ## Unified Modeling Language
 
 Unified Modeling language (UML) is a standardized modeling language enabling developers to specify, visualize, construct and document artifacts of a software system. The most basic relations are presented in this section.
-        
+
 Association is merely the invocation of a method of another object via a reference to that object (received on a method for instance).
+
 ```
 [Dog]→[Ball]
 ```
+
 Aggregation implies a relationship where the child can exist independently of the parent. Delete the parent and the child still exists. Child can be received in the parent's constructor for example.
+
 ```
 [Parent]◇→[Child]
 ```
+
 Composition implies a relationship where the child cannot exist independent of the parent. Child can be instantiated in the parent’s constructor for example.
+
 ```
 [House]◆→[Roof]
 ```
+
 Inheritance enables subclasses to take on the properties of existing classes.
+
 ```
 [Base]←[Derived]
 ```
+
 Interface inheritance enables a class to implement an abstract class, interface.
+
 ```
 [Interface]⇠[Implementation]
 ```
@@ -135,4 +144,3 @@ Refactoring: Improving the Design of Existing Code, by Martin Fowler et al, 1999
 The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.
 
 [yUML](https://yuml.me/), Unified Modeling Language (UML).
-

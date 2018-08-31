@@ -11,4 +11,3 @@ Good fences make good neighbors. ― Robert Frost, Mending Wall.
 Love life more than the meaning of it? ― Fyodor Dostoyevsky.
 
 In fondo, è solo un trucco. Sì, è solo un trucco. ― Jep Gambardella, La Grande Bellezza.
-
