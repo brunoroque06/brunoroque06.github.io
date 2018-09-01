@@ -1,20 +1,20 @@
 import React from "react";
-import Main from "./main"
+import Main from "./main";
 import Header from "./header";
 
-import "./app.css"
+import "./app.css";
 
 export default class App extends React.Component {
   render() {
     return (
-      <div class="container">
+      <div className="container">
         <header>
           <Header />
         </header>
         <main>
           <Main />
         </main>
-      </div >
+      </div>
     );
   }
 }

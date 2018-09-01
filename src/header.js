@@ -7,16 +7,12 @@ import HeaderItem from "./header-item";
 export default class Header extends React.Component {
   render() {
     return (
-      <div class="row margin">
-        <div class="column">
-          <div class="title">
-            Bruno Roque
-          </div>
-          <div class="subtitle">
-            Software Engineer
-          </div>
+      <div className="row margin">
+        <div className="column">
+          <div className="title">Bruno Roque</div>
+          <div className="subtitle">Software Engineer</div>
         </div>
-        <div class="row items">
+        <div className="row items">
           <HeaderItem text="About" />
           <HeaderItem text="Code Mastery" />
           <HeaderItem text="Software Architecture" />
