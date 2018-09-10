@@ -2,16 +2,17 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import markDown from "./data/quotes.md";
 
-import "./main.css";
+import "./article.css";
 
-export default class Main extends React.Component {
+export default class Article extends React.Component {
   constructor() {
     super();
     this.state = { text: null };
   }
 
   componentDidMount() {
-    fetch(markDown)
+    window
+      .fetch(markDown)
       .then(r => r.text())
       .then(text => {
         this.setState({ text });
@@ -20,9 +21,10 @@ export default class Main extends React.Component {
   }
 
   render() {
+    const { text } = this.state;
     return (
-      <div className="main">
-        <ReactMarkdown source={this.state.text} />
+      <div className="article">
+        <ReactMarkdown source={text} />
       </div>
     );
   }

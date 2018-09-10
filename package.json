@@ -11,7 +11,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "eslint --fix src"
+    "lint": "eslint --fix src/*.js*; prettier --write src/data/*.*"
   },
   "devDependencies": {
     "eslint": "^5.5.0",

@@ -4,6 +4,7 @@ import "./header-item.css";
 
 export default class HeaderItem extends React.Component {
   render() {
-    return <div className="item">{this.props.text}</div>;
+    const { text } = this.props;
+    return <div className="item">{text}</div>;
   }
 }
