@@ -81,6 +81,10 @@ main {
   a:hover {
     background: $hover-color;
   }
+  h2,
+  h3 {
+    border-bottom: 0.1rem solid $font-color;
+  }
 }
 .center {
   text-align: center;
