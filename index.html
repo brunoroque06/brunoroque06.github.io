@@ -11,7 +11,8 @@ title: Bruno Roque
     {% include header.html %}
   </header>
   <main>
-    {% include intel/about.md %}
+    {% capture about %}{% include intel/about.md %}{% endcapture %}
+    {{ about | markdownify }}
   </main>
 </div>
 
