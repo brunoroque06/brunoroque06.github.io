@@ -6,6 +6,10 @@ $font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Ubuntu,
 $primary-color: #2c3d51;
 $font-color: white;
 $hover-color: grey;
+::selection {
+  color: white;
+  background: $primary-color;
+}
 header {
   grid-area: header;
   text-align: center;
