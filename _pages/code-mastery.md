@@ -28,7 +28,7 @@ I find this a good way for me to check something pretty quickly. Feel free to do
 - Dependency inversion principle (DIP), one should depend on abstractions, not on concretions.
 - Polymorphism should be preferred to `if/else` or `switch/case`.
 - Coupling should be kept low by having small interfaces with few methods and responsibilities. The fewer (variables, methods, etc) the better.
-- Law of Demeter"/"Shy Code" should be respected, by avoiding `a.getB().getC().doSomething()`.
+- Law of Demeter/Shy Code should be respected, by avoiding `a.getB().getC().doSomething()`.
 - Base classes should not depend on their derivatives.
 - `Static` methods should be used when they do not operate in a single instance and all the data that they use comes from their arguments. For different implementations polymorphism should be used instead.
 - Abstract classes should be used to get rid of duplicated code, while Interfaces should define contracts.
@@ -66,7 +66,7 @@ I find this a good way for me to check something pretty quickly. Feel free to do
 - Safeties should not be overridden, like turning off certain compiler warnings, ignoring failing tests, etc.
 - A developer should be consistent: if something is done in a certain way, all similar things should be done in the same way. Conventions should be followed, and every team should have one.
 - Design decisions should be enforced with structure over convention.
-- Broken Window Theory: one broken window, left unrepaired for any substantial length of time, instills in the inhabitants of the building a sense of abandonment. So another window gets broken. Serious structural damage begins. In a relatively short space of time, the building becomes damaged beyond the owner's desire to fix it, and the sense of abandonment becomes reality. Each broken window should be fixed as soon as it is discovered.
+- Broken Window Theory: one broken window, left un-repaired for any substantial length of time, instills in the inhabitants of the building a sense of abandonment. So another window gets broken. Serious structural damage begins. In a relatively short space of time, the building becomes damaged beyond the owner's desire to fix it, and the sense of abandonment becomes reality. Each broken window should be fixed as soon as it is discovered.
 - Optimization should only be performed after the code is working as intended: "Premature optimization is the root of all evil (or at least most of it) in programming." - Donald Knuth.
 - Instead of excuses, options should be provided. Don’t say it can’t be done; explain what can be done.
 - Abstractions outlive implementations, and are more worthy of time investment.
@@ -87,7 +87,7 @@ I find this a good way for me to check something pretty quickly. Feel free to do
 - Tests are insufficient as long as there are conditions that have not been covered by the tests or calculations that have not been validated. Test suite should not be bigger than the required to test every piece of code.
 - Should require 1 step to run, and should run fast.
 - Test Doubles:
-  1. Dummy objects are passed around but never actually used. It should return `null`, as that prevents that implementation from being used ( `NullPointerException`);
+  1. Dummy objects are passed around but never actually used. It should return `null`, as that prevents that implementation from being used (`NullPointerException`);
   2. Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test;
   3. Spies are stubs that also record some information based on how they were called. It might be used when the test wants to be sure that the authorize method was called by the system (or to count how many times it was called for example);
   4. Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected to receive. A mock spies on the behavior of the module being tested. And the mock knows what behavior to expect;
