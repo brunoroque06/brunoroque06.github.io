@@ -5,8 +5,11 @@
   </div>
   <div class="row items">
     {% for page in site.data.pages %}
-    <div class="item"><a href="{{ site.data.global.url }}/{{ page | downcase | replace: ' ', '-'}}">{{ page }}</a></div>
+    <div class="item"><a href="{{ site.data.global.url }}/{{ page | downcase | replace: ' ', '-'}}">{{
+        page }}</a></div>
     {% endfor %}
-    {% include logos.html %}
+    <div class="logos">
+      {% include logos.html %}
+    </div>
   </div>
 </div>

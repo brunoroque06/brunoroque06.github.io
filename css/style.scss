@@ -1,26 +1,70 @@
 ---
 ---
 
-a {
-  fill: white;
-  transition: 100ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 100ms;
-  -webkit-transition-timing-function: ease-in-out;
-}
-a:hover {
-  fill: #8d9db6;
-}
+$font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Ubuntu,
+  "Helvetica Neue", sans-serif;
+$primary-color: #2c3d51;
+$font-color: white;
+$hover-color: grey;
 header {
   grid-area: header;
+  text-align: center;
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+  .item {
+    font-size: 20px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    a {
+      color: $font-color;
+      text-decoration: none;
+      padding: 0.1em;
+    }
+    a:hover {
+      background: $hover-color;
+    }
+  }
+  .items {
+    margin-left: auto;
+  }
+  .logos {
+    a {
+      fill: $font-color;
+      transition: 100ms;
+      transition-timing-function: ease-in-out;
+      -webkit-transition: 100ms;
+      -webkit-transition-timing-function: ease-in-out;
+    }
+    a:hover {
+      fill: $hover-color;
+    }
+    .logo {
+      height: 1.75em;
+      margin: 0.5em;
+    }
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .subtitle {
+    font-size: 20px;
+  }
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 }
 html,
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Ubuntu,
-    "Helvetica Neue", sans-serif;
+  font-family: $font-stack;
   margin: 0;
-  background: #2c3d51;
-  color: white;
+  background: $primary-color;
+  color: $font-color;
 }
 main {
   grid-area: main;
@@ -29,18 +73,8 @@ main {
 .center {
   text-align: center;
 }
-.column {
-  display: flex;
-  flex-direction: column;
-}
-.item {
-  font-size: 20px;
-  text-align: center;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-}
-.items {
-  margin-left: auto;
+.margin {
+  margin: 4em;
 }
 .layout {
   display: grid;
@@ -49,26 +83,4 @@ main {
     "header"
     "main";
   grid-gap: 0px;
-}
-.logo {
-  height: 1.75em;
-  margin: 0.5em;
-}
-.margin {
-  margin: 4em;
-}
-.row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.subtitle {
-  font-size: 20px;
-  text-align: center;
-}
-.title {
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
 }
