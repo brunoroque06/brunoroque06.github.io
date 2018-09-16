@@ -7,7 +7,6 @@
     {% for page in site.data.pages %}
     <div class="item"><a href="{{ site.data.global.url }}/{{ page | downcase | replace: ' ', '-'}}">{{ page }}</a></div>
     {% endfor %}
-
     {% include logos.html %}
   </div>
 </div>
