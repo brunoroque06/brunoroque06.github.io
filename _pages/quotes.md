@@ -1,3 +1,9 @@
+---
+layout: default
+title: Quotes
+permalink: /quotes/
+---
+
 # Quotes
 
 Perfection is achieved not when there is nothing left to add, but when there is nothing left to take. ― Antoine de Saint-Exupéry, Airman's Odyssey.

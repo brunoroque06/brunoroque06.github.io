@@ -1,3 +1,9 @@
+---
+layout: default
+title: Code Mastery
+permalink: /code-mastery/
+---
+
 # Code Mastery
 
 This page contains a compilation of good practices on software development, gathered through different sources. Some concepts are only valid for object oriented programming, but most are language agnostic.
@@ -14,10 +20,10 @@ I find this a good way for me to check something pretty quickly. Feel free to do
 
 - Five S.O.L.I.D. principles:
 
-    1. Single responsibility principle (SRP), a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class);
-    2. Open/closed principle (OCP), software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification;
-    3. Liskov substitution principle (LSP), objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program;
-    4. Interface segregation principle (ISP), many client-specific interfaces are better than one general-purpose interface;
+  1. Single responsibility principle (SRP), a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class);
+  2. Open/closed principle (OCP), software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification;
+  3. Liskov substitution principle (LSP), objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program;
+  4. Interface segregation principle (ISP), many client-specific interfaces are better than one general-purpose interface;
 
 - Dependency inversion principle (DIP), one should depend on abstractions, not on concretions.
 - Polymorphism should be preferred to `if/else` or `switch/case`.
@@ -40,8 +46,8 @@ I find this a good way for me to check something pretty quickly. Feel free to do
 - Contrary to imperative programming, functional programming is characterized by variable immutability, higher order functions (functions that can receive functions as inputs and/or return functions as outputs), and recursion instead of imperative loops (for, while).
 - It is stateless, which makes easy the exploitation of parallelism.
 - Substitution model reduces expressions to a value, as long as these expressions have no side effects. It is formalized in the &#955;-calculus, which is the foundation for functional programming. An example of a side effect is the following expression: `number++`, which can not be expressed by the substitution model. There are 2 evaluation strategies:
-    1. Call-by-value: evaluate operations, and then functions. It has the advantage that it evaluates every function argument only once;
-    2. Call-by-name: evaluate functions, and then operations. It has the advantage that a function argument is not evaluated if the corresponding parameter is unused in the evaluation of the function body.
+  1. Call-by-value: evaluate operations, and then functions. It has the advantage that it evaluates every function argument only once;
+  2. Call-by-name: evaluate functions, and then operations. It has the advantage that a function argument is not evaluated if the corresponding parameter is unused in the evaluation of the function body.
 - A function uses tail recursion if it calls itself as its last action, allowing the function's stack frame to be reused.
 
 ## Functions
@@ -75,17 +81,17 @@ I find this a good way for me to check something pretty quickly. Feel free to do
 ## Test Driven Development
 
 - There are 3 laws for Test Driven Development (TDD):
-    1. One must write a failing unit test before writing any production code.
-    2. One may not write more of a unit test than is sufficient to fail, and not compiling is failing;
-    3. One may not write more production code than is sufficient to pass the currently failing unit test.
+  1. One must write a failing unit test before writing any production code.
+  2. One may not write more of a unit test than is sufficient to fail, and not compiling is failing;
+  3. One may not write more production code than is sufficient to pass the currently failing unit test.
 - Tests are insufficient as long as there are conditions that have not been covered by the tests or calculations that have not been validated. Test suite should not be bigger than the required to test every piece of code.
 - Should require 1 step to run, and should run fast.
 - Test Doubles:
-    1. Dummy objects are passed around but never actually used. It should return `null`, as that prevents that implementation from being used ( `NullPointerException`);
-    2. Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test;
-    3. Spies are stubs that also record some information based on how they were called. It might be used when the test wants to be sure that the authorize method was called by the system (or to count how many times it was called for example);
-    4. Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected to receive. A mock spies on the behavior of the module being tested. And the mock knows what behavior to expect;
-    5. Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an in memory database is a good example).
+  1. Dummy objects are passed around but never actually used. It should return `null`, as that prevents that implementation from being used ( `NullPointerException`);
+  2. Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test;
+  3. Spies are stubs that also record some information based on how they were called. It might be used when the test wants to be sure that the authorize method was called by the system (or to count how many times it was called for example);
+  4. Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected to receive. A mock spies on the behavior of the module being tested. And the mock knows what behavior to expect;
+  5. Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an in memory database is a good example).
 - Functions should do or delegate, never both.
 
 ## Variables and Constants

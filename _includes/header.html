@@ -4,7 +4,10 @@
     <div class="subtitle">Software Engineer</div>
   </div>
   <div class="row items">
-    <div class="item">About</div>
+    {% for page in site.data.pages %}
+    <div class="item"><a href="{{ page | downcase | replace: ' ', '-'}}">{{ page }}</a></div>
+    {% endfor %}
+
     {% include logos.html %}
   </div>
 </div>

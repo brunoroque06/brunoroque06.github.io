@@ -1,19 +1,4 @@
 ---
 title: Bruno Roque
+layout: default
 ---
-<!DOCTYPE html>
-<html lang="en">
-
-{% include head.html %}
-
-<div className="layout">
-  <header>
-    {% include header.html %}
-  </header>
-  <main>
-    {% capture about %}{% include intel/about.md %}{% endcapture %}
-    {{ about | markdownify }}
-  </main>
-</div>
-
-</html>

@@ -1,3 +1,9 @@
+---
+layout: default
+title: Software Architecture
+permalink: /software-architecture/
+---
+
 # Software Architecture
 
 This page contains information on systems designs, and problem solving. Its main focus is Software Architecture, but most concepts are applicable to any area where design is involved.
