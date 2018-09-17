@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Code Mastery
-permalink: /code-mastery/
+permalink: code-mastery/
 ---
 
 # Code Mastery

@@ -4,6 +4,7 @@
     <div class="subtitle">Software Engineer</div>
   </div>
   <div class="row items">
+    <div class="item"><a href="{{ site.data.global.url }}/">About</a></div>
     {% for page in site.data.pages %}
     <div class="item"><a href="{{ site.data.global.url }}/{{ page | downcase | replace: ' ', '-'}}">{{
         page }}</a></div>

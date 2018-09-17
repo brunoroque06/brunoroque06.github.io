@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Quotes
-permalink: /quotes/
+permalink: quotes/
 ---
 
 # Quotes

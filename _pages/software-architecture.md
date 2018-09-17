@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Software Architecture
-permalink: /software-architecture/
+permalink: software-architecture/
 ---
 
 # Software Architecture
