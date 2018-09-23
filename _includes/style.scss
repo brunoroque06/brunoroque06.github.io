@@ -1,8 +1,4 @@
----
----
-
-$font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Ubuntu,
-  "Helvetica Neue", sans-serif;
+$font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
 $primary-color: #2c3d51;
 $font-color: white;
 $hover-color: grey;
@@ -13,6 +9,8 @@ $hover-color: grey;
 header {
   grid-area: header;
   text-align: center;
+  width: 1100px;
+  margin: 0em auto 0em auto;
   a {
     text-decoration: none;
   }
@@ -80,8 +78,9 @@ body {
 }
 main {
   grid-area: main;
-  margin: 2em 10em 2em 10em;
+  margin: 2em auto 2em auto;
   font-size: 16px;
+  width: 900px;
   a {
     color: $font-color;
     text-decoration: underline;
