@@ -6,22 +6,63 @@ $hover-color: grey;
   color: white;
   background: $primary-color;
 }
+html,
+body {
+  font-family: $font-stack;
+  background: $primary-color;
+  color: $font-color;
+  margin: 0;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main";
+  grid-gap: 0px;
+  width: 100%;
+}
 header {
   grid-area: header;
   text-align: center;
   width: 1100px;
-  margin: 0em auto 0em auto;
+  margin: 2em auto 2em auto;
   a {
     text-decoration: none;
+  }
+  .bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
   .column {
     display: flex;
     flex-direction: column;
   }
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    .vim-char {
+      color: $hover-color;
+      background: $hover-color;
+      line-height: 1em;
+      display: inline-block;
+    }
+  }
+  .subtitle {
+    font-size: 20px;
+  }
+  .items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+  }
   .item {
     font-size: 20px;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin: 0 0.5em 0 0.5em;
     a {
       color: $font-color;
       padding: 0.1em;
@@ -29,9 +70,6 @@ header {
     a:hover {
       background: $hover-color;
     }
-  }
-  .items {
-    margin-left: auto;
   }
   .logos {
     a {
@@ -49,38 +87,12 @@ header {
       margin: 0.5em;
     }
   }
-  .row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  .subtitle {
-    font-size: 20px;
-  }
-  .title {
-    font-size: 28px;
-    font-weight: bold;
-    text-transform: uppercase;
-    .vim-char {
-      color: $hover-color;
-      background: $hover-color;
-      line-height: 1em;
-      display: inline-block;
-    }
-  }
-}
-html,
-body {
-  font-family: $font-stack;
-  margin: 0;
-  background: $primary-color;
-  color: $font-color;
 }
 main {
   grid-area: main;
-  margin: 2em auto 2em auto;
+  margin: 0 auto 0 auto;
   font-size: 16px;
-  width: 900px;
+  width: 1044px;
   a {
     color: $font-color;
     text-decoration: underline;
@@ -93,26 +105,12 @@ main {
     border-bottom: 0.1rem solid $font-color;
   }
 }
-.center {
-  text-align: center;
-}
-.margin {
-  margin: 4em;
-}
-.layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "header"
-    "main";
-  grid-gap: 0px;
-}
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1160px) {
   header {
-    width: 100%;
+    width: 95%;
   }
   main {
-    width: 80%;
+    width: 90%;
   }
 }
 @media only screen and (max-width: 250px) {

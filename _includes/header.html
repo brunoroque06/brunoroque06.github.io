@@ -1,10 +1,10 @@
-<div class="row margin">
+<div class="bar">
   <div class="column">
     <div class="title">Bruno Roque<div class="vim-char">#</div>
     </div>
     <div class="subtitle">Software Engineer</div>
   </div>
-  <div class="row items">
+  <div class="items">
     <div class="item"><a href="{{ site.data.global.url }}/">About</a></div>
     {% for page in site.data.pages %}
     <div class="item"><a href="{{ site.data.global.url }}/{{ page | downcase | replace: ' ', '-'}}">{{
