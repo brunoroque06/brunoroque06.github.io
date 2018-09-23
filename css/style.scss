@@ -61,6 +61,12 @@ header {
     font-size: 28px;
     font-weight: bold;
     text-transform: uppercase;
+    .vim-char {
+      color: $hover-color;
+      background: $hover-color;
+      line-height: 0.9em;
+      display: inline-block;
+    }
   }
 }
 html,
