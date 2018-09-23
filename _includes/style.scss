@@ -55,9 +55,6 @@ header {
   }
   .items {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
     margin-left: auto;
   }
   .item {
@@ -111,6 +108,17 @@ main {
   }
   main {
     width: 90%;
+  }
+}
+@media only screen and (max-width: 750px) {
+  header {
+    .bar {
+      display: flex;
+      flex-direction: column;
+    }
+    .items {
+      margin: 2em 0 0.5em 0;
+    }
   }
 }
 @media only screen and (max-width: 250px) {
