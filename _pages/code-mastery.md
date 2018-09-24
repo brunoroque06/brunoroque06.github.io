@@ -77,6 +77,7 @@ I find this a good way for me to check something pretty quickly. Feel free to do
 - The "Principle of Least Surprise" should be followed: any function or class should implement the behaviors that another programmer could reasonably expect just by reading its name.
 - Standard nomenclature should be used where possible, like when using patterns, or native language methods like `toString`.
 - The length of a name should be related to the length of the scope. Short variable names should be used for tiny scopes, but for big scopes longer names should be used (variable `i` for a `for` cycle is fine for example).
+- The domain should play a big role when naming. Looking up thesaurus is a good way of getting new ideas for names, while still being on the same domain (usually).
 
 ## Test Driven Development
 
@@ -144,6 +145,8 @@ Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.
 [DataClump](https://martinfowler.com/bliki/DataClump.html), by Martin Fowler.
 
 [Mock Are Not Stubs](https://martinfowler.com/articles/mocksArentStubs.html), by Martin Fowler.
+
+[Naming Smells](https://hilton.org.uk/blog/naming-smells), by Peter Hilton.
 
 Refactoring: Improving the Design of Existing Code, by Martin Fowler et al, 1999.
 
