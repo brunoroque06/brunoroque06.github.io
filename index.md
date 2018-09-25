@@ -5,7 +5,6 @@ title: About
 
 # About
 
-My name is Bruno Roque, and I'm a Portuguese Software Engineer. I live in Bern, Switzerland, with my wife.
+My name is Bruno Roque, and I'm a Portuguese Software Engineer. I live in Bern, Switzerland, together with my wife.
 
-In this website it is possible to find information about myself and side projects, and (hopefully) helpful information
-about software development.
+In this website it is possible to find information about myself, about side projects, and (hopefully) helpful information about software development.
