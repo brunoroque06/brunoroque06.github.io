@@ -1,7 +1,10 @@
 all: serve
 
+clean:
+	rm -rf _site/
+
 serve:
 	jekyll serve
 
-clean:
-	rm -rf _site/
+.PHONY: all clean serve 
+
