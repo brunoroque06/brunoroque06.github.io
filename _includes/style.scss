@@ -6,124 +6,113 @@ $hover-color: grey;
   color: white;
   background: $primary-color;
 }
-html,
 body {
+  margin: 0;
   font-family: $font-stack;
   background: $primary-color;
   color: $font-color;
-  margin: 0;
-}
-.layout {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas:
-    "header"
-    "main";
-  grid-gap: 0px;
+  grid-template-areas: "header" "main";
+  grid-gap: 0;
   width: 100%;
-}
-header {
-  grid-area: header;
-  text-align: center;
-  width: 1100px;
-  margin: 2em auto 2em auto;
-  a {
-    text-decoration: none;
-  }
-  .bar {
+  header {
+    grid-area: header;
+    text-align: center;
+    width: 1100px;
+    margin: 2em auto;
     display: flex;
     flex-direction: row;
     align-items: center;
-  }
-  .column {
-    display: flex;
-    flex-direction: column;
-  }
-  .title {
-    font-size: 28px;
-    font-weight: bold;
-    text-transform: uppercase;
-    .vim-char {
-      color: $hover-color;
-      background: $hover-color;
-      line-height: 1em;
-      display: inline-block;
+    a {
+      text-decoration: none;
+    }
+    .column {
+      flex-direction: column;
+    }
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      .vim-char {
+        color: $hover-color;
+        background: $hover-color;
+        line-height: 1em;
+        display: inline-block;
+      }
+    }
+    .subtitle {
+      font-size: 20px;
+    }
+    .items {
+      display: flex;
+      margin-left: auto;
+    }
+    .item {
+      font-size: 20px;
+      margin: 0 0.5em;
+      a {
+        color: $font-color;
+        padding: 0.1em;
+      }
+      a:hover {
+        background: $hover-color;
+      }
+    }
+    .logos {
+      a {
+        display: inline-block;
+        fill: $font-color;
+        transition: 100ms;
+        transition-timing-function: ease-in-out;
+        -webkit-transition: 100ms;
+        -webkit-transition-timing-function: ease-in-out;
+      }
+      a:hover {
+        fill: $hover-color;
+      }
+      .logo {
+        height: 1.75em;
+        margin: 0.5em;
+      }
     }
   }
-  .subtitle {
-    font-size: 20px;
-  }
-  .items {
-    display: flex;
-    margin-left: auto;
-  }
-  .item {
-    font-size: 20px;
-    margin: 0 0.5em 0 0.5em;
+  main {
+    grid-area: main;
+    width: 1044px;
+    margin: 0 auto;
+    font-size: 16px;
+    text-align: justify;
     a {
       color: $font-color;
-      padding: 0.1em;
+      text-decoration: underline;
     }
     a:hover {
       background: $hover-color;
     }
-  }
-  .logos {
-    a {
-      fill: $font-color;
-      transition: 100ms;
-      transition-timing-function: ease-in-out;
-      -webkit-transition: 100ms;
-      -webkit-transition-timing-function: ease-in-out;
+    h2,
+    h3 {
+      border-bottom: 0.1rem solid $font-color;
     }
-    a:hover {
-      fill: $hover-color;
-    }
-    .logo {
-      height: 1.75em;
-      margin: 0.5em;
-    }
-  }
-}
-main {
-  grid-area: main;
-  width: 1044px;
-  margin: 0 auto 0 auto;
-  font-size: 16px;
-  text-align: justify;
-  a {
-    color: $font-color;
-    text-decoration: underline;
-  }
-  a:hover {
-    background: $hover-color;
-  }
-  h2,
-  h3 {
-    border-bottom: 0.1rem solid $font-color;
   }
 }
 @media only screen and (max-width: 1160px) {
-  header {
+  body header {
     width: 95%;
   }
-  main {
+  body main {
     width: 90%;
   }
 }
 @media only screen and (max-width: 750px) {
-  header {
-    .bar {
-      display: flex;
-      flex-direction: column;
-    }
+  body header {
+    flex-direction: column;
     .items {
-      margin: 2em 0 0.5em 0;
+      margin: 2em 0 0.5em;
     }
   }
 }
-@media only screen and (max-width: 250px) {
-  html,
+@media only screen and (max-width: 275px) {
   body {
     word-break: break-all;
   }

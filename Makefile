@@ -6,5 +6,4 @@ clean:
 serve:
 	jekyll serve
 
-.PHONY: all clean serve 
-
+.PHONY: all clean serve

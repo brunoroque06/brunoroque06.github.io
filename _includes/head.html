@@ -4,11 +4,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#2C3D51">
   <link rel="icon" href="{{ site.data.global.url }}/images/favicon.png" sizes="any">
-  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>
+    {% if page.title %}{{ page.title }}
+      -
+      {{ site.title }}
+    {% else %}{{ site.title }}
+    {% endif %}
+  </title>
   <style type="text/css">
     {% capture style %}
       {% include style.scss %}
     {% endcapture %}
-    {{ style | scssify }}
+    {{style | scssify}}
   </style>
 </head>
