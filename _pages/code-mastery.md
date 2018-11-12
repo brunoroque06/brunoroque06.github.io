@@ -54,6 +54,8 @@ I find this a good way for me to check something pretty quickly. Feel free to do
 
 ## Functions
 
+- The ident level of a function should not be greater than 2.
+- Functions should have one level of abstraction: The Stepdown Rule. Every function should be followed by those at the next level of abstraction. An example of 2 very different levels: making a database query, or creating that query.
 - Flag arguments should be avoided, and different functions should be used instead.
 - Functions with more than 3 arguments are very questionable.
 - Output arguments should be avoided: if a function must change the state of something, it should change the state of the object it is called on.
