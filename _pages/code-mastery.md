@@ -24,8 +24,8 @@ I find this a good way for me to check something pretty quickly. Feel free to do
   2. Open/closed principle (OCP), software entities (classes, modules, methods, etc.) should be open for extension, but closed for modification;
   3. Liskov substitution principle (LSP), objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program;
   4. Interface segregation principle (ISP), many client-specific interfaces are better than one general-purpose interface.
+  5. Dependency inversion principle (DIP): one should depend on abstractions, not on concretions.
 
-- Dependency inversion principle (DIP): one should depend on abstractions, not on concretions.
 - Polymorphism should be preferred over `if/else` or `switch/case`.
 - Coupling should be kept low by having small interfaces with few methods and responsibilities.
 - Law of Demeter/Shy Code should be respected by avoiding `a.getB().getC().doSomething()`.
