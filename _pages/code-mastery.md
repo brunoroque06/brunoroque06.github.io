@@ -58,6 +58,7 @@ I find this a good way for me to check something pretty quickly. Feel free to do
 - Functions should have one level of abstraction: The Stepdown Rule. Every function should be followed by those at the next level of abstraction. An example of 2 very different levels: making a database query, or creating that query.
 - Flag arguments should be avoided, and different functions should be used instead.
 - Functions with more than 3 arguments are very questionable.
+- Arguments should be tested for validity as early as possible. A great example of a good library for that is [Google's Guava PreconditionsExplained](https://github.com/google/guava/wiki/PreconditionsExplained).
 - Output arguments should be avoided: if a function must change the state of something, it should change the state of the object it is called on.
 - Temporal coupling should be enforced, so that methods are not executed in a different order than intended.
 - Algorithms that are not well understood are hard to work with, or to change. Even if they are "working", this should be avoided.
