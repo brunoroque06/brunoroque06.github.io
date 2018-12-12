@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"**/*.*css\" \"**/*.html\" \"**/*.md\" \"**/*.yml\""
+  },
+  "devDependencies": {
+    "husky": "^1.2.0",
+    "prettier": "^1.15.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
+  }
+}
