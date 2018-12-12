@@ -38,18 +38,19 @@ body {
       .vim-char {
         color: $hover-color;
         background: $hover-color;
-        line-height: 1em;
         display: inline-block;
+        line-height: 0.8em;
+        padding-top: 0.2em;
       }
     }
     .subtitle {
       font-size: 20px;
     }
-    .items {
+    .pages {
       display: flex;
       margin-left: auto;
     }
-    .item {
+    .page {
       font-size: 20px;
       margin: 0 0.5em;
       a {

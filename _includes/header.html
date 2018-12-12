@@ -1,17 +1,18 @@
 <header>
   <div class="column">
     <div class="title">
-      Bruno Roque
-      <div class="vim-char">#</div>
+      <span><span>Bruno Roque</span><span class="vim-char">#</span></span>
     </div>
     <div class="subtitle">Software Engineer</div>
   </div>
-  <div class="items">
-    <div class="item"><a href="{{ site.data.global.url }}/">About</a></div>
+  <div class="pages">
+    <div class="page"><a href="{{ site.data.global.url }}/">About</a></div>
     {% for page in site.data.pages %}
-    <div class="item">
+    <div class="page">
       <a
-        href="{{ site.data.global.url }}/{{ page | downcase | replace: ' ', '-'}}"
+        href="{{
+          site.data.global.url
+        }}/{{ page | downcase | replace: ' ', '-'}}"
         >{{ page }}</a
       >
     </div>
