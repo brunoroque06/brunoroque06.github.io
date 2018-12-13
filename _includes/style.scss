@@ -32,7 +32,7 @@ body {
       flex-direction: column;
     }
     .title {
-      font-size: 28px;
+      font-size: 1.75rem;
       font-weight: bold;
       text-transform: uppercase;
       .vim-char {
@@ -43,14 +43,14 @@ body {
       }
     }
     .subtitle {
-      font-size: 20px;
+      font-size: 1.3rem;
     }
     .pages {
       display: flex;
       margin-left: auto;
     }
     .page {
-      font-size: 20px;
+      font-size: 1.3rem;
       margin: 0 0.5em;
       a {
         color: $font-color;
@@ -82,7 +82,7 @@ body {
     grid-area: main;
     width: 1044px;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: justify;
     a {
       color: $font-color;
@@ -93,7 +93,7 @@ body {
     }
     h2,
     h3 {
-      border-bottom: 0.1rem solid $font-color;
+      border-bottom: 0.1em solid $font-color;
     }
   }
 }
