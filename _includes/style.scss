@@ -39,8 +39,7 @@ body {
         color: $hover-color;
         background: $hover-color;
         display: inline-block;
-        line-height: 0.8em;
-        padding-top: 0.2em;
+        line-height: 1.0em;
       }
     }
     .subtitle {
@@ -109,7 +108,7 @@ body {
 @media only screen and (max-width: 750px) {
   body header {
     flex-direction: column;
-    .items {
+    .pages {
       margin: 2em 0 0.5em;
     }
   }
