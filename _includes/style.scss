@@ -20,8 +20,8 @@ body {
   header {
     grid-area: header;
     text-align: center;
-    width: 68em;
-    margin: 2em auto;
+    width: 68rem;
+    margin: 2rem auto;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -51,10 +51,10 @@ body {
     }
     .page {
       font-size: 1.3rem;
-      margin: 0 0.5em;
+      margin: 0 0.5rem;
       a {
         color: $font-color;
-        padding: 0.1em;
+        padding: 0.1rem;
       }
       a:hover {
         background: $hover-color;
@@ -73,14 +73,14 @@ body {
         fill: $hover-color;
       }
       .logo {
-        height: 1.75em;
-        margin: 0.5em;
+        height: 1.75rem;
+        margin: 0.5rem;
       }
     }
   }
   main {
     grid-area: main;
-    width: 65em;
+    width: 65rem;
     margin: 0 auto;
     font-size: 1rem;
     text-align: justify;
@@ -93,7 +93,7 @@ body {
     }
     h2,
     h3 {
-      border-bottom: 0.1em solid $font-color;
+      border-bottom: 0.1rem solid $font-color;
     }
   }
 }
@@ -111,7 +111,7 @@ body {
   body header {
     flex-direction: column;
     .pages {
-      margin: 2em 0 0.5em;
+      margin: 2rem 0 0.5rem;
     }
   }
 }
