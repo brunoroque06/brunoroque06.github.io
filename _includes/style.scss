@@ -107,7 +107,7 @@ body {
     }
   }
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 60em) {
   body header {
     flex-direction: column;
     .pages {
@@ -115,7 +115,7 @@ body {
     }
   }
 }
-@media only screen and (max-width: 17em) {
+@media only screen and (max-width: 25em) {
   body {
     word-break: break-all;
   }
