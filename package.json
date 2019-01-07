@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "format": "prettier --write \"**/*.*css\" \"**/*.html\" \"**/*.md\" \"**/*.yml\""
+    "format": "prettier --write \"**/*.html\" \"**/*.json\" \"**/*.md\" \"**/*.scss\" \"**/*.yml\""
   },
   "devDependencies": {
     "husky": "^1.2.0",
