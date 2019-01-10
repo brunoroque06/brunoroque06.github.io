@@ -1,4 +1,3 @@
-% Packages
 \documentclass[letterpaper, 12pt]{article}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{helvet}
@@ -16,7 +15,6 @@
 \usepackage{graphicx}
 \usepackage{multirow}
 
-% New commands
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\hrule]
 \titlespacing{\section}{0pt}{5pt}{5pt}
 \newcommand{\tabularBar}[1]{ \begin{tabular}{r | p{13cm}}#1\end{tabular} }
@@ -25,20 +23,18 @@
 \newcommand{\horizontalSpace}[0]{\hspace*{10 pt}}
 \newcommand{\bulletText}[0]{\horizontalSpace$\bullet$\,\,\,}
 
-% Personal Data
 \newcommand{\name}[0]{{\Huge \textsc{Bruno Roque}}}
 \newcommand{\profTitle}[0]{\textsc{Software Engineer}}
 \newcommand{\mobilePhone}[0]{(+41) 765 174 226}
 \newcommand{\email}[0]{\href{mailto:brunoroque06@gmail.com}{brunoroque06@gmail.com}}
 \newcommand{\linkedIn}[0]{\href[pdfnewwindow=true]{https://www.linkedin.com/in/brunoroque06}{https://www.linkedin.com/in/brunoroque06}}
-\newcommand{\gitHub}[0]{\href[pdfnewwindow=true]{https://github.com/brunoroque06/geneticalgorithm}{https://github.com/brunoroque06}}
+\newcommand{\gitHub}[0]{\href[pdfnewwindow=true]{https://github.com/BrunoRoque06/geneticalgorithm}{https://github.com/brunoroque06}}
 \newcommand{\gitHubNoUrl}[0]{\href[pdfnewwindow=true]{https://github.com/BrunoRoque06/geneticalgorithm}{GitHub}}
 \newcommand{\website}[0]{\href[pdfnewwindow=true]{https://brunoroque06.github.io}{https://brunoroque06.github.io}}
 \newcommand{\photo}[0]{\includegraphics[height=4.9cm]{resources/photo.jpg}}
 \newcommand{\certificateML}{\href{https://brunoroque06.github.io/documents/MachineLearningCoursera.pdf}{Machine Learning}}
 \newcommand{\certificateFE}{\href{https://brunoroque06.github.io/documents/FrontEndUdacity.pdf}{Front-End Web Developer Nanodegree}}
 
-% Header
 \chead{
 \name\\
 \profTitle\\
@@ -61,10 +57,8 @@
 
 \begin{document}
 
-% \input{cover-letter}
-% \clearpage
 \input{resume}
-% \clearpage
-% \includepdf[pages={1}]{resources/academic-certificate.pdf}
+\clearpage
+\includepdf[pages={1}]{resources/academic-certificate.pdf}
 
 \end{document}
