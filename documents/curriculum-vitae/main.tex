@@ -1,0 +1,70 @@
+% Packages
+\documentclass[letterpaper, 12pt]{article}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+\usepackage[a4paper, top = 30mm, right = 20mm, bottom = 30mm, left = 20mm]{geometry}
+\usepackage[usenames, dvipsnames]{xcolor} % Required for specifying custom colors
+\definecolor{linkColour}{rgb}{0, 0.2, 0.6} % Blue
+\usepackage{hyperref}
+\hypersetup{colorlinks = true, allcolors = linkColour, pdfnewwindow = true}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\setlength{\headsep}{0.5cm}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+% New commands
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\hrule]
+\titlespacing{\section}{0pt}{5pt}{5pt}
+\newcommand{\tabularBar}[1]{ \begin{tabular}{r | p{13cm}}#1\end{tabular} }
+\newcommand{\tabularNoBar}[1]{ \begin{tabular}{r p{13cm}}#1\end{tabular} }
+\newcommand{\quotationMarks}[1]{``#1"}
+\newcommand{\horizontalSpace}[0]{\hspace*{10 pt}}
+\newcommand{\bulletText}[0]{\horizontalSpace$\bullet$\,\,\,}
+
+% Personal Data
+\newcommand{\name}[0]{{\Huge \textsc{Bruno Roque}}}
+\newcommand{\profTitle}[0]{\textsc{Software Engineer}}
+\newcommand{\mobilePhone}[0]{(+41) 765 174 226}
+\newcommand{\email}[0]{\href{mailto:brunoroque06@gmail.com}{brunoroque06@gmail.com}}
+\newcommand{\linkedIn}[0]{\href[pdfnewwindow=true]{https://www.linkedin.com/in/brunoroque06}{https://www.linkedin.com/in/brunoroque06}}
+\newcommand{\gitHub}[0]{\href[pdfnewwindow=true]{https://github.com/brunoroque06/geneticalgorithm}{https://github.com/brunoroque06}}
+\newcommand{\gitHubNoUrl}[0]{\href[pdfnewwindow=true]{https://github.com/BrunoRoque06/geneticalgorithm}{GitHub}}
+\newcommand{\website}[0]{\href[pdfnewwindow=true]{https://brunoroque06.github.io}{https://brunoroque06.github.io}}
+\newcommand{\photo}[0]{\includegraphics[height=4.9cm]{resources/photo.jpg}}
+\newcommand{\certificateML}{\href{https://brunoroque06.github.io/documents/MachineLearningCoursera.pdf}{Machine Learning}}
+\newcommand{\certificateFE}{\href{https://brunoroque06.github.io/documents/FrontEndUdacity.pdf}{Front-End Web Developer Nanodegree}}
+
+% Header
+\chead{
+\name\\
+\profTitle\\
+\vspace{20pt}
+\begin{tabular}{l l c}
+    \textsc{Address:} & Bern, Switzerland & \multirow{10}{*}{\photo}\\
+    \textsc{D.O.B.:} & 06 October 1989 &\\
+    \textsc{Nationality:} & Portuguese &\\
+    \textsc{Marital Status:} & Married &\\
+    \textsc{Phone:} & \mobilePhone &\\
+    \textsc{email:} & \email &\\
+    \textsc{LinkedIn:} & \linkedIn &\\
+    \textsc{Website:} & \website &\\
+    \textsc{GitHub:} & \gitHub &
+\end{tabular}
+\vspace{10pt}
+}
+\pagestyle{fancy}
+\setlength{\headheight}{195pt}
+
+\begin{document}
+
+% \input{cover-letter}
+% \clearpage
+\input{resume}
+% \clearpage
+% \includepdf[pages={1}]{resources/academic-certificate.pdf}
+
+\end{document}
