@@ -48,16 +48,16 @@ body {
     .pages {
       display: flex;
       margin-left: auto;
-    }
-    .page {
-      font-size: 1.3rem;
-      margin: 0 0.5rem;
-      a {
-        color: $font-color;
-        padding: 0.1rem;
-      }
-      a:hover {
-        background: $hover-color;
+      .page {
+        font-size: 1.3rem;
+        margin: 0 0.5rem;
+        a {
+          color: $font-color;
+          padding: 0.1rem;
+        }
+        a:hover {
+          background: $hover-color;
+        }
       }
     }
     .logos {
@@ -113,6 +113,11 @@ body {
     .pages {
       margin: 2rem 0 0.5rem;
     }
+  }
+}
+@media only screen and (max-width: 35em) {
+  body header .pages {
+    flex-direction: column;
   }
 }
 @media only screen and (max-width: 25em) {
