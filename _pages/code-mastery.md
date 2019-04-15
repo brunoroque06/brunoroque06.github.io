@@ -104,40 +104,6 @@ This page contains a compilation of good practices on software development, gath
   4. Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected to receive. A mock spies on the behavior of the module being tested. And the mock knows what behavior to expect;
   5. Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (e.g. an in memory database).
 
-## Unified Modeling Language
-
-Unified Modeling language (UML) is a standardized modeling language enabling developers to specify, visualize, construct and document artifacts of a software system. The most basic relations are presented in this section.
-
-Association is merely the invocation of a method of another object via a reference to that object, received on a method for instance.
-
-```
-[Dog]→[Ball]
-```
-
-Aggregation implies a relationship where the child can exist independently of the parent. Delete the parent and the child still exists. Child can be received in the parent's constructor for example.
-
-```
-[Parent]◇→[Child]
-```
-
-Composition implies a relationship where the child cannot exist independent of the parent. Child can be instantiated in the parent’s constructor for example.
-
-```
-[House]◆→[Roof]
-```
-
-Inheritance enables subclasses to take on the properties of existing classes.
-
-```
-[Base]←[Derived]
-```
-
-Interface inheritance enables a class to implement an abstract class, interface.
-
-```
-[Interface]⇠[Implementation]
-```
-
 ## References
 
 Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.
@@ -159,5 +125,3 @@ Test-Driven Development By Example, by Kent Beck, 2003.
 The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.
 
 [Yagni](https://martinfowler.com/bliki/Yagni.html), by Martin Fowler.
-
-[yUML](https://yuml.me/), Unified Modeling Language (UML).
