@@ -6,7 +6,7 @@ permalink: code-mastery/
 
 # Code Mastery
 
-This page contains a compilation of good practices on software development, gathered through different sources. Some concepts are only valid for object oriented programming, but most are language agnostic.
+This page contains a compilation of good practices on software development. Some concepts are only valid for object oriented programming, but most are language agnostic.
 
 ## General Principles
 
