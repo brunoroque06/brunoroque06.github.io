@@ -54,7 +54,7 @@ Realism is the belief that some aspect of our reality is ontologically independe
 
 ## 384 BC to 322 BC - Aristotle, Ancient Greece
 
-"A good person fulfills his/her function well". "But what is the function of a human being?", "We think, we do, we plan.". "Human is a rational being".
+"A good person fulfills his function well". "But what is the function of a human being?", "We think, we do, we plan.". "Human is a rational being".
 
 Pathos represents an appeal to the emotions of the audience; it is a communication technique used most often in rhetoric (where it is considered one of the three modes of persuasion, alongside ethos and logos), and in literature, film and other narrative art.
 
