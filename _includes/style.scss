@@ -23,7 +23,7 @@ body {
     width: 68rem;
     margin: 2rem auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     a {
       text-decoration: none;
@@ -47,7 +47,7 @@ body {
     }
     .pages {
       display: flex;
-      margin-left: auto;
+      margin: 2rem 0 0.5rem;
       .page {
         font-size: 1.3rem;
         margin: 0 0.5rem;
@@ -96,6 +96,19 @@ body {
       border-bottom: 0.1rem solid $font-color;
     }
   }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+      background-color: $hover-color;
+    }
+    td {
+      border-bottom: 0.1rem solid $hover-color;
+    }
+    tr:hover {
+      background-color: $hover-color;
+    }
+  }
 }
 @media only screen and (max-width: 72em) {
   body {
@@ -107,20 +120,12 @@ body {
     }
   }
 }
-@media only screen and (max-width: 60em) {
-  body header {
-    flex-direction: column;
-    .pages {
-      margin: 2rem 0 0.5rem;
-    }
-  }
-}
 @media only screen and (max-width: 35em) {
   body header .pages {
     flex-direction: column;
   }
 }
-@media only screen and (max-width: 15em) {
+@media only screen and (max-width: 25em) {
   body {
     word-break: break-all;
   }
