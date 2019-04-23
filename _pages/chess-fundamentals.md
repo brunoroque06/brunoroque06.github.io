@@ -11,10 +11,8 @@ This page contains a compilation of chess fundamentals.
 ## General Principles
 
 - Method on move finding:
-  - is the opponent threatening anything?;
-  - are there any tactics in the position (tempo moves first)?;
-  - assert imbalances for both sides;
-  - find the move that best improves own's/worsens opponent's position (tempo moves first).
+  - tactics (CCT): checks, captures, threads;
+  - positional: assert imbalances for both sides, and find the move that best improves own's/worsens opponent's position (tempo moves first);
 - Tempo moves:
   1. checks;
   2. captures;
@@ -93,7 +91,7 @@ This page contains a compilation of chess fundamentals.
 |  ♘♘   |   -   |                                      -                                       |  Draw  |                      -                       |
 |  ♗♘   |   -   |                                      -                                       |  Win   |                      -                       |
 |   ♙   |   -   |                         White King has opposition\*                          |  Win   |                      -                       |
-|   ♙   |   -   |                    White King does not have opposition\*                     |  Draw  |                      -                       |
+|   ♙   |   -   |                         Black King has opposition\*                          |  Draw  |                      -                       |
 
 \* opposition: situation where both Kings face each other on the same row, with only 1 square in between them. The player not having to move is said to have the opposition. Given a position where White King in on `e3` and Black King in on `e5`:
 
