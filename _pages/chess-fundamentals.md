@@ -10,16 +10,16 @@ This page contains a compilation of chess fundamentals.
 
 ## General Principles
 
-- Method on move finding:
-  - tactics (CCT): checks, captures, threads;
-  - positional: assert imbalances for both sides, and find the move that best improves own's/worsens opponent's position (tempo moves first);
+- Method for move finding:
+  - check tactics (CCT): checks, captures, threads;
+  - positional: assert imbalances for both sides, and then find the move that best improves own's/worsens opponent's position (tempo moves first);
 - Tempo moves:
   1. checks;
   2. captures;
   3. attacks of a piece towards a higher value piece.
-- On trading pieces: most of the time, to take is a mistake. When a player takes, most of the times he is developing opponent's pieces. Players should embrace tension, and not be afraid of it.
-- Placing a piece on a square where it does not work with the rest of its army is rarely a good idea. Chess is a team game and each side wants as many pieces as possible to work towards the same goal.
-- Unless the position is very sharp, and positionally speaking, it's usually a bad idea to leave pieces undefended.
+- On trading pieces: most of the time it is a mistake. When a player trades, specially in the opening, he is developing opponent's pieces. Players should embrace tension, and not be afraid of it.
+- Placing a piece on a square where it does not work with the rest of its army is rarely a good idea, as one wants as many pieces as possible to work towards the same goal.
+- Unless the position is very sharp, thus positionally speaking, it's usually a bad idea to leave pieces undefended.
 - A quote on plans: "The P-word. I think (Jan) Gustafsson doesn't allow people to use the word plan in a chess sense. Actually I completely agree with him! Plans do not exist. There are some ideas, they exist, and then when you've played lots of ideas in the game you can say, "ok, this was my plan", but not beforehand. It's like, what is your plan in life? It's impossible to answer until your life actually happens." - Alexander Grischuk.
 
 ## Imbalances
@@ -39,26 +39,26 @@ This page contains a compilation of chess fundamentals.
 
 ## Knights
 
-- Knights do well in closed positions, unlike bishops.
-- Knights are usually the best blockaders of enemy Pawns, as they are the only piece that can jump, therefore not losing mobility.
-- Should be put in outposts, i.e. advanced squares that are no longer controlled by enemy Pawns, and ideally controlled by the player. A Knight on the 6th rank (octopus), is usually a pretty strong piece.
-- Given an endgame with Knight vs bishop, the Knight should aim for Pawns only on one side of the board.
-- 2 Knights don't have the same synergie as 2 bishops, so such positions should be avoided.
+- Knights do well in closed positions, unlike Bishops.
+- Knights are usually the best Pawn blockaders, as they are the only piece that can jump, therefore not losing mobility.
+- Knights should be placed in outposts, i.e. advanced squares that are no longer controlled by enemy Pawns, and ideally controlled by the player. A Knight on the 6th rank (octopus), is usually a pretty strong piece.
+- Given an endgame with Knight vs Bishop, the Knight should aim for Pawns only on one side of the board.
+- 2 Knights don't have the same synergie as 2 Bishops, so such positions should be avoided.
 
 ## Bishops
 
-- Bishops do well in open positions, unlike Knights. The fewer the Pawns in the way of the bishop, the greater its scope.
-- Should be in open diagonals. If they don't exist, they should be created or it should be understood where they will exist (one should try at least!).
-- A bishop trapped behind its own Pawns is usually called a tall-Pawn. Such a bishop is most of the times a horrible piece (a serious imbalance).
-- Moving Pawns can seriously affect a bishops activity (e.g. opening files, pushing a Pawn that will blocks a bishop).
+- Bishops do well in open positions, unlike Knights. The fewer the Pawns in the way of the Bishop, the greater its scope.
+- Bishops should be in open diagonals. If they don't exist, they should be created or it should be understood where they will exist.
+- A Bishop trapped behind its own Pawns is usually called a tall-Pawn. Such a Bishop is most of the times a horrible piece (a serious imbalance).
+- Moving Pawns can seriously affect Bishops' activity (e.g. opening diagonals, blocking a Bishop).
 - Bishops are usually better than Knights in the endgame, given their long range capabilities.
 
 ## Rooks
 
 - Rooks should be placed in open/half-open files. Both Rooks on the 7th or 8th rank are deadly usually.
 - Half-open files should be used to exert tremendous pressure against weak opponent's Pawn.
-- When there is only an open file, it becomes even more important for the person who owns it.
-- Should be placed in the open file that is further away from the opponent's King. For example: in case both the `c` and `d` files are open, and the opponent's King castled King side, `c` file should be picked.
+- When there is only an open file, it becomes even more important for the player who owns it.
+- Rooks should be placed in the open file that is further away from the opponent's King. E.g. in case both the `c` and `d` files are open, and the opponent's King castled King side, `c` file should be picked.
 
 ## Queens
 
@@ -68,17 +68,17 @@ This page contains a compilation of chess fundamentals.
 
 - "My main purpose is to gain recognition for myself by means of a new idea of which no one has conceived, or perhaps has been unable to practice; that is, good play of the Pawns; they are the soul of chess: it is they alone that determine the attack and the defence, and the winning or losing of the game depends entirely on their good or bad arrangement." - François-André Danican Philidor.
 - Whenever a Pawn is advanced, weak squares are potentially created, as that Pawn no longer controls the squares it used to.
-- How to battle an isolated Pawn: minor pieces should be traded (as such a Pawn can give strong activity to minor pieces), and Rooks and Queen should be kept in order to exploit that weakness. Keeping the Queen is important, as she is the best piece to restrain the enemy King from getting to the weakness and help defending.
-- A backward Pawn shares many of the same shortcomings as the isolated Pawn, therefore the same ideas apply. It should be kept backwards, by controlling its advancing squares.
+- How to battle an isolated Pawn: minor pieces should be traded (as such Pawn can give strong activity to minor pieces), and Rooks and Queen should be kept in order to exploit that weakness. Keeping the Queen is important, as she is the best piece to restrain the enemy King from getting to the weakness and help defending.
+- A backward Pawn shares many of the same shortcomings as the isolated Pawn, therefore the same ideas apply. It should be kept backwards, by controlling its advancing square(s).
 - How to create weaknesses: by making the opponent push a Pawn, usually by attacking his Pawns (either by advancing Pawns or attacking with pieces).
 - Doubled Pawns: usually bad, but not always as the doubled Pawn can control an important square.
 - Tripled Pawns: almost always terrible, as they can be easily attacked and can be blocked by a single Pawn.
 - Principle of 2 weaknesses: usually a player can hold when only 1 weakness is being attacked. But if another weakness is added to his position, then the added defensive burden proves to be too much.
-- Usually, the less Pawn islands a players possesses, the better.
+- The less number of Pawn islands a players possesses, the better.
 
 ## Statics/Positional vs Dynamics
 
-- Static/positional advantages last long, while dynamics are like a flare that burns bright for a few moments.
+- Static/positional advantages last long, while dynamics last for a few moves.
 - By default, positional play should be employed. But some positions demand dynamic play, and it's critically important to be able to recognize them. Some simple examples: vs an un-castled King when one has already developed pieces/castled King, vs a better Pawn structure, after gambling a Pawn/exchange.
 - The transformation of one kind of imbalance (static or dynamic) into another (dynamic or static) is very common.
 
@@ -86,8 +86,8 @@ This page contains a compilation of chess fundamentals.
 
 | White | Black |                                 Requirements                                 | Result |                   Strategy                   |
 | :---: | :---: | :--------------------------------------------------------------------------: | :----: | :------------------------------------------: |
-|   ♕   |   ♙   | Black's Pawn is a bishop or Rook Pawn on the 7th rank, supported by his King |  Draw  |        Move Black King to the corner         |
-|  ♗♗   |   -   |                                      -                                       |  Win   | Centralize bishops, then mate on the corner. |
+|   ♕   |   ♙   | Black's Pawn is a Bishop or Rook Pawn on the 7th rank, supported by his King |  Draw  |        Move Black King to the corner         |
+|  ♗♗   |   -   |                                      -                                       |  Win   | Centralize Bishops, then mate on the corner. |
 |  ♘♘   |   -   |                                      -                                       |  Draw  |                      -                       |
 |  ♗♘   |   -   |                                      -                                       |  Win   |                      -                       |
 |   ♙   |   -   |                         White King has opposition\*                          |  Win   |                      -                       |
