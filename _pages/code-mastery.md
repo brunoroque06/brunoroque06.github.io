@@ -108,8 +108,6 @@ This page contains a compilation of good practices on software development. Some
 
 Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.
 
-[Clean Code Javascript](https://github.com/ryanmcdermott/clean-code-javascript), by Ryan McDermott et al.
-
 [DataClump](https://martinfowler.com/bliki/DataClump.html), by Martin Fowler.
 
 [Mock Are Not Stubs](https://martinfowler.com/articles/mocksArentStubs.html), by Martin Fowler.
