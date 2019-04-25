@@ -6,19 +6,18 @@ permalink: software-architecture/
 
 # Software Architecture
 
-This page contains information on systems designs, and problem solving. Its main focus is Software Architecture, but most concepts are applicable to any area where design is involved.
+This page contains information on Software Architecture, and problem solving. Most concepts are applicable to any area where design is involved.
 
 Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations. - Melvin Conway
 
 ## Problem Solving
 
-- Four essential steps to iterate over:
+- Essential steps to iterate over:
   1. Which is the problem? Use cases, business requirements, company goals should help defining it;
-  2. How to solve it? Define "-ilities": speed, scalability, deployability, etc;
-  3. Why that solution?;
-  4. How to validate the solution?
+  2. How to solve it? Define features to aim for, the so called `-ilities`: speed, scalability, deployability, etc;
+  3. How to validate the solution?.
 
-## Design
+## Architecture
 
 - Conceptual Integrity: "All of the parts of a system relate to each other and relate to the whole. There is nothing unnecessary, and all of the parts have an internal consistency. The design must proceed from one mind, or from a very small number of agreeing resonant minds".
 - All architectures become interactive because of unknown unknowns; agile just recognizes this and does it sooner. - Mark Richards.
@@ -29,10 +28,10 @@ Organizations which design systems are constrained to produce designs which are 
 
 ## Validation
 
-- Fitness functions should be used: any tool that helps assess some architectural characteristic qualifies as a fitness function.
-- Some benefits of fitness functions:
+- Fitness functions should be used: any tool that helps assessing some architectural characteristic qualifies as a fitness function.
+- Benefits of fitness functions:
   1. Provide quantifiable results;
-  2. Capturing all concerns as fitness functions creates a consistent enforcement mechanism;
+  2. Capturing every concern as fitness functions creates a consistent enforcement mechanism;
   3. Having a list of fitness functions allows developers to most easily design deployment pipelines;
 - Once fitness functions have been defined, architects must ensure that they are evaluated in a timely manner. A deployment pipeline is often used to evaluate tasks like this. Using a deployment pipeline, architects can define which, when, and how often fitness functions execute.
 
@@ -53,7 +52,7 @@ Organizations which design systems are constrained to produce designs which are 
   1. Easier global refactoring;
   2. True continuous integration;
   3. Easier to test (integration/acceptance tests);
-  4. Sense of code owning of each developer is (arguably) higher, which encourages changes and improvements.
+  4. Sense of code owning of each developer is (arguably) higher, which encourages changes/improvements.
 
 ## Teams
 
