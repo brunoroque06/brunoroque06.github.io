@@ -14,10 +14,10 @@ This page contains a compilation of good practices on software development. Some
 - Don't Repeat Yourself (DRY): a duplication of code, or any other task, represents a missed opportunity for automation/abstraction.
 - A developer should be consistent: if something is done in a certain way, all similar things should be done in the same way. Conventions should be followed, and every team should have one.
 - You Aren't Gonna Need It (Yagni): a feature should not be build until it is needed. The first argument for Yagni is that while we may now think we need this presumptive feature, it's likely that we will be wrong. There are 4 main costs when a not needed feature is built: build cost, delay cost (delaying other important features), carry cost (integration), repair cost (in case it was a right feature after all, but built wrong). Yagni only applies to capabilities built into the software to support a presumptive feature, it does not apply to effort to make the software easier to modify.
-- Design decisions should be enforced with structure over convention.
+- Design decisions should be enforced with structure, that force compliance, over convention.
 - Optimization should only be performed after the code is working as intended: "Premature optimization is the root of all evil (or at least most of it) in programming." - Donald Knuth.
-- Builds should be a one step process.
-- Safeties should not be overridden, like turning off certain compiler warnings, ignoring failing tests, etc.
+- Builds/Tests should be a one step process.
+- Safeties should not be overridden, e.g. turning off certain compiler warnings, ignoring failing tests.
 - Abstractions outlive implementations, and are more worthy of time investment.
 
 ## Classes
@@ -30,27 +30,24 @@ This page contains a compilation of good practices on software development. Some
   5. Dependency inversion principle (DIP): one should depend on abstractions, not on concretions.
 - Polymorphism should be preferred over `if/else` or `switch/case`.
 - Coupling should be kept low by having small interfaces with few methods and responsibilities.
-- Law of Demeter/Shy Code should be respected by avoiding `a.getB().getC().doSomething()`.
-- Base classes should not depend on their derivatives.
-- `Static` methods should be used when they do not operate in a single instance and all the data that they use comes from their arguments. Otherwise polymorphism should be used instead.
+- Law of Demeter/Shy Code should be respected by avoiding: `a.getB().getC().doSomething()`.
 - Abstract classes should be used to get rid of duplicated code, while interfaces should define contracts.
-- DataClump: a group of values (usually primitives) that belong together and should be aggregated into a class.
+- `DataClump`s should be identified: a group of values (usually primitives) that belong together and should be aggregated into a class.
 
 ## Functions
 
+- Functions should have one level of abstraction: The Stepdown Rule. Every function should be followed by those at the next level of abstraction. An example of 2 very different abstraction levels: making a database query, or creating the query.
 - The ident level of a function should not be greater than 2.
-- Functions should have one level of abstraction: The Stepdown Rule. Every function should be followed by those at the next level of abstraction. An example of 2 very different levels: making a database query, or creating the query.
 - Flag arguments should be avoided, and different functions should be used instead.
 - Functions with more than 3 arguments are very questionable.
 - Arguments should be tested for validity as early as possible. A great example of a good Java library for that is [Google's Guava PreconditionsExplained](https://github.com/google/guava/wiki/PreconditionsExplained).
 - Output arguments should be avoided: if a function must change the state of something, it should change the state of the object it is called on.
 - Temporal coupling should be enforced, so that methods are not executed in a different order than intended.
 - Algorithms that are not well understood are hard to work with, or to change. Even if they are "working", this should be avoided.
-- Functions should do or delegate, never both.
 
 ## Boundaries and Conditionals
 
-- Encapsulated, so that they are easier to read.
+- Should be encapsulated, so that they are easier to read.
 - Should be properly tested, as they are very error prone.
 - Positive conditionals should be preferred over negative ones.
 
@@ -64,9 +61,9 @@ This page contains a compilation of good practices on software development. Some
 ## Naming
 
 - The "Principle of Least Surprise" should be followed: any function or class should implement the behaviors that another programmer could expect just by reading its name.
-- Standard nomenclature should be used where possible, like when using patterns, or native language methods like `toString`.
+- Standard nomenclature should be used where possible, like when using patterns, or native language methods like Java's `toString`.
 - The length of a name should be related to the length of the scope: short variable names should be used for tiny scopes, while longer names should be used for big scopes (e.g. variable `i` for a `for` cycle is fine).
-- The domain should play a major role when naming. Looking up thesaurus is a very good way of getting new ideas for names, while still keeping the same domain.
+- The domain should play a major role when naming. Looking up thesaurus is a very good way of getting new ideas for names, while keeping the same domain.
 
 ## Comments
 
@@ -95,8 +92,8 @@ This page contains a compilation of good practices on software development. Some
   2. Green: make that test pass;
   3. Refactor.
 - Tests are insufficient as long as there are conditions that have not been covered by the tests or calculations that have not been validated.
-- When a defect is found, a regression test that fails should be written, and only then the code should be fixed.
-- Leaving a programming session with a broken test (not committed) is a great way to ensure an easy ramp up in the next session.
+- When a bug is found, a regression test that fails because of that same bug should be written, and only then the code should be fixed.
+- Leaving a programming session with a broken test is a great way to ensure an easy ramp up in the next session.
 - Test Doubles:
   1. Dummy objects are passed around but never actually used. They should return `null`, as that prevents that implementation from being used (`NullPointerException`);
   2. Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test;
