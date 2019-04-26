@@ -1,17 +1,19 @@
 $font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Ubuntu,
   "Fira Sans", "Helvetica Neue", sans-serif;
-$primary-color: #2c3d51;
-$font-color: white;
+$main-color: #2c3d51;
+$sec-color: #fabd2f;
+$font-main-color: white;
+$font-sec-color: black;
 $hover-color: grey;
 ::selection {
-  color: black;
-  background: #fabd2f;
+  color: $font-sec-color;
+  background: $sec-color;
 }
 body {
   margin: 0;
   font-family: $font-stack;
-  background: $primary-color;
-  color: $font-color;
+  background: $main-color;
+  color: $font-main-color;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "header" "main";
@@ -52,7 +54,7 @@ body {
         font-size: 1.3rem;
         margin: 0 0.5rem;
         a {
-          color: $font-color;
+          color: $font-main-color;
           padding: 0.1rem 0.3rem;
         }
         a:hover {
@@ -63,7 +65,7 @@ body {
     .logos {
       a {
         display: inline-block;
-        fill: $font-color;
+        fill: $font-main-color;
         transition: 100ms;
         transition-timing-function: ease-in-out;
         -webkit-transition: 100ms;
@@ -85,29 +87,36 @@ body {
     font-size: 1rem;
     text-align: justify;
     a {
-      color: $font-color;
+      color: $font-main-color;
       text-decoration: underline;
     }
     a:hover {
       background: $hover-color;
     }
+    code {
+      font-family: $font-stack;
+      color: $sec-color;
+    }
+    code::selection {
+      background: $font-main-color;
+    }
     h2,
     h3 {
-      border-bottom: 0.1rem solid $font-color;
+      border-bottom: 0.1rem solid $font-main-color;
     }
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 0.1rem solid $hover-color;
-    th {
-      background-color: $hover-color;
-    }
-    tr:hover {
-      background-color: $hover-color;
-    }
-    tr:not(:last-child) {
-      border-bottom: 0.1rem solid $hover-color;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 0.1rem solid $hover-color;
+      th {
+        background-color: $hover-color;
+      }
+      tr:hover {
+        background-color: $hover-color;
+      }
+      tr:not(:last-child) {
+        border-bottom: 0.1rem solid $hover-color;
+      }
     }
   }
 }
