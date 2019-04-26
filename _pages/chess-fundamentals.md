@@ -100,6 +100,4 @@ This page contains a compilation of chess fundamentals.
 
 ## References
 
-Play Winning Chess, by Yasser Seirawan, 1990.
-
 How to Reassess Your Chess: Chess Mastery Through Chess Imbalances, by Jeremy Silman, 2010.
