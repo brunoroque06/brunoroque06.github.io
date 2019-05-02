@@ -70,7 +70,7 @@ Materialism is a form of philosophical monism which holds that matter is the fun
 
 ## 334 BC to 262 BC - Zeno of Citium, Ancient Greece
 
-Stoicism: the only thing that is truly good is an excellent mental state, identified with virtue and reason. This is the only thing that can guarantee our happiness. External things such as money, success, fame and the like can never bring us happiness. Although there is nothing wrong with these things and they do hold value and may well form part of a good life, often the pursuit of these things actually damages the only thing that can bring us happiness: an excellent, rational mental state. Our emotions are the project of our judgements, of thinking that something good or bad is happening or is about to happen. Many of our negative emotions are based on mistaken judgements, but because they are due to our judgements it means they are within our control.
+Stoicism: the only thing that is truly good is an excellent mental state, identified with virtue and reason. This is the only thing that can guarantee our happiness. External things such as money, success, fame and the like can never bring us happiness. Although there is nothing wrong with these things and they do hold value and may well form part of a good life, often the pursuit of these things actually damages the only thing that can bring us happiness: an excellent, rational mental state. Our emotions are the project of our judgments, of thinking that something good or bad is happening or is about to happen. Many of our negative emotions are based on mistaken judgments, but because they are due to our judgments it means they are within our control.
 
 ## ~900 to ~1500 - Feudalism, Europe
 
@@ -90,7 +90,7 @@ In the early 1330s a deadly bubonic plague occurred in China. The bubonic plague
 
 ## 1300 ~ 1600 - Renaissance, Europe
 
-The Renaissance ushers in an age of scientific, intellectual and artistic inquiry and appreciation of ancient Greek and Roman civilisations. Martin Luther sparks the Protestant Reformation. Scholasticism is a Medieval school of philosophy (or, perhaps more accurately, a method of learning) taught by the academics of medieval universities and cathedrals in the period from the 12th to 16th Century. It combined Logic, Metaphysics and semantics into one discipline, and is generally recognised to have developed our understanding of Logic significantly.
+The Renaissance ushers in an age of scientific, intellectual and artistic inquiry and appreciation of ancient Greek and Roman civilizations. Martin Luther sparks the Protestant Reformation. Scholasticism is a Medieval school of philosophy (or, perhaps more accurately, a method of learning) taught by the academics of medieval universities and cathedrals in the period from the 12th to 16th Century. It combined Logic, Metaphysics and semantics into one discipline, and is generally recognised to have developed our understanding of Logic significantly.
 
 ## ~1400 - Capitalism, Europe
 
