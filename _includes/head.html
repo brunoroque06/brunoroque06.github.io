@@ -5,7 +5,10 @@
     content="width=device-width, initial-scale=1, shrink-to-fit=no"
   />
   <link rel="manifest" href="{{ site.data.global.url }}/manifest.webmanifest" />
-  <meta name="Description" content="BrunoRoque06" />
+  <meta
+    name="Description"
+    content="Bruno Roque's personal website. It contains information about: Software Engineering, and Chess."
+  />
   <meta name="theme-color" content="#2c3d51" />
   <link
     rel="icon"
@@ -14,7 +17,9 @@
   />
   <title>
     {% if page.title %}{{ page.title }} - {{ site.title }} {% else %}{{
-    site.title }} {% endif %}
+      site.title
+    }}
+    {% endif %}
   </title>
   <style type="text/css">
     {% capture style %}
