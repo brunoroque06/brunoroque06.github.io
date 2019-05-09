@@ -16,8 +16,8 @@ This page contains a compilation of good practices on software development. Some
 - You Aren't Gonna Need It (Yagni): a feature should not be build until it is needed. The first argument for Yagni is that while we may now think we need this presumptive feature, it's likely that we will be wrong. There are 4 main costs when a not needed feature is built: build cost, delay cost (delaying other important features), carry cost (integration), repair cost (in case it was a right feature after all, but built wrong). Yagni only applies to capabilities built into the software to support a presumptive feature, it does not apply to effort to make the software easier to modify.
 - Design decisions should be enforced with structure, that force compliance, over convention.
 - Optimization should only be performed after the code is working as intended: "Premature optimization is the root of all evil (or at least most of it) in programming." - Donald Knuth.
-- Builds/Tests should be a one step process.
-- Safeties should not be overridden, e.g. turning off certain compiler warnings, ignoring failing tests.
+- Builds/Tests should be a one step/command process.
+- Safeties should not be overridden, e.g., turning off certain compiler warnings, ignoring failing tests.
 - Abstractions outlive implementations, and are more worthy of time investment.
 
 ## Classes
@@ -53,8 +53,8 @@ This page contains a compilation of good practices on software development. Some
 
 ## Variables and Constants
 
-- Explanatory variables should be used by breaking up calculations into intermediate values that are held in variables with meaningful names.
-- Known numbers should be replaced with named constants (e.g. `PI`, `EARTH_RADIUS_IN_METER`).
+- Explanatory variables should be used by breaking up calculations into intermediate values, that are held in variables with meaningful names.
+- Known numbers should be replaced with named constants (e.g., `PI`, `EARTH_RADIUS_IN_METER`).
 - Configurable data should be at high levels.
 - Constants should not be inherited, because they would be hidden and hard to find. It is better to use static imports, so that it becomes obvious where they come from.
 
@@ -75,7 +75,7 @@ This page contains a compilation of good practices on software development. Some
 ## Functional Programming
 
 - Contrary to imperative programming, functional programming is characterized by variable immutability, higher order functions (functions that can receive functions as inputs and/or return functions as outputs), and recursion instead of imperative loops (`for`, `while`).
-- It is stateless, which makes easy the exploitation of parallelism.
+- It is stateless, which makes it easy the exploitation of parallelism.
 - Substitution model reduces expressions to a value, as long as these expressions have no side effects. It is formalized in the &#955;-calculus, which is the foundation for functional programming. An example of a side effect is the following expression: `number++`, which can not be expressed by the substitution model. There are 2 evaluation strategies:
   1. Call-by-value: evaluate operations, and then functions. It has the advantage of evaluating every function argument only once;
   2. Call-by-name: evaluate functions, and then operations. This way a function argument is not evaluated if the corresponding parameter is unused in the evaluation of the function body.
@@ -99,7 +99,7 @@ This page contains a compilation of good practices on software development. Some
   2. Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test;
   3. Spies are stubs that also record some information based on how they were called. They might be used when the test wants to be sure that the authorize method was called by the system (e.g. count how many times it was called);
   4. Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected to receive. A mock spies on the behavior of the module being tested. And the mock knows what behavior to expect;
-  5. Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (e.g. an in memory database).
+  5. Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (e.g., an in memory database).
 
 ## References
 

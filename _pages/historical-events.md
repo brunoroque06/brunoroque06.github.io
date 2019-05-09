@@ -140,7 +140,7 @@ Categorical Imperative, "Act only according to that maxim whereby you can, at th
 
 Idealism: reality, or reality as we can know it, is fundamentally mental, mentally constructed, or otherwise immaterial. It's not possible to separate what we view from what we perceive. Antonym: realism.
 
-Phenomenalism is the view that physical objects cannot justifiably be said to exist in themselves, but only as perceptual phenomena or sensory stimuli (e.g. redness, hardness, softness, sweetness, etc.) situated in time and in space. In particular, some forms of phenomenalism reduce talk about physical objects in the external world to talk about bundles of sense-data.
+Phenomenalism is the view that physical objects cannot justifiably be said to exist in themselves, but only as perceptual phenomena or sensory stimuli (e.g., redness, hardness, softness, sweetness, etc.) situated in time and in space. In particular, some forms of phenomenalism reduce talk about physical objects in the external world to talk about bundles of sense-data.
 
 ## 1769 to 1821 - Napoléon Bonaparte, France
 

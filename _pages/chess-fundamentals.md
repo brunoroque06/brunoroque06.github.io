@@ -11,12 +11,12 @@ This page contains a compilation of chess fundamentals.
 ## General Principles
 
 - Method for move finding:
-  - check tactics (CCT): checks, captures, threads;
-  - positional: assert imbalances for both sides, and then find the move that best improves own's/worsens opponent's position (tempo moves first);
+  1. Check tactics (CCT): checks, captures, threads;
+  2. Positional: assert imbalances for both sides, and then find the move that best improves own's/worsens opponent's position (tempo moves first);
 - Tempo moves:
-  1. checks;
-  2. captures;
-  3. attacks of a piece towards a higher value piece.
+  1. Checks;
+  2. Captures;
+  3. Attacks of a piece towards a higher value piece.
 - On trading pieces: most of the time it is a mistake. When a player trades, specially in the opening, he is developing opponent's pieces. Players should embrace tension, and not be afraid of it.
 - Placing a piece on a square where it does not work with the rest of its army is rarely a good idea, as one wants as many pieces as possible to work towards the same goal.
 - Unless the position is very sharp, thus positionally speaking, it's usually a bad idea to leave pieces undefended.
@@ -50,7 +50,7 @@ This page contains a compilation of chess fundamentals.
 - Bishops do well in open positions, unlike Knights. The fewer the Pawns in the way of the Bishop, the greater its scope.
 - Bishops should be in open diagonals. If they don't exist, they should be created or it should be understood where they will exist.
 - A Bishop trapped behind its own Pawns is usually called a tall-Pawn. Such a Bishop is most of the times a horrible piece (a serious imbalance).
-- Moving Pawns can seriously affect Bishops' activity (e.g. opening diagonals, blocking a Bishop).
+- Moving Pawns can seriously affect Bishops' activity (e.g., opening diagonals, blocking a Bishop).
 - Bishops are usually better than Knights in the endgame, given their long range capabilities.
 
 ## Rooks
@@ -58,7 +58,7 @@ This page contains a compilation of chess fundamentals.
 - Rooks should be placed in open/half-open files. Both Rooks on the 7th or 8th rank are deadly usually.
 - Half-open files should be used to exert tremendous pressure against weak opponent's Pawn.
 - When there is only an open file, it becomes even more important for the player who owns it.
-- Rooks should be placed in the open file that is further away from the opponent's King. E.g. in case both the `c` and `d` files are open, and the opponent's King castled King side, `c` file should be picked.
+- Rooks should be placed in the open file that is further away from the opponent's King. E.g., in case both the `c` and `d` files are open, and the opponent's King castled King side, `c` file should be picked.
 
 ## Queens
 
@@ -75,6 +75,7 @@ This page contains a compilation of chess fundamentals.
 - Tripled Pawns: almost always terrible, as they can be easily attacked and can be blocked by a single Pawn.
 - Principle of 2 weaknesses: usually a player can hold when only 1 weakness is being attacked. But if another weakness is added to his position, then the added defensive burden proves to be too much.
 - The less number of Pawn islands a players possesses, the better.
+- Given a position where White has Pawns on `b2`, `b3`, and `c3`, White should play `b4` before Black can play `a5`. Otherwise `b4` won't be possible anymore, and `b3` will remain weak.
 
 ## Statics/Positional vs Dynamics
 
@@ -95,8 +96,8 @@ This page contains a compilation of chess fundamentals.
 
 \* opposition: situation where both Kings face each other on the same row, with only 1 square in between them. The player not having to move is said to have the opposition. Given a position where White King in on `e3` and Black King in on `e5`:
 
-- if it's White to move, then Black King has the opposition;
-- if it's Black to move, then White King has the opposition.
+- If it's White to move, then Black King has the opposition;
+- If it's Black to move, then White King has the opposition.
 
 ## References
 
