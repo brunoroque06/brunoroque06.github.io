@@ -14,14 +14,12 @@ Organizations which design systems are constrained to produce designs which are 
 
 - Essential steps to iterate over:
   1. Which is the problem? Use cases, business requirements, company goals should help defining it;
-  2. How to solve it? Define features to aim for, the so called `-ilities`: speed, scalability, deployability, etc;
+  2. How to solve it? Features to aim for, the so called `-ilities`, should be defined (e.g., speed, scalability, deployability);
   3. How to validate the solution?.
 
 ## Architecture
 
 - Conceptual Integrity: "All of the parts of a system relate to each other and relate to the whole. There is nothing unnecessary, and all of the parts have an internal consistency. The design must proceed from one mind, or from a very small number of agreeing resonant minds".
-- All architectures become interactive because of unknown unknowns; agile just recognizes this and does it sooner. - Mark Richards.
-- Architecture components that can change, that are volatile, should be identified by looking at the clients and at the future.
 - Planning horizons: in the early planning phases, developers spend significant effort on activities like research, often in the form of reading, to validate their assumptions. Based on their studies, what is "best practice" or "best in class" at that time form part of the basic fundamental assumptions before developers write any code, or release software to end users. More and more effort put into assumptions, even if they turn out to be false in six months, leads to a string attachment to them. The "Sunk Cost Fallacy" describes decisions affected by emotional investment: one's decisions are tainted by the emotional investments he accumulates, and the more he invests into something, the harder it becomes to abandon it. Long planning cycles that force architects into irreversible decisions should be avoided, and ways to keep options open should be used. Breaking large programs of work into smaller early deliverables tests the feasibility of both the architectural choices and the development infrastructure. Architects should avoid following technologies that require a significant upfront investment before software is actually built (e.g., licenses, contracts) before they have validated through end-user feedback that the technology actually fits the problem they are trying to solve.
 - Just-in-time anti-corruption layers should be used to isolate against 3rd-party library changes.
 - Embracing sacrificial architectures: accepting now that in a few years time, what is currently being built will (hopefully) be thrown away. This does not imply sacrificing quality. "Design for ~10X growth, but plan to rewrite before ~100X" - Jeff Dean.
@@ -31,14 +29,27 @@ Organizations which design systems are constrained to produce designs which are 
 - Fitness functions should be used: any tool that helps assessing some architectural characteristic qualifies as a fitness function.
 - Benefits of fitness functions:
   1. Provide quantifiable results;
-  2. Capturing every concern as fitness functions creates a consistent enforcement mechanism;
-  3. Having a list of fitness functions allows developers to most easily design deployment pipelines;
+  2. Creates a consistent enforcement mechanism by capturing every concern as fitness functions;
+  3. Having a list of fitness functions allows developers to most easily design deployment pipelines.
 - Once fitness functions have been defined, architects must ensure that they are evaluated in a timely manner. A deployment pipeline is often used to evaluate tasks like this. Using a deployment pipeline, architects can define which, when, and how often fitness functions execute.
 
-## Evolution
+## Stability & Change
 
+- Software should be made stable in the presence of change.
+- Volatility of a module (e.g., interface, class, module of a given system) is affected by:
+  - Domain;
+  - Market/Customers;
+  - Stability (inverse proportionality). A module is stable when it is:
+    - Independent, if it does not depend upon other elements => no reason to change;
+    - Responsible, if there are other elements that depend upon it (e.g., an interface may be responsible for a couple of classes). Given that any change would have a large impact, they have reasons not to change.
 - Speed of evolution is a function of cycle time: faster cycle time allows faster evolution.
 - Parallel change, also known as expand and contract, is a pattern to implement backward-incompatible changes to an interface in a safe manner, by breaking the change into three distinct phases: expand, migrate, and contract.
+
+## Dependencies
+
+- A `Good Dependency` is a dependency upon something stable, with low volatility.
+- The Stable Dependencies Principle: a package should only depend on packages that are more stable than itself. If a stable package depends upon a volatile one, then the volatile package loses its ability to change.
+- The Stable Abstractions Principle: the abstraction of a package should be in proportion to its stability, i.e., stable packages should be abstract.
 
 ## Anti-patterns
 
@@ -67,3 +78,5 @@ Building Evolutionary Architectures, by Neil Ford, Rebecca Parsons and Patrick K
 [ParallelChange](https://martinfowler.com/bliki/ParallelChange.html), by Danilo Sato.
 
 [SacrificalArchitecture](https://martinfowler.com/bliki/SacrificialArchitecture.html), by Martin Fowler.
+
+[Design Principles and Design Patterns](https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf), by Robert Martin, 2000.
