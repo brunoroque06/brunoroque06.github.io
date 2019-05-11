@@ -10,13 +10,9 @@ This page contains a compilation of chess fundamentals.
 
 ## General Principles
 
-- Method for move finding:
-  1. Check tactics (CCT): checks, captures, threads;
-  2. Positional: assert imbalances for both sides, and then find the move that best improves own's/worsens opponent's position (tempo moves first);
-- Tempo moves:
-  1. Checks;
-  2. Captures;
-  3. Attacks of a piece towards a higher value piece.
+- There are 2 possible approaches to play a position:
+  1. Tactically/Dynamically: direct approach to improve owns position through CCTs (checks, captures, and threads);
+  2. Positionally/Strategically: assert imbalances for both sides, then find the move that best improves own's/worsens opponent's position.
 - On trading pieces: most of the time it is a mistake. When a player trades, specially in the opening, he is developing opponent's pieces. Players should embrace tension, and not be afraid of it.
 - Placing a piece on a square where it does not work with the rest of its army is rarely a good idea, as one wants as many pieces as possible to work towards the same goal.
 - Unless the position is very sharp, thus positionally speaking, it's usually a bad idea to leave pieces undefended.
@@ -36,6 +32,12 @@ This page contains a compilation of chess fundamentals.
   - Initiative;
   - King safety;
   - Statics vs dynamics.
+
+## Statics/Positional vs Dynamics
+
+- Static/positional advantages last long, while dynamics last for a few moves.
+- By default, positional play should be employed. But some positions demand dynamic play, and it's critically important to recognize them. E.g.: vs an un-castled King when one has already developed pieces/castled King, vs a better Pawn structure, after gambling a Pawn/exchange.
+- The transformation of one kind of imbalance (static or dynamic) into another (dynamic or static) is very common.
 
 ## Knights
 
@@ -77,11 +79,20 @@ This page contains a compilation of chess fundamentals.
 - The less number of Pawn islands a players possesses, the better.
 - Given a position where White has Pawns on `b2`, `b3`, and `c3`, White should play `b4` before Black can play `a5`. Otherwise `b4` won't be possible anymore, and `b3` will remain weak.
 
-## Statics/Positional vs Dynamics
+### Space
 
-- Static/positional advantages last long, while dynamics last for a few moves.
-- By default, positional play should be employed. But some positions demand dynamic play, and it's critically important to be able to recognize them. Some simple examples: vs an un-castled King when one has already developed pieces/castled King, vs a better Pawn structure, after gambling a Pawn/exchange.
-- The transformation of one kind of imbalance (static or dynamic) into another (dynamic or static) is very common.
+- Space is created by the expansion of Pawns. One can see the line of Pawns as a "fence", where the space behind them is controlled by the player.
+- An advantage in space can take away many options from the enemy. He can end up with a passive position, where it is not easy to manuever his pieces.
+- Usually the side with the space advantage does not want to trade pieces, because the player with less space would profit from it (it would be easier to manuever less pieces in the same space).
+- The following ways should be considered when fighting an enemy space advantage:
+  1. Exchange pieces;
+  2. Use of Pawn breaks;
+  3. Take advantage of the weak squares behind the enemy Pawns;
+  4. Target a space-gaining enemy Pawn;
+  5. Create own space advantage in another side of the board (Queen side, center, King side).
+- Given a position where White has blocked Pawns on `e4` and `f5`, he should push `g4` as it is the next Pawn in the chain, next to his lead Pawn.
+- Given a space advantage, one should not lock the Pawns. A player should aim for space advantage, followed by piece penetration in enemy's territory.
+- Space advantage can be greatly enhanced with other types of imbalances, e.g., a strong minor piece.
 
 ## Endgames
 
