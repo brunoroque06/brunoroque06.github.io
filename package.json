@@ -4,8 +4,8 @@
     "format": "git diff --cached --name-only | grep -E '^.*\\.(html|json|md|scss|yml)' | xargs prettier --write"
   },
   "devDependencies": {
-    "husky": "^2.1.0",
-    "prettier": "^1.17.0"
+    "husky": "^2.2.0",
+    "prettier": "^1.17.1"
   },
   "husky": {
     "hooks": {
