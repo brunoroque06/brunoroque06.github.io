@@ -19,6 +19,7 @@ Organizations which design systems are constrained to produce designs which are 
 
 ## Architecture
 
+- Functional decomposition/Flowcharts should be avoided, and information hiding should be used instead (from Wikipedia's page): information hiding is the principle of segregation of the design decisions in a computer program that are most likely to change, thus protecting other parts of the program from extensive modification if the design decision is changed. The protection involves providing a stable interface which protects the remainder of the program from the implementation (the details that are most likely to change).
 - Conceptual Integrity: "All of the parts of a system relate to each other and relate to the whole. There is nothing unnecessary, and all of the parts have an internal consistency. The design must proceed from one mind, or from a very small number of agreeing resonant minds".
 - Planning horizons: in the early planning phases, developers spend significant effort on activities like research, often in the form of reading, to validate their assumptions. Based on their studies, what is "best practice" or "best in class" at that time form part of the basic fundamental assumptions before developers write any code, or release software to end users. More and more effort put into assumptions, even if they turn out to be false in six months, leads to a string attachment to them. The "Sunk Cost Fallacy" describes decisions affected by emotional investment: one's decisions are tainted by the emotional investments he accumulates, and the more he invests into something, the harder it becomes to abandon it. Long planning cycles that force architects into irreversible decisions should be avoided, and ways to keep options open should be used. Breaking large programs of work into smaller early deliverables tests the feasibility of both the architectural choices and the development infrastructure. Architects should avoid following technologies that require a significant upfront investment before software is actually built (e.g., licenses, contracts) before they have validated through end-user feedback that the technology actually fits the problem they are trying to solve.
 - Just-in-time anti-corruption layers should be used to isolate against 3rd-party library changes.
@@ -75,8 +76,10 @@ Organizations which design systems are constrained to produce designs which are 
 
 Building Evolutionary Architectures, by Neil Ford, Rebecca Parsons and Patrick Kua, 2017.
 
+[Design Principles and Design Patterns](https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf), by Robert Martin, 2000.
+
+[Information Hidding](https://en.wikipedia.org/wiki/Information_hiding), by David Parnas, 1972.
+
 [ParallelChange](https://martinfowler.com/bliki/ParallelChange.html), by Danilo Sato.
 
 [SacrificalArchitecture](https://martinfowler.com/bliki/SacrificialArchitecture.html), by Martin Fowler.
-
-[Design Principles and Design Patterns](https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf), by Robert Martin, 2000.
