@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "format": "git diff --cached --name-only | grep -E '^.*\\.(html|json|md|scss|yml)' | xargs prettier --write"
+    "format": "git diff --cached --name-only | grep -E '^.*\\.(html|json|md|scss|yml)' | xargs --no-run-if-empty prettier --write"
   },
   "devDependencies": {
     "husky": "^2.4.0",
