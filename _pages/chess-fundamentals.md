@@ -17,6 +17,7 @@ This page contains a compilation of chess fundamentals.
 - Placing a piece on a square where it does not work with the rest of its army is rarely a good idea, as one wants as many pieces as possible to work towards the same goal.
 - Unless the position is very sharp, thus positionally speaking, it's usually a bad idea to leave pieces undefended.
 - A quote on plans: "The P-word. I think (Jan) Gustafsson doesn't allow people to use the word plan in a chess sense. Actually I completely agree with him! Plans do not exist. There are some ideas, they exist, and then when you've played lots of ideas in the game you can say, "ok, this was my plan", but not beforehand. It's like, what is your plan in life? It's impossible to answer until your life actually happens." - Alexander Grischuk.
+- A given piece is considered bad when its position cannot be improved.
 
 ## Imbalances
 
@@ -32,12 +33,15 @@ This page contains a compilation of chess fundamentals.
   - Initiative;
   - King safety;
   - Statics vs dynamics.
+- A square is considered weak when it cannot be defended by Pawns, and when it may theoretically be occupied by one of the opponent's pieces.
 
 ## Statics/Positional vs Dynamics
 
 - Static/positional advantages last long, while dynamics last for a few moves.
 - By default, positional play should be employed. But some positions demand dynamic play, and it's critically important to recognize them. E.g.: vs an un-castled King when one has already developed pieces/castled King, vs a better Pawn structure, after gambling a Pawn/exchange.
 - The transformation of one kind of imbalance (static or dynamic) into another (dynamic or static) is very common.
+- "If for one of the players the static balance is negative, he must without hesitation employ dynamic means, and be ready to go in for extreme measures." - Iossif Dorfman. And then: "Dynamic play should be continued until the opponent is deprived of his static trumps.".
+- "The exchange of Queens is fundamentally linked with the static position of the King." - Iossif Dorfman. In the sense that a weak King will benefit a lot if Queens are exchanged.
 
 ## Knights
 
@@ -113,3 +117,5 @@ This page contains a compilation of chess fundamentals.
 ## References
 
 How to Reassess Your Chess: Chess Mastery Through Chess Imbalances, by Jeremy Silman, 2010.
+The Method in Chess, Iossif Dorfman, 2001.
+
