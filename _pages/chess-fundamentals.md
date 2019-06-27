@@ -119,4 +119,3 @@ This page contains a compilation of chess fundamentals.
 How to Reassess Your Chess: Chess Mastery Through Chess Imbalances, by Jeremy Silman, 2010.
 
 The Method in Chess, by Iossif Dorfman, 2001.
-
