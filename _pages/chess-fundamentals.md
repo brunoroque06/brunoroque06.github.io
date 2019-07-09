@@ -16,7 +16,7 @@ This page contains a compilation of chess fundamentals.
 - On trading pieces: most of the time it is a mistake. When a player trades, specially in the opening, he is developing opponent's pieces. Players should embrace tension, and not be afraid of it.
 - Placing a piece on a square where it does not work with the rest of its army is rarely a good idea, as one wants as many pieces as possible to work towards the same goal.
 - Unless the position is very sharp, thus positionally speaking, it's usually a bad idea to leave pieces undefended.
-- A quote on plans: "The P-word. I think (Jan) Gustafsson doesn't allow people to use the word plan in a chess sense. Actually I completely agree with him! Plans do not exist. There are some ideas, they exist, and then when you've played lots of ideas in the game you can say, "ok, this was my plan", but not beforehand. It's like, what is your plan in life? It's impossible to answer until your life actually happens." - Alexander Grischuk.
+- A quote on plans: "The P-word. I think (Jan) Gustafsson doesn't allow people to use the word plan in a chess sense. Actually I completely agree with him! Plans do not exist. There are some ideas, they exist, and then when you've played lots of ideas in the game you can say, "OK, this was my plan", but not beforehand. It's like, what is your plan in life? It's impossible to answer until your life actually happens." - Alexander Grischuk.
 - A given piece is considered bad when its position cannot be improved.
 
 ## Imbalances
@@ -97,6 +97,14 @@ This page contains a compilation of chess fundamentals.
 - Given a position where White has blocked Pawns on `e4` and `f5`, he should push `g4` as it is the next Pawn in the chain, next to his lead Pawn.
 - Given a space advantage, one should not lock the Pawns. A player should aim for space advantage, followed by piece penetration in enemy's territory.
 - Space advantage can be greatly enhanced with other types of imbalances, e.g., a strong minor piece.
+
+### Passed Pawns
+
+- A passed Pawn can be a static strength, or a dynamic game winner. But sometimes, even when protected, can turn into a serious weakness.
+- A Pawn majority's ultimate goal is to create a passed Pawn.
+- Usually a passed Pawn is stronger in King and Pawn, and Queen endgames. Queen endgames are particularly favorable as: the opponent's Queen cannot maintain the blockade on its own, and it makes the defending King's participation in the defense rather risky.
+- The ideal plan for the player with the passed Pawn is to exchange minor pieces, leaving Queens/Rook(s). This makes the blockade uncomfortable as Queens and Rooks are not ideal blockaders (Knights are!).
+- When a passed Pawn exists on the board, its blockade is of extreme importance for both sides.
 
 ## Endgames
 
