@@ -104,7 +104,7 @@ This page contains a compilation of chess fundamentals.
 - A Pawn majority's ultimate goal is to create a passed Pawn.
 - Usually a passed Pawn is stronger in King and Pawn, and Queen endgames. Queen endgames are particularly favorable as: the opponent's Queen cannot maintain the blockade on its own, and it makes the defending King's participation in the defense rather risky.
 - The ideal plan for the player with the passed Pawn is to exchange minor pieces, leaving Queens/Rook(s). This makes the blockade uncomfortable as Queens and Rooks are not ideal blockaders (Knights are!).
-- When a passed Pawn exists on the board, its blockade is of extreme importance for both sides.
+- When a passed Pawn exists on the board, its blockade is of extreme importance for both sides. Knights are usually excellent blockaders.
 
 ## Endgames
 
