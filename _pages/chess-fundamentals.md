@@ -69,6 +69,7 @@ This page contains a compilation of chess fundamentals.
 ## Queens
 
 - One should not trade Queens when the enemy King is weaker than his.
+- During Queen and Rook endgames, the following are of extreme importance: centralization of the Queens, Kings' safety, and Pawns' qualities (rather than quantity).
 
 ## Pawns
 
