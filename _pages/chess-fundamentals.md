@@ -100,7 +100,10 @@ This page contains a compilation of chess fundamentals.
 
 ### Isolated Pawns
 
-- How to battle an isolated Pawn: minor pieces should be traded (as such a Pawn can give strong activity to minor pieces), the square in front of the Pawn should be controlled so that the Pawn cannot move, and Rooks and Queen should be kept in order to exploit that weakness. Keeping the Queen is important, as she is the best piece to restrain the enemy King from getting to the weakness and help defending.
+- How to battle an isolated Pawn:
+  1. the square in front of the Pawn should be controlled so that the Pawn cannot advance;
+  2. minor pieces should be traded, as such a Pawn can give strong activity to minor pieces;
+  3. Rooks and Queen should be kept in order to exploit that weakness. Keeping the Queen is important, as she is the best piece to restrain the enemy King from getting to the weakness and help defending.
 - A backward Pawn shares many of the same shortcomings as the isolated Pawn, therefore the same ideas apply. It should be kept backwards, by controlling its advancing square(s).
 
 ### Passed Pawns
