@@ -18,6 +18,7 @@ This page contains a compilation of chess fundamentals.
 - Unless the position is very sharp, thus positionally speaking, it's usually a bad idea to leave pieces undefended.
 - A quote on plans: "The P-word. I think (Jan) Gustafsson doesn't allow people to use the word plan in a chess sense. Actually I completely agree with him! Plans do not exist. There are some ideas, they exist, and then when you've played lots of ideas in the game you can say, "OK, this was my plan", but not beforehand. It's like, what is your plan in life? It's impossible to answer until your life actually happens." - Alexander Grischuk.
 - A given piece is considered bad when its position cannot be improved.
+- Superfluous/Extra Piece: when a player has more than 1 Piece that would do great on only one square. The opponent should recognize this, and avoid exchanging any of them.
 
 ## Imbalances
 
