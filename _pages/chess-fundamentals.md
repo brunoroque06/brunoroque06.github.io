@@ -75,8 +75,6 @@ This page contains a compilation of chess fundamentals.
 
 - "My main purpose is to gain recognition for myself by means of a new idea of which no one has conceived, or perhaps has been unable to practice; that is, good play of the Pawns; they are the soul of chess: it is they alone that determine the attack and the defence, and the winning or losing of the game depends entirely on their good or bad arrangement." - François-André Danican Philidor.
 - Whenever a Pawn is advanced, weak squares are potentially created, as that Pawn no longer controls the squares it used to.
-- How to battle an isolated Pawn: minor pieces should be traded (as such Pawn can give strong activity to minor pieces), and Rooks and Queen should be kept in order to exploit that weakness. Keeping the Queen is important, as she is the best piece to restrain the enemy King from getting to the weakness and help defending.
-- A backward Pawn shares many of the same shortcomings as the isolated Pawn, therefore the same ideas apply. It should be kept backwards, by controlling its advancing square(s).
 - How to create weaknesses: by making the opponent push a Pawn, usually by attacking his Pawns (either by advancing Pawns or attacking with pieces).
 - Doubled Pawns: usually bad, but not always as the doubled Pawn can control an important square.
 - Tripled Pawns: almost always terrible, as they can be easily attacked and can be blocked by a single Pawn.
@@ -98,6 +96,11 @@ This page contains a compilation of chess fundamentals.
 - Given a position where White has blocked Pawns on `e4` and `f5`, he should push `g4` as it is the next Pawn in the chain, next to his lead Pawn.
 - Given a space advantage, one should not lock the Pawns. A player should aim for space advantage, followed by piece penetration in enemy's territory.
 - Space advantage can be greatly enhanced with other types of imbalances, e.g., a strong minor piece.
+
+### Isolated Pawns
+
+- How to battle an isolated Pawn: minor pieces should be traded (as such a Pawn can give strong activity to minor pieces), the square in front of the Pawn should be controlled (so that the Pawn cannot move), and Rooks and Queen should be kept in order to exploit that weakness. Keeping the Queen is important, as she is the best piece to restrain the enemy King from getting to the weakness and help defending.
+- A backward Pawn shares many of the same shortcomings as the isolated Pawn, therefore the same ideas apply. It should be kept backwards, by controlling its advancing square(s).
 
 ### Passed Pawns
 
