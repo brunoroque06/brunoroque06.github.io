@@ -1,7 +1,5 @@
 # Historical Events
 
-This page contains historical events that I find highly interesting.
-
 ## ~20,000 to ~18,000 BC - Arithmetic, Egypt
 
 Arithmetic is the oldest and most elementary branch of mathematics. It consists of the study of numbers, especially the properties of the traditional operations between them - addition, subtraction, multiplication and division.
