@@ -13,6 +13,7 @@ This page contains a compilation of chess fundamentals.
 - There are 2 possible approaches to play a position:
   1. Tactically/Dynamically: direct approach to improve owns position through CCTs (checks, captures, and threads);
   2. Positionally/Strategically: assert imbalances for both sides, then find the move that best improves own's/worsens opponent's position.
+- "Tactics is what you do when there is something to do; strategy is what you do when there is nothing to do." - Savielly Tartakower
 - On trading pieces: most of the time it is a mistake. When a player trades, specially in the opening, he is developing opponent's pieces. Players should embrace tension, and not be afraid of it.
 - Placing a piece on a square where it does not work with the rest of its army is rarely a good idea, as one wants as many pieces as possible to work towards the same goal.
 - Unless the position is very sharp, thus positionally speaking, it's usually a bad idea to leave pieces undefended.
