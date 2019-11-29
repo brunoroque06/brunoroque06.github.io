@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Software Architecture
-permalink: software-architecture/
+permalink: software-architecture
 ---
 
 # Software Architecture
@@ -24,7 +24,18 @@ Organizations which design systems are constrained to produce designs which are 
 - Planning horizons: in the early planning phases, developers spend significant effort on activities like research, often in the form of reading, to validate their assumptions. Based on their studies, what is "best practice" or "best in class" at that time form part of the basic fundamental assumptions before developers write any code, or release software to end users. More and more effort put into assumptions, even if they turn out to be false in six months, leads to a string attachment to them. The "Sunk Cost Fallacy" describes decisions affected by emotional investment: one's decisions are tainted by the emotional investments he accumulates, and the more he invests into something, the harder it becomes to abandon it. Long planning cycles that force architects into irreversible decisions should be avoided, and ways to keep options open should be used. Breaking large programs of work into smaller early deliverables tests the feasibility of both the architectural choices and the development infrastructure. Architects should avoid following technologies that require a significant upfront investment before software is actually built (e.g., licenses, contracts) before they have validated through end-user feedback that the technology actually fits the problem they are trying to solve.
 - Just-in-time anti-corruption layers should be used to isolate against 3rd-party library changes.
 - Embracing sacrificial architectures: accepting now that in a few years time, what is currently being built will (hopefully) be thrown away. This does not imply sacrificing quality. "Design for ~10X growth, but plan to rewrite before ~100X" - Jeff Dean.
-- The process should come from the engineering/architecture, and not the other way around.
+- The process used in a given project should come from the engineering/architecture, and not the other way around.
+
+## Domain
+
+- Domain Driven Design:
+  1. Focus on the core domain;
+  2. Explore models in a creative collaboration of domain practitioners and software practitioners;
+  3. Speak a ubiquitous language within an explicitly bounded context.
+- Given a project (independently of its domain), a single ubiquitous model should be used between all the involved.
+- Architects
+- A given model must have a context in which it applies. Boundaries in terms of team organization, usage within specific parts of the application, and physical manifestations such as code bases and database schemas should be set.
+- The model should be the backbone of a language. Teams should exercise that language (model) relentlessly in all communication, and in the code. Difficulties should be ironed out, and code should be refactored accordingly in case the model changes.
 
 ## Validation
 

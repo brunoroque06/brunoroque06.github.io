@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Chess Fundamentals
-permalink: chess-fundamentals/
+permalink: chess-fundamentals
 ---
 
 # Chess Fundamentals
