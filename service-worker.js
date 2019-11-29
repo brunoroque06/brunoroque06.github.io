@@ -32,10 +32,10 @@ async function updateCache(request, response) {
 
 async function fromCache(request) {
   const cache = await caches.open(CACHE);
-  const matching = await cache.match(request);
-  if (!matching || matching.status === 404) {
+  const match = await cache.match(request);
+  if (!match || match.status === 404) {
     const offline = new Response('[ServiceWorker] You are offline (",)');
     return Promise.resolve(offline);
   }
-  return matching;
+  return match;
 }
