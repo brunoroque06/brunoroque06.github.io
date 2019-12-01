@@ -70,7 +70,7 @@ This page contains a compilation of good practices on software development. Some
 - Are redundant if they describe something that adequately describes itself.
 - Get outdated quickly, and tend to migrate away from the code they once described.
 - Should be used to explain business logic, or eventually explain decisions.
-- Commented-out code should be deleted (version control systems will still remember it).
+- Commented-out code should be deleted (version control systems can always recover it).
 
 ## Functional Programming
 
