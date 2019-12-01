@@ -86,7 +86,7 @@ This page contains a compilation of chess fundamentals.
 
 ### Space
 
-- Space is created by the expansion of Pawns. One can see the line of Pawns as a "fence", where the space behind them is controlled by the player.
+- Space is created by the expansion of Pawns. One can see the line of Pawns as a "fence", where the space behind them is controlled by the player who owns them.
 - An advantage in space can take away many options from the enemy. He can end up with a passive position, where it is not easy to manuever his pieces.
 - Usually the side with the space advantage does not want to trade pieces, because the player with less space would profit from it (it would be easier to manuever less pieces in the same space).
 - The following ways should be considered when fighting an enemy space advantage:
