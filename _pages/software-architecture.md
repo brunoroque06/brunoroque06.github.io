@@ -6,36 +6,37 @@ permalink: software-architecture
 
 # Software Architecture
 
-This page contains information on Software Architecture, and problem solving. Most concepts are applicable to any area where design is involved.
+This page contains information on Software Architecture, and problem solving. Most concepts are applicable to any area in which design is involved.
 
 Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations. - Melvin Conway
+
+Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new "features". - UNIX philosophy
 
 ## Problem Solving
 
 - Essential steps to iterate over:
   1. Which is the problem? Use cases, business requirements, company goals should help defining it;
   2. How to solve it? Features to aim for, the so called `-ilities`, should be defined (e.g., speed, scalability, deployability);
-  3. How to validate the solution?.
+  3. How to validate the solution? It must be defined before implementing.
 
 ## Architecture
 
 - Functional decomposition/Flowcharts should be avoided, and information hiding should be used instead (from Wikipedia's page): information hiding is the principle of segregation of the design decisions in a computer program that are most likely to change, thus protecting other parts of the program from extensive modification if the design decision is changed. The protection involves providing a stable interface which protects the remainder of the program from the implementation (the details that are most likely to change).
 - Conceptual Integrity: "All of the parts of a system relate to each other and relate to the whole. There is nothing unnecessary, and all of the parts have an internal consistency. The design must proceed from one mind, or from a very small number of agreeing resonant minds".
 - Planning horizons: in the early planning phases, developers spend significant effort on activities like research, often in the form of reading, to validate their assumptions. Based on their studies, what is "best practice" or "best in class" at that time form part of the basic fundamental assumptions before developers write any code, or release software to end users. More and more effort put into assumptions, even if they turn out to be false in six months, leads to a string attachment to them. The "Sunk Cost Fallacy" describes decisions affected by emotional investment: one's decisions are tainted by the emotional investments he accumulates, and the more he invests into something, the harder it becomes to abandon it. Long planning cycles that force architects into irreversible decisions should be avoided, and ways to keep options open should be used. Breaking large programs of work into smaller early deliverables tests the feasibility of both the architectural choices and the development infrastructure. Architects should avoid following technologies that require a significant upfront investment before software is actually built (e.g., licenses, contracts) before they have validated through end-user feedback that the technology actually fits the problem they are trying to solve.
-- Just-in-time anti-corruption layers should be used to isolate against 3rd-party library changes.
 - Embracing sacrificial architectures: accepting now that in a few years time, what is currently being built will (hopefully) be thrown away. This does not imply sacrificing quality. "Design for ~10X growth, but plan to rewrite before ~100X" - Jeff Dean.
 - The process used in a given project should come from the engineering/architecture, and not the other way around.
 
 ## Domain
 
 - Domain Driven Design:
-  1. Focus on the core domain;
-  2. Explore models in a creative collaboration of domain practitioners and software practitioners;
-  3. Speak a ubiquitous language within an explicitly bounded context.
+  1. Model the core domain;
+  2. Domain experts and software developers should collaborate and iterate over the definition of the models;
+  3. Speak a ubiquitous language (model) within an explicitly bounded context.
 - Given a project (independently of its domain), a single ubiquitous model should be used between all the involved.
-- Architects
-- A given model must have a context in which it applies. Boundaries in terms of team organization, usage within specific parts of the application, and physical manifestations such as code bases and database schemas should be set.
+- A given model must have a context in which it applies. Boundaries in terms of team organization, usage within specific parts of the application, and physical manifestations such as code bases and database schemas should be defined.
 - The model should be the backbone of a language. Teams should exercise that language (model) relentlessly in all communication, and in the code. Difficulties should be ironed out, and code should be refactored accordingly in case the model changes.
+- Complex programs should be partitioned into layers, such as: UI (presentation), Application, Domain, Infrastructure. The domain objects, free of the responsibility of displaying themselves, storing themselves, managing application tasks, and so forth, can be focused on expressing the domain model.
 
 ## Validation
 
@@ -64,11 +65,11 @@ Organizations which design systems are constrained to produce designs which are 
 - The Stable Dependencies Principle: a package should only depend on packages that are more stable than itself. If a stable package depends upon a volatile one, then the volatile package loses its ability to change.
 - The Stable Abstractions Principle: the abstraction of a package should be in proportion to its stability, i.e., stable packages should be abstract.
 
-## Anti-patterns
+## Anti-Patterns
 
-- Vendor king: architecture should not be coupled to a vendor (products, tools, etc).
 - Last 10% trap: creating a solution to a problem that only achieves 90% of the requirements.
-- Code reuse abuse: ease of code use is often inversely proportional to how reusable that code is. The more effort developers put into making code reusable, the harder it is to use. Making code reusable involves adding additional options and decision points to accommodate the different uses. The more developers add hooks to enable reusability the more they harm the basic usability of the code. When developers build code to be reusable they must add features to accommodate the myriad ways developers will eventually use the code. All that future proofing makes it more difficult for developers to use the code for a single purpose. Code reuse can be an asset but also a potential liability. The introduced coupling points in the code should not conflict with other goals of the architecture. An (extreme) quote: "Software reuse is more like an organ transplant than snapping together Lego blocks." - John D. Cook.
+- Code reuse abuse: ease of code use is often inversely proportional to how reusable that code is. The more effort developers put into making code reusable, the harder it is to use. Making code reusable involves adding additional options and decision points to accommodate the different uses. The more developers add hooks to enable reusability the more they harm the basic usability of the code. When developers build code to be reusable they must add features to accommodate the myriad ways developers will eventually use the code. All that future proofing makes it more difficult for developers to use the code for a single purpose. Code reuse can be an asset but also a potential liability. The introduced coupling points in the code should not conflict with other goals of the architecture. An (extreme) statement: "Software reuse is more like an organ transplant than snapping together Lego blocks." - John D. Cook.
+- Vendor king: architecture should not be coupled to a vendor (products, tools, etc).
 
 ## Codebase
 
@@ -89,6 +90,8 @@ Organizations which design systems are constrained to produce designs which are 
 Building Evolutionary Architectures, by Neil Ford, Rebecca Parsons and Patrick Kua, 2017.
 
 [Design Principles and Design Patterns](https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf), by Robert Martin, 2000.
+
+Domain-Driven Design, by Eric Evans, 2003.
 
 [Information Hidding](https://en.wikipedia.org/wiki/Information_hiding), by David Parnas, 1972.
 
