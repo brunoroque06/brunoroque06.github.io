@@ -77,6 +77,7 @@ This page contains a compilation of chess fundamentals.
 
 - "My main purpose is to gain recognition for myself by means of a new idea of which no one has conceived, or perhaps has been unable to practice; that is, good play of the Pawns; they are the soul of chess: it is they alone that determine the attack and the defence, and the winning or losing of the game depends entirely on their good or bad arrangement." - François-André Danican Philidor.
 - Whenever a Pawn is advanced, weak squares are potentially created, as that Pawn no longer controls the squares it used to.
+- Pawns around the King (`f`, `g`, `h` when castled King side) become particularly weak if pushed. Pushing the `h` Pawn, to `h3` or `h4` for example as white, creates what is called a "hook", which the opponent can then take advantage of by pushing his `g` Pawn, or even sacrificing the Bishop to start an attack.
 - How to create weaknesses: by making the opponent push a Pawn, usually by attacking his Pawns (either by advancing Pawns or attacking with pieces).
 - Doubled Pawns: usually bad, but not always as the doubled Pawn can control an important square.
 - Tripled Pawns: almost always terrible, as they can be easily attacked and can be blocked by a single Pawn.
