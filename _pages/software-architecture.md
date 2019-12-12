@@ -6,7 +6,7 @@ permalink: software-architecture
 
 # Software Architecture
 
-This page contains information on Software Architecture, and problem solving. Most concepts are applicable to any area in which design is involved.
+This page contains information on Software Architecture, and problem solving. Most concepts are applicable to any domain in which design is involved.
 
 Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations. - Melvin Conway
 
