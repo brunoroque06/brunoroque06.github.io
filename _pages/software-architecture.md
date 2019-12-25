@@ -32,11 +32,8 @@ Make each program do one thing well. To do a new job, build afresh rather than c
 - Domain Driven Design:
   1. Model the core domain;
   2. Domain experts and software developers should collaborate and iterate over the definition of the models;
-  3. Speak a ubiquitous language (model) within an explicitly bounded context.
-- Given a project (independently of its domain), a single ubiquitous model should be used between all the involved.
-- A given model must have a context in which it applies. Boundaries in terms of team organization, usage within specific parts of the application, and physical manifestations such as code bases and database schemas should be defined.
+  3. A ubiquitous language (model), within an explicitly bounded context, should be spoken between all the involved.
 - The model should be the backbone of a language. Teams should exercise that language (model) relentlessly in all communication, and in the code. Difficulties should be ironed out, and code should be refactored accordingly in case the model changes.
-- Complex programs should be partitioned into layers, such as: UI (presentation), Application, Domain, Infrastructure. The domain objects, free of the responsibility of displaying themselves, storing themselves, managing application tasks, and so forth, can be focused on expressing the domain model.
 
 ## Validation
 
