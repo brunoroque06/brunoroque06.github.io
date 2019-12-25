@@ -4,7 +4,7 @@ clean:
 
 .PHONY: prepare
 prepare:
-	npm install
+	bundle install; yarn install
 
 .PHONY: serve
 serve:
