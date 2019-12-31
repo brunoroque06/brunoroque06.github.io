@@ -90,7 +90,7 @@ Building Evolutionary Architectures, by Neil Ford, Rebecca Parsons and Patrick K
 
 Domain-Driven Design, by Eric Evans, 2003.
 
-[Information Hidding](https://en.wikipedia.org/wiki/Information_hiding), by David Parnas, 1972.
+[Information Hiding](https://en.wikipedia.org/wiki/Information_hiding), by David Parnas, 1972.
 
 [ParallelChange](https://martinfowler.com/bliki/ParallelChange.html), by Danilo Sato.
 
