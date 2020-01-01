@@ -52,12 +52,16 @@ Norms (cumulative):
 - 3NF: no non-key attribute depends on other non-key attributes, i.e., all the non-key attributes must depend only on the keys. E.g.: `book (id, genre_id, genre_name) {id}`. It should be split into: `book (id, genre_id) {id}` and `genre (id, name) {id}`.
 - 4NF: no multivalued dependency. E.g.: `movie (name, producer, star) {name, producer, star}`, where `producer` and `star` only depend on the `name`, and not on each other. It should be split into: `movie_producer (name, producer) {name, producer}`, and `movie_star (name, star) {name, star}`.
 
+### The Principle of Orthogonal Design
+
+It states that: `Within a given database, no two distinct base tables should have overlapping meanings.`. E.g.: `love (giver, receiver)` and `hate (giver, receiver)` should be merged `relation (giver, receiver, type)`.
+
 ## References
 
 [Database Normalization](https://en.wikipedia.org/wiki/Database_normalization#Normal_forms).
 
 [Multivalued Dependency](https://www.sciencedirect.com/topics/computer-science/multivalued-dependency), by Jan L. Harrington.
 
-[The Principle of Orthogonal Design](http://www.dpxo.net/articles/POD1.html), by David Portas.
+[The Principle of Orthogonal Design](https://web.archive.org/web/20100224075429/http://www.dbdebunk.com/page/page/622331.htm), by Chris Date and David McGoveran.
 
 [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf), by Hadley Wickham.
