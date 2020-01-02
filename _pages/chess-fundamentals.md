@@ -120,12 +120,12 @@ This page contains a compilation of chess fundamentals.
 
 | White | Black |                                 Requirements                                 | Result |                   Strategy                   |
 | :---: | :---: | :--------------------------------------------------------------------------: | :----: | :------------------------------------------: |
-|   ♕   |   ♙   | Black's Pawn is a Bishop or Rook Pawn on the 7th rank, supported by his King |  Draw  |        Move Black King to the corner         |
-|  ♗♗   |   -   |                                      -                                       |  Win   | Centralize Bishops, then mate on the corner. |
-|  ♘♘   |   -   |                                      -                                       |  Draw  |                      -                       |
-|  ♗♘   |   -   |                                      -                                       |  Win   |                      -                       |
-|   ♙   |   -   |                         White King has opposition\*                          |  Win   |                      -                       |
-|   ♙   |   -   |                         Black King has opposition\*                          |  Draw  |                      -                       |
+|   Q   |   P   | Black's Pawn is a Bishop or Rook Pawn on the 7th rank, supported by his King |  Draw  |        Move Black King to the corner         |
+|  BB   |   -   |                                      -                                       |  Win   | Centralize Bishops, then mate on the corner. |
+|  NN   |   -   |                                      -                                       |  Draw  |                      -                       |
+|  BN   |   -   |                                      -                                       |  Win   |                      -                       |
+|   P   |   -   |                         White King has opposition\*                          |  Win   |                      -                       |
+|   P   |   -   |                         Black King has opposition\*                          |  Draw  |                      -                       |
 
 \* opposition: situation where both Kings face each other on the same row, with only 1 square in between them. The player not having to move is said to have the opposition. Given a position where White King in on `e3` and Black King in on `e5`:
 
