@@ -40,7 +40,7 @@ This page contains a compilation of chess fundamentals.
 ## Statics/Positional vs Dynamics
 
 - Static/positional advantages last long, while dynamics last for a few moves.
-- By default, positional play should be employed. But some positions demand dynamic play, and it's critically important to recognize them. E.g.: vs an un-castled King when one has already developed pieces/castled King, vs a better Pawn structure, after gambling a Pawn/exchange.
+- By default, positional play should be employed. But when a player is behind positionally/statically, dynamic play should be applied. E.g.: vs an un-castled King when one has already developed pieces/castled King, vs a better Pawn structure, after gambling a Pawn/exchange.
 - The transformation of one kind of imbalance (static or dynamic) into another (dynamic or static) is very common.
 - "If for one of the players the static balance is negative, he must without hesitation employ dynamic means, and be ready to go in for extreme measures." - Iossif Dorfman. And then: "Dynamic play should be continued until the opponent is deprived of his static trumps.".
 - "The exchange of Queens is fundamentally linked with the static position of the King." - Iossif Dorfman. In the sense that a weak King will benefit a lot if Queens are exchanged.
@@ -51,7 +51,7 @@ This page contains a compilation of chess fundamentals.
 - Knights are usually the best Pawn blockaders, as they are the only piece that can jump, therefore not losing mobility.
 - Knights should be placed in outposts, i.e. advanced squares that are no longer controlled by enemy Pawns, and ideally controlled by the player. A Knight on the 6th rank (octopus), is usually a pretty strong piece.
 - Given an endgame with Knight vs Bishop, the Knight should aim for Pawns only on one side of the board.
-- 2 Knights don't have the same synergie as 2 Bishops, so such positions should be avoided.
+- 2 Knights don't have the same synergy as 2 Bishops, so such positions should be avoided.
 
 ## Bishops
 
@@ -89,7 +89,7 @@ This page contains a compilation of chess fundamentals.
 
 - Space is created by the expansion of Pawns. One can see the line of Pawns as a "fence", where the space behind them is controlled by the player who owns them.
 - An advantage in space can take away many options from the enemy. He can end up with a passive position, where it is not easy to manuever his pieces.
-- Usually the side with the space advantage does not want to trade pieces, because the player with less space would profit from it (it would be easier to manuever less pieces in the same space).
+- Usually the side with the space advantage does not want to trade pieces, because the player with less space would profit from it, as it is easier to manuever less pieces in the same space.
 - The following ways should be considered when fighting an enemy space advantage:
   1. Exchange pieces;
   2. Use of Pawn breaks;
