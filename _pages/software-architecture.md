@@ -82,6 +82,36 @@ Make each program do one thing well. To do a new job, build afresh rather than c
 - Product over project thinking. Software projects have a common workflow in most organizations. A problem is identified, a development team is formed, problem is solved until "completion", and the software is handed over to operations for care, feeding, and maintenance for the rest of its life. The project team moves on to the next problem. This causes some problems: bug fixes are often difficult to manage, developers are isolated from the operational aspects of their code, and they care less about things like quality. In general, the more layers of indirection between a developer and their running code, the less connection they have to that code. This sometimes leads to an "us versus them" mentality. By thinking of software as a product, it shifts the company's perspective in 3 ways. First, products live forever, and cross-functional teams stay associated with their product. Second, each product has an owner who advocates for its use within the ecosystem and manages things like requirements. Third, because the team is cross-functional, each role needed by the product is represented.
 - Teams should be small, in order to minimize the required connections, and should also be cross-functional to eliminate artificial friction imposed by coordinating across silos. Each team shouldn't have to know what other teams are doing, unless integration points exist between the teams. Even then, fitness functions should be used to ensure integrity of integrations points. The number of connections between development teams should also be low.
 
+## Leadership
+
+- Winning the war within:
+  1. Extreme Ownership: on any organization/team, all responsibility for success and failure rests with the leader. The leader must own everything in his world.
+  2. No bad teams, only bad leaders: as a leader, `it is not what you preach, it is what you tolerate`. When setting expectations, if substandard performance is accepted and no one is held accountable, the poor performance becomes the new standard. Leaders must enforce standards, and push them in a way that encourages and enables the team to utilize Extreme Ownership.
+  3. Believe: a leader must be a true believer in the mission, in order to convince and inspire others to follow. Every leader must be able to detach from the immediate tactical mission and understand how it fits into strategic goals: the `why`. This `why` must be understood by every leader and troop alike.
+  4. Check the ego: ego can become destructive, and when that happens it is of critical importance that one is able to control it.
+- Laws of combat:
+  1. Cover and move: all elements within the greater team (e.g. other teams, departments, other companies) are crucial and must work together to accomplish the mission, mutually supporting one another for that singular purpose.
+  2. Simple: simplifying as much as possible is crucial for success. Plans and orders must be communicated in a manner that is simple, clear and concise.
+  3. Prioritize and execute: `relax, look around, make a call`.
+  4. Decentralized command: teams must be broken down into manageable elements of 4 or 5 operators, with a clearly designated leader.
+- Sustaining victory:
+  1. Plan.
+  2. Leading up and down the chain of command: leaders must explain to their junior leaders and troops executing the mission how their role contributes to big picture success. A leader must also push situational awareness up the chain of command, in order to obtain the decisions and support his team needs.
+  3. Decisiveness amid uncertainty: the picture is never complete, and there is no 100% right solution. Waiting for the certain solution leads to delay, indecision, and inability to execute. Leaders must be prepared to make an educated guess based on previous experience, knowledge of how the enemy operates, likely outcomes, and whatever intelligence is available in the immediate moment.
+  4. Discipline equals freedom: every leader must walk a fine line. a good leader must be:
+  - confident but not cocky;
+  - courageous but not foolhardy;
+  - competitive but a gracious loser;
+  - attentive to detail but not obsessed by them;
+  - strong but have endurance;
+  - a leader and follower;
+  - humble but not passive;
+  - aggressive not overbearing;
+  - quiet not silent;
+  - calm but not robotic, logical but not devoid or emotions;
+  - close with the troops but not so close that one becomes more important than another or more important than the good of the team; so close that they forget who is in charge;
+  - able to execute Extreme Ownership, while exercising Decentralized Command.
+
 ## References
 
 Building Evolutionary Architectures, by Neil Ford, Rebecca Parsons and Patrick Kua, 2017.
@@ -89,6 +119,8 @@ Building Evolutionary Architectures, by Neil Ford, Rebecca Parsons and Patrick K
 [Design Principles and Design Patterns](https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf), by Robert Martin, 2000.
 
 Domain-Driven Design, by Eric Evans, 2003.
+
+Extreme Ownership, by Jocko Willink and Leif Babin, 2015.
 
 [Information Hiding](https://en.wikipedia.org/wiki/Information_hiding), by David Parnas, 1972.
 
