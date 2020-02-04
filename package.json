@@ -4,7 +4,7 @@
     "format": "git diff --cached --name-only --diff-filter=d | grep -E '^.*\\.(html|json|md|scss|yml)' | xargs prettier --write"
   },
   "devDependencies": {
-    "husky": "3.1.0",
+    "husky": "4.2.1",
     "prettier": "1.19.1"
   },
   "husky": {
