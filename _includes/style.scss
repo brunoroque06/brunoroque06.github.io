@@ -1,4 +1,5 @@
-$font-stack: sans-serif;
+$font: IBM Plex Sans, sans-serif;
+$font-mono: IBM Plex Mono, monospace;
 $main-color: #2c3d51;
 $sec-color: #fabd2f;
 $font-main-color: white;
@@ -10,7 +11,7 @@ $hover-color: grey;
 }
 body {
   margin: 0;
-  font-family: $font-stack;
+  font-family: $font;
   background: $main-color;
   color: $font-main-color;
   display: grid;
@@ -94,6 +95,7 @@ body {
     }
     code {
       color: $sec-color;
+      font-family: $font-mono;
     }
     code::selection {
       background: $font-main-color;
