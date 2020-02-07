@@ -10,7 +10,12 @@ self.addEventListener("install", function(event) {
 });
 
 self.addEventListener("fetch", function(event) {
-  if (event.request.method !== "GET") return;
+  if (
+    event.request.method !== "GET" ||
+    event.request.url.startsWith("chrome-extension://")
+  )
+    return;
+
   event.respondWith(
     fetch(event.request)
       .then(function(response) {
