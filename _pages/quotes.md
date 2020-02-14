@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Quotes
 permalink: quotes
 ---
 
@@ -10,7 +9,7 @@ Perfection is achieved not when there is nothing left to add, but when there is 
 
 Progress, far from consisting in change, depends on retentiveness. When change is absolute there remains no being to improve and no direction is set for possible improvement: and when experience is not retained, as among savages, infancy is perpetual. Those who cannot remember the past are condemned to repeat it. ― George Santayana, Life of Reason
 
-Happy families are all alike; every unhappy family is unhappy in its own way. - Leo Tolstoy
+Happy families are all alike; every unhappy family is unhappy in its own way. ― Leo Tolstoy
 
 Good fences make good neighbors. ― Robert Frost, Mending Wall
 

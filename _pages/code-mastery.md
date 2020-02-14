@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Code Mastery
 permalink: code-mastery
 ---
 

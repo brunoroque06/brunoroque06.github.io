@@ -93,6 +93,10 @@ body {
     a:hover {
       background: $hover-color;
     }
+    blockquote {
+      border-left: 0.3rem solid $font-main-color;
+      padding: 0 0 0 0.5rem;
+    }
     code {
       color: $sec-color;
       font-family: $font-mono;

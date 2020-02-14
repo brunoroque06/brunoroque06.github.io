@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Chess Fundamentals
 permalink: chess-fundamentals
 ---
 
