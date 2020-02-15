@@ -33,7 +33,7 @@ Test-Driven Development By Example, by Kent Beck, 2003.
 
 Righting Software, by Juval Löwy, 2019.
 
-Anti-fragile ICT Systems, by Kjell Jørgen Hole, 2016.
+<!-- Anti-fragile ICT Systems, by Kjell Jørgen Hole, 2016. -->
 
 [Design Principles and Design Patterns](https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf), by Robert Martin, 2000.
 
