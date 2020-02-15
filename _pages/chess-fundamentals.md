@@ -7,6 +7,8 @@ permalink: chess-fundamentals
 
 This page contains a compilation of chess fundamentals.
 
+> In the beginner's mind there are many possibilities, but in the expert's there are few. ― Shunryu Suzuki, Zen Mind, Beginner's Mind
+
 ## General Principles
 
 - There are 2 possible approaches to play a position:
