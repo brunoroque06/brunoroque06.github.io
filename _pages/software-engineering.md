@@ -7,7 +7,7 @@ permalink: software-engineering
 
 This pages contains what I consider to be relevant sources of information on Software Engineering.
 
-> Progress, far from consisting in change, depends on retentiveness. When change is absolute there remains no being to improve and no direction is set for possible improvement: and when experience is not retained, as among savages, infancy is perpetual. Those who cannot remember the past are condemned to repeat it. ― George Santayana, Life of Reason
+> Progress, far from consisting in change, depends on retentiveness. When change is absolute there remains no being to improve and no direction is set for possible improvement: and when experience is not retained, as among savages, infancy is perpetual. Those who cannot remember the past are condemned to repeat it. - George Santayana, Life of Reason
 
 ## Development
 
