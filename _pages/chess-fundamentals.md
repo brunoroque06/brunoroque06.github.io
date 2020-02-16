@@ -134,7 +134,7 @@ This page contains a compilation of chess fundamentals.
 
 ### Key Squares
 
-Key squares are squares whose occupation by the King assures victory, regardless of whose turn it is to move.
+> Key squares are squares whose occupation by the King assures victory, regardless of whose turn it is to move.
 
 For a King and Pawn endgame, the key squares are:
 
@@ -149,7 +149,15 @@ For a King and Pawn endgame, the key squares are:
 | `b7` (`b` to `g`) |    `a7`, `a8`, `b8`, `c7`, `c8`    |
 | `a*` (`a` or `h`) |             `b7`, `b8`             |
 
-### Opposition
+### Corresponding Squares
+
+Corresponding squares are squares of reciprocal (mutual) zugzwang.
+
+#### Opposition
+
+> Opposition is the state of 2 Kings standing on the same file with 1 (or 3 or 5) square separating them.
+
+The opposition may be vertical, horizontal, or diagonal. Given a white Pawn on `e3`, white King on `e4`, and black King on `e6`; it is a draw if it is white's turn (because black has the opposition), and a win if it is black's turn (because white has the opposition).
 
 ## References
 
