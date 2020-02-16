@@ -138,17 +138,6 @@ Key squares are squares whose occupation by the King assures victory, regardless
 
 For a King and Pawn endgame, the key squares are:
 
-| Pawn File  | Pawn Rank |            Key Squares             |
-| :--------: | :-------: | :--------------------------------: |
-| `b` to `g` |    `2`    |          `a4`, `b4`, `c4`          |
-| `b` to `g` |    `3`    |          `a5`, `b5`, `c5`          |
-| `b` to `g` |    `4`    |          `a6`, `b6`, `c6`          |
-| `b` to `g` |    `5`    | `a6`, `a7`, `b6`, `b7`, `c6`, `c7` |
-| `c` to `f` |    `6`    | `b7`, `b8`, `c7`, `c8`, `d7`, `d8` |
-| `b` or `g` |    `6`    |       `a7`, `a8`, `b7`, `b8`       |
-| `b` to `g` |    `7`    |    `a7`, `a8`, `b8`, `c7`, `c8`    |
-| `a` or `h` |    \*     |             `b7`, `b8`             |
-
 |       Pawn        |            Key Squares             |
 | :---------------: | :--------------------------------: |
 | `b2` (`b` to `g`) |          `a4`, `b4`, `c4`          |
@@ -156,7 +145,7 @@ For a King and Pawn endgame, the key squares are:
 | `b4` (`b` to `g`) |          `a6`, `b6`, `c6`          |
 | `b5` (`b` to `g`) | `a6`, `a7`, `b6`, `b7`, `c6`, `c7` |
 | `c6` (`c` to `f`) | `b7`, `b8`, `c7`, `c8`, `d7`, `d8` |
-| `b6` (`b` to `g`) |       `a7`, `a8`, `b7`, `b8`       |
+| `b6` (`b` or `g`) |       `a7`, `a8`, `b7`, `b8`       |
 | `b7` (`b` to `g`) |    `a7`, `a8`, `b8`, `c7`, `c8`    |
 | `a*` (`a` or `h`) |             `b7`, `b8`             |
 
