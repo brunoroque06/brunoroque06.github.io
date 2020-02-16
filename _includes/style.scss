@@ -116,11 +116,11 @@ body {
       }
       th {
         border-bottom: 0.3rem solid $hover-color;
-        padding: 0 1rem;
+        padding: 0 0.5rem;
       }
       tbody {
         td {
-          padding: 0 1rem;
+          padding: 0 0.5rem;
         }
         tr:hover {
           background: $hover-color;
