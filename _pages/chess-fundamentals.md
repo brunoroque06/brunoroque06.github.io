@@ -14,8 +14,8 @@ This page contains a compilation of chess fundamentals.
 > Tactics is what you do when there is something to do; strategy is what you do when there is nothing to do. - Savielly Tartakower
 
 - There are 2 possible approaches to play a position:
-  1. Tactically/Dynamically: direct approach to improve owns position through CCTs (checks, captures, and threads);
-  2. Positionally/Strategically: assert imbalances for both sides, then find the move that best improves own's/worsens opponent's position.
+  1. tactically/dynamically: direct approach to improve owns position through CCTs (checks, captures, and threads);
+  2. positionally/strategically: assert imbalances for both sides, then find the move that best improves own's/worsens opponent's position.
 - On trading pieces: most of the time it is a mistake. When a player trades, specially in the opening, he is developing opponent's pieces. Players should embrace tension, and not be afraid of it.
 - Placing a piece on a square where it does not work with the rest of its army is rarely a good idea, as one wants as many pieces as possible to work towards the same goal.
 - Unless the position is very sharp, thus positionally speaking, it's usually a bad idea to leave pieces undefended.
@@ -26,119 +26,105 @@ This page contains a compilation of chess fundamentals.
 
 - Imbalances act as a roadmap that shows each player what do to.
 - Types of imbalances:
-  - Superior minor piece;
-  - Pawn structure;
-  - Space;
-  - Material;
-  - Control of a key file;
-  - Control of a weak square.
-  - Lead in development;
-  - Initiative;
-  - King safety;
-  - Statics vs dynamics.
+  - superior minor piece;
+  - pawn structure;
+  - space;
+  - material;
+  - control of a key file;
+  - control of a weak square.
+  - lead in development;
+  - initiative;
+  - king safety;
+  - statics vs dynamics.
 - A square is considered weak when it cannot be defended by Pawns, and when it may theoretically be occupied by one of the opponent's pieces.
 
 ## Statics/Positional vs Dynamics
 
 - Static/positional advantages last long, while dynamics last for a few moves.
-- By default, positional play should be employed. But when a player is behind positionally/statically, dynamic play should be applied. E.g.: vs an un-castled King when one has already developed pieces/castled King, vs a better Pawn structure, or after gambling a Pawn/exchange. The transformation of one kind of imbalance (static or dynamic) into another (dynamic or static) is very common.
+- By default, positional play should be employed. But when a player is behind positionally/statically, dynamic play should be applied. E.g.: vs an un-castled king when one has already developed pieces/castled king, vs a better pawn structure, or after gambling a pawn/exchange. The transformation of one kind of imbalance (static or dynamic) into another (dynamic or static) is very common.
 - "If for one of the players the static balance is negative, he must without hesitation employ dynamic means, and be ready to go in for extreme measures." - Iossif Dorfman. And then: "Dynamic play should be continued until the opponent is deprived of his static trumps.".
-- "The exchange of Queens is fundamentally linked with the static position of the King." - Iossif Dorfman. In the sense that a weak King will benefit a lot if Queens are exchanged.
+- "The exchange of Queens is fundamentally linked with the static position of the king." - Iossif Dorfman. In the sense that a weak king will benefit a lot if Queens are exchanged.
 
 ## Knights
 
-- Knights do well in closed positions, unlike Bishops.
-- Knights are usually the best Pawn blockaders, as they are the only piece that can jump, therefore not losing mobility.
-- Knights should be placed in outposts, i.e. advanced squares that are no longer controlled by enemy Pawns, and ideally controlled by the player. A Knight on the 6th rank (octopus), is usually a pretty strong piece.
-- Given an endgame with Knight vs Bishop, the Knight should aim for Pawns only on one side of the board.
-- 2 Knights don't have the same synergy as 2 Bishops, so such positions should be avoided.
+- Knights do well in closed positions, unlike bishops.
+- Knights are usually the best pawn blockaders, as they are the only piece that can jump, therefore not losing mobility.
+- Knights should be placed in outposts, i.e. advanced squares that are no longer controlled by enemy pawns, and ideally controlled by the player. A knight on the 6th rank (octopus), is usually a pretty strong piece.
+- Given an endgame with knight vs bishop, the knight should aim for pawns only on one side of the board.
+- 2 knights don't have the same synergy as 2 bishops, so such positions should be avoided.
 
 ## Bishops
 
-- Bishops do well in open positions, unlike Knights. The fewer the Pawns in the way of the Bishop, the greater its scope.
+- Bishops do well in open positions, unlike knights. The fewer the pawns in the way of the bishop, the greater its scope.
 - Bishops should be in open diagonals. If they don't exist, they should be created or it should be understood where they will exist.
-- A Bishop trapped behind its own Pawns is usually called a tall-Pawn. Such a Bishop is most of the times a horrible piece (a serious imbalance).
-- Moving Pawns can seriously affect Bishops' activity (e.g., opening diagonals, blocking a Bishop).
+- A bishop trapped behind its own Pawns is usually called a tall-pawn. Such a bishop is most of the times a horrible piece (a serious imbalance).
+- Moving pawns can seriously affect bishops' activity (e.g., opening diagonals, blocking a bishop).
 - Bishops are usually better than Knights in the endgame, given their long range capabilities.
 
 ## Rooks
 
-- Rooks should be placed in open/half-open files. Both Rooks on the 7th or 8th rank are deadly usually.
-- Half-open files should be used to exert tremendous pressure against weak opponent's Pawn.
+- Rooks should be placed in open/half-open files. Both rooks on the 7th or 8th rank are deadly usually.
+- Half-open files should be used to exert tremendous pressure against weak opponent's pawn.
 - When there is only an open file, it becomes even more important for the player who owns it.
-- Rooks should be placed in the open file that is further away from the opponent's King. E.g., in case both the `c` and `d` files are open, and the opponent's King castled King side, `c` file should be picked.
+- Rooks should be placed in the open file that is further away from the opponent's king. E.g., in case both the `c` and `d` files are open, and the opponent's king castled king side, `c` file should be picked.
 
 ## Queens
 
-- One should not trade Queens when the enemy King is weaker than his.
-- During Queen and Rook endgames, the following are of extreme importance: centralization of the Queens, Kings' safety, and Pawns' qualities (rather than quantity).
+- One should not trade queens when the enemy king is weaker than his.
+- During queen and rook endgames, the following are of extreme importance: centralization of the queens, kings' safety, and pawns' qualities (rather than quantity).
 
 ## Pawns
 
-- "My main purpose is to gain recognition for myself by means of a new idea of which no one has conceived, or perhaps has been unable to practice; that is, good play of the Pawns; they are the soul of chess: it is they alone that determine the attack and the defence, and the winning or losing of the game depends entirely on their good or bad arrangement." - François-André Danican Philidor.
-- Whenever a Pawn is advanced, weak squares are potentially created, as that Pawn no longer controls the squares it used to.
-- Pawns around the King (`f`, `g`, `h` when castled King side) become particularly weak if pushed. Pushing the `h` Pawn, to `h5` or `h6` for example as black, creates what is called a "hook", which white can then take advantage of by pushing his `g` Pawn, or even sacrificing the Bishop to start an attack.
-- How to create weaknesses: by making the opponent push a Pawn, usually by attacking his Pawns (either by advancing Pawns or attacking with pieces).
-- Doubled Pawns: usually bad, but not always as the doubled Pawn can control an important square.
-- Tripled Pawns: almost always terrible, as they can be easily attacked and can be blocked by a single Pawn.
+- "My main purpose is to gain recognition for myself by means of a new idea of which no one has conceived, or perhaps has been unable to practice; that is, good play of the pawns; they are the soul of chess: it is they alone that determine the attack and the defence, and the winning or losing of the game depends entirely on their good or bad arrangement." - François-André Danican Philidor.
+- Whenever a pawn is advanced, weak squares are potentially created, as that pawn no longer controls the squares it used to.
+- Pawns around the king (`f`, `g`, `h` when castled king side) become particularly weak if pushed. Pushing the `h` pawn, to `h5` or `h6` for example as black, creates what is called a "hook", which white can then take advantage of by pushing his `g` pawn, or even sacrificing the bishop to start an attack.
+- How to create weaknesses: by making the opponent push a pawn, usually by attacking his pawns (either by advancing pawns or attacking with pieces).
+- Doubled pawns: usually bad, but not always as the doubled pawn can control an important square.
+- Tripled pawns: almost always terrible, as they can be easily attacked and can be blocked by a single pawn.
 - Principle of 2 weaknesses: usually a player can hold when only 1 weakness is being attacked. But if another weakness is added to his position, then the added defensive burden proves to be too much.
-- The less number of Pawn islands a players possesses, the better.
-- Given a position where White has Pawns on `b2`, `b3`, and `c3`, White should play `b4` before Black can play `a5`. Otherwise `b4` won't be possible anymore, and `b3` will remain weak.
+- The less number of pawn islands a players possesses, the better.
+- Given a position where white has pawns on `b2`, `b3`, and `c3`, white should play `b4` before black can play `a5`. Otherwise `b4` won't be possible anymore, and `b3` will remain weak.
 
 ### Space
 
-- Space is created by the expansion of Pawns. One can see the line of Pawns as a "fence", where the space behind them is controlled by the player who owns them.
+- Space is created by the expansion of pawns. One can see the line of pawns as a "fence", where the space behind them is controlled by the player who owns them.
 - An advantage in space can take away many options from the enemy. He can end up with a passive position, where it is not easy to manuever his pieces.
 - Usually the side with the space advantage does not want to trade pieces, because the player with less space would profit from it, as it is easier to manuever less pieces in the same space.
 - The following ways should be considered when fighting an enemy space advantage:
-  1. Exchange pieces;
-  2. Use of Pawn breaks;
-  3. Take advantage of the weak squares behind the enemy Pawns;
-  4. Target a space-gaining enemy Pawn;
-  5. Create own space advantage in another side of the board (Queen side, center, King side).
-- Given a position where White has blocked Pawns on `e4` and `f5`, he should push `g4` as it is the next Pawn in the chain, next to his lead Pawn.
-- Given a space advantage, one should not lock the Pawns. A player should aim for space advantage, followed by piece penetration in enemy's territory.
+  1. exchange pieces;
+  2. use of pawn breaks;
+  3. take advantage of the weak squares behind the enemy pawns;
+  4. target a space-gaining enemy pawn;
+  5. create own space advantage in another side of the board (queen side, center, king side).
+- Given a position where white has blocked pawns on `e4` and `f5`, he should push `g4` as it is the next pawn in the chain, next to his lead pawn.
+- Given a space advantage, one should not lock the pawns. A player should aim for space advantage, followed by piece penetration in enemy's territory.
 - Space advantage can be greatly enhanced with other types of imbalances, e.g., a strong minor piece.
 
 ### Isolated Pawns
 
-- How to battle an isolated Pawn:
-  1. the square in front of the Pawn should be controlled so that the Pawn cannot advance;
-  2. minor pieces should be traded, as such a Pawn can give strong activity to minor pieces;
-  3. Rooks and Queen should be kept in order to exploit that weakness. Keeping the Queen is important, as she is the best piece to restrain the enemy King from getting to the weakness and help defending.
-- A backward Pawn shares many of the same shortcomings as the isolated Pawn, therefore the same ideas apply. It should be kept backwards, by controlling its advancing square(s).
+- How to battle an isolated pawn:
+  1. the square in front of the pawn should be controlled so that the pawn cannot advance;
+  2. minor pieces should be traded, as such a pawn can give strong activity to minor pieces;
+  3. rooks and queen should be kept in order to exploit that weakness. Keeping the queen is important, as she is the best piece to restrain the enemy king from getting to the weakness and help defending.
+- A backward pawn shares many of the same shortcomings as the isolated pawn, therefore the same ideas apply. It should be kept backwards, by controlling its advancing square(s).
 
 ### Passed Pawns
 
-- A passed Pawn can be a static strength, or a dynamic game winner. But sometimes, even when protected, can turn into a serious weakness.
-- A Pawn majority should be used to create a passed Pawn.
-- Usually a passed Pawn is stronger in King and Pawn, and Queen endgames. Queen endgames are particularly favorable as: the opponent's Queen cannot maintain the blockade on its own, and it makes the defending King's participation in the defense rather risky.
-- The ideal plan for the player with the passed Pawn is to exchange minor pieces, leaving Queens/Rook(s). This makes the blockade uncomfortable as Queens and Rooks are not ideal blockaders (Knights are!).
-- When a passed Pawn exists on the board, its blockade is of extreme importance for both sides. Knights are usually excellent blockaders.
+- A passed pawn can be a static strength, or a dynamic game winner. But sometimes, even when protected, can turn into a serious weakness.
+- A pawn majority should be used to create a passed pawn.
+- Usually a passed pawn is stronger in king and pawn, and queen endgames. queen endgames are particularly favorable as: the opponent's queen cannot maintain the blockade on its own, and it makes the defending king's participation in the defense rather risky.
+- The ideal plan for the player with the passed pawn is to exchange minor pieces, leaving queens/rook(s). This makes the blockade uncomfortable as queens and rooks are not ideal blockaders (knights are!).
+- When a passed pawn exists on the board, its blockade is of extreme importance for both sides. Knights are usually excellent blockaders.
 
 ## Endgames
 
-| White | Black |                                 Requirements                                 | Result |                   Strategy                   |
-| :---: | :---: | :--------------------------------------------------------------------------: | :----: | :------------------------------------------: |
-|   Q   |   P   | Black's Pawn is a Bishop or Rook Pawn on the 7th rank, supported by his King |  Draw  |        Move Black King to the corner         |
-|  BB   |   -   |                                      -                                       |  Win   | Centralize Bishops, then mate on the corner. |
-|  NN   |   -   |                                      -                                       |  Draw  |                      -                       |
-|  BN   |   -   |                                      -                                       |  Win   |                      -                       |
-|   P   |   -   |                         White King has opposition\*                          |  Win   |                      -                       |
-|   P   |   -   |                         Black King has opposition\*                          |  Draw  |                      -                       |
-
-\* opposition: situation where both Kings face each other on the same row, with only 1 square in between them. The player not having to move is said to have the opposition. Given a position where White King in on `e3` and Black King in on `e5`:
-
-- If it's White to move, then Black King has the opposition;
-- If it's Black to move, then White King has the opposition.
-
 ### Key Squares
 
-> Key squares are squares whose occupation by the King assures victory, regardless of whose turn it is to move.
+> Key squares are squares whose occupation by the king assures victory, regardless of whose turn it is to move.
 
-For a King and Pawn endgame, the key squares are:
+For a king and pawn endgame, the key squares are:
 
-|       Pawn        |            Key Squares             |
+|       pawn        |            Key Squares             |
 | :---------------: | :--------------------------------: |
 | `b2` (`b` to `g`) |          `a4`, `b4`, `c4`          |
 | `b3` (`b` to `g`) |          `a5`, `b5`, `c5`          |
@@ -157,7 +143,7 @@ Corresponding squares are squares of reciprocal (mutual) zugzwang.
 
 > Opposition is the state of 2 Kings standing on the same file with 1 (or 3 or 5) square separating them.
 
-The opposition may be vertical, horizontal, or diagonal. Given a white Pawn on `e3`, white King on `e4`, and black King on `e6`; it is a draw if it is white's turn (because black has the opposition), and a win if it is black's turn (because white has the opposition).
+The opposition may be vertical, horizontal, or diagonal. Given a white pawn on `e3`, white king on `e4`, and black king on `e6`; it is a draw if it is white's turn (because black has the opposition), and a win if it is black's turn (because white has the opposition). When a king has the opposition, outflanking becomes possible: enemy king retreats to one side, and our king then attacks the other way.
 
 ## References
 
