@@ -109,17 +109,22 @@ body {
       border-bottom: 0.1rem solid $font-main-color;
     }
     table {
-      width: 100%;
+      margin: auto;
       border-collapse: collapse;
-      border: 0.1rem solid $hover-color;
-      th {
-        background-color: $hover-color;
-      }
-      tr:hover {
-        background-color: $hover-color;
-      }
       tr:not(:last-child) {
         border-bottom: 0.1rem solid $hover-color;
+      }
+      th {
+        border-bottom: 0.3rem solid $hover-color;
+        padding: 0 1rem;
+      }
+      tbody {
+        td {
+          padding: 0 1rem;
+        }
+        tr:hover {
+          background: $hover-color;
+        }
       }
     }
   }
