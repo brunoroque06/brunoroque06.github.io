@@ -141,9 +141,9 @@ Corresponding squares are squares of reciprocal (mutual) zugzwang.
 
 #### Opposition
 
-> Opposition is the state of 2 Kings standing on the same file with 1 (or 3 or 5) square separating them.
+> Opposition is the state of 2 Kings standing on the same file with 1 (close) or 3/5 (distant) square(s) separating them.
 
-The opposition may be vertical, horizontal, or diagonal. Given a white pawn on `e3`, white king on `e4`, and black king on `e6`; it is a draw if it is white's turn (because black has the opposition), and a win if it is black's turn (because white has the opposition). When a king has the opposition, outflanking becomes possible: enemy king retreats to one side, and our king then attacks the other way.
+The opposition may be vertical, horizontal, or diagonal. Given a white pawn on `e3`, white king on `e4`, and black king on `e6`; it is a draw if it is white's turn (because black has the opposition), and a win if it is black's turn (because white has the opposition). When a king has the opposition, outflanking becomes possible: enemy king retreats to one side, and our king then attacks the other way. Outflanking is used to turn distant opposition into close opposition
 
 ## References
 
