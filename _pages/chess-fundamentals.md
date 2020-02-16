@@ -7,18 +7,18 @@ permalink: chess-fundamentals
 
 This page contains a compilation of chess fundamentals.
 
-> In the beginner's mind there are many possibilities, but in the expert's there are few. ― Shunryu Suzuki, Zen Mind, Beginner's Mind
+> In the beginner's mind there are many possibilities, but in the expert's there are few. - Shunryu Suzuki, Zen Mind, Beginner's Mind
 
 ## General Principles
+
+> Tactics is what you do when there is something to do; strategy is what you do when there is nothing to do. - Savielly Tartakower
 
 - There are 2 possible approaches to play a position:
   1. Tactically/Dynamically: direct approach to improve owns position through CCTs (checks, captures, and threads);
   2. Positionally/Strategically: assert imbalances for both sides, then find the move that best improves own's/worsens opponent's position.
-- "Tactics is what you do when there is something to do; strategy is what you do when there is nothing to do." - Savielly Tartakower
 - On trading pieces: most of the time it is a mistake. When a player trades, specially in the opening, he is developing opponent's pieces. Players should embrace tension, and not be afraid of it.
 - Placing a piece on a square where it does not work with the rest of its army is rarely a good idea, as one wants as many pieces as possible to work towards the same goal.
 - Unless the position is very sharp, thus positionally speaking, it's usually a bad idea to leave pieces undefended.
-- A quote on plans: "The P-word. I think (Jan) Gustafsson doesn't allow people to use the word plan in a chess sense. Actually I completely agree with him! Plans do not exist. There are some ideas, they exist, and then when you've played lots of ideas in the game you can say, "OK, this was my plan", but not beforehand. It's like, what is your plan in life? It's impossible to answer until your life actually happens." - Alexander Grischuk.
 - A given piece is considered bad when its position cannot be improved.
 - Superfluous/Extra Piece: when a player has more than 1 Piece that would do great on only one square. The opponent should recognize this, and avoid exchanging any of them.
 
@@ -41,8 +41,7 @@ This page contains a compilation of chess fundamentals.
 ## Statics/Positional vs Dynamics
 
 - Static/positional advantages last long, while dynamics last for a few moves.
-- By default, positional play should be employed. But when a player is behind positionally/statically, dynamic play should be applied. E.g.: vs an un-castled King when one has already developed pieces/castled King, vs a better Pawn structure, after gambling a Pawn/exchange.
-- The transformation of one kind of imbalance (static or dynamic) into another (dynamic or static) is very common.
+- By default, positional play should be employed. But when a player is behind positionally/statically, dynamic play should be applied. E.g.: vs an un-castled King when one has already developed pieces/castled King, vs a better Pawn structure, or after gambling a Pawn/exchange. The transformation of one kind of imbalance (static or dynamic) into another (dynamic or static) is very common.
 - "If for one of the players the static balance is negative, he must without hesitation employ dynamic means, and be ready to go in for extreme measures." - Iossif Dorfman. And then: "Dynamic play should be continued until the opponent is deprived of his static trumps.".
 - "The exchange of Queens is fundamentally linked with the static position of the King." - Iossif Dorfman. In the sense that a weak King will benefit a lot if Queens are exchanged.
 
@@ -133,7 +132,39 @@ This page contains a compilation of chess fundamentals.
 - If it's White to move, then Black King has the opposition;
 - If it's Black to move, then White King has the opposition.
 
+### Key Squares
+
+Key squares are squares whose occupation by the King assures victory, regardless of whose turn it is to move.
+
+For a King and Pawn endgame, the key squares are:
+
+| Pawn File  | Pawn Rank |            Key Squares             |
+| :--------: | :-------: | :--------------------------------: |
+| `b` to `g` |    `2`    |          `a4`, `b4`, `c4`          |
+| `b` to `g` |    `3`    |          `a5`, `b5`, `c5`          |
+| `b` to `g` |    `4`    |          `a6`, `b6`, `c6`          |
+| `b` to `g` |    `5`    | `a6`, `a7`, `b6`, `b7`, `c6`, `c7` |
+| `c` to `f` |    `6`    | `b7`, `b8`, `c7`, `c8`, `d7`, `d8` |
+| `b` or `g` |    `6`    |       `a7`, `a8`, `b7`, `b8`       |
+| `b` to `g` |    `7`    |    `a7`, `a8`, `b8`, `c7`, `c8`    |
+| `a` or `h` |    \*     |             `b7`, `b8`             |
+
+|       Pawn        |            Key Squares             |
+| :---------------: | :--------------------------------: |
+| `b2` (`b` to `g`) |          `a4`, `b4`, `c4`          |
+| `b3` (`b` to `g`) |          `a5`, `b5`, `c5`          |
+| `b4` (`b` to `g`) |          `a6`, `b6`, `c6`          |
+| `b5` (`b` to `g`) | `a6`, `a7`, `b6`, `b7`, `c6`, `c7` |
+| `c6` (`c` to `f`) | `b7`, `b8`, `c7`, `c8`, `d7`, `d8` |
+| `b6` (`b` to `g`) |       `a7`, `a8`, `b7`, `b8`       |
+| `b7` (`b` to `g`) |    `a7`, `a8`, `b8`, `c7`, `c8`    |
+| `a*` (`a` or `h`) |             `b7`, `b8`             |
+
+### Opposition
+
 ## References
+
+Endgame Manual 4th Edition, by Mark Dvoretsky, 2014.
 
 How to Reassess Your Chess: Chess Mastery Through Chess Imbalances, by Jeremy Silman, 2010.
 
