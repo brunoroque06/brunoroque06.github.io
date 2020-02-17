@@ -37,6 +37,8 @@ On the Criteria to be Used in Decomposing Systems into Modules, by David L. Parn
 
 <!-- Anti-fragile ICT Systems, by Kjell Jørgen Hole, 2016. -->
 
+No More Snake Oil: Architecting Agility through Antifragility, by Barry O'Reilly, 2019.
+
 [Design Principles and Design Patterns](https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf), by Robert Martin, 2000.
 
 ## Conduct
