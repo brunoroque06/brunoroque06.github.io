@@ -124,7 +124,7 @@ This page contains a compilation of chess fundamentals.
 
 For a king and pawn endgame, the key squares are:
 
-|       pawn        |            Key Squares             |
+|       Pawn        |            Key Squares             |
 | :---------------: | :--------------------------------: |
 | `b2` (`b` to `g`) |          `a4`, `b4`, `c4`          |
 | `b3` (`b` to `g`) |          `a5`, `b5`, `c5`          |
