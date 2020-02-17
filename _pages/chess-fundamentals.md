@@ -7,15 +7,12 @@ permalink: chess-fundamentals
 
 This page contains a compilation of chess fundamentals.
 
-> In the beginner's mind there are many possibilities, but in the expert's there are few. - Shunryu Suzuki, Zen Mind, Beginner's Mind
-
 ## General Principles
-
-> Tactics is what you do when there is something to do; strategy is what you do when there is nothing to do. - Savielly Tartakower
 
 - There are 2 possible approaches to play a position:
   1. tactically/dynamically: direct approach to improve owns position through CCTs (checks, captures, and threads);
   2. positionally/strategically: assert imbalances for both sides, then find the move that best improves own's/worsens opponent's position.
+- Tactics is what you do when there is something to do; strategy is what you do when there is nothing to do. - Savielly Tartakower
 - On trading pieces: most of the time it is a mistake. When a player trades, specially in the opening, he is developing opponent's pieces. Players should embrace tension, and not be afraid of it.
 - Placing a piece on a square where it does not work with the rest of its army is rarely a good idea, as one wants as many pieces as possible to work towards the same goal.
 - Unless the position is very sharp, thus positionally speaking, it's usually a bad idea to leave pieces undefended.
@@ -42,8 +39,8 @@ This page contains a compilation of chess fundamentals.
 
 - Static/positional advantages last long, while dynamics last for a few moves.
 - By default, positional play should be employed. But when a player is behind positionally/statically, dynamic play should be applied. E.g.: vs an un-castled king when one has already developed pieces/castled king, vs a better pawn structure, or after gambling a pawn/exchange. The transformation of one kind of imbalance (static or dynamic) into another (dynamic or static) is very common.
-- "If for one of the players the static balance is negative, he must without hesitation employ dynamic means, and be ready to go in for extreme measures." - Iossif Dorfman. And then: "Dynamic play should be continued until the opponent is deprived of his static trumps.".
-- "The exchange of Queens is fundamentally linked with the static position of the king." - Iossif Dorfman. In the sense that a weak king will benefit a lot if Queens are exchanged.
+- If for one of the players the static balance is negative, he must without hesitation employ dynamic means, and be ready to go in for extreme measures. (...) Dynamic play should be continued until the opponent is deprived of his static trumps. - Iossif Dorfman.
+- The exchange of Queens is fundamentally linked with the static position of the king. - Iossif Dorfman. In the sense that a weak king will benefit a lot if Queens are exchanged.
 
 ## Knights
 
@@ -75,7 +72,7 @@ This page contains a compilation of chess fundamentals.
 
 ## Pawns
 
-- "My main purpose is to gain recognition for myself by means of a new idea of which no one has conceived, or perhaps has been unable to practice; that is, good play of the pawns; they are the soul of chess: it is they alone that determine the attack and the defence, and the winning or losing of the game depends entirely on their good or bad arrangement." - François-André Danican Philidor.
+- My main purpose is to gain recognition for myself by means of a new idea of which no one has conceived, or perhaps has been unable to practice; that is, good play of the pawns; they are the soul of chess: it is they alone that determine the attack and the defence, and the winning or losing of the game depends entirely on their good or bad arrangement. - François-André Danican Philidor.
 - Whenever a pawn is advanced, weak squares are potentially created, as that pawn no longer controls the squares it used to.
 - Pawns around the king (`f`, `g`, `h` when castled king side) become particularly weak if pushed. Pushing the `h` pawn, to `h5` or `h6` for example as black, creates what is called a "hook", which white can then take advantage of by pushing his `g` pawn, or even sacrificing the bishop to start an attack.
 - How to create weaknesses: by making the opponent push a pawn, usually by attacking his pawns (either by advancing pawns or attacking with pieces).
