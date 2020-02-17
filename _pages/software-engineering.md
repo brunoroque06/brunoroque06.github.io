@@ -5,7 +5,7 @@ permalink: software-engineering
 
 # Software Engineering
 
-This page contains what I consider to be most relevant sources of information on software engineering.
+This page contains, what I consider to be, the most relevant sources of information on software engineering.
 
 > Progress, far from consisting in change, depends on retentiveness. When change is absolute there remains no being to improve and no direction is set for possible improvement: and when experience is not retained, as among savages, infancy is perpetual. Those who cannot remember the past are condemned to repeat it. - George Santayana, Life of Reason
 
