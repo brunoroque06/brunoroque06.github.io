@@ -29,7 +29,7 @@ Test-Driven Development By Example, by Kent Beck, 2003.
 
 [Database Normalization](https://en.wikipedia.org/wiki/Database_normalization#Normal_forms).
 
-## Architecture
+## Architecture (Project Design)
 
 Righting Software, by Juval Löwy, 2019.
 
