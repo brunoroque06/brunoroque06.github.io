@@ -113,7 +113,7 @@ This page contains a compilation of chess fundamentals.
 - The ideal plan for the player with the passed pawn is to exchange minor pieces, leaving queens/rook(s). This makes the blockade uncomfortable as queens and rooks are not ideal blockaders (knights are!).
 - When a passed pawn exists on the board, its blockade is of extreme importance for both sides. Knights are usually excellent blockaders.
 
-## Endgames
+## Endgame
 
 ### Key Squares
 
