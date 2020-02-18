@@ -29,7 +29,7 @@ Test-Driven Development By Example, by Kent Beck, 2003.
 
 [Database Normalization](https://en.wikipedia.org/wiki/Database_normalization#Normal_forms).
 
-## Architecture and Project Design
+## System (Architecture) and Project Design
 
 Righting Software, by Juval Löwy, 2019.
 
@@ -37,7 +37,7 @@ On the Criteria to be Used in Decomposing Systems into Modules, by David L. Parn
 
 <!-- Anti-fragile ICT Systems, by Kjell Jørgen Hole, 2016. -->
 
-No More Snake Oil: Architecting Agility through Antifragility, by Barry O'Reilly, 2019.
+[No More Snake Oil: Architecting Agility through Antifragility](https://www.sciencedirect.com/science/article/pii/S1877050919305861), by Barry O'Reilly, 2019.
 
 [Design Principles and Design Patterns](https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf), by Robert Martin, 2000.
 
