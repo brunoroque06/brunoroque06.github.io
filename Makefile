@@ -4,8 +4,12 @@ clean:
 
 .PHONY: prepare
 prepare:
-	bundle install; yarn install
+	gem install bundler; gem update bundler; bundle install; yarn install
+
+.PHONY: update
+update:
+	bundle update
 
 .PHONY: serve
 serve:
-	jekyll serve
+	bundle exec jekyll serve
