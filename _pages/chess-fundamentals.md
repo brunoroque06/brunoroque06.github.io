@@ -144,7 +144,7 @@ The opposition may be vertical, horizontal, or diagonal. Given a white pawn on `
 
 ## References
 
-Endgame Manual 4th Edition, by Mark Dvoretsky, 2014.
+Dvoretsky's Endgame Manual, by Mark Dvoretsky, 2014.
 
 How to Reassess Your Chess: Chess Mastery Through Chess Imbalances, by Jeremy Silman, 2010.
 
