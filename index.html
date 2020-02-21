@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="myBoard" style="width: 800px"></div>
+
+    <script
+      src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"
+      integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+      integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const piece =
+        "/Users/brunoroque/Projects/brunoroque06.github.io/tatiana/bB.svg";
+      const config = {
+        pieceTheme:
+          "/Users/brunoroque/Projects/brunoroque06.github.io/chess-pieces/{piece}.svg",
+        position: "start"
+      };
+      const board = Chessboard("myBoard", config);
+    </script>
+  </body>
+</html>
