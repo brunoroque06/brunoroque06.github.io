@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: chess
 permalink: chess-fundamentals
 ---
 
@@ -140,7 +140,21 @@ Corresponding squares are squares of reciprocal (mutual) zugzwang.
 
 > Opposition is the state of 2 Kings standing on the same file with 1 (close) or 3/5 (distant) square(s) separating them.
 
-The opposition may be vertical, horizontal, or diagonal. Given a white pawn on `e3`, white king on `e4`, and black king on `e6`; it is a draw if it is white's turn (because black has the opposition), and a win if it is black's turn (because white has the opposition). When a king has the opposition, outflanking becomes possible: enemy king retreats to one side, and our king then attacks the other way. Outflanking is used to turn distant opposition into close opposition: `1 ... Kd6 2 Kf5! (outflanking)`.
+The opposition may be vertical, horizontal, or diagonal. Given the following position:
+
+<div class="chess-board" id="chess-opposition"></div>
+
+It is a draw if it is white's turn (because black has the opposition), and a win if it is black's turn (because white has the opposition). When a king has the opposition, outflanking becomes possible: enemy king retreats to one side, and our king then attacks the other way. Outflanking is used to turn distant opposition into close opposition: `1 ... Kd6 2 Kf5! (outflanking)`.
+
+#### Mined Squares
+
+> Mined squares are a pair of squares that correspond; the first player on a mined square will fall into zugzwang.
+
+Given:
+
+<div class="chess-board" id="chess-mined-squares"></div>
+
+Squares `c4` and `b6` are mined.
 
 ## References
 
