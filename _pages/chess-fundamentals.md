@@ -146,6 +146,16 @@ The opposition may be vertical, horizontal, or diagonal. Given the following pos
 
 It is a draw if it is white's turn (because black has the opposition), and a win if it is black's turn (because white has the opposition). When a king has the opposition, outflanking becomes possible: enemy king retreats to one side, and our king then attacks the other way. Outflanking is used to turn distant opposition into close opposition: `1 ... Kd6 2 Kf5! (outflanking)`.
 
+#### Mined Squares
+
+> Mined squares are a pair of squares that correspond; the first player on a mined square will fall into zugzwang.
+
+Given:
+
+<div class="chess-board" id="chess-mined-squares"></div>
+
+Squares `c4` and `b6` are mined.
+
 ## References
 
 Dvoretsky's Endgame Manual, by Mark Dvoretsky, 2014.
