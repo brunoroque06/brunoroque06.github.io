@@ -5,10 +5,12 @@ $sec-color: #fabd2f;
 $font-main-color: white;
 $font-sec-color: black;
 $hover-color: grey;
+
 ::selection {
   color: $font-sec-color;
   background: $sec-color;
 }
+
 body {
   margin: 0;
   font-family: $font;
@@ -127,8 +129,13 @@ body {
         }
       }
     }
+    .chess-board {
+      margin: 1rem auto;
+      width: 50%;
+    }
   }
 }
+
 @media only screen and (max-width: 72em) {
   body {
     header {
@@ -139,18 +146,23 @@ body {
     }
   }
 }
+
 @media only screen and (max-width: 35em) {
-  body header .pages {
-    flex-direction: column;
-    .page {
-      margin: 0.3rem 0;
+  body {
+    header .pages {
+      flex-direction: column;
+      .page {
+        margin: 0.3rem 0;
+      }
+    }
+    main {
+      .chess-board {
+        width: 90%;
+      }
     }
   }
-  tr {
-    display: flex;
-    flex-direction: column;
-  }
 }
+
 @media only screen and (max-width: 15em) {
   body {
     word-break: break-all;
