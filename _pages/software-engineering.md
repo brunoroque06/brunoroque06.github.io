@@ -31,6 +31,8 @@ Test-Driven Development By Example, by Kent Beck, 2003.
 
 ## System (Architecture) and Project Design
 
+[Cynefin Framework](https://en.wikipedia.org/wiki/Cynefin_framework), by Dave Snowden, 1999.
+
 Righting Software, by Juval Löwy, 2019.
 
 On the Criteria to be Used in Decomposing Systems into Modules, by David L. Parnas, 1972.
