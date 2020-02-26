@@ -21,6 +21,10 @@ Test-Driven Development By Example, by Kent Beck, 2003.
 
 [Mock Are Not Stubs](https://martinfowler.com/articles/mocksArentStubs.html), by Martin Fowler, 2007.
 
+### Python
+
+[Default Parameter Values](https://stackoverflow.com/questions/1132941/least-astonishment-and-the-mutable-default-argument).
+
 ## Data
 
 [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf), by Hadley Wickham.
