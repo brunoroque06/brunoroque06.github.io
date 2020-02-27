@@ -50,3 +50,5 @@ On the Criteria to be Used in Decomposing Systems into Modules, by David L. Parn
 ## Conduct
 
 Extreme Ownership, by Jocko Willink and Leif Babin, 2015.
+
+The Dichotomy of Leadership, by Jocko Willink and Leif Babin, 2018.
