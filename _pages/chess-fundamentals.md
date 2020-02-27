@@ -156,6 +156,21 @@ Given:
 
 Squares `c4` and `b6` are mined.
 
+#### Triangulation
+
+> Triangulation is a king manuever which aims to lose a tempo, and leave the opponent with the move.
+
+Given:
+
+<div class="chess-board" id="chess-triangulation"></div>
+
+```chess
+1. Ke5 Kc6
+2. Kd4 Kd7
+3. Kd5 Kc8 (zugzwang)
+4. Ke6 (diagonal opposition)
+```
+
 ## References
 
 Dvoretsky's Endgame Manual, by Mark Dvoretsky, 2014.
