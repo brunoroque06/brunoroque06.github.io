@@ -21,9 +21,11 @@ Test-Driven Development By Example, by Kent Beck, 2003.
 
 [Mock Are Not Stubs](https://martinfowler.com/articles/mocksArentStubs.html), by Martin Fowler, 2007.
 
+[Design Principles and Design Patterns](https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf), by Robert Martin, 2000.
+
 ### Python
 
-[Default Parameter Values](https://stackoverflow.com/questions/1132941/least-astonishment-and-the-mutable-default-argument).
+[Default Parameter Values in Python](http://effbot.org/zone/default-values.htm), by Fredrik Lundh, 2008.
 
 ## Data
 
@@ -35,17 +37,15 @@ Test-Driven Development By Example, by Kent Beck, 2003.
 
 ## System (Architecture) and Project Design
 
-[Cynefin Framework](https://en.wikipedia.org/wiki/Cynefin_framework), by Dave Snowden, 1999.
-
 Righting Software, by Juval Löwy, 2019.
 
 On the Criteria to be Used in Decomposing Systems into Modules, by David L. Parnas, 1972.
 
-<!-- Anti-fragile ICT Systems, by Kjell Jørgen Hole, 2016. -->
+[Anti-fragile ICT Systems](https://link.springer.com/book/10.1007%2F978-3-319-30070-2), by Kjell Jørgen Hole, 2016.
 
 [No More Snake Oil: Architecting Agility through Antifragility](https://www.sciencedirect.com/science/article/pii/S1877050919305861), by Barry O'Reilly, 2019.
 
-[Design Principles and Design Patterns](https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf), by Robert Martin, 2000.
+[Cynefin Framework](https://en.wikipedia.org/wiki/Cynefin_framework), by Dave Snowden, 1999.
 
 ## Conduct
 
