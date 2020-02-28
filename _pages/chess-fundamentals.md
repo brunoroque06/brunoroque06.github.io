@@ -144,7 +144,7 @@ The opposition may be vertical, horizontal, or diagonal. Given the following pos
 
 <div class="chess-board" id="chess-opposition"></div>
 
-It is a draw if it is white's turn (because black has the opposition), and a win if it is black's turn (because white has the opposition). When a king has the opposition, outflanking becomes possible: enemy king retreats to one side, and our king then attacks the other way. Outflanking is used to turn distant opposition into close opposition: `1 ... Kd6 2 Kf5! (outflanking)`.
+It is a draw if it is white's turn (because black has the opposition), and a win if it is black's turn (because white has the opposition). When a king has the opposition, outflanking becomes possible: enemy king retreats to one side, and our king then attacks the other way. Outflanking is used to turn distant opposition into close opposition: `1. ... Kd6 2. Kf5! (outflanking) 1-0`.
 
 #### Mined Squares
 
@@ -165,10 +165,10 @@ Given:
 <div class="chess-board" id="chess-triangulation"></div>
 
 ```chess
-1. Ke5 Kc6
+1. Ke5 Kc6 (1. ... Ke7 2. c6!)
 2. Kd4 Kd7
 3. Kd5 Kc8 (zugzwang)
-4. Ke6 (diagonal opposition)
+4. Ke6 (diagonal opposition) 1-0
 ```
 
 ## References
