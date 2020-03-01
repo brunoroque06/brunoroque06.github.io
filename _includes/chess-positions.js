@@ -16,3 +16,7 @@ Chessboard(
   "chess-triangulation",
   createConfig("8/1p1k4/1P6/2PK4/8/8/8/8 w - - 0 1")
 );
+Chessboard(
+  "chess-corresponding-squares",
+  createConfig("8/8/8/1p6/1P6/3P1k2/3K4/8 w - - 0 1")
+);
