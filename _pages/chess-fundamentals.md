@@ -1,5 +1,5 @@
 ---
-layout: chess
+layout: default
 permalink: chess-fundamentals
 ---
 
@@ -131,59 +131,6 @@ For a king and pawn endgame, the key squares are:
 | `(b or g)6` |       `a7`, `a8`, `b7`, `b8`       |
 |  `(b-g)7`   |    `a7`, `a8`, `b8`, `c7`, `c8`    |
 | `(a or h)*` |             `b7`, `b8`             |
-
-### Corresponding Squares
-
-Corresponding squares are squares of reciprocal (mutual) zugzwang.
-
-#### Opposition
-
-> Opposition is the state of 2 Kings standing on the same file with 1 (close) or 3/5 (distant) square(s) separating them.
-
-The opposition may be vertical, horizontal, or diagonal. Given the following position:
-
-<div class="chess-board" id="chess-opposition"></div>
-
-It is a draw if it is white's turn (because black has the opposition), and a win if it is black's turn (because white has the opposition). When a king has the opposition, outflanking becomes possible: enemy king retreats to one side, and our king then attacks the other way. Outflanking is used to turn distant opposition into close opposition: `1. ... Kd6 2. Kf5! (outflanking) 1-0`.
-
-#### Mined Squares
-
-> Mined squares are a pair of squares that correspond; the first player on a mined square will fall into zugzwang.
-
-Given:
-
-<div class="chess-board" id="chess-mined-squares"></div>
-
-Squares `c4` and `b6` are mined.
-
-#### Triangulation
-
-> Triangulation is a king manuever which aims to lose a tempo, and leave the opponent with the move.
-
-Given:
-
-<div class="chess-board" id="chess-triangulation"></div>
-
-```chess
-1. Ke5 Kc6 (1. ... Ke7 2. c6!)
-2. Kd4 Kd7
-3. Kd5 Kc8 (zugzwang)
-4. Ke6 (diagonal opposition) 1-0
-```
-
-Regarding corresponding squares:
-
-<div class="chess-board" id="chess-corresponding-squares"></div>
-
-The corresponding squares are: `c3` and `e3`, `d2` and `f3`, and by extension `c2` and `f4` (because it is adjacent to both pairs). Furthermore, white can use `b2` and `b3` to cede the move, given that black's corresponding square to those is only one `f3`.
-
-```chess
-1. Kc2 Kf4
-2. Kb3! Kf3
-3. Kb2 Kf4
-4. Kc2 Ke5
-5. Kd1! (d2 and d4 are corresponding) 1-0 (there is still a lot to go wrong)
-```
 
 ## References
 

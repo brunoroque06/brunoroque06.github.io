@@ -128,10 +128,6 @@ body {
         }
       }
     }
-    .chess-board {
-      margin: 1rem auto;
-      width: 50%;
-    }
   }
 }
 
@@ -152,11 +148,6 @@ body {
       flex-direction: column;
       .page {
         margin: 0.3rem 0;
-      }
-    }
-    main {
-      .chess-board {
-        width: 90%;
       }
     }
   }
