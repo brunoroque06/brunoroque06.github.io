@@ -15,6 +15,10 @@ The Method in Chess, by Iossif Dorfman, 2001.
 
 Dvoretsky's Endgame Manual, by Mark Dvoretsky, 2014.
 
+[Extra Piece](https://www.chess.com/article/view/an-quotextraquot-piece).
+
 [Corresponding Squares](https://en.wikipedia.org/wiki/Corresponding_squares).
 
-[Extra Piece](https://www.chess.com/article/view/an-quotextraquot-piece).
+[Philidor Position](https://en.wikipedia.org/wiki/Philidor_position)
+
+[Lucena Position](https://en.wikipedia.org/wiki/Lucena_position)
