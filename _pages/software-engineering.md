@@ -19,21 +19,13 @@ Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.
 
 Test-Driven Development By Example, by Kent Beck, 2003.
 
-[Mock Are Not Stubs](https://martinfowler.com/articles/mocksArentStubs.html), by Martin Fowler, 2007.
-
 [Design Principles and Design Patterns](https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf), by Robert Martin, 2000.
-
-### Python
-
-[Default Parameter Values in Python](http://effbot.org/zone/default-values.htm), by Fredrik Lundh, 2008.
 
 ## Data
 
 [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf), by Hadley Wickham.
 
 [The Principle of Orthogonal Design](https://web.archive.org/web/20100224075429/http://www.dbdebunk.com/page/page/622331.htm), by Chris Date and David McGoveran.
-
-[Database Normalization](https://en.wikipedia.org/wiki/Database_normalization#Normal_forms).
 
 ## System (Architecture) and Project Design
 
@@ -48,6 +40,8 @@ On the Criteria to be Used in Decomposing Systems into Modules, by David L. Parn
 [Cynefin Framework](https://en.wikipedia.org/wiki/Cynefin_framework), by Dave Snowden, 1999.
 
 ## Conduct
+
+Skin in the Game: The Hidden Asymmetries in Daily Life, by Nassim Taleb, 2017.
 
 Extreme Ownership, by Jocko Willink and Leif Babin, 2015.
 
