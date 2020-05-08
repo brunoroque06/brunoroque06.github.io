@@ -19,6 +19,6 @@ Dvoretsky's Endgame Manual, by Mark Dvoretsky, 2014.
 
 [Corresponding Squares](https://en.wikipedia.org/wiki/Corresponding_squares).
 
-[Philidor Position](https://en.wikipedia.org/wiki/Philidor_position)
+[Philidor Position](https://en.wikipedia.org/wiki/Philidor_position).
 
-[Lucena Position](https://en.wikipedia.org/wiki/Lucena_position)
+[Lucena Position](https://en.wikipedia.org/wiki/Lucena_position).
