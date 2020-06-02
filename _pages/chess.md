@@ -7,6 +7,8 @@ permalink: chess
 
 This page contains chess references that I consider important.
 
+> On the chessboard lies and hypocrisy do not survive long. The creative combination lays bare the presumption of a lie; the merciless fact, culminating in a checkmate, contradicts the hypocrite. - Emanuel Lasker, Lasker's Manual of Chess
+
 ## References
 
 How to Reassess Your Chess: Chess Mastery Through Chess Imbalances, by Jeremy Silman, 2010.
