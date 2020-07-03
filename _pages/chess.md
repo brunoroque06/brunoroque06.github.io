@@ -9,13 +9,17 @@ This page contains chess references that I consider important.
 
 > On the chessboard lies and hypocrisy do not survive long. The creative combination lays bare the presumption of a lie; the merciless fact, culminating in a checkmate, contradicts the hypocrite. - Emanuel Lasker, Lasker's Manual of Chess
 
-## References
+## Books
 
 How to Reassess Your Chess: Chess Mastery Through Chess Imbalances, by Jeremy Silman, 2010.
 
 The Method in Chess, by Iossif Dorfman, 2001.
 
 Dvoretsky's Endgame Manual, by Mark Dvoretsky, 2014.
+
+Mastering Chess Strategy, by Johan Hellsten, 2010.
+
+## Concepts
 
 [Extra Piece](https://www.chess.com/article/view/an-quotextraquot-piece).
 
