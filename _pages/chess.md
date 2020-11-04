@@ -30,3 +30,41 @@ The Woodpecker Method, by Axel Smith and Hans Tikkanen, 2018.
 [Lucena Position](https://en.wikipedia.org/wiki/Lucena_position).
 
 [Philidor Position](https://en.wikipedia.org/wiki/Philidor_position).
+
+## My Immortal Game (... xD)
+
+```chess
+[White "Bruno Roque"]
+[Black "-"]
+[Result "1-0"]
+[WhiteElo "2014"]
+[BlackElo "2029"]
+[Variant "Standard"]
+[TimeControl "1800+30"]
+[ECO "C42"]
+[Opening "Russian Game: Classical Attack, Marshall Variation"]
+
+1. e4 e5
+2. Nf3 Nf6
+3. Nxe5 d6
+4. Nf3 Nxe4
+5. d4 d5
+6. Bd3 Bd6
+7. O-O O-O
+8. Nbd2 Bf5
+9. Re1 Re8
+10. Nf1 Bg6
+11. Ng3 f5
+12. c4 Nxg3
+13. hxg3 Rxe1+
+14. Qxe1 c6
+15. cxd5 cxd5
+16. Qe6+ Bf7
+17. Qxf5 g6
+18. Qg4 Qd7
+19. Qh4 Bf8
+20. Ne5 Qe6
+21. Qd8 Qe7
+22. Nxf7 Qxf7
+23. Bh6 { Black resigns. } 1-0
+```
