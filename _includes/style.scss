@@ -1,10 +1,10 @@
 $font: sans-serif;
 $font-mono: monospace;
 $main-color: #2c3d51;
-$sec-color: #fabd2f;
+$sec-color: #e09f1f;
 $font-main-color: white;
 $font-sec-color: black;
-$hover-color: grey;
+$hover-color: #5c6c82;
 
 ::selection {
   color: $font-sec-color;
@@ -100,11 +100,10 @@ body {
       padding: 0 0 0 0.5rem;
     }
     code {
-      color: $sec-color;
+      display: block;
+      white-space: pre-line;
       font-family: $font-mono;
-    }
-    code::selection {
-      background: $font-main-color;
+      margin: 1rem;
     }
     h2 {
       border-bottom: 0.1rem solid $font-main-color;
