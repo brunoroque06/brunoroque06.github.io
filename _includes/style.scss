@@ -1,4 +1,6 @@
-$font: sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+$font: "Rubik", sans-serif;
 $font-mono: monospace;
 $main-color: #2c3d51;
 $sec-color: #e09f1f;
@@ -37,7 +39,6 @@ body {
     }
     .title {
       font-size: 1.75rem;
-      font-weight: bold;
       text-transform: uppercase;
       .vim {
         color: $hover-color;
@@ -47,7 +48,7 @@ body {
       }
     }
     .subtitle {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
     .pages {
       display: flex;
@@ -68,10 +69,6 @@ body {
       a {
         display: inline-block;
         fill: $font-main-color;
-        transition: 100ms;
-        transition-timing-function: ease-in-out;
-        -webkit-transition: 100ms;
-        -webkit-transition-timing-function: ease-in-out;
       }
       a:hover {
         fill: $hover-color;
