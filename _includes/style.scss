@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-
-$font: "Rubik", sans-serif;
+$font: "SF Pro Text", sans-serif;
 $font-mono: monospace;
 $main-color: #2c3d51;
 $sec-color: #e09f1f;
@@ -39,6 +37,7 @@ body {
     }
     .title {
       font-size: 1.75rem;
+      font-weight: 500;
       text-transform: uppercase;
       .vim {
         color: $hover-color;
@@ -102,27 +101,12 @@ body {
       font-family: $font-mono;
       margin: 1rem;
     }
+    h1,
+    h2 {
+      font-weight: 400;
+    }
     h2 {
       border-bottom: 0.1rem solid $font-main-color;
-    }
-    table {
-      margin: auto;
-      border-collapse: collapse;
-      tr:not(:last-child) {
-        border-bottom: 0.1rem solid $hover-color;
-      }
-      th {
-        border-bottom: 0.3rem solid $hover-color;
-        padding: 0 0.5rem;
-      }
-      tbody {
-        td {
-          padding: 0 0.5rem;
-        }
-        tr:hover {
-          background: $hover-color;
-        }
-      }
     }
   }
 }
