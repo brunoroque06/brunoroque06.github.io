@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font: 11pt "SF Text Pro";
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 5mm;
+        border: 1pt #d3d3d3 solid;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+        display: flex;
+      }
+
+      .column-left {
+        flex: 25%;
+        padding: 10pt;
+
+        border-right: 2px #2c3d51 solid;
+      }
+
+      .column-right {
+        flex: 75%;
+        padding: 10px;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      @media print {
+        html,
+        body {
+          width: 210mm;
+          height: 297mm;
+        }
+        .page {
+          margin: 0;
+          border: initial;
+          border-radius: initial;
+          width: initial;
+          min-height: initial;
+          box-shadow: initial;
+          background: initial;
+          page-break-after: always;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="column-left">
+        <h2>Contact</h2>
+        <p>Zurich, Switzerland</p>
+        <p>(+41) 765 174 226</p>
+        <p>brunoroque06@gmail.com</p>
+        <p>https://brunoroque06.github.io</p>
+        <p>https://www.linkedin.com/in/brunoroque06</p>
+        <h2>Technologies</h2>
+        <p>
+          Java (Spring), Reactive Streams (RxJava), NodeJS (Typescript), Python,
+          Golang, Apache Kafka, Docker
+        </p>
+        <h2>Languages</h2>
+        <p>Portuguese - Native</p>
+        <p>English - Proficient</p>
+        <p>German - Intermediate</p>
+      </div>
+      <div class="column-right">
+        <h1>Bruno Roque</h1>
+        <h3>Software Engineer</h3>
+
+        <h2>Experience</h2>
+
+        <h3>
+          Software Engineer at Raccoon Works, Zurich, Switzerland / 06.2019 -
+          Present
+        </h3>
+
+        <h3>
+          Software Developer at Spoud AG, Bern, Switzerland / 11.2017 - 05.2019
+        </h3>
+        <p>
+          Development of a real-time transport layer using Reactive Streams
+          (RxJava), gRPC (with Protocol Buffers), Apache Kafka. Development of a
+          REST API (including Server Side Events) using Spring Web/WebFlux,
+          Reactor, JPA, Swagger.
+        </p>
+
+        <h2>Education</h2>
+
+        <h3>
+          MSc in Electrical and Computer Engineering Instituto Superior Tecnico,
+          Lisbon / 09.2007 - 12.2014
+        </h3>
+      </div>
+    </div>
+  </body>
+</html>
