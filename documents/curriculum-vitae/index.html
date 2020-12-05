@@ -60,6 +60,13 @@
         margin: 0.5rem 0;
       }
 
+      .section {
+        border-bottom: var(--border);
+        margin: 0.5rem 0;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+      }
+
       .info-entry {
         font-size: 0.8rem;
       }
@@ -80,11 +87,31 @@
         height: 1rem;
       }
 
-      .section {
-        border-bottom: var(--border);
-        margin: 0.5rem 0;
-        font-size: 1.4rem;
-        text-transform: uppercase;
+      .tech {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .tech-name {
+        display: inline-block;
+      }
+
+      .tech-score {
+        display: inline-block;
+      }
+
+      .tech-full {
+        background-color: black;
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+      }
+
+      .tech-empty {
+        border: 2pt black solid;
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
       }
 
       .column-right {
@@ -208,11 +235,60 @@
         </div>
 
         <div class="section">Technologies</div>
-        <div class="row">Dotnet</div>
-        <div class="row">Node.js (Typescript)</div>
-        <div class="row">Python</div>
-        <div class="row">Azure (Pulumi)</div>
-        <div class="row">Angular</div>
+
+        <div class="row tech">
+          <div class="tech-name">Dotnet</div>
+          <div class="tech-score">
+            <div class="tech-full"></div>
+            <div class="tech-full"></div>
+            <div class="tech-full"></div>
+          </div>
+        </div>
+
+        <div class="row tech">
+          <div class="tech-name">PostgreSQL</div>
+          <div class="tech-score">
+            <div class="tech-full"></div>
+            <div class="tech-full"></div>
+            <div class="tech-full"></div>
+          </div>
+        </div>
+
+        <div class="row tech">
+          <div class="tech-name">Azure (Pulumi)</div>
+          <div class="tech-score">
+            <div class="tech-full"></div>
+            <div class="tech-full"></div>
+            <div class="tech-empty"></div>
+          </div>
+        </div>
+
+        <div class="row tech">
+          <div class="tech-name">Node.js (Typescript)</div>
+          <div class="tech-score">
+            <div class="tech-full"></div>
+            <div class="tech-full"></div>
+            <div class="tech-empty"></div>
+          </div>
+        </div>
+
+        <div class="row tech">
+          <div class="tech-name">Python</div>
+          <div class="tech-score">
+            <div class="tech-full"></div>
+            <div class="tech-full"></div>
+            <div class="tech-empty"></div>
+          </div>
+        </div>
+
+        <div class="row tech">
+          <div class="tech-name">Angular</div>
+          <div class="tech-score">
+            <div class="tech-full"></div>
+            <div class="tech-empty"></div>
+            <div class="tech-empty"></div>
+          </div>
+        </div>
 
         <div class="section">Languages</div>
         <div class="row">Portuguese - Native</div>
