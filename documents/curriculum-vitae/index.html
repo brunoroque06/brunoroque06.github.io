@@ -56,6 +56,10 @@
         padding: var(--padding);
       }
 
+      .row {
+        margin: 0.5rem 0;
+      }
+
       .info-entry {
         font-size: 0.8rem;
       }
@@ -132,7 +136,7 @@
       <div class="column-left">
         <div class="section">Personal Info</div>
 
-        <div class="info-entry">
+        <div class="row info-entry">
           <span class="info-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M0 0h24v24H0z" fill="none" />
@@ -144,7 +148,7 @@
           <span class="info-text">Zürich, Switzerland</span>
         </div>
 
-        <div class="info-entry">
+        <div class="row info-entry">
           <span class="info-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M0 0h24v24H0z" fill="none" />
@@ -156,7 +160,7 @@
           <span class="info-text">(+41) 765 174 226</span>
         </div>
 
-        <div class="info-entry">
+        <div class="row info-entry">
           <span class="info-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M0 0h24v24H0z" fill="none" />
@@ -168,7 +172,7 @@
           <span class="info-text">brunoroque06@gmail.com</span>
         </div>
 
-        <div class="info-entry">
+        <div class="row info-entry">
           <a
             href="https://brunoroque06.github.io"
             target="_blank"
@@ -185,7 +189,7 @@
           </a>
         </div>
 
-        <div class="info-entry">
+        <div class="row info-entry">
           <a
             href="https://www.linkedin.com/in/brunoroque06"
             target="_blank"
@@ -203,74 +207,86 @@
         </div>
 
         <div class="section">Technologies</div>
-        <div>Dotnet</div>
-        <div>Node.js (Typescript)</div>
-        <div>Python</div>
-        <div>Azure (Pulumi)</div>
-        <div>Angular</div>
+        <div class="row">Dotnet</div>
+        <div class="row">Node.js (Typescript)</div>
+        <div class="row">Python</div>
+        <div class="row">Azure (Pulumi)</div>
+        <div class="row">Angular</div>
 
         <div class="section">Languages</div>
-        <p>Portuguese - Native</p>
-        <p>English - Proficient</p>
-        <p>German - Intermediate</p>
+        <div class="row">Portuguese - Native</div>
+        <div class="row">English - Proficient</div>
+        <div class="row">German - Intermediate</div>
       </div>
 
       <div class="column-right">
         <div class="section">Experience</div>
 
-        <div class="exp-title">Software Engineer</div>
-        <div class="exp-sub">
-          06.2019 - Present / Raccoon Works, Zürich, Switzerland
-        </div>
-        <div class="exp-content">...</div>
-
-        <div class="exp-title">Software Developer</div>
-        <div class="exp-sub">
-          11.2017 - 05.2019 / Spoud AG, Bern, Switzerland
-        </div>
-        <div class="exp-content">
-          Development of a real-time transport layer using Reactive Streams
-          (RxJava), gRPC (with Protocol Buffers), Apache Kafka. Development of a
-          REST API (including Server Side Events) using Spring Web/WebFlux,
-          Reactor, JPA, Swagger.
+        <div class="row">
+          <div class="exp-title">Software Engineer</div>
+          <div class="exp-sub">
+            06.2019 - Present / Raccoon Works, Zürich, Switzerland
+          </div>
+          <div class="exp-content">...</div>
         </div>
 
-        <div class="exp-title">Software Engineer</div>
-        <div class="exp-sub">
-          04.2017 - 08.2017 / Vodafone, Glasgow, Scotland
-        </div>
-        <div class="exp-content">
-          Development of a desktop application to automate the planning of
-          neighbors in cellular networks. Improved the drop call rate of
-          northern areas of the UK by more than 30%.
-        </div>
-
-        <div class="exp-title">Software Engineer R&D</div>
-        <div class="exp-sub">
-          10.2015 - 03.2017 / Celfinet, Lisbon, Portugal
-        </div>
-        <div class="exp-content">
-          Research of geolocation algorithms for mobile and IoT networks using
-          radio frequency propagation models. Improved the geolocation error of
-          ∼278 meter to less than 131 meter. Use of genetic algorithms to
-          calibrate the models.
+        <div class="row">
+          <div class="exp-title">Software Developer</div>
+          <div class="exp-sub">
+            11.2017 - 05.2019 / Spoud AG, Bern, Switzerland
+          </div>
+          <div class="exp-content">
+            Development of a real-time transport layer using Reactive Streams
+            (RxJava), gRPC (with Protocol Buffers), Apache Kafka. Development of
+            a REST API (including Server Side Events) using Spring Web/WebFlux,
+            Reactor, JPA, Swagger.
+          </div>
         </div>
 
-        <div class="exp-title">Software Engineer R&D</div>
-        <div class="exp-sub">
-          01.2015 - 09.2015 / Instituto Telecomunicações, Lisbon, Portugal
+        <div class="row">
+          <div class="exp-title">Software Engineer</div>
+          <div class="exp-sub">
+            04.2017 - 08.2017 / Vodafone, Glasgow, Scotland
+          </div>
+          <div class="exp-content">
+            Development of a desktop application to automate the planning of
+            neighbors in cellular networks. Improved the drop call rate of
+            northern areas of the UK by more than 30%.
+          </div>
         </div>
-        <div class="exp-content">
-          Software development of video processing algorithms: detection of
-          black frames, black margins, flashes, block effect, removal of
-          subtitles and inpaint.
+
+        <div class="row">
+          <div class="exp-title">Software Engineer R&D</div>
+          <div class="exp-sub">
+            10.2015 - 03.2017 / Celfinet, Lisbon, Portugal
+          </div>
+          <div class="exp-content">
+            Research of geolocation algorithms for mobile and IoT networks using
+            radio frequency propagation models. Improved the geolocation error
+            of ∼278 meter to less than 131 meter. Use of genetic algorithms to
+            calibrate the models.
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="exp-title">Software Engineer R&D</div>
+          <div class="exp-sub">
+            01.2015 - 09.2015 / Instituto Telecomunicações, Lisbon, Portugal
+          </div>
+          <div class="exp-content">
+            Software development of video processing algorithms: detection of
+            black frames, black margins, flashes, block effect, removal of
+            subtitles and inpaint.
+          </div>
         </div>
 
         <div class="section">Education</div>
 
-        <div class="exp-title">MSc Electrical and Computer Engineering</div>
-        <div class="exp-sub">
-          09.2007 - 12.2014 / Instituto Superior Técnico, Lisbon, Portugal
+        <div class="row">
+          <div class="exp-title">MSc Electrical and Computer Engineering</div>
+          <div class="exp-sub">
+            09.2007 - 12.2014 / Instituto Superior Técnico, Lisbon, Portugal
+          </div>
         </div>
       </div>
     </div>
