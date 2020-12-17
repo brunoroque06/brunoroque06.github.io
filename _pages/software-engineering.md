@@ -23,6 +23,8 @@ Economics in One Lesson, by Henry Hazlitt, 1978.
 
 The 22 Immutable Laws of Marketing: Violate Them at Your Own Risk!, by Al Ries and Jack Trout, 1994.
 
+Positioning: The Battle for Your Mind, by Al Ries and Jack Trout, 2001.
+
 [Cynefin Framework](https://en.wikipedia.org/wiki/Cynefin_framework), by Dave Snowden, 1999.
 
 ## System (Architecture) & Project Design
