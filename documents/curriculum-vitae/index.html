@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       :root {
+        --font-main: 11pt "SF Pro Text";
+        --font-mono: "SF Mono";
         --primary-text: black;
         --primary-color: #2c3d51;
         --border: 2pt black solid;
@@ -20,7 +22,7 @@
         height: 100%;
         margin: 0;
         padding: 0;
-        font: 11pt "SF Text Pro";
+        font: var(--font-main);
       }
 
       .page {
@@ -31,7 +33,7 @@
         box-shadow: 0 0 5pt rgba(0, 0, 0, 0.1);
 
         display: grid;
-        grid-template-columns: 33% 67%;
+        grid-template-columns: 34% 66%;
         grid-template-rows: 7% 93%;
       }
 
@@ -43,12 +45,13 @@
       }
 
       .name {
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: 600;
         text-transform: uppercase;
       }
 
       .title {
+        font-family: var(--font-mono);
         font-size: 1.2rem;
       }
 
@@ -61,6 +64,7 @@
       }
 
       .section {
+        font-family: var(--font-mono);
         border-bottom: var(--border);
         margin: 0.5rem 0;
         font-size: 1.4rem;
@@ -90,12 +94,6 @@
       .tech {
         display: flex;
         justify-content: space-between;
-      }
-
-      .tech-name {
-      }
-
-      .tech-score {
       }
 
       .tech-full {
@@ -249,7 +247,7 @@
         </div>
 
         <div class="row tech">
-          <div class="tech-name">PostgreSQL (Timescale)</div>
+          <div class="tech-name">PostgreSQL (TimescaleDB)</div>
           <div class="tech-score">
             <div class="tech-full"></div>
             <div class="tech-full"></div>
