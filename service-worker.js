@@ -1,15 +1,15 @@
 const CACHE = "brunoroque06";
 
-self.addEventListener("install", function(event) {
+self.addEventListener("install", function (event) {
   console.log("[ServiceWorker] Installing...");
   event.waitUntil(
-    caches.open(CACHE).then(function(cache) {
+    caches.open(CACHE).then(function (cache) {
       console.log("[ServiceWorker] Installed");
     })
   );
 });
 
-self.addEventListener("fetch", function(event) {
+self.addEventListener("fetch", function (event) {
   if (
     event.request.method !== "GET" ||
     event.request.url.startsWith("chrome-extension://")
@@ -18,12 +18,12 @@ self.addEventListener("fetch", function(event) {
 
   event.respondWith(
     fetch(event.request)
-      .then(function(response) {
+      .then(function (response) {
         console.log(`[ServiceWorker] Adding to cache: ${response.url}`);
         event.waitUntil(updateCache(event.request, response.clone()));
         return response;
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.log(`[ServiceWorker] Serving from cache: ${event.request.url}`);
         return fromCache(event.request);
       })
