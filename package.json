@@ -1,15 +1,13 @@
 {
   "private": true,
-  "scripts": {
-    "format": "git diff --cached --name-only --diff-filter=d | grep -E '^.*\\.(html|json|md|scss|yml)' | xargs prettier --write"
-  },
   "devDependencies": {
     "husky": "^4.3.6",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run format"
+      "pre-commit": "pretty-quick --staged"
     }
   }
 }
