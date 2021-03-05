@@ -43,9 +43,11 @@ Test-Driven Development By Example, by Kent Beck, 2003.
 
 ## Software Technologies
 
-Pro Git, by Scott Chacon and Ben Straub, 2014.
-
 The Art of PostgreSQL, by Dimitri Fontaine, 2019.
+
+You Don't Know JS Yet, by Kyle Simpson, 2020.
+
+Pro Git, by Scott Chacon and Ben Straub, 2014.
 
 ## Data
 
