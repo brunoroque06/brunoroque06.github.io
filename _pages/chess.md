@@ -35,7 +35,7 @@ The Woodpecker Method, by Axel Smith and Hans Tikkanen, 2018.
 
 ```chess
 [White "Bruno Roque"]
-[Black "-"]
+[Black "Very Tough Opponent"]
 [Result "1-0"]
 [WhiteElo "2014"]
 [BlackElo "2029"]
