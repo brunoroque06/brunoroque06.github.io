@@ -11,6 +11,8 @@ This page contains what I consider to be the most relevant sources of informatio
 
 ## Conduct & Human Nature
 
+[Start with Why](https://www.youtube.com/watch?v=u4ZoJKF_VuA), by Simon Sinek, 2009.
+
 Extreme Ownership, by Jocko Willink and Leif Babin, 2015.
 
 The Dichotomy of Leadership, by Jocko Willink and Leif Babin, 2018.
