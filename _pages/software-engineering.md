@@ -35,6 +35,14 @@ On the Criteria to be Used in Decomposing Systems into Modules, by David L. Parn
 
 Righting Software, by Juval Löwy, 2019.
 
+## Analytics Engineering
+
+[The Analytics Setup Guidebook](https://www.holistics.io/books/setup-analytics/start-here-introduction), by Huy Nguyen, Ha Pham, Cedric Chin from Holistics.
+
+[Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf), by Hadley Wickham.
+
+[The Principle of Orthogonal Design](https://web.archive.org/web/20100224075429/http://www.dbdebunk.com/page/page/622331.htm), by Chris Date and David McGoveran.
+
 ## Software Development
 
 The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.
@@ -50,9 +58,3 @@ The Art of PostgreSQL, by Dimitri Fontaine, 2019.
 You Don't Know JS Yet, by Kyle Simpson, 2020.
 
 Pro Git, by Scott Chacon and Ben Straub, 2014.
-
-## Data
-
-[Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf), by Hadley Wickham.
-
-[The Principle of Orthogonal Design](https://web.archive.org/web/20100224075429/http://www.dbdebunk.com/page/page/622331.htm), by Chris Date and David McGoveran.
