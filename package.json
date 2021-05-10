@@ -1,12 +1,16 @@
 {
   "private": true,
   "scripts": {
+    "clean": "rm -rf _site/ .bundle/ node_modules/",
     "postinstall": "husky install",
-    "prettier-staged": "pretty-quick --staged"
+    "prepare": "gem install --user-install bundler; bundle config set --local path .bundle; bundle install",
+    "prettier-staged": "pretty-quick --staged",
+    "serve": "bundle exec jekyll serve --watch",
+    "update": "bundle update"
   },
   "devDependencies": {
     "husky": "^6.0.0",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.0",
     "pretty-quick": "^3.1.0"
   }
 }
