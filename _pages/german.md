@@ -7,12 +7,12 @@ permalink: german
 
 ## Articles
 
-| Nominative | Accusative | Dativ |
-| ---------- | ---------- | ----- |
-| der        | den        | dem   |
-| die        | die        | der   |
-| das        | das        | dem   |
-| die        | die        | den   |
+| Definite Article | Nominative | Accusative | Dativ |
+| ---------------- | ---------- | ---------- | ----- |
+| masculine        | der        | den        | dem   |
+| feminine         | die        | die        | der   |
+| neuter           | das        | das        | dem   |
+| plural           | die        | die        | den   |
 
 | Indefinite Article | Nominative | Accusative | Dativ |
 | ------------------ | ---------- | ---------- | ----- |
@@ -30,7 +30,20 @@ permalink: german
 | sie                  | ihr/ihre           |
 | wir                  | unser/unsere       |
 | ihr                  | euer/euere         |
-| sie                  | ihr/ihre           |
+| Sie                  | ihr/ihre           |
+
+| Adjektivendung  | Nominative | Accusative | Dativ |
+| --------------- | ---------- | ---------- | ----- |
+| der             | -e         | -en        | -en   |
+| die             | -e         | -e         | -en   |
+| das             | -e         | -e         | -en   |
+| die (plural)    | -en        | -en        | -en   |
+| ein (masculine) | -er        | -en        | -en   |
+| eine            | -e         | -e         | -en   |
+| ein (plural)    | -es        | -es        | -en   |
+
+Komparativ: -er (und Adjektivendung)
+Superlativ: am -(e)sten / definite article -(e)ste
 
 ## Pronouns
 
@@ -47,7 +60,25 @@ Possessive Pronouns:
 | er/sie/es          | sich       | sich  |
 | wir                | uns        | uns   |
 | ihr                | euch       | euch  |
-| sie                | euch       | sich  |
+| Sie                | euch       | sich  |
+
+| Pronouns | Accusative | Dativ |
+| -------- | ---------- | ----- |
+| ich      | mich       | mir   |
+| du       | dich       | dir   |
+| er       | ihn        | ihm   |
+| sie      | sie        | ihr   |
+| es       | es         | ihm   |
+| wir      | uns        | uns   |
+| ihr      | euch       | euch  |
+| Sie      | Sie        | Ihnen |
+
+| Relative Pronoun | Nominative | Accusative | Dativ |
+| ---------------- | ---------- | ---------- | ----- |
+| der              | der        | den        | dem   |
+| die              | die        | die        | der   |
+| das              | das        | das        | dem   |
+| die (plural)     | die        | die        | denen |
 
 ## Verbs
 
@@ -58,13 +89,13 @@ Possessive Pronouns:
 | er/sie/es    | -t     |
 | wir          | -en    |
 | ihr          | -t     |
-| sie          | -en    |
+| Sie          | -en    |
 
 | Imperative |                      |
 | ---------- | -------------------- |
 | du         | remove -st: "geh"    |
 | ihr        | regular ihr: "geht"  |
-| sie        | regular sie: "gehen" |
+| Sie        | regular sie: "gehen" |
 
 | Modal Verbs                        |
 | ---------------------------------- |
@@ -74,6 +105,19 @@ Possessive Pronouns:
 | mögen (would like)                 |
 | wollen (to want)                   |
 | sollen (should, to be supposed to) |
+
+Perfect:
+
+- haben/sein + verb (Partizip II)
+
+| Präteritum | Regular | Irregular/Modal |
+| ---------- | ------- | --------------- |
+| ich        | -te     | -               |
+| du         | -test   | -st             |
+| er/sie/es  | -te     | -               |
+| wir        | -ten    | -en             |
+| ihr        | -tet    | -t              |
+| Sie        | -ten    | -en             |
 
 ## Prepositions
 
@@ -97,6 +141,16 @@ Dativ:
 - zu (to)
 - ausser (except)
 - gegenüber (opposite)
+
+Accusative or Dativ:
+
+- in
+- an
+- auf
+- hinter
+- zwischen
+- über
+- unter
 
 ## Nouns
 
