@@ -3,101 +3,101 @@ layout: default
 permalink: german
 ---
 
-# German
+# Deutsch
 
-## Articles
+## Artikel
 
-| Definite Article | Nominative | Accusative | Dativ |
-| ---------------- | ---------- | ---------- | ----- |
-| masculine        | der        | den        | dem   |
-| feminine         | die        | die        | der   |
-| neuter           | das        | das        | dem   |
-| plural           | die        | die        | den   |
+| Bestimmter Artikel | Nominativ | Akkusativ | Dativ |
+| ------------------ | --------- | --------- | ----- |
+| maskulin           | der       | den       | dem   |
+| feminin            | die       | die       | der   |
+| neuter             | das       | das       | dem   |
+| plural             | die       | die       | den   |
 
-| Indefinite Article | Nominative | Accusative | Dativ |
-| ------------------ | ---------- | ---------- | ----- |
-| masculine          | ein        | einen      | einem |
-| feminine           | eine       | eine       | einer |
-| neuter             | ein        | ein        | einem |
+| Unbestimmter Artikel | Nominativ | Akkusativ | Dativ |
+| -------------------- | --------- | --------- | ----- |
+| maskulin             | ein       | einen     | einem |
+| feminin              | eine      | eine      | einer |
+| neuter               | ein       | ein       | einem |
 
-## Adjectives
+## Adjektive
 
-| Possessive Adjective | masculine/feminine |
-| -------------------- | ------------------ |
-| ich                  | meien/meine        |
-| du                   | dein/deine         |
-| er                   | sein/seine         |
-| sie                  | ihr/ihre           |
-| wir                  | unser/unsere       |
-| ihr                  | euer/euere         |
-| Sie                  | ihr/ihre           |
+| Possessiv Adjektive | maskulin/feminin |
+| ------------------- | ---------------- |
+| ich                 | meien/meine      |
+| du                  | dein/deine       |
+| er                  | sein/seine       |
+| sie                 | ihr/ihre         |
+| wir                 | unser/unsere     |
+| ihr                 | euer/euere       |
+| Sie                 | ihr/ihre         |
 
-| Adjektivendung  | Nominative | Accusative | Dativ |
-| --------------- | ---------- | ---------- | ----- |
-| der             | -e         | -en        | -en   |
-| die             | -e         | -e         | -en   |
-| das             | -e         | -e         | -en   |
-| die (plural)    | -en        | -en        | -en   |
-| ein (masculine) | -er        | -en        | -en   |
-| eine            | -e         | -e         | -en   |
-| ein (plural)    | -es        | -es        | -en   |
+| Adjektivendung | Nominativ | Akkusativ | Dativ |
+| -------------- | --------- | --------- | ----- |
+| der            | -e        | -en       | -en   |
+| die            | -e        | -e        | -en   |
+| das            | -e        | -e        | -en   |
+| die (plural)   | -en       | -en       | -en   |
+| ein (maskulin) | -er       | -en       | -en   |
+| eine           | -e        | -e        | -en   |
+| ein (neuter)   | -es       | -es       | -en   |
 
 Komparativ: -er (und Adjektivendung)
-Superlativ: am -(e)sten / definite article -(e)ste
+Superlativ: am -(e)sten / (Bestimmter Artikel) -(e)ste
 
-## Pronouns
+## Pronomen
 
-Possessive Pronouns:
+Possessivpronomen:
 
-- masculine: -er, for example: deiner (yours)
-- neutral: -s, for example: deins (yours)
-- feminine/plural: -e, for example: deine (yours)
+- maskulin: -er (deiner)
+- neutral: -s (deins)
+- feminin/plural: -e (deine)
 
-| Reflexive Pronouns | Accusative | Dativ |
-| ------------------ | ---------- | ----- |
-| ich                | mich       | mir   |
-| du                 | dich       | dir   |
-| er/sie/es          | sich       | sich  |
-| wir                | uns        | uns   |
-| ihr                | euch       | euch  |
-| Sie                | euch       | sich  |
+| Reflexivpronomen | Akkusativ | Dativ |
+| ---------------- | --------- | ----- |
+| ich              | mich      | mir   |
+| du               | dich      | dir   |
+| er/sie/es        | sich      | sich  |
+| wir              | uns       | uns   |
+| ihr              | euch      | euch  |
+| Sie              | euch      | sich  |
 
-| Pronouns | Accusative | Dativ |
-| -------- | ---------- | ----- |
-| ich      | mich       | mir   |
-| du       | dich       | dir   |
-| er       | ihn        | ihm   |
-| sie      | sie        | ihr   |
-| es       | es         | ihm   |
-| wir      | uns        | uns   |
-| ihr      | euch       | euch  |
-| Sie      | Sie        | Ihnen |
+| Pronomen | Akkusativ | Dativ |
+| -------- | --------- | ----- |
+| ich      | mich      | mir   |
+| du       | dich      | dir   |
+| er       | ihn       | ihm   |
+| sie      | sie       | ihr   |
+| es       | es        | ihm   |
+| wir      | uns       | uns   |
+| ihr      | euch      | euch  |
+| Sie      | Sie       | Ihnen |
 
-| Relative Pronoun | Nominative | Accusative | Dativ |
-| ---------------- | ---------- | ---------- | ----- |
-| der              | der        | den        | dem   |
-| die              | die        | die        | der   |
-| das              | das        | das        | dem   |
-| die (plural)     | die        | die        | denen |
+| Relativpronomen | Nominativ | Akkusativ | Dativ |
+| --------------- | --------- | --------- | ----- |
+| der             | der       | den       | dem   |
+| die             | die       | die       | der   |
+| das             | das       | das       | dem   |
+| die (plural)    | die       | die       | denen |
 
-## Verbs
+## Verben
 
-| Regular Verb | Ending |
-| ------------ | ------ |
-| ich          | -e     |
-| du           | -st    |
-| er/sie/es    | -t     |
-| wir          | -en    |
-| ihr          | -t     |
-| Sie          | -en    |
+| Regelmässig Verb | Endung |
+| ---------------- | ------ |
+| ich              | -e     |
+| du               | -st    |
+| er/sie/es        | -t     |
+| wir              | -en    |
+| ihr              | -t     |
+| Sie              | -en    |
 
-| Imperative |                      |
-| ---------- | -------------------- |
-| du         | remove -st: "geh"    |
-| ihr        | regular ihr: "geht"  |
-| Sie        | regular sie: "gehen" |
+| Imperativ |                          |
+| --------- | ------------------------ |
+| du        | remove -st: "geh"        |
+| ihr       | Regelmässig ihr: "geht"  |
+| Sie       | Regelmässig sie: "gehen" |
 
-| Modal Verbs                        |
+| Modal Verben                       |
 | ---------------------------------- |
 | können (to be able to)             |
 | dürfen (to be allowed)             |
@@ -110,18 +110,18 @@ Perfect:
 
 - haben/sein + verb (Partizip II)
 
-| Präteritum | Regular | Irregular/Modal |
-| ---------- | ------- | --------------- |
-| ich        | -te     | -               |
-| du         | -test   | -st             |
-| er/sie/es  | -te     | -               |
-| wir        | -ten    | -en             |
-| ihr        | -tet    | -t              |
-| Sie        | -ten    | -en             |
+| Präteritum | Regelmässig | Unregelmässig/Modal |
+| ---------- | ----------- | ------------------- |
+| ich        | -te         | -                   |
+| du         | -test       | -st                 |
+| er/sie/es  | -te         | -                   |
+| wir        | -ten        | -en                 |
+| ihr        | -tet        | -t                  |
+| Sie        | -ten        | -en                 |
 
 ## Prepositions
 
-Accusative:
+Akkusativ:
 
 - bis (until / to)
 - durch (through)
@@ -142,7 +142,7 @@ Dativ:
 - ausser (except)
 - gegenüber (opposite)
 
-Accusative or Dativ:
+Akkusativ oder Dativ:
 
 - in
 - an
@@ -156,5 +156,5 @@ Accusative or Dativ:
 
 Plural:
 
-- masculine: -e
-- feminine (most): -n/-en/-nen
+- maskulin: -e
+- feminin (meiste): -n/-en/-nen
