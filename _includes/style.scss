@@ -11,6 +11,18 @@ $hover-color: #5c6c82;
   background: $sec-color;
 }
 
+table {
+  border-collapse: collapse;
+  border: 1px solid $font-main-color;
+  margin: 1rem 0;
+
+  td,
+  th {
+    border: 1px solid $font-main-color;
+    padding: 0.5rem;
+  }
+}
+
 body {
   margin: 0;
   font-family: $font;
@@ -21,6 +33,7 @@ body {
   grid-template-areas: "header" "main";
   grid-gap: 0;
   width: 100%;
+
   header {
     grid-area: header;
     text-align: center;
@@ -29,16 +42,20 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     a {
       text-decoration: none;
     }
+
     .column {
       flex-direction: column;
     }
+
     .title {
       font-size: 1.9rem;
       font-weight: 500;
       text-transform: uppercase;
+
       .vim {
         color: $hover-color;
         background: $hover-color;
@@ -46,66 +63,81 @@ body {
         line-height: 1em;
       }
     }
+
     .subtitle {
       font-family: $font-mono;
       font-size: 1.2rem;
     }
+
     .pages {
       display: flex;
       margin: 2rem 0 0.5rem;
+
       .page {
         font-size: 1.3rem;
         margin: 0 0.5rem;
+
         a {
           color: $font-main-color;
           padding: 0.1rem 0.3rem;
         }
+
         a:hover {
           background: $hover-color;
         }
       }
     }
+
     .logos {
       a {
         display: inline-block;
         fill: $font-main-color;
       }
+
       a:hover {
         fill: $hover-color;
       }
+
       .logo {
         height: 1.75rem;
         margin: 0.5rem;
       }
     }
   }
+
   main {
     grid-area: main;
     width: 65rem;
     margin: 0 auto;
     font-size: 1rem;
     text-align: justify;
+
     a {
       color: $font-main-color;
       text-decoration: underline;
     }
+
     a:hover {
       background: $hover-color;
     }
+
     blockquote {
       border-left: 0.3rem solid $font-main-color;
       padding: 0 0 0 0.5rem;
     }
+
     code {
       display: block;
       white-space: pre-line;
       font-family: $font-mono;
       margin: 1rem;
     }
+
     h1,
     h2 {
       font-weight: 400;
     }
+
     h2 {
       border-bottom: 0.1rem solid $font-main-color;
     }
