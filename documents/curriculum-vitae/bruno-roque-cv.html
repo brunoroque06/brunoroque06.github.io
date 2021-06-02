@@ -271,16 +271,16 @@
 
       let info = document.getElementById("info");
       infos.forEach((i) => {
-        let icon = `<span class="info-icon">${i.icon}</span>`;
+        let iconText = `<span class="info-icon">${i.icon}</span><span class="info-text">${i.value}</span>`;
 
-        let value =
+        let wrap =
           i.ref === undefined
-            ? `<span class="info-text">${i.value}</span>`
-            : `<a class="info-text" href="${i.ref}" target="_blank" rel="noopener noreferrer">${i.value}</a>`;
+            ? iconText
+            : `<a href="${i.ref}" target="_blank" rel="noopener noreferrer">${iconText}</a>`;
 
         info.insertAdjacentHTML(
           "beforeend",
-          `<div class="row small">${icon}${value}</div>`
+          `<div class="row small">${wrap}</div>`
         );
       });
 
