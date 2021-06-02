@@ -94,8 +94,8 @@ Possessivpronomen:
 | Imperativ |                          |
 | --------- | ------------------------ |
 | du        | remove -st: "geh"        |
-| ihr       | Regelmässig ihr: "geht"  |
-| Sie       | Regelmässig sie: "gehen" |
+| ihr       | regelmässig ihr: "geht"  |
+| Sie       | regelmässig sie: "gehen" |
 
 | Modal Verben                       |
 | ---------------------------------- |
