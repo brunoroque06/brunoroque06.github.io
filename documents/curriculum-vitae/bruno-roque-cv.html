@@ -95,23 +95,24 @@
         height: 1rem;
       }
 
-      .tech {
+      .tech-score {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
+        margin-top: 0.2rem;
+      }
+
+      .tech-unit {
+        height: 0.5rem;
+        width: 3rem;
+        margin: 0 0.2rem;
       }
 
       .tech-full {
         background-color: black;
-        display: inline-block;
-        height: 1rem;
-        width: 1rem;
       }
 
       .tech-empty {
         border: 2pt black solid;
-        display: inline-block;
-        height: 1rem;
-        width: 1rem;
       }
 
       .column-right {
@@ -179,87 +180,6 @@
 
         <div id="tech">
           <div class="section">Technologies</div>
-        </div>
-
-        <div class="row tech">
-          <div class="small">Dotnet</div>
-          <div class="tech-score">
-            <div class="tech-full"></div>
-            <div class="tech-full"></div>
-            <div class="tech-full"></div>
-          </div>
-        </div>
-
-        <div class="row tech">
-          <div class="small">PostgreSQL (TimescaleDB)</div>
-          <div class="tech-score">
-            <div class="tech-full"></div>
-            <div class="tech-full"></div>
-            <div class="tech-full"></div>
-          </div>
-        </div>
-
-        <div class="row tech">
-          <div class="small">Azure (Pulumi)</div>
-          <div class="tech-score">
-            <div class="tech-full"></div>
-            <div class="tech-full"></div>
-            <div class="tech-empty"></div>
-          </div>
-        </div>
-
-        <div class="row tech">
-          <div class="small">Node.js</div>
-          <div class="tech-score">
-            <div class="tech-full"></div>
-            <div class="tech-full"></div>
-            <div class="tech-empty"></div>
-          </div>
-        </div>
-
-        <div class="row tech">
-          <div class="small">Python</div>
-          <div class="tech-score">
-            <div class="tech-full"></div>
-            <div class="tech-full"></div>
-            <div class="tech-empty"></div>
-          </div>
-        </div>
-
-        <div class="row tech">
-          <div class="small">Docker</div>
-          <div class="tech-score">
-            <div class="tech-full"></div>
-            <div class="tech-full"></div>
-            <div class="tech-empty"></div>
-          </div>
-        </div>
-
-        <div class="row tech">
-          <div class="small">ReactiveX</div>
-          <div class="tech-score">
-            <div class="tech-full"></div>
-            <div class="tech-full"></div>
-            <div class="tech-empty"></div>
-          </div>
-        </div>
-
-        <div class="row tech">
-          <div class="small">Angular (Material, XState)</div>
-          <div class="tech-score">
-            <div class="tech-full"></div>
-            <div class="tech-empty"></div>
-            <div class="tech-empty"></div>
-          </div>
-        </div>
-
-        <div class="row tech">
-          <div class="small">Svelte (Bulma, XState)</div>
-          <div class="tech-score">
-            <div class="tech-full"></div>
-            <div class="tech-empty"></div>
-            <div class="tech-empty"></div>
-          </div>
         </div>
 
         <div class="section">Languages</div>
@@ -361,6 +281,37 @@
         info.insertAdjacentHTML(
           "beforeend",
           `<div class="row small">${icon}${value}</div>`
+        );
+      });
+
+      let techs = [
+        { name: "Dotnet", level: 3 },
+        { name: "PostgreSQL (TimescaleDB)", level: 3 },
+        { name: "Azure (Pulumi)", level: 2 },
+        { name: "Node.js", level: 2 },
+        { name: "Python", level: 2 },
+        { name: "Docker", level: 2 },
+        { name: "ReactiveX", level: 2 },
+        { name: "Angular (Material, XState)", level: 1 },
+        { name: "Svelte (Bulma, XState)", level: 1 },
+      ];
+
+      let tech = document.getElementById("tech");
+      techs.forEach((t) => {
+        let full = '<div class="tech-unit tech-full"></div> '.repeat(t.level);
+        let empty = '<div class="tech-unit tech-empty"></div> '.repeat(
+          3 - t.level
+        );
+        tech.insertAdjacentHTML(
+          "beforeend",
+          `<div class="row">
+          <div class="small">${t.name}</div>
+          <div class="tech-score">
+          ${full}
+          ${empty}
+          </div>
+        </div>
+`
         );
       });
 
