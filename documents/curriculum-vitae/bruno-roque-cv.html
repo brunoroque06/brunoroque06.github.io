@@ -305,13 +305,13 @@
         tech.insertAdjacentHTML(
           "beforeend",
           `<div class="row">
-          <div class="small">${t.name}</div>
-          <div class="tech-score">
-          ${full}
-          ${empty}
+            <div class="small">${t.name}</div>
+            <div class="tech-score">
+              ${full}
+              ${empty}
+            </div>
           </div>
-        </div>
-`
+      `
         );
       });
 
@@ -358,13 +358,13 @@
         exp.insertAdjacentHTML(
           "beforeend",
           `<div class="row">
-                      <div class="main-title">${e.title}</div>
-                      <div class="main-sub">
-                        <span class="main-sub-date">${e.start} - ${e.end}</span>
-                        | ${e.loc}
-                      </div>
-                      <div class="main-content">${e.des}</div>
-                    </div>
+             <div class="main-title">${e.title}</div>
+              <div class="main-sub">
+                <span class="main-sub-date">${e.start} - ${e.end}</span>
+                | ${e.loc}
+              </div>
+              <div class="main-content">${e.des}</div>
+            </div>
             `
         );
       });
@@ -376,19 +376,14 @@
           des: "Genetic Algorithm, Blockchain, Decision Tree Player and other side projects on GitHub.",
         },
         {
+          ref: "https://www.idesign.net/Training/Architect-Master-Class",
+          date: "05.2021",
+          des: "Architect Master Class, Juval Löwy, IDesign.",
+        },
+        {
           ref: "https://www.idesign.net/Training/Project-Design-Master-Class",
           date: "03.2020",
           des: "Project Design Master Class, Juval Löwy, IDesign.",
-        },
-        {
-          ref: "https://brunoroque06.github.io/documents/certificates/rest-api-spring-udemy.pdf",
-          date: "02.2019",
-          des: "Java Web Services and RESTful API with Spring, Udemy.",
-        },
-        {
-          ref: "https://brunoroque06.github.io/documents/certificates/apache-kafka-udemy.pdf",
-          date: "01.2019",
-          des: "Learn Apache Kafka for Beginners v2, Udemy.",
         },
         {
           ref: "https://brunoroque06.github.io/documents/certificates/front-end-udacity.pdf",
@@ -407,19 +402,19 @@
         dev.insertAdjacentHTML(
           "beforeend",
           `<div class="row">
-                <div class="main-content">
-                  <a
-                    href="${d.ref}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span class="main-sub-date">${d.date}</span>
-                    | ${d.des}
-                    <url-icon></url-icon>
-                  </a>
-                </div>
-              </div>
-      `
+               <div class="main-content">
+                 <a
+                   href="${d.ref}"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                 >
+                   <span class="main-sub-date">${d.date}</span>
+                   | ${d.des}
+                   <url-icon></url-icon>
+                 </a>
+               </div>
+            </div>
+            `
         );
       });
 
