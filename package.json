@@ -3,7 +3,7 @@
   "scripts": {
     "clean": "rm -rf _site/ .bundle/ node_modules/",
     "postinstall": "husky install",
-    "prepare": "gem install --user-install bundler; bundle config set --local path .bundle; bundle install",
+    "prepare": "gem install --user-install bundler && bundle config set --local path .bundle && bundle install",
     "prettier-staged": "pretty-quick --staged",
     "serve": "bundle exec jekyll serve --watch",
     "update": "bundle update"
