@@ -85,6 +85,10 @@ body {
         a:hover {
           background: $hover-color;
         }
+
+        a.active {
+          text-decoration: underline;
+        }
       }
     }
 

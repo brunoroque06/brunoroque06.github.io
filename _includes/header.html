@@ -6,14 +6,13 @@
     <div class="subtitle">Software Engineer</div>
   </div>
   <div class="pages">
-    <div class="page"><a href="{{ site.data.global.url }}/">About</a></div>
-    {% for page in site.data.pages %}
+    {% for p in site.data.pages %}
     <div class="page">
+      {% assign current = page.url | remove: '/' %}
       <a
-        href="{{
-          site.data.global.url
-        }}/{{ page | downcase | replace: ' ', '-'}}"
-        >{{ page }}</a
+        {% if current == p.link or current == '' and p.name == 'About' %} class='active' {% endif %}
+        href="{{ site.data.global.url }}/{{ p.link }}"
+        >{{ p.name }}</a
       >
     </div>
     {% endfor %}

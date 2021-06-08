@@ -1,8 +1,9 @@
+# Jekyll
 .bundle/
 .jekyll-cache/
-.vscode/
 _site/
 
+# Yarn
 .yarn/*
 !.yarn/patches
 !.yarn/releases
