@@ -1,5 +1,6 @@
-$font-family-regular: "SF Pro Text", sans-serif;
-$font-family-mono: "SF Mono", monospace;
+$font-family-regular: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+$font-family-mono: "SF Mono", ui-monospace, monospace;
 $font-color: white;
 $color-main: #2c3d51;
 $color-secondary: #9b4f0f;
@@ -102,7 +103,7 @@ body {
 
       .logo {
         fill: $font-color;
-        height: 2rem;
+        height: 1.8rem;
         margin: 0.8rem;
 
         &:hover {
