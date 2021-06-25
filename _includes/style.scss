@@ -2,10 +2,11 @@ $font-family-regular: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
   "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
 $font-family-mono: "SF Mono", ui-monospace, monospace;
 $font-color: white;
+
 $color-main: #2c3d51;
-$color-secondary: #9b4f0f;
-//$color-secondary: #7d5642;
-//$color-secondary: #73605b;
+$color-accent: #9b4f0f;
+//$color-accent: #7d5642;
+//$color-accent: #73605b;
 $color-vim-char: #5c6c82;
 
 table {
@@ -41,7 +42,7 @@ body {
     text-decoration: none;
     &::after {
       content: "";
-      background: $color-secondary;
+      background: $color-accent;
       position: absolute;
       left: 0;
       bottom: 0;
@@ -107,7 +108,7 @@ body {
         margin: 0.8rem;
 
         &:hover {
-          fill: $color-secondary;
+          fill: $color-accent;
         }
       }
     }
