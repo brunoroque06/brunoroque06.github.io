@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "build": "bundle exec jekyll build",
     "build-cv": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --print-to-pdf=documents/bruno-roque-cv.pdf documents/bruno-roque-cv.html",
     "clean": "rm -rf _site/ .bundle/ node_modules/",
     "postinstall": "husky install",
