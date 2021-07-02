@@ -1,1 +1,1 @@
-yarn run prettier-staged
+npm run prettier-staged
