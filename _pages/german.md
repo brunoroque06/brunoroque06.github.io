@@ -7,32 +7,50 @@ permalink: german
 
 ## Artikel
 
-| Bestimmter Artikel | Nominativ | Akkusativ | Dativ |
-| ------------------ | --------- | --------- | ----- |
-| maskulin           | der       | den       | dem   |
-| feminin            | die       | die       | der   |
-| neuter             | das       | das       | dem   |
-| plural             | die       | die       | den   |
+### Bestimmter Artikel
 
-| Unbestimmter Artikel | Nominativ | Akkusativ | Dativ |
-| -------------------- | --------- | --------- | ----- |
-| maskulin             | ein       | einen     | einem |
-| feminin              | eine      | eine      | einer |
-| neuter               | ein       | ein       | einem |
+|          | Nominativ | Akkusativ | Dativ | Genitiv |
+| -------- | --------- | --------- | ----- | ------- |
+| maskulin | der       | den       | dem   | des     |
+| feminin  | die       | die       | der   | der     |
+| neuter   | das       | das       | dem   | des     |
+| plural   | die       | die       | den   | der     |
+
+Beispiel: Das Eis schmeckt ihr sehr gut.
+
+### Unbestimmter Artikel
+
+|          | Nominativ | Akkusativ | Dativ | Genitiv |
+| -------- | --------- | --------- | ----- | ------- |
+| maskulin | ein       | einen     | einem | eines   |
+| feminin  | eine      | eine      | einer | einer   |
+| neuter   | ein       | ein       | einem | eines   |
+
+Beispiel: Lena hat ein Eis gekauft.
 
 ## Adjektive
 
-| Possessiv Adjektive | maskulin/feminin |
-| ------------------- | ---------------- |
-| ich                 | meien/meine      |
-| du                  | dein/deine       |
-| er                  | sein/seine       |
-| sie                 | ihr/ihre         |
-| wir                 | unser/unsere     |
-| ihr                 | euer/euere       |
-| Sie                 | ihr/ihre         |
+### Possessiv Adjektive
 
-| Adjektivendung | Nominativ | Akkusativ | Dativ |
+TO FINISH
+
+|     | Nominativ | Akkusativ | Dativ | Genitiv |
+| --- | --------- | --------- | ----- | ------- |
+| ich |
+
+|     | maskulin/feminin |
+| --- | ---------------- |
+| ich | mein/meine       |
+| du  | dein/deine       |
+| er  | sein/seine       |
+| sie | ihr/ihre         |
+| wir | unser/unsere     |
+| ihr | euer/euere       |
+| Sie | ihr/ihre         |
+
+### Adjektivendungen (Deklination)
+
+|                | Nominativ | Akkusativ | Dativ |
 | -------------- | --------- | --------- | ----- |
 | der            | -e        | -en       | -en   |
 | die            | -e        | -e        | -en   |
@@ -47,11 +65,18 @@ Superlativ: am -(e)sten / (Bestimmter Artikel) -(e)ste
 
 ## Pronomen
 
-Possessivpronomen:
+|     | Akkusativ | Dativ |
+| --- | --------- | ----- |
+| ich | mich      | mir   |
+| du  | dich      | dir   |
+| er  | ihn       | ihm   |
+| sie | sie       | ihr   |
+| es  | es        | ihm   |
+| wir | uns       | uns   |
+| ihr | euch      | euch  |
+| Sie | Sie       | Ihnen |
 
-- maskulin: -er (deiner)
-- neutral: -s (deins)
-- feminin/plural: -e (deine)
+## Reflexivpronomen
 
 | Reflexivpronomen | Akkusativ | Dativ |
 | ---------------- | --------- | ----- |
@@ -62,16 +87,13 @@ Possessivpronomen:
 | ihr              | euch      | euch  |
 | Sie              | euch      | sich  |
 
-| Pronomen | Akkusativ | Dativ |
-| -------- | --------- | ----- |
-| ich      | mich      | mir   |
-| du       | dich      | dir   |
-| er       | ihn       | ihm   |
-| sie      | sie       | ihr   |
-| es       | es        | ihm   |
-| wir      | uns       | uns   |
-| ihr      | euch      | euch  |
-| Sie      | Sie       | Ihnen |
+## Possessivpronomen
+
+- maskulin: -er (deiner)
+- neutral: -s (deins)
+- feminin/plural: -e (deine)
+
+## Relativpronomen
 
 | Relativpronomen | Nominativ | Akkusativ | Dativ |
 | --------------- | --------- | --------- | ----- |
@@ -82,14 +104,27 @@ Possessivpronomen:
 
 ## Verben
 
-| Regelmässig Verb | Endung |
-| ---------------- | ------ |
-| ich              | -e     |
-| du               | -st    |
-| er/sie/es        | -t     |
-| wir              | -en    |
-| ihr              | -t     |
-| Sie              | -en    |
+### Indikativ
+
+|           | Endung |
+| --------- | ------ |
+| ich       | -e     |
+| du        | -st    |
+| er/sie/es | -t     |
+| wir       | -en    |
+| ihr       | -t     |
+| Sie       | -en    |
+
+### Modal Verben
+
+- können (to be able to)
+- dürfen (to be allowed)
+- müssen (must, to have to)
+- mögen (would like)
+- wollen (to want)
+- sollen (should, to be supposed to)
+
+### Imperativ
 
 | Imperativ |                          |
 | --------- | ------------------------ |
@@ -97,27 +132,33 @@ Possessivpronomen:
 | ihr       | regelmässig ihr: "geht"  |
 | Sie       | regelmässig sie: "gehen" |
 
-| Modal Verben                       |
-| ---------------------------------- |
-| können (to be able to)             |
-| dürfen (to be allowed)             |
-| müssen (must, to have to)          |
-| mögen (would like)                 |
-| wollen (to want)                   |
-| sollen (should, to be supposed to) |
-
-Perfect:
+### Perfect
 
 - haben/sein + verb (Partizip II)
 
-| Präteritum | Regelmässig | Unregelmässig/Modal |
-| ---------- | ----------- | ------------------- |
-| ich        | -te         | -                   |
-| du         | -test       | -st                 |
-| er/sie/es  | -te         | -                   |
-| wir        | -ten        | -en                 |
-| ihr        | -tet        | -t                  |
-| Sie        | -ten        | -en                 |
+### Präteritum
+
+|           | Regelmässig | Unregelmässig/Modal |
+| --------- | ----------- | ------------------- |
+| ich       | -te         | -                   |
+| du        | -test       | -st                 |
+| er/sie/es | -te         | -                   |
+| wir       | -ten        | -en                 |
+| ihr       | -tet        | -t                  |
+| Sie       | -ten        | -en                 |
+
+### Konjunktiv I (reported or indirect speech):
+
+|           | Endung Konjunktiv I | Beispiel "haben" |
+| --------- | ------------------- | ---------------- |
+| ich       | -e                  | habe             |
+| du        | -est                | habest           |
+| er/sie/es | -e                  | habe             |
+| wir       | -en                 | haben            |
+| ihr       | -et                 | habet            |
+| sie/Sie   | -en                 | haben            |
+
+Beispiel: Du erklärst, er habe verschlafen und sei deshalb zu spät.
 
 ## Prepositions
 

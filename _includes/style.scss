@@ -1,12 +1,13 @@
 $font-family-regular: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
   "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+
 $font-family-mono: "SF Mono", ui-monospace, monospace;
 $font-color: white;
 
 $color-main: #2c3d51;
 $color-accent: #9b4f0f;
-//$color-accent: #7d5642;
-//$color-accent: #73605b;
+// $color-accent: #7d5642;
+// $color-accent: #73605b;
 $color-vim-char: #5c6c82;
 
 table {
@@ -36,10 +37,10 @@ body {
   main a {
     color: $font-color;
     padding: 0.1rem 0.3rem;
-
     position: relative;
     overflow: hidden;
     text-decoration: none;
+
     &::after {
       content: "";
       background: $color-accent;
@@ -51,6 +52,7 @@ body {
       z-index: -1;
       transition: 0.1s ease-in-out;
     }
+
     &.active:after,
     &:hover:after {
       height: 100%;
@@ -134,11 +136,6 @@ body {
       margin: 1rem;
     }
 
-    h1,
-    h2 {
-      font-weight: 400;
-    }
-
     h2 {
       border-bottom: 0.1rem solid $font-color;
     }
@@ -150,6 +147,7 @@ body {
     header {
       width: 95%;
     }
+
     main {
       width: 90%;
     }
@@ -160,6 +158,7 @@ body {
   body {
     header .pages {
       flex-direction: column;
+
       .page {
         margin: 0.5rem 0;
       }
