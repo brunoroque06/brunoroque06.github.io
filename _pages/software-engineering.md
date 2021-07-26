@@ -35,15 +35,11 @@ On the Criteria to be Used in Decomposing Systems into Modules, by David L. Parn
 
 [Lehman's laws of software evolution](https://en.wikipedia.org/wiki/Lehman%27s_laws_of_software_evolution), by Meir Lehman, 1980.
 
+[Worse is Better (Lisp: Good News, Bad News, How to Win Big)](https://en.wikipedia.org/wiki/Worse_is_better), by Richard P. Gabriel, 1990.
+
 [O-ring theory of economic development](https://en.wikipedia.org/wiki/O-ring_theory_of_economic_development), by Michael Kremer, 1993.
 
 Righting Software, by Juval Löwy, 2019.
-
-## Analytics Engineering
-
-[The Analytics Setup Guidebook](https://www.holistics.io/books/setup-analytics/start-here-introduction), by Huy Nguyen, Ha Pham, Cedric Chin from Holistics.
-
-[Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf), by Hadley Wickham.
 
 ## Software Development
 
@@ -66,3 +62,9 @@ The Art of PostgreSQL, by Dimitri Fontaine, 2019.
 [Learn CSS](https://web.dev/learn/css), by Google.
 
 Pro Git, by Scott Chacon and Ben Straub, 2014.
+
+## Data Engineering
+
+[The Analytics Setup Guidebook](https://www.holistics.io/books/setup-analytics/start-here-introduction), by Huy Nguyen, Ha Pham, Cedric Chin from Holistics.
+
+[Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf), by Hadley Wickham.
