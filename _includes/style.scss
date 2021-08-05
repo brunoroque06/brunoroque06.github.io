@@ -10,18 +10,6 @@ $color-accent: #9b4f0f;
 // $color-accent: #73605b;
 $color-vim-char: #5c6c82;
 
-table {
-  border-collapse: collapse;
-  border: 1px solid $font-color;
-  margin: 1rem 0;
-
-  td,
-  th {
-    border: 1px solid $font-color;
-    padding: 0.5rem;
-  }
-}
-
 body {
   margin: 0;
   font-family: $font-family-regular;
@@ -50,7 +38,6 @@ body {
       width: 100%;
       height: calc(100% - 1.1em);
       z-index: -1;
-      transition: 0.1s ease-in-out;
     }
 
     &.active:after,
@@ -102,15 +89,17 @@ body {
     .logos {
       a {
         display: inline-block;
-      }
 
-      .logo {
-        fill: $font-color;
-        height: 1.8rem;
-        margin: 0.8rem;
+        .logo {
+          fill: $font-color;
+          height: 1.8rem;
+          margin: 0.8rem;
+        }
 
         &:hover {
-          fill: $color-accent;
+          .logo {
+            fill: $color-accent;
+          }
         }
       }
     }
@@ -138,6 +127,18 @@ body {
 
     h2 {
       border-bottom: 0.1rem solid $font-color;
+    }
+
+    table {
+      border-collapse: collapse;
+      border: 1px solid $font-color;
+      margin: 1rem 0;
+
+      td,
+      th {
+        border: 1px solid $font-color;
+        padding: 0.5rem;
+      }
     }
   }
 }
