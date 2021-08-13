@@ -7,9 +7,11 @@ permalink: software-engineering
 
 This page contains what I consider to be the most relevant sources of information on software engineering.
 
-> Progress, far from consisting in change, depends on retentiveness. When change is absolute there remains no being to improve and no direction is set for possible improvement: and when experience is not retained, as among savages, infancy is perpetual. Those who cannot remember the past are condemned to repeat it. - George Santayana, Life of Reason
+> I hold that orthodoxy is the death of knowledge, since the growth of knowledge depends entirely on the existence of disagreement. - Karl Popper, Myth of the Framework
 
 ## Conduct & Human Nature
+
+The Myth of the Framework: In Defence of Science and Rationality, by Karl Popper, 1994.
 
 Sapiens: A Brief History of Humankind, by Yuval Harari, 2014.
 
@@ -35,7 +37,7 @@ On the Criteria to be Used in Decomposing Systems into Modules, by David L. Parn
 
 [Lehman's laws of software evolution](https://en.wikipedia.org/wiki/Lehman%27s_laws_of_software_evolution), by Meir Lehman, 1980.
 
-[Worse is Better (Lisp: Good News, Bad News, How to Win Big)](https://en.wikipedia.org/wiki/Worse_is_better), by Richard P. Gabriel, 1990.
+[Worse is Better](https://en.wikipedia.org/wiki/Worse_is_better), by Richard P. Gabriel, 1990.
 
 [O-ring theory of economic development](https://en.wikipedia.org/wiki/O-ring_theory_of_economic_development), by Michael Kremer, 1993.
 
