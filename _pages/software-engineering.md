@@ -7,7 +7,7 @@ permalink: software-engineering
 
 This page contains what I consider to be the most relevant sources of information on software engineering.
 
-> I hold that orthodoxy is the death of knowledge, since the growth of knowledge depends entirely on the existence of disagreement. - Karl Popper, Myth of the Framework
+> I hold that orthodoxy is the death of knowledge, since the growth of knowledge depends entirely on the existence of disagreement. - Karl Popper
 
 ## Conduct & Human Nature
 
