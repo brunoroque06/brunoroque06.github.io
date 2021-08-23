@@ -18,3 +18,11 @@ jobs:
 
       - name: Build
         run: npm run build
+
+  website:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: treosh/lighthouse-ci-action@v8
+        with:
+          urls: https://brunoroque06.github.io
