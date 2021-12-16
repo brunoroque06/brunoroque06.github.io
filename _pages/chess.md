@@ -15,13 +15,11 @@ The Woodpecker Method, by Axel Smith and Hans Tikkanen, 2018.
 
 How to Reassess Your Chess: Chess Mastery Through Chess Imbalances, by Jeremy Silman, 2010.
 
-The Method in Chess, by Iossif Dorfman, 2001.
-
 Mastering Chess Strategy, by Johan Hellsten, 2010.
 
-Small Steps to Giant Improvement: Master Pawn Play in Chess, by Sam Shankland, 2018.
+Chess Structures: A Grandmaster Guide, by Mauricio Rios, 2015.
 
-Dvoretsky's Endgame Manual, by Mark Dvoretsky, 2014.
+Dvoretsky's Endgame Manual: FastTrack Edition, by Mark Dvoretsky, 2021.
 
 ## My Immortal (... xD)
 
