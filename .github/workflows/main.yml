@@ -12,6 +12,9 @@ jobs:
       - name: Install
         run: npm install
 
+      - name: Format Prettier
+        run: npx prettier -l '**/*.{json,md,yaml,yml}'
+
       - name: Build
         run: npm run build
 
