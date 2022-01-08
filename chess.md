@@ -1,9 +1,9 @@
 ---
 layout: default
-permalink: chess
+title: Chess
 ---
 
-# Chess
+# {{ title }}
 
 This page contains chess references that I consider important.
 

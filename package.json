@@ -1,18 +1,17 @@
 {
-  "private": true,
   "scripts": {
-    "build": "bundle exec jekyll build",
+    "build": "eleventy",
     "build-cv": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --print-to-pdf=documents/bruno-roque-cv.pdf documents/bruno-roque-cv.html",
-    "clean": "rm -rf _site/ .bundle/ node_modules/",
     "postinstall": "husky install",
-    "prepare": "gem install --user-install bundler && bundle config set --local path .bundle && bundle install",
     "prettier-staged": "pretty-quick --staged",
-    "serve": "bundle exec jekyll serve --watch",
-    "update": "bundle update"
+    "serve": "eleventy --serve",
+    "style": "sass --style=compressed --no-source-map _includes/style.scss _includes/style.css"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
     "husky": "^7.0.4",
     "prettier": "^2.5.1",
-    "pretty-quick": "^3.1.2"
+    "pretty-quick": "^3.1.2",
+    "sass": "^1.47.0"
   }
 }

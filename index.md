@@ -1,8 +1,9 @@
 ---
 layout: default
+title: About
 ---
 
-# About
+# {{ title }}
 
 My name is Bruno Roque, and I am a software engineer.
 

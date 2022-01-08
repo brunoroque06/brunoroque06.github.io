@@ -4,10 +4,10 @@
       console.log("[ServiceWorker] Already registered");
     } else {
       navigator.serviceWorker
-        .register("{{ site.data.global.url }}/service-worker.js", {
-          scope: "./"
+        .register("{{ origin }}/service-worker.js", {
+          scope: "./",
         })
-        .then(reg =>
+        .then((reg) =>
           console.log(`[ServiceWorker] Registered for scope: ${reg.scope}`)
         );
     }

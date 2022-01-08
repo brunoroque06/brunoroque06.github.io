@@ -1,0 +1,19 @@
+<header>
+  <div class="column">
+    <div class="title">
+      <span>
+        <span>Bruno Roque</span>
+        <span class="vim">#</span>
+      </span>
+    </div>
+    <div class="subtitle">Software Engineer</div>
+  </div>
+  <div class="pages">
+    {% for p in pages %}
+      <div class="page">
+        <a {% if page.url == p.link or page.url == '' and p.name == 'About' %} class='active' {% endif %} href="{{ origin }}/{{ p.link }}">{{ p.name }}</a>
+      </div>
+    {% endfor %}
+  </div>
+  {% include "logos.njk" %}
+</header>

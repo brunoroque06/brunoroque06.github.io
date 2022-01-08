@@ -1,9 +1,9 @@
 ---
 layout: default
-permalink: software-engineering
+title: Software Engineering
 ---
 
-# Software Engineering
+# {{ title }}
 
 This page contains what I consider to be the most relevant sources of information on software engineering.
 

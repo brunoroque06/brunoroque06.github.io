@@ -1,0 +1,13 @@
+---
+name: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  {% include "head.njk" %}
+  <body>
+    {% include "header.njk" %}
+    <main>{{ content | safe }}</main>
+  </body>
+  {% include "service-worker-reg.html" %}
+</html>
