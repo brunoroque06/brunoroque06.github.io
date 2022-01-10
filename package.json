@@ -2,7 +2,7 @@
   "scripts": {
     "build": "npm run style && eleventy",
     "build-cv": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --print-to-pdf=documents/bruno-roque-cv.pdf documents/bruno-roque-cv.html",
-    "deploy": "sed -i '' 's/localhost:8080/brunoroque06.github.io/' _data/origin.js && npm run style && npm run build && gh-pages --dist _site --no-history && git checkout _data/origin.js",
+    "deploy": "sed -i '' 's/localhost:8080/brunoroque06.github.io/' _data/origin.js && npm run build && gh-pages --dist _site --no-history && git checkout _data/origin.js",
     "serve": "eleventy --serve",
     "style": "sass --style=compressed --no-source-map _includes/style.scss _includes/style.css"
   },

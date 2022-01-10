@@ -1,3 +1,3 @@
 # Personal Website
 
-Personal website: [brunoroque06](https://brunoroque06.github.io).
+Personal website: [https://brunoroque06.github.io](https://brunoroque06.github.io).
