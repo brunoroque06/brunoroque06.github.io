@@ -1,3 +1,4 @@
+_includes/style.css
 _site/
+dist/
 node_modules/
-*.css
