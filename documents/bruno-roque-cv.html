@@ -100,24 +100,19 @@
         height: 1.1em;
       }
 
-      .tech-score {
+      #techs {
         display: flex;
-        justify-content: flex-end;
-        margin-top: 0.3rem;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        row-gap: 0.4rem;
       }
 
-      .tech-unit {
-        height: 0.5rem;
-        width: 3rem;
-        margin: 0 0.2rem;
-      }
-
-      .tech-full {
+      .tech {
         background-color: black;
-      }
-
-      .tech-empty {
-        border: 2pt black solid;
+        border: 0.1rem black solid;
+        border-radius: 1rem;
+        color: white;
+        padding: 0.3rem 0.3rem;
       }
 
       .main-title {
@@ -180,8 +175,9 @@
           <div class="section">Info</div>
         </div>
 
-        <div id="tech">
+        <div>
           <div class="section">Technologies</div>
+          <div id="techs"></div>
         </div>
 
         <div class="section">Languages</div>
@@ -276,31 +272,25 @@
       });
 
       let techs = [
-        { name: "Dotnet", level: 3 },
-        { name: "PostgreSQL (TimescaleDB)", level: 3 },
-        { name: "Python", level: 2 },
-        { name: "Node.js", level: 2 },
-        { name: "Angular (Material, RxJS, XState)", level: 2 },
-        { name: "Azure (IaC with Pulumi)", level: 2 },
-        { name: "Docker", level: 2 },
+        "Dotnet",
+        "Python",
+        "Node.js",
+        "PostgreSQL",
+        "TimescaleDB",
+        "Angular",
+        "RxJS",
+        "XState",
+        "GraphQL",
+        "Azure",
+        "Pulumi",
+        "Docker",
       ];
 
-      let tech = document.getElementById("tech");
+      let tech = document.getElementById("techs");
       techs.forEach((t) => {
-        let full = '<div class="tech-unit tech-full"></div> '.repeat(t.level);
-        let empty = '<div class="tech-unit tech-empty"></div> '.repeat(
-          3 - t.level
-        );
         tech.insertAdjacentHTML(
           "beforeend",
-          `<div class="row">
-            <div class="small">${t.name}</div>
-            <div class="tech-score">
-              ${full}
-              ${empty}
-            </div>
-          </div>
-      `
+          `<span class="small tech">${t}</span>`
         );
       });
 
