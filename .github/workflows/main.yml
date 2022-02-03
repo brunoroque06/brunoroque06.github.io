@@ -21,7 +21,18 @@ jobs:
   website:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        page:
+          [
+            https://brunoroque06.github.io,
+            https://brunoroque06.github.io/chess/,
+            https://brunoroque06.github.io/software-engineering/,
+          ]
+
     steps:
       - uses: treosh/lighthouse-ci-action@v8
+        name: Audit ${{ matrix.page }}
         with:
-          urls: https://brunoroque06.github.io
+          uploadArtifacts: true
+          urls: ${{ matrix.page }}
