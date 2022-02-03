@@ -34,6 +34,5 @@ jobs:
       - uses: treosh/lighthouse-ci-action@v8
         name: Audit ${{ matrix.page }}
         with:
-          configPath: .github/workflows/lighthouserc.json
-          uploadArtifacts: true
+          configPath: ./.github/workflows/lighthouserc.json
           urls: ${{ matrix.page }}
