@@ -25,9 +25,9 @@ jobs:
       matrix:
         page:
           [
-            https://brunoroque06.github.io,
-            https://brunoroque06.github.io/chess/,
-            https://brunoroque06.github.io/software-engineering/,
+            "https://brunoroque06.github.io",
+            "https://brunoroque06.github.io/chess/",
+            "https://brunoroque06.github.io/software-engineering/",
           ]
 
     steps:
