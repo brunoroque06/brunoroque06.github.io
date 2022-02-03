@@ -31,15 +31,15 @@ self.addEventListener("fetch", function (event) {
 });
 
 async function updateCache(request, response) {
-  const cache = await caches.open(CACHE);
+  let cache = await caches.open(CACHE);
   return cache.put(request, response);
 }
 
 async function fromCache(request) {
-  const cache = await caches.open(CACHE);
-  const match = await cache.match(request);
+  let cache = await caches.open(CACHE);
+  let match = await cache.match(request);
   if (!match || match.status === 404) {
-    const offline = new Response('[ServiceWorker] You are offline (",)');
+    let offline = new Response('[ServiceWorker] You are offline (",)');
     return Promise.resolve(offline);
   }
   return match;

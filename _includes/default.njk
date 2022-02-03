@@ -9,5 +9,7 @@ name: default
     {% include "header.njk" %}
     <main>{{ content | safe }}</main>
   </body>
-  {% include "service-worker-reg.html" %}
+  <script>
+    {% include "service-worker-registration.js" %}
+  </script>
 </html>
