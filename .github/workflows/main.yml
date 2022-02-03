@@ -31,8 +31,10 @@ jobs:
           ]
 
     steps:
+      - uses: actions/checkout@v2
+
       - uses: treosh/lighthouse-ci-action@v8
         name: Audit ${{ matrix.page }}
         with:
-          configPath: ./lighthouserc.json
+          configPath: .github/workflows/lighthouserc.json
           urls: ${{ matrix.page }}
