@@ -9,7 +9,7 @@ This page contains what I consider to be the most relevant sources of informatio
 
 > I hold that orthodoxy is the death of knowledge, since the growth of knowledge depends entirely on the existence of disagreement. - Karl Popper, The Myth of the Framework
 
-## Conduct & Human Nature
+## Human Nature & Conduct
 
 The Myth of the Framework: In Defence of Science and Rationality, by Karl Popper, 1994.
 
