@@ -50,25 +50,3 @@ Righting Software, by Juval Löwy, 2019.
 The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.
 
 Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.
-
-Test-Driven Development By Example, by Kent Beck, 2003.
-
-## Software Technologies
-
-[Semantic Diffusion](https://martinfowler.com/bliki/SemanticDiffusion.html), by Martin Fowler, 2006.
-
-[F#](https://docs.microsoft.com/en-us/dotnet/fsharp) and [C#](https://docs.microsoft.com/en-us/dotnet/csharp), by Microsoft.
-
-The Art of PostgreSQL, by Dimitri Fontaine, 2019.
-
-[You Don't Know JS Yet](https://github.com/getify/You-Dont-Know-JS), by Kyle Simpson, 2020.
-
-[Learn CSS](https://web.dev/learn/css), by Google.
-
-[Pro Git](https://git-scm.com/book/en/v2), by Scott Chacon and Ben Straub, 2014.
-
-## Data Engineering
-
-[The Analytics Setup Guidebook](https://www.holistics.io/books/setup-analytics/start-here-introduction), by Huy Nguyen, Ha Pham, Cedric Chin from Holistics.
-
-[Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf), by Hadley Wickham.
