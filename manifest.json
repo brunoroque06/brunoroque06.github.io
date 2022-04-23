@@ -4,7 +4,7 @@
   "description": "Bruno Roque's personal website.",
   "start_url": "/",
   "background_color": "#f2e9e1",
-  "theme_color": "#f2e9e1",
+  "theme_color": "#286983",
   "display": "standalone",
   "icons": [
     {
