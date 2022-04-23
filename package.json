@@ -5,10 +5,10 @@
     "serve": "eleventy --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "1.0.0",
+    "@11ty/eleventy": "1.0.1",
     "gh-pages": "3.2.3",
     "prettier": "2.6.2",
-    "puppeteer": "13.5.2",
-    "sass": "1.50.0"
+    "puppeteer": "13.6.0",
+    "sass": "1.50.1"
   }
 }
