@@ -8,7 +8,7 @@
     "@11ty/eleventy": "1.0.1",
     "gh-pages": "3.2.3",
     "prettier": "2.6.2",
-    "puppeteer": "13.6.0",
-    "sass": "1.50.1"
+    "puppeteer": "13.7.0",
+    "sass": "1.51.0"
   }
 }
