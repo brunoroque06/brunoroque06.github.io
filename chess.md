@@ -27,8 +27,6 @@ Dvoretsky's Endgame Manual: FastTrack Edition, by Mark Dvoretsky, 2021.
 [White "Bruno Roque"]
 [Black "Very Tough Opponent"]
 [Result "1-0"]
-[WhiteElo "2014"]
-[BlackElo "2029"]
 [Variant "Standard"]
 [TimeControl "1800+30"]
 [ECO "C42"]
