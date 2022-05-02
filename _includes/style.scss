@@ -71,21 +71,6 @@ body {
         display: inline-block;
         line-height: 1em;
         padding: 0 0.05em;
-        animation: blink 1s infinite;
-
-        @keyframes blink {
-          0% {
-            opacity: 0;
-          }
-
-          50% {
-            opacity: 1;
-          }
-
-          to {
-            opacity: 0;
-          }
-        }
       }
     }
 
