@@ -5,11 +5,9 @@ title: Chess
 
 # {{ title }}
 
-This page contains chess references that I consider important.
-
 > On the chessboard lies and hypocrisy do not survive long. The creative combination lays bare the presumption of a lie; the merciless fact, culminating in a checkmate, contradicts the hypocrite. - Emanuel Lasker, Lasker's Manual of Chess
 
-## Books
+## References
 
 The Woodpecker Method, by Axel Smith and Hans Tikkanen, 2018.
 

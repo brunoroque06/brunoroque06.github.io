@@ -1,5 +1,4 @@
 module.exports = [
-  { name: "About", link: "/" },
-  { name: "Software Engineering", link: "/software-engineering/" },
+  { name: "Software Engineering", link: "/" },
   { name: "Chess", link: "/chess/" },
 ];
