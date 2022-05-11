@@ -5,7 +5,7 @@ title: Software Engineering
 
 # {{ title }}
 
-> It means absolutely nothing - Someone (?)
+> It means absolutely nothing. - Someone (?)
 
 > I hold that orthodoxy is the death of knowledge, since the growth of knowledge depends entirely on the existence of disagreement. - Karl Popper, The Myth of the Framework
 
