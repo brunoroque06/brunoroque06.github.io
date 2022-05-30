@@ -11,13 +11,11 @@ title: Software Engineering
 
 ## Humans
 
-The Myth of the Framework: In Defence of Science and Rationality, by Karl Popper, 1994.
-
 [Timeline of the Human Condition](https://www.southampton.ac.uk/~cpd/history.html).
 
-Sapiens: A Brief History of Humankind, by Yuval Harari, 2014.
+The Myth of the Framework: In Defence of Science and Rationality, by Karl Popper, 1994.
 
-Extreme Ownership, by Jocko Willink and Leif Babin, 2015.
+Sapiens: A Brief History of Humankind, by Yuval Harari, 2014.
 
 Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets, by Nassim Taleb, 2001.
 
