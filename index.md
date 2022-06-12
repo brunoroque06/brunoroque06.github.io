@@ -11,15 +11,13 @@ title: Software Engineering
 
 ## Humans
 
-[Timeline of the Human Condition](https://www.southampton.ac.uk/~cpd/history.html).
-
 The Myth of the Framework: In Defence of Science and Rationality, by Karl Popper, 1994.
-
-Sapiens: A Brief History of Humankind, by Yuval Harari, 2014.
 
 Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets, by Nassim Taleb, 2001.
 
 [Start With Why](https://www.youtube.com/watch?v=u4ZoJKF_VuA), by Simon Sinek, 2009.
+
+The Burnout Society, by Byung-Chul Han, 2010.
 
 ## Economy
 
@@ -46,5 +44,3 @@ Righting Software, by Juval Löwy, 2019.
 ## Development
 
 The Pragmatic Programmer: From Journeyman to Master, by Andrew Hunt and David Thomas, 1999.
-
-Clean Code: A Handbook of Agile Software Craftsmanship, by Robert Martin, 2008.
