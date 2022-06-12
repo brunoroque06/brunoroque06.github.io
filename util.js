@@ -2,13 +2,13 @@ let fs = require("fs");
 let puppeteer = require("puppeteer");
 
 function shouldBuildCv(files) {
-  return files.includes("documents/bruno-roque-cv.html");
+  return files.includes("docs/bruno-roque-cv.html");
 }
 
 async function buildCv() {
   let browser = await puppeteer.launch({ headless: true });
   let page = await browser.newPage();
-  let html = fs.readFileSync("./documents/bruno-roque-cv.html", "utf8");
+  let html = fs.readFileSync("./docs/bruno-roque-cv.html", "utf8");
   await page.setContent(html, { waitUntil: "domcontentloaded" });
 
   if (!fs.existsSync("./dist")) {

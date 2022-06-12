@@ -9,13 +9,13 @@
   "icons": [
     {
       "type": "image/png",
-      "src": "images/favicon-fill.png",
+      "src": "imgs/favicon-fill.png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
       "type": "image/png",
-      "src": "images/favicon-fill.png",
+      "src": "imgs/favicon-fill.png",
       "sizes": "512x512"
     }
   ]

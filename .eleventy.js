@@ -19,12 +19,12 @@ module.exports = function (config) {
     }).css;
   });
 
-  config.addPassthroughCopy("documents");
-  config.addPassthroughCopy("images");
+  config.addPassthroughCopy("docs");
+  config.addPassthroughCopy("imgs");
   config.addPassthroughCopy("manifest.json");
   config.addPassthroughCopy("service-worker.js");
 
-  config.addPassthroughCopy({ dist: "documents" });
+  config.addPassthroughCopy({ dist: "docs" });
 
   return {};
 };
