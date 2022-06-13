@@ -1,21 +1,22 @@
-let { shouldBuildCv, buildCv } = require("./util.js");
+let tools = require("./tools.js");
 let sass = require("sass");
 
-module.exports = function (config) {
+module.exports = function(config) {
   config.on("eleventy.before", async () => {
-    await buildCv();
+    await tools.buildCv();
+    await tools.buildFavicons();
   });
 
   config.on("eleventy.beforeWatch", async (files) => {
-    if (shouldBuildCv(files)) {
-      await buildCv();
+    if (tools.shouldBuildCv(files)) {
+      await tools.buildCv();
     }
   });
 
-  config.addFilter("scss2css", function (content) {
+  config.addFilter("scss2css", function(content) {
     return sass.compileString(content, {
       sourceMap: false,
-      style: "compressed",
+      style: "compressed"
     }).css;
   });
 
@@ -24,7 +25,7 @@ module.exports = function (config) {
   config.addPassthroughCopy("manifest.json");
   config.addPassthroughCopy("service-worker.js");
 
-  config.addPassthroughCopy({ dist: "docs" });
+  config.addPassthroughCopy(tools.pass());
 
   return {};
 };
