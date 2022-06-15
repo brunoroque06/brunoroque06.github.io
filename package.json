@@ -1,14 +1,14 @@
 {
   "scripts": {
     "build": "eleventy",
-    "deploy": "npm run build && gh-pages --dist _site --no-history",
+    "deploy": "rm -rf _site dist && npm run build && gh-pages --dist _site --no-history",
     "serve": "eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "1.0.1",
     "gh-pages": "4.0.0",
-    "prettier": "2.6.2",
-    "puppeteer": "14.3.0",
+    "prettier": "2.7.0",
+    "puppeteer": "14.4.0",
     "sass": "1.52.3",
     "sharp": "0.30.6"
   }
