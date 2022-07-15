@@ -19,16 +19,12 @@ Chess Structures: A Grandmaster Guide, by Mauricio Rios, 2015.
 
 Dvoretsky's Endgame Manual: FastTrack Edition, by Mark Dvoretsky, 2021.
 
-## My Immortal (... xD)
+## My Mortal (... xD)
 
 ```chess
 [White "Bruno Roque"]
 [Black "Very Tough Opponent"]
-[Result "1-0"]
-[Variant "Standard"]
 [TimeControl "1800+30"]
-[ECO "C42"]
-[Opening "Russian Game: Classical Attack, Marshall Variation"]
 
 1. e4 e5
 2. Nf3 Nf6

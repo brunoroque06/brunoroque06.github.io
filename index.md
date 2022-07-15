@@ -7,8 +7,6 @@ title: Software Engineering
 
 > It means absolutely nothing. - Someone (?)
 
-> I hold that orthodoxy is the death of knowledge, since the growth of knowledge depends entirely on the existence of disagreement. - Karl Popper, The Myth of the Framework
-
 ## Humans
 
 The Myth of the Framework: In Defence of Science and Rationality, by Karl Popper, 1994.
