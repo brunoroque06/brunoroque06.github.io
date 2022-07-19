@@ -1,0 +1,15 @@
+---
+name: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  {% render "head", title: title %}
+  <body>
+    {% render "header", page: page, pages: pages %}
+    <main>{{ content }}</main>
+  </body>
+  <script>
+    {% render "service-worker-registration.js" %}
+  </script>
+</html>

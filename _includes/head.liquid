@@ -13,6 +13,6 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Sora:wght@400;700&display=swap');
   </style>
-  {% set style %}{% include "style.scss" %}{% endset %}
-  <style type="text/css">{{style | scss2css | safe}}</style>
+  {% capture style %}{% render "style.scss" %}{% endcapture %}
+  <style type="text/css">{{ style | scss2css }}</style>
 </head>
