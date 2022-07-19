@@ -15,7 +15,7 @@ Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets, by N
 
 [Start With Why](https://www.youtube.com/watch?v=u4ZoJKF_VuA), by Simon Sinek, 2009.
 
-The Burnout Society, by Byung-Chul Han, 2010.
+The Disappearance of Rituals: A Topology of the Present, by Byung-Chul Han, 2020.
 
 ## Economy
 
