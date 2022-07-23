@@ -35,7 +35,7 @@ body {
       left: 0;
       bottom: 0;
       width: 100%;
-      height: calc(100% - 1.2em);
+      height: max(0.2em, 0.25rem);
       z-index: -1;
     }
 
