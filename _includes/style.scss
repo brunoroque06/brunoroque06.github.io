@@ -23,29 +23,16 @@ body {
   header .pages .page a,
   main a {
     color: $font-color-main;
-    padding: 0.1rem 0.3rem;
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-
-    &::after {
-      content: "";
-      background: $color-main;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: max(0.2em, 0.25rem);
-      z-index: -1;
-    }
+    padding: 0.3rem 0.3rem;
+    text-decoration-color: $color-main;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.2em;
+    text-underline-offset: 0.2em;
 
     &.active,
     &:hover {
+      background: $color-main;
       color: $font-color-accent;
-
-      &::after {
-        height: 100%;
-      }
     }
   }
 
