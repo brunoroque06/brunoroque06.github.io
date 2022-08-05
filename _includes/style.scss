@@ -6,7 +6,6 @@ $color-main: #286983;
 // $color-accent: #ea9d34;
 $content-width: 52rem;
 $font-color-main: black;
-$font-color-accent: #f4ede8;
 
 body {
   margin: 0;
@@ -32,7 +31,7 @@ body {
     &.active,
     &:hover {
       background: $color-main;
-      color: $font-color-accent;
+      color: $color-background;
     }
   }
 

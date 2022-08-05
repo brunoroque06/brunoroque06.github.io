@@ -9,11 +9,11 @@ title: Software Engineering
 
 ## Humans
 
+[Start With Why](https://www.youtube.com/watch?v=u4ZoJKF_VuA), by Simon Sinek, 2009.
+
 The Myth of the Framework: In Defence of Science and Rationality, by Karl Popper, 1994.
 
 Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets, by Nassim Taleb, 2001.
-
-[Start With Why](https://www.youtube.com/watch?v=u4ZoJKF_VuA), by Simon Sinek, 2009.
 
 The Disappearance of Rituals: A Topology of the Present, by Byung-Chul Han, 2020.
 
