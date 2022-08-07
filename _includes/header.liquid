@@ -1,19 +1,8 @@
 <header>
-  <div class="column">
-    <div class="title">
-      <span>
-        <span>Bruno Roque</span>
-        <span class="caret">#</span>
-      </span>
-    </div>
-    <div class="subtitle">Software Engineer</div>
+  <div class="name">
+    <span>Bruno Roque</span>
+    <span class="caret">#</span>
   </div>
-  <div class="pages">
-    {% for p in pages %}
-      <div class="page">
-        <a {% if page.url == p.link or page.url == '' and p.name == 'About' %} class='active' {% endif %} href="{{ p.link }}">{{ p.name }}</a>
-      </div>
-    {% endfor %}
-  </div>
-  {% render "logos" %}
+  <div class="title">Software Engineer</div>
+  {% render "links" %}
 </header>
