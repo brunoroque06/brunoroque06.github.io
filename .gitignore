@@ -1,4 +1,3 @@
-_includes/style.css
-_site/
-dist/
-node_modules/
+_site
+dist
+node_modules
