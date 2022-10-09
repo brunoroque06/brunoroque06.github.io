@@ -22,7 +22,7 @@ body {
     gap: 1.2rem;
 
     .name {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 600;
       text-transform: uppercase;
 
@@ -37,7 +37,8 @@ body {
 
     .title {
       font-family: $font-family-mono;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
+      font-weight: 500;
     }
 
     .links {
@@ -51,7 +52,7 @@ body {
 
         .link {
           fill: $font-color-main;
-          height: 1.8rem;
+          height: 1.6rem;
         }
 
         &:hover {

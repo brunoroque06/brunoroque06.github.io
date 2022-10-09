@@ -15,6 +15,10 @@
         -moz-box-sizing: border-box;
       }
 
+      html {
+        font-size: 16px;
+      }
+
       body {
         width: 100%;
         height: 100%;
@@ -36,7 +40,7 @@
       }
 
       .name {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 600;
         text-transform: uppercase;
       }
@@ -123,6 +127,8 @@
       .main-sub {
         font-size: 0.9rem;
         margin: 0.2rem 0;
+        display: flex;
+        justify-content: space-between;
       }
 
       .main-sub-date {
@@ -180,9 +186,7 @@
       <div class="section">Info</div>
       <div id="info"></div>
 
-      <div id="exp">
-        <div class="section">Experience</div>
-      </div>
+      <div id="exp" class="section">Experience</div>
 
       <div class="section">Education</div>
 
@@ -196,16 +200,14 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="main-sub-date">09.2007 - 12.2014</span>
-            <span>| Instituto Superior Técnico, Lisbon, Portugal</span>
+            <span>Instituto Superior Técnico, Lisbon, Portugal</span>
             <span class="open-icon"></span>
           </a>
+          <span class="main-sub-date">09.2007 - 12.2014</span>
         </div>
       </div>
 
-      <div id="devs">
-        <div class="section">Professional Development</div>
-      </div>
+      <div id="devs" class="section">Professional Development</div>
 
       <div class="footer">
         <div class="footer-entry">
@@ -287,19 +289,19 @@
       });
 
       let exps = [
+        // {
+        //   start: "01.2015",
+        //   end: "09.2015",
+        //   loc: "Instituto Telecomunicações, Lisbon, Portugal",
+        //   title: "Software Engineer R&D",
+        //   des: "Software development of video processing algorithms: detection of black frames, black margins, flashes, block effect, removal of subtitles and inpaint.",
+        // },
         {
-          start: "06.2019",
-          end: "Present",
-          loc: "Raccoon Works, Zürich, Switzerland",
-          title: "Software Engineer",
-          des: "...",
-        },
-        {
-          start: "11.2017",
-          end: "05.2019",
-          loc: "Spoud AG, Bern, Switzerland",
-          title: "Software Developer",
-          des: "Development of a real-time transport layer using Reactive Streams (RxJava), gRPC (Protocol Buffers), Apache Kafka. Development of a REST API (including Server Side Events) using Spring Web/WebFlux, Reactor, JPA, OpenAPI.",
+          start: "10.2015",
+          end: "03.2017",
+          loc: "Celfinet, Lisbon, Portugal",
+          title: "Software Engineer R&D",
+          des: "Research of geolocation algorithms for mobile and IoT networks using radio frequency propagation models. Improved the geolocation error of &#126;278 meter to less than 131 meter. Use of genetic algorithms to calibrate the models.",
         },
         {
           start: "04.2017",
@@ -309,30 +311,30 @@
           des: "Development of a desktop application to automate the planning of neighbors in cellular networks. Improved the drop call rate of northern areas of the UK by more than 30%.",
         },
         {
-          start: "10.2015",
-          end: "03.2017",
-          loc: "Celfinet, Lisbon, Portugal",
-          title: "Software Engineer R&D",
-          des: "Research of geolocation algorithms for mobile and IoT networks using radio frequency propagation models. Improved the geolocation error of &#126;278 meter to less than 131 meter. Use of genetic algorithms to calibrate the models.",
+          start: "11.2017",
+          end: "05.2019",
+          loc: "Spoud AG, Bern, Switzerland",
+          title: "Software Developer",
+          des: "Development of a real-time transport layer using Reactive Streams (RxJava), gRPC (Protocol Buffers), Apache Kafka. Development of a REST API (including Server Side Events) using Spring Web/WebFlux, Reactor, JPA, OpenAPI.",
         },
-        // {
-        //   start: "01.2015",
-        //   end: "09.2015",
-        //   loc: "Instituto Telecomunicações, Lisbon, Portugal",
-        //   title: "Software Engineer R&D",
-        //   des: "Software development of video processing algorithms: detection of black frames, black margins, flashes, block effect, removal of subtitles and inpaint.",
-        // },
+        {
+          start: "06.2019",
+          end: "Present",
+          loc: "Raccoon Works, Zürich, Switzerland",
+          title: "Software Engineer",
+          des: "...",
+        },
       ];
 
       let exp = document.getElementById("exp");
       exps.forEach((e) => {
         exp.insertAdjacentHTML(
-          "beforeend",
+          "afterend",
           `<div class="row">
              <div class="main-title">${e.title}</div>
               <div class="main-sub">
+                <span>${e.loc}</span>
                 <span class="main-sub-date">${e.start} - ${e.end}</span>
-                <span>| ${e.loc}</span>
               </div>
               <div class="main-content">${e.des}</div>
             </div>
@@ -342,9 +344,9 @@
 
       let devs = [
         {
-          ref: "https://github.com/brunoroque06/playground/tree/master/genetic-algorithm",
-          date: "Present",
-          des: "Genetic Algorithm, Decision Tree Player, Dijkstra, and other side projects on GitHub.",
+          ref: "https://www.idesign.net/Training/Project-Design-Master-Class",
+          date: "03.2020",
+          des: "Project Design Master Class, Juval Löwy, IDesign.",
         },
         {
           ref: "https://www.idesign.net/Training/Architect-Master-Class",
@@ -352,27 +354,27 @@
           des: "Architect's Master Class, Juval Löwy, IDesign.",
         },
         {
-          ref: "https://www.idesign.net/Training/Project-Design-Master-Class",
-          date: "03.2020",
-          des: "Project Design Master Class, Juval Löwy, IDesign.",
+          ref: "https://github.com/brunoroque06/playground/tree/master/genetic-algorithm",
+          date: "Present",
+          des: "Genetic Algorithm, Decision Tree Player, Dijkstra, and other side projects on GitHub.",
         },
       ];
 
       let dev = document.getElementById("devs");
       devs.forEach((d) => {
         dev.insertAdjacentHTML(
-          "beforeend",
+          "afterend",
           `<div class="row">
-               <div class="main-content">
+               <div class="main-sub">
                  <a
                    href="${d.ref}"
                    target="_blank"
                    rel="noopener noreferrer"
                  >
-                   <span class="main-sub-date">${d.date}</span>
-                   <span>| ${d.des}</span>
+                   <span>${d.des}</span>
                    <span class="open-icon"></span>
                  </a>
+                 <span class="main-sub-date">${d.date}</span>
                </div>
             </div>
             `
