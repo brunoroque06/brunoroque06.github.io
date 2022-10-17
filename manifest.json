@@ -3,7 +3,7 @@
   "short_name": "BR06",
   "description": "Bruno Roque's personal website.",
   "start_url": "/",
-  "background_color": "#f2e9e1",
+  "background_color": "#f2dfce",
   "theme_color": "#286983",
   "display": "standalone",
   "icons": [
