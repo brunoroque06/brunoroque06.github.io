@@ -1,5 +1,5 @@
 let fs = require("fs");
-let puppeteer = require("puppeteer");
+let pup = require("puppeteer");
 let sharp = require("sharp");
 
 const docs = "dist/docs";
@@ -20,7 +20,7 @@ function shouldBuildCv(files) {
 async function buildCv() {
   setup();
 
-  let browser = await puppeteer.launch({ headless: true });
+  let browser = await pup.launch({ headless: true });
   let page = await browser.newPage();
   let html = fs.readFileSync("docs/bruno-roque-cv.html", "utf8");
   await page.setContent(html, { waitUntil: "domcontentloaded" });
