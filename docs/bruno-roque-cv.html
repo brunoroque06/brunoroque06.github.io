@@ -56,16 +56,16 @@
       }
 
       .row {
-        margin: 0.6rem 0;
+        margin: 0.5rem 0;
       }
 
       .section {
         font-family: var(--font-mono);
         font-weight: 500;
         border-bottom: var(--border);
-        margin: 0.8rem 0;
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         text-transform: uppercase;
+        margin: 0.6rem 0;
       }
 
       #info {
@@ -211,16 +211,16 @@
 
       <div id="devs" class="section">Professional Development</div>
 
-      <div class="footer">
+      <div class="footer" style="margin-top: 0.6rem">
         <div class="footer-entry">
-          <div class="section">Languages</div>
+          <div class="section" style="margin-top: 0">Languages</div>
           <div class="row small">Portuguese - Native</div>
           <div class="row small">English - Proficient</div>
           <div class="row small">German - Intermediate</div>
         </div>
 
         <div class="footer-entry">
-          <div class="section">Technologies</div>
+          <div class="section" style="margin-top: 0">Technologies</div>
           <div id="techs"></div>
         </div>
       </div>
@@ -279,6 +279,7 @@
         "PostgreSQL (TimescaleDB)",
         "Angular (RxJS)",
         "Docker",
+        "Bazel",
         "Azure (Pulumi)",
       ];
 
@@ -291,13 +292,13 @@
       });
 
       let exps = [
-        // {
-        //   start: "01.2015",
-        //   end: "09.2015",
-        //   loc: "Instituto Telecomunicações, Lisbon, Portugal",
-        //   title: "Software Engineer R&D",
-        //   des: "Software development of video processing algorithms: detection of black frames, black margins, flashes, block effect, removal of subtitles and inpaint.",
-        // },
+        {
+          start: "01.2015",
+          end: "09.2015",
+          loc: "Instituto Telecomunicações, Lisbon, Portugal",
+          title: "Software Engineer R&D",
+          des: "Software development of video processing algorithms using OpenCV: detection of black frames, black margins, flashes, block effect, removal of subtitles and inpaint.",
+        },
         {
           start: "10.2015",
           end: "03.2017",
@@ -324,7 +325,7 @@
           end: "12.2022",
           loc: "Raccoon Works, Zürich, Switzerland",
           title: "Software Engineer",
-          des: "Development of an analytics system for time-series data using: Dotnet, PostgreSQL/TimescaleDB, Angular, Grafana, and Azure/Pulumi. It enabled correlation of events across components of production lines.",
+          des: "Development of an analytics system for time-series data using: Dotnet, PostgreSQL/TimescaleDB, Angular, Grafana, and Azure/Pulumi. It enabled correlation of events across components in production lines.",
         },
       ];
 
