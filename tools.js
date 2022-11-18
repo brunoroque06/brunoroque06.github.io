@@ -6,31 +6,37 @@ const docs = "dist/docs";
 const imgs = "dist/imgs";
 
 function setup() {
-  [docs, imgs].forEach(dir => {
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+  [docs, imgs].forEach((d) => {
+    if (!fs.existsSync(d)) {
+      fs.mkdirSync(d, { recursive: true });
     }
   });
 }
 
-function shouldBuildCv(files) {
-  return files.includes("docs/bruno-roque-cv.html");
+function shouldBuildDocs(files) {
+  return files.includes("docs");
 }
 
-async function buildCv() {
-  setup();
-
+async function buildPdf(src, dest) {
   let browser = await pup.launch({ headless: true });
   let page = await browser.newPage();
-  let html = fs.readFileSync("docs/bruno-roque-cv.html", "utf8");
+  let html = fs.readFileSync("docs/" + src, "utf8");
   await page.setContent(html, { waitUntil: "domcontentloaded" });
+  await page.addStyleTag({ path: "docs/style.css" });
 
   await page.pdf({
     format: "A4",
-    path: docs + "/bruno-roque-cv.pdf",
-    printBackground: true
+    path: docs + "/" + dest,
+    printBackground: true,
   });
   await browser.close();
+}
+
+async function buildDocs() {
+  setup();
+
+  await buildPdf("cv.html", "bruno-roque-cv.pdf");
+  await buildPdf("cover.html", "bruno-roque-cover.pdf");
 }
 
 async function buildFavicons() {
@@ -60,8 +66,8 @@ function pass() {
 }
 
 module.exports = {
-  shouldBuildCv,
-  buildCv,
+  shouldBuildDocs,
+  buildDocs,
   buildFavicons,
-  pass
+  pass,
 };

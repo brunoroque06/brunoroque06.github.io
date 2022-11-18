@@ -3,13 +3,13 @@ let sass = require("sass");
 
 module.exports = function(config) {
   config.on("eleventy.before", async () => {
-    await tools.buildCv();
+    await tools.buildDocs();
     await tools.buildFavicons();
   });
 
   config.on("eleventy.beforeWatch", async (files) => {
-    if (tools.shouldBuildCv(files)) {
-      await tools.buildCv();
+    if (tools.shouldBuildDocs(files)) {
+      await tools.buildDocs();
     }
   });
 
