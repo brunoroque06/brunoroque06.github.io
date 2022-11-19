@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-      #date {
+      .head {
         margin: 3rem 0;
       }
 
@@ -20,7 +20,10 @@
         <div class="title">Software Engineer</div>
       </div>
 
-      <div id="date"></div>
+      <div class="head">
+        <div>Company</div>
+        <div id="date"></div>
+      </div>
 
       <div class="para">Dear _,</div>
 
@@ -34,13 +37,23 @@
       </div>
 
       <div class="para">
-        Ac dolor ac adipiscing amet bibendum nullam, lacus molestie ut libero
-        nec, diam et, pharetra sodales, feugiat ullamcorper id tempor id vitae.
-        Mauris pretium aliquet, lectus tincidunt. Porttitor mollis imperdiet
-        libero senectus pulvinar. Etiam molestie mauris ligula laoreet, vehicula
-        eleifend. Repellat orci erat et, sem cum, ultricies sollicitudin amet
-        eleifend dolor nullam erat, malesuada est leo ac. Varius natoque turpis
-        elementum est.
+        <div>
+          Ac dolor ac adipiscing amet bibendum nullam, lacus molestie ut libero
+          nec, diam et, pharetra sodales, feugiat ullamcorper id tempor id
+          vitae. Mauris pretium aliquet, lectus tincidunt. Porttitor mollis
+          imperdiet libero senectus pulvinar. Etiam molestie mauris ligula
+          laoreet, vehicula eleifend. Repellat orci erat et, sem cum, ultricies
+          sollicitudin amet eleifend dolor nullam erat, malesuada est leo ac.
+          Varius natoque turpis elementum est:
+        </div>
+        <ul>
+          <li>Porttitor mollis imperdiet libero senectus pulvinar;</li>
+          <li>Justo fermentum id;</li>
+          <li>
+            Mauris at suspendisse, neque aliquam faucibus adipiscing, vivamus
+            in.
+          </li>
+        </ul>
       </div>
 
       <div class="para">
@@ -57,16 +70,17 @@
       <div class="para">Bruno Roque</div>
 
       <script>
+        function today() {
+          let t = new Date();
+          return [
+            t.getDate(),
+            t.toLocaleString("en-US", { month: "long" }),
+            t.getFullYear(),
+          ].join(" ");
+        }
+
         let date = document.getElementById("date");
-        let today = new Date();
-        date.insertAdjacentText(
-          "afterbegin",
-          [
-            today.getDay(),
-            today.toLocaleString("en-US", { month: "long" }),
-            today.getFullYear(),
-          ].join(" ")
-        );
+        date.insertAdjacentText("afterbegin", today());
       </script>
     </div>
   </body>
