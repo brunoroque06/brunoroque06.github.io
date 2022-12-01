@@ -5,25 +5,16 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Install
-        run: npm ci
-
-      - name: Format Prettier
-        run: npx prettier -l '**/*.{json,md,yaml,yml}'
-
-      - name: Build
-        run: npm run build
+      - uses: actions/checkout@v3
+      - run: npm ci
+      - run: npx prettier -l '**/*.{json,md,yaml,yml}'
+      - run: npm run build
 
   audit:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-
+      - uses: actions/checkout@v3
       - uses: treosh/lighthouse-ci-action@v9
         with:
           configPath: .github/workflows/lighthouserc.json
