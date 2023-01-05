@@ -7,9 +7,9 @@
   "devDependencies": {
     "@11ty/eleventy": "1.0.2",
     "gh-pages": "4.0.0",
-    "prettier": "2.8.0",
-    "puppeteer": "19.3.0",
-    "sass": "1.56.1",
-    "sharp": "0.31.2"
+    "prettier": "2.8.1",
+    "puppeteer": "19.4.1",
+    "sass": "1.57.1",
+    "sharp": "0.31.3"
   }
 }
