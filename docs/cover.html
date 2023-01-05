@@ -10,6 +10,10 @@
       .para {
         margin: 1.5rem 0;
       }
+
+      a {
+        color: black;
+      }
     </style>
   </head>
 
@@ -25,49 +29,7 @@
         <div id="date"></div>
       </div>
 
-      <div class="para">Dear _,</div>
-
-      <div class="para">
-        Lorem ipsum dolor sit amet, ligula suspendisse nulla pretium, rhoncus
-        tempor fermentum, enim integer ad vestibulum volutpat. Nisl rhoncus
-        turpis est, vel elit, congue wisi enim nunc ultricies sit, magna
-        tincidunt. Maecenas aliquam maecenas ligula nostra, accumsan taciti.
-        Sociis mauris in integer, a dolor netus non dui aliquet, sagittis felis
-        sodales, dolor sociis mauris, vel eu libero cras.
-      </div>
-
-      <div class="para">
-        <div>
-          Ac dolor ac adipiscing amet bibendum nullam, lacus molestie ut libero
-          nec, diam et, pharetra sodales, feugiat ullamcorper id tempor id
-          vitae. Mauris pretium aliquet, lectus tincidunt. Porttitor mollis
-          imperdiet libero senectus pulvinar. Etiam molestie mauris ligula
-          laoreet, vehicula eleifend. Repellat orci erat et, sem cum, ultricies
-          sollicitudin amet eleifend dolor nullam erat, malesuada est leo ac.
-          Varius natoque turpis elementum est:
-        </div>
-        <ul>
-          <li>Porttitor mollis imperdiet libero senectus pulvinar;</li>
-          <li>Justo fermentum id;</li>
-          <li>
-            Mauris at suspendisse, neque aliquam faucibus adipiscing, vivamus
-            in.
-          </li>
-        </ul>
-      </div>
-
-      <div class="para">
-        Consectetuer arcu ipsum ornare pellentesque vehicula, in vehicula diam,
-        ornare magna erat felis wisi a risus. Justo fermentum id. Malesuada
-        eleifend, tortor molestie, a a vel et. Mauris at suspendisse, neque
-        aliquam faucibus adipiscing, vivamus in. Wisi mattis leo suscipit nec
-        amet, nisl fermentum tempor ac a, augue in eleifend in venenatis, cras
-        sit id in vestibulum felis in, sed ligula.
-      </div>
-
-      <div class="para">Respectfully,</div>
-
-      <div class="para">Bruno Roque</div>
+      <div id="text"></div>
 
       <script>
         function today() {
@@ -81,6 +43,18 @@
 
         let date = document.getElementById("date");
         date.insertAdjacentText("afterbegin", today());
+
+        let text = [
+          "Dear _",
+          "...",
+          "Respectfully,",
+          "Bruno Roque",
+        ];
+
+        let body = document.getElementById("text");
+        text.reverse().forEach((t) => {
+          body.insertAdjacentHTML("afterend", `<div class="para">${t}</div>`);
+        });
       </script>
     </div>
   </body>
