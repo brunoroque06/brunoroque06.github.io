@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "@angular/common": "19.2.10",
+    "@angular/compiler": "19.2.10",
+    "@angular/core": "19.2.10",
+    "@angular/platform-browser": "19.2.10",
+    "rxjs": "7.8.2",
+    "tslib": "2.8.1"
+  },
+  "devDependencies": {
+    "@angular/build": "19.2.10",
+    "@angular/cli": "19.2.10",
+    "@angular/compiler-cli": "19.2.10",
+    "@angular/language-service": "19.2.10",
+    "@lhci/cli": "0.14.0",
+    "gh-pages": "6.3.0",
+    "prettier": "3.5.3",
+    "sharp": "0.34.1",
+    "typescript": "5.8.3"
+  },
+  "name": "website",
+  "private": true,
+  "scripts": {
+    "audit": "lhci autorun",
+    "build": "npm run pre && ng build -c prod",
+    "fmt": "prettier --ignore-path .gitignore -w .",
+    "fmt:check": "prettier --ignore-path .gitignore -l .",
+    "pre": "typst compile assets/resume.typ assets/bruno-roque-resume.pdf && node assets/main.js",
+    "pre:watch": "typst watch assets/resume.typ assets/bruno-roque-resume.pdf",
+    "start": "npm run pre && ng serve -c dev",
+    "up": "npm run build; gh-pages --branch deploy --dist dist/browser --no-history --repo https://github.com/brunoroque06/brunoroque06.github.io.git",
+    "watch": "npm run pre && ng build --watch -c dev"
+  },
+  "version": "0.0.0"
+}

@@ -1,0 +1,65 @@
+:root {
+  --color-main: #286486;
+}
+
+body {
+  font-family: monospace;
+  font-size: 1.4rem;
+  margin: 0 auto;
+  max-width: 20em;
+  padding: 0 1em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .name {
+    font-size: 1.6em;
+    font-weight: 600;
+
+    .caret {
+      background: var(--color-main);
+    }
+  }
+
+  .title {
+    color: var(--color-main);
+    font-size: 1.2em;
+  }
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  gap: 1em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  padding: 0.2em;
+  border-bottom: 0.2em solid var(--color-main);
+
+  &:hover {
+    color: white;
+    background-color: var(--color-main);
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width: 15em) {
+  body {
+    word-break: break-all;
+  }
+}

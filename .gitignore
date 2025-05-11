@@ -1,0 +1,5 @@
+.DS_Store
+.angular
+.lighthouseci
+node_modules
+dist

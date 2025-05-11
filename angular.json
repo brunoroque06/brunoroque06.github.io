@@ -1,0 +1,71 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "newProjectRoot": "projects",
+  "projects": {
+    "app": {
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "configurations": {
+            "dev": {
+              "namedChunks": true,
+              "optimization": false,
+              "sourceMap": true
+            },
+            "prod": {
+              "aot": true,
+              "budgets": [
+                {
+                  "maximumError": "1mb",
+                  "maximumWarning": "500kb",
+                  "type": "initial"
+                },
+                {
+                  "maximumError": "4kb",
+                  "maximumWarning": "2kb",
+                  "type": "anyComponentStyle"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all"
+            }
+          },
+          "options": {
+            "assets": [
+              { "glob": "*.{pdf,png}", "input": "assets", "output": "." }
+            ],
+            "browser": "src/main.ts",
+            "index": "src/index.html",
+            "outputPath": "dist",
+            "scripts": [],
+            "styles": ["src/style.css"],
+            "tsConfig": "tsconfig.json"
+          }
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "dev": {
+              "buildTarget": "app:build:dev"
+            },
+            "prod": {
+              "buildTarget": "app:build:prod"
+            }
+          }
+        }
+      },
+      "prefix": "app",
+      "projectType": "application",
+      "root": "",
+      "schematics": {
+        "@schematics/angular:component": {
+          "inlineStyle": true,
+          "inlineTemplate": true,
+          "standalone": true
+        }
+      },
+      "sourceRoot": "src"
+    }
+  },
+  "version": 1
+}
