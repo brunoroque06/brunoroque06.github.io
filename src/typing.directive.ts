@@ -23,7 +23,7 @@ export class TypingDirective implements OnInit, OnDestroy {
         tap(() => (this.el.nativeElement.innerText = "")),
         delay(this.delay()),
         concatMap((n) => from(type(n))),
-        concatMap((n) => of(n).pipe(delay(this.interval())))
+        concatMap((n) => of(n).pipe(delay(this.interval()))),
       )
       .subscribe((v) => {
         this.el.nativeElement.innerText = v;
