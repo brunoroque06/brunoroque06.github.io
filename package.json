@@ -24,7 +24,7 @@
     "build": "npm run pre && ng build -c prod",
     "fmt": "prettier --ignore-path .gitignore -w .",
     "fmt:check": "prettier --ignore-path .gitignore -l .",
-		"resume": "typst compile assets/resume.typ assets/bruno-roque-resume.pdf",
+    "resume": "typst compile assets/resume.typ assets/bruno-roque-resume.pdf",
     "resume:watch": "typst watch assets/resume.typ assets/bruno-roque-resume.pdf",
     "pre": "node assets/main.js",
     "start": "npm run pre && ng serve -c dev",
