@@ -1,6 +1,9 @@
 on: [push]
 
-permissions: {}
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   ci:
@@ -12,7 +15,7 @@ jobs:
       - run: pip install zizmor
       - run: zizmor .github/workflows/main.yml
 
-  website:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,9 +28,27 @@ jobs:
       - run: npm run fmt:check
       - run: sudo snap install typst
       - run: npm run build
+      - uses: actions/upload-artifact@v3
+        with:
+          name: site
+          path: dist/browser
 
-  website-audit:
-    needs: website
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  audit:
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
