@@ -1,24 +1,22 @@
-#set text(12.5pt, font: "SF Pro Rounded")
+#set text(12pt, font: "SF Pro Rounded")
 
 #let monospaced(cnt, size: 1em, weight: 400) = {
-  text(size: size, font: "SF Mono", weight: weight)[#cnt]
+  text(size: size, font: "M Plus 1 Code", weight: weight)[#cnt]
 }
 
 #align(center, text(2em, weight: 600)[Bruno Roque])
 #v(-1.6em)
-#align(center, monospaced(size: 1.2em)[Software Engineer])
-#v(-1.2em)
+#align(center, monospaced(size: 1.3em)[Software Engineer])
 
 #let section(title) = {
-  monospaced(size: 1.1em, weight: 500)[#title]
+  v(-0.4em)
+  monospaced(size: 1.2em, weight: 500)[#title]
   v(-0.9em)
   line(length: 100%, stroke: 0.1em)
-  v(-0.7em)
+  v(-0.6em)
 }
 
 #section[Info]
-
-#let ungap = { v(-0.6em) }
 
 #let linki(ref, disp) = {
   link(ref)[#disp #text("↗")]
@@ -35,7 +33,7 @@
 }
 #grid(
   columns: (50%, 50%),
-  row-gutter: 0.4em,
+  row-gutter: 0.3em,
   info("location.svg", "Zürich, Switzerland"),
   info("mobile.svg", "(+41) 765 174 226", ref: "tel:+41-765-174-226"),
 
@@ -61,7 +59,6 @@
     ref: "https://linkedin.com/in/brunoroque06",
   ),
 )
-#ungap
 
 #section[Experience]
 
@@ -105,9 +102,8 @@
   duration: true,
   desc: none,
 ) = {
-  v(0%)
   text(1.2em, weight: 600)[#title]
-  v(-0.8em)
+  linebreak()
   let place = [#entity - #city, #country]
   if (entityRef != none) {
     place = linki(entityRef, place)
@@ -119,10 +115,9 @@
     span = [#calcDuration(start, end)#span]
   }
   period[#span]
-  ungap
   if (desc != none) {
+    v(-0.4em)
     par(justify: true)[#desc]
-    ungap
   }
 }
 
@@ -135,7 +130,7 @@
     start: datetime(year: 2023, month: 3, day: 1),
     end: none,
     desc: "...",
-    // desc: "Development of a trading system that aggregates Capacity Auctions from different Providers, with a monthly trading volume of ~1 M€ and ~1 TWh. Tech: C#, Python, MS SQL, Angular, Azure DevOps, Azure, Terraform.",
+    // desc: "Development of a trading system that aggregates Capacity Auctions from different Providers, with a monthly trading volume of ~1 M€ and ~1 TWh. Development of a Python SDK used by >100 applications in the company. Tech: C#, Python, MS SQL, Angular, Azure DevOps, Azure, Terraform.",
   ),
   (
     title: "Senior Software Developer",
@@ -205,11 +200,10 @@
 #section[Professional Development]
 
 #let dev(disp, u, date) = {
-  v(0%)
   linki(u, disp)
   h(1fr)
   period(dateStr(date))
-  ungap
+  linebreak()
 }
 
 #let devs = (
@@ -224,7 +218,7 @@
     datetime(year: 2023, month: 9, day: 1),
   ),
   (
-    "Architect's Master Class, Juval Löwy, IDesign",
+    "Architect's and Project Design Master Class, Juval Löwy, IDesign",
     "https://www.idesign.net/Training/Architect-Master-Class",
     datetime(year: 2021, month: 5, day: 1),
   ),
@@ -235,17 +229,15 @@
   ),
 )
 
-#for d in devs.slice(0, 4) {
+#for d in devs.slice(0, 3) {
   dev(..d)
 }
 
 #let languages() = {
   section[Languages]
-  [English - Proficient (C)]
-  ungap
-  [German - Intermediate (B)]
-  ungap
-  [Portuguese - Native]
+  [English - Proficient (C)\
+    German - Intermediate (B)\
+    Portuguese - Native]
 }
 
 #let technologies() = {
@@ -260,7 +252,7 @@
   }
 
   techsRow((".NET (C#)", "Python", "Angular", "PostgreSQL"))
-  ungap
+  v(-0.6em)
   techsRow((
     linki("https://github.com/brunoroque06/dots", "Shell"),
     "Bazel",
@@ -273,5 +265,5 @@
 #grid(
   columns: (45%, 55%),
   grid.cell(languages()),
-  grid.cell(technologies())
+  grid.cell(technologies()),
 )
