@@ -1,6 +1,5 @@
 *.png
 .DS_Store
-.angular
 .lighthouseci
 dist
 node_modules

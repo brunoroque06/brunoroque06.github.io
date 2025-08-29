@@ -1,34 +1,18 @@
 {
-  "dependencies": {
-    "@angular/common": "20.0.2",
-    "@angular/compiler": "20.0.2",
-    "@angular/core": "20.0.2",
-    "@angular/platform-browser": "20.0.2",
-    "rxjs": "7.8.2",
-    "tslib": "2.8.1"
-  },
   "devDependencies": {
-    "@angular/build": "20.0.2",
-    "@angular/cli": "20.0.2",
-    "@angular/compiler-cli": "20.0.2",
-    "@angular/language-service": "20.0.2",
-    "@lhci/cli": "0.15.0",
-    "prettier": "3.5.3",
-    "sharp": "0.34.2",
-    "typescript": "5.8.3"
+    "@lhci/cli": "0.15.1",
+    "prettier": "3.6.2",
+    "sharp": "0.34.3"
   },
   "name": "website",
   "private": true,
   "scripts": {
     "audit": "lhci autorun",
-    "build": "npm run pre && ng build -c prod",
+    "build": "node build.js",
     "fmt": "prettier --ignore-path .gitignore -w .",
     "fmt:check": "prettier --ignore-path .gitignore -l .",
-    "resume": "typst compile assets/resume.typ assets/bruno-roque-resume.pdf",
-    "resume:watch": "typst watch assets/resume.typ assets/bruno-roque-resume.pdf",
-    "pre": "node assets/main.js",
-    "start": "npm run pre && ng serve -c dev",
-    "watch": "npm run pre && ng build --watch -c dev"
+    "resume": "typst compile resume.typ bruno-roque-resume.pdf",
+    "resume:watch": "typst watch resume.typ bruno-roque-resume.pdf"
   },
   "version": "0.0.0"
 }
