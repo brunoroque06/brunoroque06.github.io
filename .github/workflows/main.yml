@@ -24,7 +24,6 @@ jobs:
           node-version: 24
       - run: npm ci
       - run: npm run fmt:check
-      - run: sudo snap install typst
       - run: npm run build
       - uses: actions/upload-artifact@v4
         with:
