@@ -13,21 +13,23 @@
     <title>Bruno Roque</title>
     <style>
       :root {
-        --color-main: #000000;
+        --color-main: black;
+        --color-sec: grey;
       }
 
       body {
         font-family: monospace;
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         margin: 0 auto;
-        max-width: 20em;
+        width: fit-content;
         padding: 0 1em;
+        word-break: break-all;
       }
 
       main {
         display: flex;
         flex-direction: column;
-        gap: 2em;
+        gap: 1em;
         justify-content: center;
         min-height: 100vh;
       }
@@ -35,58 +37,37 @@
       .header {
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        gap: 0.5em;
 
         .name {
-          display: flex;
-          font-size: 1.6em;
+          font-size: 1.4em;
           font-weight: 600;
-
-          .caret {
-            background: var(--color-main);
-          }
         }
 
         .title {
-          color: var(--color-main);
-          font-size: 1.2em;
+          color: var(--color-sec);
+          font-size: 1.1em;
         }
       }
 
       .links {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: right;
         gap: 1em;
       }
 
       a {
-        color: black;
+        color: var(--color-main);
         text-decoration: none;
         padding: 0.2em;
-        border-bottom: 0.2em solid var(--color-main);
-
-        &:hover {
-          color: white;
-          background-color: var(--color-main);
-          border-bottom: none;
-        }
-      }
-
-      @media only screen and (max-width: 15em) {
-        body {
-          word-break: break-all;
-        }
+        border: 0.1em solid var(--color-sec);
+        border-radius: 0.5em;
       }
     </style>
   </head>
   <body>
     <main>
       <div class="header">
-        <div class="name">
-          <span>Bruno Roque</span>
-          <span class="caret">&nbsp;</span>
-        </div>
+        <div class="name">Bruno Roque</div>
         <div class="title">Software Engineer</div>
       </div>
       <div class="links">
