@@ -130,7 +130,6 @@
     start: datetime(year: 2023, month: 3, day: 1),
     end: none,
     desc: "...",
-    // desc: "Development of a trading system that aggregates Capacity Auctions from different Providers, with a monthly trading volume of ~1 M€ and ~1 TWh. Development of a Python SDK used by >100 applications in the company. Tech: C#, Python, MS SQL, Angular, Azure DevOps, Azure, Terraform.",
   ),
   (
     title: "Senior Software Developer",
@@ -181,7 +180,7 @@
   ),
 )
 
-#for e in exps.slice(0, 4) {
+#for e in exps.slice(0, 3) {
   stage(e.title, e.entity, e.city, e.country, e.start, e.end, desc: e.desc)
 }
 
@@ -213,6 +212,11 @@
     none,
   ),
   (
+    "Secure (Software) Development, Compass Security",
+    "https://eu.badgr.com/public/assertions/8cZszPGXQVetjEsOREII4A",
+    datetime(year: 2025, month: 6, day: 1),
+  ),
+  (
     "Architecture Clinic, Michael Montgomery, IDesign",
     "https://www.idesign.net/Clinics/Architecture-Clinic",
     datetime(year: 2023, month: 9, day: 1),
@@ -229,7 +233,7 @@
   ),
 )
 
-#for d in devs.slice(0, 3) {
+#for d in devs.slice(0, 4) {
   dev(..d)
 }
 
