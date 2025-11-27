@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "@lhci/cli": "0.15.1",
-    "prettier": "3.6.2"
+    "prettier": "3.7.0"
   },
   "name": "website",
   "private": true,
