@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "audit": "lhci autorun",
-    "build": "node build.js",
+    "build": "rm -rf dist; mkdir dist; cp bruno-roque-resume.pdf favicon.svg index.html dist",
     "fmt": "prettier --ignore-path .gitignore -w .",
     "fmt:check": "prettier --ignore-path .gitignore -l .",
     "resume": "typst compile resume.typ bruno-roque-resume.pdf",
