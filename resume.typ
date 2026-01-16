@@ -212,7 +212,12 @@
     none,
   ),
   (
-    "Secure (Software) Development, Compass Security",
+    "Advanced Software Architecture - Residuality Theory, Barry O'Reilly",
+    "https://www.blacktulip.se/take-action",
+    datetime(year: 2026, month: 1, day: 1),
+  ),
+  (
+    "Secure Software Development, Compass Security",
     "https://eu.badgr.com/public/assertions/8cZszPGXQVetjEsOREII4A",
     datetime(year: 2025, month: 6, day: 1),
   ),
@@ -233,7 +238,7 @@
   ),
 )
 
-#for d in devs.slice(0, 4) {
+#for d in devs.slice(0, 5) {
   dev(..d)
 }
 
