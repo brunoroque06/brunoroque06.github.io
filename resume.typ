@@ -217,7 +217,7 @@
     datetime(year: 2026, month: 1, day: 1),
   ),
   (
-    "Secure Software Development, Compass Security",
+    "Secure Development, Compass Security",
     "https://eu.badgr.com/public/assertions/8cZszPGXQVetjEsOREII4A",
     datetime(year: 2025, month: 6, day: 1),
   ),
