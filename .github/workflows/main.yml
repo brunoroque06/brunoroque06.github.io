@@ -10,33 +10,9 @@ jobs:
           node-version: 24
       - run: npm ci
       - run: npm run fmt:check
-      - run: npm run build
-      - uses: actions/upload-artifact@v5
-        with:
-          name: site
-          path: dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
-      pages: write
-    steps:
-      - uses: actions/download-artifact@v6
-        with:
-          name: site
-          path: "."
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v4
-        with:
-          path: "."
-      - id: deployment
-        uses: actions/deploy-pages@v4
 
   audit:
-    needs: deploy
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
