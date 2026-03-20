@@ -207,7 +207,7 @@
 
 #let devs = (
   (
-    "Tool to help my wife fill out reports at her work",
+    "Application to help my wife fill out reports at her work",
     "https://github.com/brunoroque06/reportus/tree/main",
     none,
   ),
