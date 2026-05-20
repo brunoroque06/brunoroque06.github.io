@@ -39,7 +39,7 @@
 
   info(
     "email.svg",
-    "brunroque06@gmail.com",
+    "brunoroque06@gmail.com",
     ref: "mailto:brunoroque06@gmail.com",
   ),
   info(
@@ -138,7 +138,7 @@
     country: "Switzerland",
     start: datetime(year: 2019, month: 6, day: 1),
     end: datetime(year: 2022, month: 12, day: 1),
-    desc: "Development of an analytics system for time-series data. It enabled the correlation of events across machines in production lines. Tech: C#, Python, PostgreSQL, Angular, Bazel, Docker, Azure DevOps, Azure, Pulumi.",
+    desc: "Built an analytics system for time-series data. It enabled the correlation of events across machines in production lines. Tech: C#, Python, PostgreSQL, Angular, Bazel, Docker, Azure DevOps, Azure, Pulumi.",
   ),
   (
     title: "Software Developer",
@@ -147,7 +147,7 @@
     country: "Switzerland",
     start: datetime(year: 2017, month: 11, day: 1),
     end: datetime(year: 2019, month: 5, day: 1),
-    desc: "Development of a real-time transport layer, and of analytics pipelines, where I introduced testing. Tech: Java, Apache Flink, Apache Kafka, Elasticsearch, gRPC, Bazel, Docker.",
+    desc: "Built a real-time transport layer and analytics pipelines. Introduced Apache Kafka e2e testing practices. Tech: Java, Apache Flink, Apache Kafka, Elasticsearch, gRPC, Bazel, Docker.",
   ),
   (
     title: "Software Engineer",
@@ -156,7 +156,7 @@
     country: "Scotland",
     start: datetime(year: 2017, month: 4, day: 1),
     end: datetime(year: 2017, month: 8, day: 1),
-    desc: "Development of a desktop application to automate the planning of neighbors in cellular networks. Improved the drop call rate in northern areas of the UK by 30%. Tech: C#, WPF, MS SQL.".trim(
+    desc: "Built a desktop application to automate the planning of neighbors in cellular networks. Improved the drop call rate in northern areas of the UK by 30%. Tech: C#, WPF, MS SQL.".trim(
       regex(" Tech:(.*)"),
     ),
   ),
@@ -167,7 +167,7 @@
     country: "Portugal",
     start: datetime(year: 2015, month: 10, day: 1),
     end: datetime(year: 2017, month: 3, day: 1),
-    desc: "Research of geolocation in mobile and IoT networks using radio frequency propagation models. Improved the geolocation error from 280 to 130 meter. Tech: C#, Matlab.",
+    desc: "Researched geolocation in mobile and IoT networks using radio frequency propagation models. Improved the geolocation error from 280 to 130 meters. Tech: C#, Matlab.",
   ),
   (
     title: "Software Engineer R&D",
@@ -176,7 +176,7 @@
     country: "Portugal",
     start: datetime(year: 2015, month: 1, day: 1),
     end: datetime(year: 2015, month: 9, day: 1),
-    desc: "Software development of video processing algorithms: detection of black frames, black margins, flashes, block effect, removal of subtitles and inpaint. Tech: C++, OpenCV, Matlab.",
+    desc: "Developed video processing algorithms: detection of black frames, black margins, flashes, block effect, removal of subtitles and inpaint. Tech: C++, OpenCV, Matlab.",
   ),
 )
 
@@ -207,7 +207,7 @@
 
 #let devs = (
   (
-    "Application to help my wife fill out reports at her work",
+    "Application that automates clinical assessment report writing (used by my wife)",
     "https://github.com/brunoroque06/reportus/tree/main",
     none,
   ),
