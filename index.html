@@ -2,27 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="Description" content="Bruno Roque's personal website." />
-    <meta name="theme-color" content="#000000" />
-    <link rel="canonical" href="https://brunoroque06.github.io" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" />
     <title>Bruno Roque</title>
     <style>
-      :root {
-        --color-main: black;
-        --color-sec: dimgray;
-      }
-
       body {
         font-family: monospace;
         font-size: 1.1rem;
         margin: 0 auto;
         width: fit-content;
-        word-break: break-all;
       }
 
       main {
@@ -33,56 +21,47 @@
         min-height: 100vh;
       }
 
-      .header {
+      header {
         display: flex;
         flex-direction: column;
         gap: 0.5em;
 
-        .name {
+        h1 {
           font-size: 1.4em;
-          font-weight: 600;
+          margin: 0;
         }
 
-        .title {
-          color: var(--color-sec);
+        p {
+          color: dimgray;
           font-size: 1.1em;
+          margin: 0;
         }
       }
 
-      .links {
+      nav {
         display: flex;
         gap: 1em;
       }
 
       a {
-        color: var(--color-main);
+        color: inherit;
         text-decoration: none;
         padding: 0.2em;
-        border: 0.1em solid var(--color-sec);
+        border: 0.1em solid dimgray;
         border-radius: 0.5em;
       }
     </style>
   </head>
   <body>
     <main>
-      <div class="header">
-        <div class="name">Bruno Roque</div>
-        <div class="title">Software Engineer</div>
-      </div>
-      <div class="links">
-        <a
-          href="https://github.com/brunoroque06"
-          target="_blank"
-          rel="noopener noreferrer"
-          >GitHub</a
-        >
-        <a
-          href="/bruno-roque-resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Resume</a
-        >
-      </div>
+      <header>
+        <h1>Bruno Roque</h1>
+        <p>Software Engineer</p>
+      </header>
+      <nav>
+        <a href="https://github.com/brunoroque06" target="_blank">GitHub</a>
+        <a href="/bruno-roque-resume.pdf" target="_blank">Resume</a>
+      </nav>
     </main>
   </body>
 </html>
