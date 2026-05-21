@@ -1,12 +1,10 @@
 {
   "devDependencies": {
-    "@lhci/cli": "0.15.1",
     "prettier": "3.8.3"
   },
   "name": "website",
   "private": true,
   "scripts": {
-    "audit": "lhci autorun",
     "fmt": "prettier --ignore-path .gitignore -w .",
     "fmt:check": "prettier --ignore-path .gitignore -l .",
     "resume": "typst compile resume.typ bruno-roque-resume.pdf",
