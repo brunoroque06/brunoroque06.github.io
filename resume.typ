@@ -10,7 +10,7 @@
 
 #let section(title) = {
   v(-0.4em)
-  monospaced(size: 1.2em, weight: 500)[#title]
+  monospaced(size: 1.2em, weight: 400)[#title]
   v(-0.9em)
   line(length: 100%, stroke: 0.1em)
   v(-0.6em)
@@ -19,7 +19,7 @@
 #section[Info]
 
 #let linki(ref, disp) = {
-  link(ref)[#disp #text("↗")]
+  link(ref)[#disp #sym.arrow.tr]
 }
 
 #let info(img, disp, ref: none) = {
@@ -138,7 +138,7 @@
     country: "Switzerland",
     start: datetime(year: 2019, month: 6, day: 1),
     end: datetime(year: 2022, month: 12, day: 1),
-    desc: "Built an analytics system for time-series data. It enabled the correlation of events across machines in production lines. Tech: C#, Python, PostgreSQL, Angular, Bazel, Docker, Azure DevOps, Azure, Pulumi.",
+    desc: "Built an analytics system for time-series data. It enabled the correlation of events across machines in production lines. Tech: .NET (C#), Python, PostgreSQL, Angular, Bazel, Docker, Azure DevOps, Azure, Pulumi.",
   ),
   (
     title: "Software Developer",
@@ -156,7 +156,7 @@
     country: "Scotland",
     start: datetime(year: 2017, month: 4, day: 1),
     end: datetime(year: 2017, month: 8, day: 1),
-    desc: "Built a desktop application to automate the planning of neighbors in cellular networks. Improved the drop call rate in northern areas of the UK by 30%. Tech: C#, WPF, MS SQL.".trim(
+    desc: "Built a desktop application to automate the planning of neighbors in cellular networks. Improved the drop call rate in northern areas of the UK by 30%. Tech: .NET (C#), WPF, MS SQL.".trim(
       regex(" Tech:(.*)"),
     ),
   ),
@@ -167,7 +167,7 @@
     country: "Portugal",
     start: datetime(year: 2015, month: 10, day: 1),
     end: datetime(year: 2017, month: 3, day: 1),
-    desc: "Researched geolocation in mobile and IoT networks using radio frequency propagation models. Improved the geolocation error from 280 to 130 meters. Tech: C#, Matlab.",
+    desc: "Researched geolocation in mobile and IoT networks using radio frequency propagation models. Improved the geolocation error from 280 to 130 meters. Tech: .NET (C#), Matlab.",
   ),
   (
     title: "Software Engineer R&D",
@@ -254,25 +254,32 @@
 
   let techsRow(techs) = {
     stack(dir: ltr, spacing: 1fr, ..techs.map(t => block(
-      inset: 0.35em,
+      inset: (x: 0.3em, y: 0.4em),
+      radius: 0.4em,
       stroke: 0.1em,
       t,
     )))
   }
 
-  techsRow((".NET (C#)", "Python", "Angular", "PostgreSQL"))
+  techsRow((
+    ".NET (C#)",
+    "Python",
+    "Rust",
+    "Angular",
+    "SQL",
+  ))
   v(-0.6em)
   techsRow((
     linki("https://github.com/brunoroque06/dots", "Shell"),
-    "Bazel",
     "Docker",
+    "CI/CD",
     "Azure",
     "Terraform",
   ))
 }
 
 #grid(
-  columns: (45%, 55%),
+  columns: (50%, 50%),
   grid.cell(languages()),
   grid.cell(technologies()),
 )
